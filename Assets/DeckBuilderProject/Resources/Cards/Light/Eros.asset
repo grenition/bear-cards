@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee5e8f24a745c24783d776ab7bcfc8e, type: 3}
+  m_Name: Eros
+  m_EditorClassIdentifier: 
+  cardName: Eros
+  cardType: 04000000
+  cardSprite: {fileID: 21300000, guid: bf8e74c445fb7ab4d819f35abe39781d, type: 3}
+  description: It's Eros
+  health: 10
+  damageMin: 3
+  damageMax: 6
+  damageType: 04000000
+  prefab: {fileID: 1797753984441286, guid: e0bd3015af80d894da39ba968ceb587e, type: 3}
+  range: 4
+  attackPattern: 6
+  priorityTarget: 1
