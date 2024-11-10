@@ -14,11 +14,11 @@ git subtree add --prefix=Assets/GreonAssets shared main --squash
 
 ## Pushing and pulling
 
-1. Pull data from remote repository (only for collaborators)
+1. Pull data from remote repository 
 ```
 git subtree pull --prefix=Assets/GreonAssets shared main --squash
 ```
-2. Push data to local repository
+2. Push data to local repository (only for collaborators)
 ```
 git subtree push --prefix=Assets/GreonAssets shared main
 ```

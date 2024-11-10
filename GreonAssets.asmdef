@@ -1,0 +1,15 @@
+{
+    "name": "GreonAssets",
+    "references": [
+        "GUID:f547b183e7119419d88303cc8c922ef1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
