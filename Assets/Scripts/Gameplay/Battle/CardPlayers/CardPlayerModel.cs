@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
-using Gameplay.Battle.Cards;
 using GreonAssets.Extensions;
-using Infrastructure;
+using Project.Gameplay.Battle.Cards;
+using Project.Gameplay.Data;
 
-namespace Gameplay.Battle.CardPlayers
+namespace Project.Gameplay.Battle.CardPlayers
 {
     public class CardPlayerModel
     {

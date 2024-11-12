@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Gameplay.Battle.Cards;
+using Project.Gameplay.Battle.Cards;
 using UnityEngine;
 
-namespace Gameplay.Battle.CardPlayers
+namespace Project.Gameplay.Battle.CardPlayers
 {
     [CreateAssetMenu(menuName = "Gameplay/CardPlayerConfig", fileName = "CardPlayer")]
     public class CardPlayerConfig : ScriptableObject

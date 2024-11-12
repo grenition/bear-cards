@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Gameplay.Battle.CardPlayers;
-using Gameplay.Battle.Cards;
+using Project.Gameplay.Battle.CardPlayers;
+using Project.Gameplay.Battle.Cards;
 using UnityEngine;
 
-namespace Infrastructure
+namespace Project.Gameplay.Data
 {
     public static class StaticData
     {

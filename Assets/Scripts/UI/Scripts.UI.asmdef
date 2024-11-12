@@ -1,6 +1,11 @@
 {
-    "name": "Extensions",
-    "references": [],
+    "name": "Scripts.UI",
+    "rootNamespace": "Project",
+    "references": [
+        "GreonAssets",
+        "Scripts.Gameplay",
+        "Scripts.Infrastructure"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

@@ -448,17 +448,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b1ba360d09046b5b7afcde53c8abf4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _battleModel:
-    player:
-      key: 
-      hand: []
-      deck: []
-    enemy:
-      key: 
-      hand: []
-      deck: []
-    playerField: []
-    enemyField: []
 --- !u!4 &806740067
 Transform:
   m_ObjectHideFlags: 0

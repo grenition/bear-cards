@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Gameplay.Battle
+namespace Project.Gameplay.Battle
 {
     public class BattleController : MonoBehaviour
     {

@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf37953c6c8481685257cdbc86851fc, type: 3}
   m_Name: enemy1
   m_EditorClassIdentifier: 
-  <VisualName>k__BackingField: 
+  <VisualName>k__BackingField: "\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
+    1"
   <VisualDescription>k__BackingField: 
-  <hand>k__BackingField:
+  <Hand>k__BackingField:
+  - {fileID: 11400000, guid: bd01e8a9a809349b688ae8a1a516fd36, type: 2}
+  - {fileID: 11400000, guid: bd01e8a9a809349b688ae8a1a516fd36, type: 2}
   - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+  <Deck>k__BackingField:
+  - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}

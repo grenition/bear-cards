@@ -1,4 +1,4 @@
-namespace Infrastructure
+namespace Project.Infrastructure
 {
     public static class Constants
     {

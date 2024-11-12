@@ -1,7 +1,7 @@
 using GreonAssets.Extensions;
-using Infrastructure;
+using Project.Gameplay.Data;
 
-namespace Gameplay.Battle.Cards
+namespace Project.Gameplay.Battle.Cards
 {
     public class CardModel
     {

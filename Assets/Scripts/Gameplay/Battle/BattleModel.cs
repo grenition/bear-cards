@@ -1,9 +1,8 @@
-using System;
-using Gameplay.Battle.CardPlayers;
-using Gameplay.Battle.Cards;
-using Infrastructure;
+using Project.Gameplay.Battle.CardPlayers;
+using Project.Gameplay.Battle.Cards;
+using Project.Infrastructure;
 
-namespace Gameplay.Battle
+namespace Project.Gameplay.Battle
 {
     public class BattleModel
     {
