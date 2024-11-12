@@ -12,6 +12,7 @@ namespace Gameplay.Battle.CardPlayers
         [field: SerializeField, TextArea] public string VisualDescription { get; private set; }
         
         [field: Header("Game")]
-        [field: SerializeField] public List<CardConfig> hand { get; private set; }
+        [field: SerializeField] public List<CardConfig> Hand { get; private set; }
+        [field: SerializeField] public List<CardConfig> Deck { get; private set; }
     }
 }

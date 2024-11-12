@@ -1,9 +1,13 @@
+using System;
 using UnityEngine;
 
 namespace Gameplay.Battle
 {
     public class BattleController : MonoBehaviour
     {
-        [field: SerializeField] private BattleModel _battleModel;
+        private void Start()
+        {
+            var battleModel = new BattleModel("enemy1");
+        }
     }
 }

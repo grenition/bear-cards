@@ -1,15 +1,24 @@
-using System;
 using GreonAssets.Extensions;
 using Infrastructure;
-using UnityEngine;
 
 namespace Gameplay.Battle.Cards
 {
-    [Serializable]
     public class CardModel
     {
-        public CardConfig Config => StaticData.Cards.Get(key);
+        public CardConfig Config => StaticData.Cards.Get(_key);
+        public CardPosition Position => _battleModel.TryGetCardPosition(this, out var pos) ? pos : default;
         
-        public string key;
+        protected string _key;
+        protected BattleModel _battleModel;
+        protected int _damage;
+        protected int _health;
+        
+        public CardModel(string key, BattleModel battleModel)
+        {
+            _key = key;
+            _battleModel = battleModel;
+            _damage = Config.BaseDamage;
+            _health = Config.BaseHealth;
+        }
     }
 }
