@@ -7,6 +7,8 @@ namespace Project.Gameplay.Battle.Cards
     {
         public CardConfig Config => StaticData.Cards.Get(_key);
         public CardPosition Position => _battleModel.TryGetCardPosition(this, out var pos) ? pos : default;
+        public int Damage => _damage;
+        public int Health => _health;
         
         protected string _key;
         protected BattleModel _battleModel;

@@ -4,7 +4,8 @@
     "references": [
         "GreonAssets",
         "Scripts.Gameplay",
-        "Scripts.Infrastructure"
+        "Scripts.Infrastructure",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
