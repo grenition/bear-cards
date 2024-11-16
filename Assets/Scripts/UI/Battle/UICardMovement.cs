@@ -1,4 +1,7 @@
 using System.Collections;
+using System.Collections.Generic;
+using DG.Tweening;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -13,9 +16,12 @@ namespace Project.UI.Battle
         [SerializeField] private bool instantiateVisual = true;
         private UIVisualCardsHandler visualHandler;
         private Vector3 offset;
+        private CanvasGroup canvasGroup;
+        private Vector3 startPosition;
 
         [Header("Movement")]
         [SerializeField] private float moveSpeedLimit = 50;
+        [SerializeField] private bool returnToHoverStartPosition = true;
 
         [Header("Selection")]
         public bool selected;
@@ -45,6 +51,7 @@ namespace Project.UI.Battle
         {
             canvas = GetComponentInParent<Canvas>();
             imageComponent = GetComponent<Image>();
+            canvasGroup = GetComponent<CanvasGroup>();
 
             if (!instantiateVisual) return;
             if(!cardVisualPrefab || UIVisualCardsHandler.instance == null) return;
@@ -112,6 +119,7 @@ namespace Project.UI.Battle
         {
             PointerEnterEvent.Invoke(this);
             isHovering = true;
+            startPosition = transform.position;
         }
 
         public void OnPointerExit(PointerEventData eventData)
@@ -139,6 +147,33 @@ namespace Project.UI.Battle
 
             PointerUpEvent.Invoke(this, pointerUpTime - pointerDownTime > .2f);
 
+            var raycaster = canvas.GetComponent<GraphicRaycaster>();
+            var raycastList = new List<RaycastResult>();
+            canvasGroup.blocksRaycasts = false;
+
+            var pointerEventData = new PointerEventData(EventSystem.current)
+            {
+                position = eventData.position
+            };
+            raycaster.Raycast(pointerEventData, raycastList);
+
+            var wasCardSlot = false;
+            foreach (var result in raycastList)
+            {
+                if (result.gameObject.TryGetComponent(out UICardSlot cardSlot))
+                {
+                    cardSlot.PlaceCard(this);
+                    wasCardSlot = true;
+                    break;
+                }
+            }
+            if (!wasCardSlot)
+            {
+                transform.DOMove(startPosition, 0.15f).SetEase(Ease.OutBack);
+            }
+
+            canvasGroup.blocksRaycasts = true;
+            
             if (pointerUpTime - pointerDownTime > .2f)
                 return;
 
