@@ -66,13 +66,9 @@ namespace Project.UI.Battle
         {
             if (selectedCard == null)
                 return;
-
-            selectedCard.transform.DOLocalMove(selectedCard.selected ? new Vector3(0,selectedCard.selectionOffset,0) : Vector3.zero, tweenCardReturn ? .15f : 0).SetEase(Ease.OutBack);
-
+            
             rect.sizeDelta += Vector2.right;
             rect.sizeDelta -= Vector2.right;
-
-            selectedCard = null;
 
         }
 
@@ -97,15 +93,7 @@ namespace Project.UI.Battle
 
                 }
             }
-
-            if (Input.GetMouseButtonDown(1))
-            {
-                foreach (UICardMovement card in cards)
-                {
-                    card.Deselect();
-                }
-            }
-
+            
             if (selectedCard == null)
                 return;
 
@@ -143,7 +131,6 @@ namespace Project.UI.Battle
             Transform crossedParent = cards[index].transform.parent;
 
             cards[index].transform.SetParent(focusedParent);
-            cards[index].transform.localPosition = cards[index].selected ? new Vector3(0, cards[index].selectionOffset, 0) : Vector3.zero;
             selectedCard.transform.SetParent(crossedParent);
 
             isCrossing = false;

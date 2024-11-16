@@ -18,16 +18,11 @@ namespace Project.UI.Battle
         private Vector3 offset;
         private CanvasGroup canvasGroup;
         private Vector3 startPosition;
+        private UICardSlot cardSlot;
 
         [Header("Movement")]
         [SerializeField] private float moveSpeedLimit = 50;
         [SerializeField] private bool returnToHoverStartPosition = true;
-
-        [Header("Selection")]
-        public bool selected;
-        public float selectionOffset = 50;
-        private float pointerDownTime;
-        private float pointerUpTime;
 
         [Header("Visual")]
         [SerializeField] private GameObject cardVisualPrefab;
@@ -45,7 +40,6 @@ namespace Project.UI.Battle
         [HideInInspector] public UnityEvent<UICardMovement> PointerDownEvent;
         [HideInInspector] public UnityEvent<UICardMovement> BeginDragEvent;
         [HideInInspector] public UnityEvent<UICardMovement> EndDragEvent;
-        [HideInInspector] public UnityEvent<UICardMovement, bool> SelectEvent;
 
         void Start()
         {
@@ -133,20 +127,15 @@ namespace Project.UI.Battle
         {
             if (eventData.button != PointerEventData.InputButton.Left)
                 return;
-
+            
             PointerDownEvent.Invoke(this);
-            pointerDownTime = Time.time;
         }
 
         public void OnPointerUp(PointerEventData eventData)
         {
             if (eventData.button != PointerEventData.InputButton.Left)
                 return;
-
-            pointerUpTime = Time.time;
-
-            PointerUpEvent.Invoke(this, pointerUpTime - pointerDownTime > .2f);
-
+            
             var raycaster = canvas.GetComponent<GraphicRaycaster>();
             var raycastList = new List<RaycastResult>();
             canvasGroup.blocksRaycasts = false;
@@ -160,48 +149,33 @@ namespace Project.UI.Battle
             var wasCardSlot = false;
             foreach (var result in raycastList)
             {
-                if (result.gameObject.TryGetComponent(out UICardSlot cardSlot))
-                {
-                    cardSlot.PlaceCard(this);
-                    wasCardSlot = true;
-                    break;
-                }
+                if (result.gameObject.TryGetComponent(out UICardSlot slot))
+                    wasCardSlot = TryPlaceCard(slot);
             }
             if (!wasCardSlot)
             {
-                transform.DOMove(startPosition, 0.15f).SetEase(Ease.OutBack);
+                transform.DOMove(cardSlot ? cardSlot.transform.position : startPosition, 0.15f).SetEase(Ease.OutBack);
             }
 
             canvasGroup.blocksRaycasts = true;
-            
-            if (pointerUpTime - pointerDownTime > .2f)
-                return;
 
-            if (wasDragged)
-                return;
-
-            selected = !selected;
-            SelectEvent.Invoke(this, selected);
-
-            if (selected)
-                transform.localPosition += (uiCardVisual.transform.up * selectionOffset);
-            else
-                transform.localPosition = Vector3.zero;
+            PointerUpEvent?.Invoke(this, false);
         }
 
-        public void Deselect()
+        public bool TryPlaceCard(UICardSlot slot)
         {
-            if (selected)
+            if (slot == null) return false;
+
+            if (slot.TryPlaceCard(this))
             {
-                selected = false;
-                if (selected)
-                    transform.localPosition += (uiCardVisual.transform.up * 50);
-                else
-                    transform.localPosition = Vector3.zero;
+                cardSlot?.TryRemoveCard(this);
+                cardSlot = slot;
+                return true;
             }
+
+            return false;
         }
-
-
+        
         public int SiblingAmount()
         {
             return transform.parent.CompareTag("Slot") ? transform.parent.parent.childCount - 1 : 0;

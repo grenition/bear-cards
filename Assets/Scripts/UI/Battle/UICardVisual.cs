@@ -82,7 +82,6 @@ namespace Project.UI.Battle
             parentCard.EndDragEvent.AddListener(EndDrag);
             parentCard.PointerDownEvent.AddListener(PointerDown);
             parentCard.PointerUpEvent.AddListener(PointerUp);
-            parentCard.SelectEvent.AddListener(Select);
 
             //Initialization
             initalize = true;
@@ -153,7 +152,6 @@ namespace Project.UI.Battle
 
             if(scaleAnimations)
                 transform.DOScale(scaleOnHover, scaleTransition).SetEase(scaleEase);
-
         }
 
         public void Swap(float dir = 1)
@@ -197,7 +195,7 @@ namespace Project.UI.Battle
         private void PointerUp(UICardMovement card, bool longPress)
         {
             if(scaleAnimations)
-                transform.DOScale(longPress ? scaleOnHover : scaleOnSelect, scaleTransition).SetEase(scaleEase);
+                transform.DOScale(scaleOnHover, scaleTransition).SetEase(scaleEase);
             canvas.overrideSorting = false;
 
             visualShadow.localPosition = shadowDistance;
