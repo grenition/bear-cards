@@ -46,10 +46,10 @@ namespace Project.UI.Battle
             canvas = GetComponentInParent<Canvas>();
             imageComponent = GetComponent<Image>();
 
-            if (!instantiateVisual)
-                return;
-
-            visualHandler = FindObjectOfType<UIVisualCardsHandler>();
+            if (!instantiateVisual) return;
+            if(!cardVisualPrefab || UIVisualCardsHandler.instance == null) return;
+            
+            visualHandler = UIVisualCardsHandler.instance;
             uiCardVisual = Instantiate(cardVisualPrefab, visualHandler ? visualHandler.transform : canvas.transform).GetComponent<UICardVisual>();
             uiCardVisual.Initialize(this);
         }
