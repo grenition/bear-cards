@@ -18,7 +18,7 @@ namespace Project.UI.Battle
 
         [Header("References")]
         public Transform visualShadow;
-        private float shadowOffset = 20;
+        [SerializeField] private float shadowOffset = 20;
         private Vector2 shadowDistance;
         private Canvas shadowCanvas;
         [SerializeField] private Transform shakeParent;
