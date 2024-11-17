@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b04a454349ce7b4cbd98de73f135c2d, type: 3}
+  m_Name: LocationFirst
+  m_EditorClassIdentifier: 
+  LocationLevel: 7
+  MinimumFork: 0
+  MaximumFork: 0
+  StartResourcesMinimum: 0
+  StartResourcesMaximum: 0
+  Keys: []
+  PricePoint:
+  - {fileID: 11400000, guid: 74c428f23962a3f478cf6f0148492f32, type: 2}
+  - {fileID: 11400000, guid: 56861ffa748c10143a94cc84da71be10, type: 2}
+  EnemyPoint:
+  - {fileID: 11400000, guid: 8757072b962789d4298788cb4c324304, type: 2}
