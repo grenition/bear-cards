@@ -60,7 +60,6 @@ namespace Project.UI.Battle
 
         private float curveYOffset;
         private float curveRotationOffset;
-        private Coroutine pressCoroutine;
 
         private void Start()
         {
@@ -69,6 +68,8 @@ namespace Project.UI.Battle
 
         public void Initialize(UICardMovement target, int index = 0)
         {
+            transform.position = target.transform.position;
+            
             //Declarations
             parentCard = target;
             cardTransform = target.transform;

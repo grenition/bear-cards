@@ -4,9 +4,10 @@ namespace Project.Gameplay.Battle
 {
     public class BattleController : MonoBehaviour
     {
-        private void Start()
+        public static BattleModel Model { get; private set; }
+        private void Awake()
         {
-            var battleModel = new BattleModel("enemy1");
+            Model = new BattleModel("enemy1");
         }
     }
 }

@@ -6,16 +6,16 @@ namespace Project.Gameplay.Battle
 {
     public class BattleModel
     {
-        public CardPlayerModel player;
-        public CardPlayerModel enemy;
+        public CardPlayerModel Player;
+        public CardPlayerModel Enemy;
         
-        public CardModel[] playerField = new CardModel[4];
-        public CardModel[] enemyField = new CardModel[4];
+        public CardModel[] PlayerField = new CardModel[4];
+        public CardModel[] EnemyField = new CardModel[4];
         
         public BattleModel(string enemyKey)
         {
-            this.player = new CardPlayerModel(Constants.Player, this);
-            this.enemy = new CardPlayerModel(enemyKey, this);
+            this.Player = new CardPlayerModel(Constants.Player, this);
+            this.Enemy = new CardPlayerModel(enemyKey, this);
         }
 
         public bool TryGetCardPosition(CardModel model, out CardPosition cardPosition)
@@ -23,31 +23,31 @@ namespace Project.Gameplay.Battle
             cardPosition = default;
             if (model == null) return false;
 
-            for (int i = 0; i < playerField.Length; i++)
+            for (int i = 0; i < PlayerField.Length; i++)
             {
-                if (playerField[i] == model)
+                if (PlayerField[i] == model)
                 {
                     cardPosition = new CardPosition(CardContainer.field, CardOwner.player, i);
                     return true;
                 }
             }
-            for (int i = 0; i < enemyField.Length; i++)
+            for (int i = 0; i < EnemyField.Length; i++)
             {
-                if (enemyField[i] == model)
+                if (EnemyField[i] == model)
                 {
                     cardPosition = new CardPosition(CardContainer.field, CardOwner.enemy, i);
                     return true;
                 }
             }
 
-            if (player.TryGetCardPosition(model, out cardPosition))
+            if (Player.TryGetCardPosition(model, out cardPosition))
                 return true;
-            if (enemy.TryGetCardPosition(model, out cardPosition))
+            if (Enemy.TryGetCardPosition(model, out cardPosition))
                 return true;
 
             return false;
         }
-        public bool IsCardPlayerEnemy(CardPlayerModel cardPlayerModel) => enemy == cardPlayerModel;
+        public bool IsCardPlayerEnemy(CardPlayerModel cardPlayerModel) => Enemy == cardPlayerModel;
 
     }
 }

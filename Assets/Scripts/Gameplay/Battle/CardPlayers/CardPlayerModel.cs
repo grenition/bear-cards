@@ -10,6 +10,8 @@ namespace Project.Gameplay.Battle.CardPlayers
     {
         public CardPlayerConfig Config => StaticData.CardPlayers.Get(_key);
         public CardOwner OwnershipType => _battleModel.IsCardPlayerEnemy(this) ? CardOwner.enemy : CardOwner.player;
+        public IReadOnlyList<CardModel> Hand => _hand;
+        public IReadOnlyList<CardModel> Deck => _deck;
         
         protected string _key;
         protected List<CardModel> _hand;

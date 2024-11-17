@@ -5,7 +5,9 @@
         "GreonAssets",
         "Scripts.Gameplay",
         "Scripts.Infrastructure",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "R3.Unity",
+        "UniTask"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
