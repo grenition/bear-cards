@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2901956881632279832
+--- !u!1001 &1384827851243643152
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3317473288056761577, guid: 8c9302bd039434499a3df923384a660e, type: 3}
       propertyPath: m_Name
-      value: CardSlotPlayerHand
+      value: CardSlotPlayerField
       objectReference: {fileID: 0}
     - target: {fileID: 6014250014683312962, guid: 8c9302bd039434499a3df923384a660e, type: 3}
       propertyPath: m_Pivot.x
@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6014250014683312962, guid: 8c9302bd039434499a3df923384a660e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 80
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 6014250014683312962, guid: 8c9302bd039434499a3df923384a660e, type: 3}
       propertyPath: m_SizeDelta.y
@@ -93,20 +93,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7540747278467654857, guid: 8c9302bd039434499a3df923384a660e, type: 3}
+      propertyPath: highlightable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540747278467654857, guid: 8c9302bd039434499a3df923384a660e, type: 3}
       propertyPath: <PlayerCanDropCard>k__BackingField
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7540747278467654857, guid: 8c9302bd039434499a3df923384a660e, type: 3}
-      propertyPath: <PlayerCanPickUpCard>k__BackingField
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7540747278467654857, guid: 8c9302bd039434499a3df923384a660e, type: 3}
-      propertyPath: <AllowCardCurvePositioning>k__BackingField
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9052642449491183137, guid: 8c9302bd039434499a3df923384a660e, type: 3}
-      propertyPath: m_Color.a
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

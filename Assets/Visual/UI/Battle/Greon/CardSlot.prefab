@@ -88,3 +88,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59acd7108c0634ea49697c581efc86d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <AllowCardCurvePositioning>k__BackingField: 0
+  <PlayerCanPickUpCard>k__BackingField: 0
+  <PlayerCanDropCard>k__BackingField: 0
+  colorTransition: 0.15
+  background: {fileID: 9052642449491183137}
+  highlightedColor: {r: 0.47058824, g: 0.77254903, b: 0.50980395, a: 0.30980393}
+  highlightEase: 3
+  highlightable: 0

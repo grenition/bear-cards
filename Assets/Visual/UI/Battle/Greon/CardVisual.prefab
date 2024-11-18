@@ -562,6 +562,7 @@ MonoBehaviour:
   scaleAnimations: 1
   scaleOnHover: 1.07
   scaleOnSelect: 1.2
+  scaleOnSlot: 1
   scaleTransition: 0.15
   scaleEase: 27
   selectPunchAmount: 20

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
-using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -13,18 +12,19 @@ namespace Project.UI.Battle
     {
         private Canvas canvas;
         private Image imageComponent;
-        [SerializeField] private bool instantiateVisual = true;
         private UIVisualCardsHandler visualHandler;
         private Vector3 offset;
         private CanvasGroup canvasGroup;
         private Vector3 startPosition;
         private UICardSlot cardSlot;
 
-        [Header("Movement")]
+        [field: Header("Movement")]
+        [field: SerializeField] public bool Interactable { get; set; } = true;
         [SerializeField] private float moveSpeedLimit = 50;
         [SerializeField] private bool returnToHoverStartPosition = true;
 
         [Header("Visual")]
+        [SerializeField] private bool instantiateVisual = true;
         [SerializeField] private GameObject cardVisualPrefab;
         [HideInInspector] public UICardVisual uiCardVisual;
 
@@ -40,12 +40,21 @@ namespace Project.UI.Battle
         [HideInInspector] public UnityEvent<UICardMovement> PointerDownEvent;
         [HideInInspector] public UnityEvent<UICardMovement> BeginDragEvent;
         [HideInInspector] public UnityEvent<UICardMovement> EndDragEvent;
+        [HideInInspector] public UnityEvent<UICardMovement, UICardSlot> SlotEnterEvent;
+        [HideInInspector] public UnityEvent<UICardMovement, UICardSlot> SlotExitEvent;
 
+        private bool pointerEntered = false;
+        private bool pointerPressed = false;
+        public UICardSlot slotUnderCursor;
+        private GraphicRaycaster raycaster;
+        
         void Start()
         {
             canvas = GetComponentInParent<Canvas>();
             imageComponent = GetComponent<Image>();
             canvasGroup = GetComponent<CanvasGroup>();
+            raycaster = canvas.GetComponent<GraphicRaycaster>();
+
 
             if (!instantiateVisual) return;
             if(!cardVisualPrefab || UIVisualCardsHandler.instance == null) return;
@@ -82,6 +91,9 @@ namespace Project.UI.Battle
 
         public void OnBeginDrag(PointerEventData eventData)
         {
+            if (!Interactable)
+                return;
+            
             BeginDragEvent.Invoke(this);
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             offset = mousePosition - (Vector2)transform.position;
@@ -94,10 +106,30 @@ namespace Project.UI.Battle
 
         public void OnDrag(PointerEventData eventData)
         {
+            var newSlot = GetAvailableCardSlotUnderCursor(eventData);
+
+            if (newSlot == null)
+            {
+                if(slotUnderCursor != null)
+                    SlotExitEvent?.Invoke(this, slotUnderCursor);
+                slotUnderCursor = null;
+                return;
+            }
+
+            if(newSlot == slotUnderCursor) return;
+            if(slotUnderCursor != null)
+                SlotExitEvent?.Invoke(this, slotUnderCursor);
+
+            slotUnderCursor = newSlot;
+            if(Interactable)
+                SlotEnterEvent?.Invoke(this, slotUnderCursor);
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
+            if (!Interactable && !isDragging)
+                return;
+            
             EndDragEvent.Invoke(this);
             isDragging = false;
             canvas.GetComponent<GraphicRaycaster>().enabled = true;
@@ -114,6 +146,10 @@ namespace Project.UI.Battle
 
         public void OnPointerEnter(PointerEventData eventData)
         {
+            if (!Interactable)
+                return;
+            
+            pointerEntered = true;
             PointerEnterEvent.Invoke(this);
             isHovering = true;
             startPosition = transform.position;
@@ -121,6 +157,10 @@ namespace Project.UI.Battle
 
         public void OnPointerExit(PointerEventData eventData)
         {
+            if (!Interactable && !pointerEntered)
+                return;
+            
+            pointerEntered = false;
             PointerExitEvent.Invoke(this);
             isHovering = false;
         }
@@ -128,40 +168,37 @@ namespace Project.UI.Battle
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            if (eventData.button != PointerEventData.InputButton.Left)
+            if (!Interactable)
                 return;
             
+            if (eventData.button != PointerEventData.InputButton.Left)
+                return;
+
+            pointerPressed = true;
+            slotUnderCursor = null;
             PointerDownEvent.Invoke(this);
         }
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            if (eventData.button != PointerEventData.InputButton.Left)
+            if (!Interactable && !pointerPressed)
                 return;
             
-            var raycaster = canvas.GetComponent<GraphicRaycaster>();
-            var raycastList = new List<RaycastResult>();
-            canvasGroup.blocksRaycasts = false;
+            if (eventData.button != PointerEventData.InputButton.Left)
+                return;
 
-            var pointerEventData = new PointerEventData(EventSystem.current)
-            {
-                position = eventData.position
-            };
-            raycaster.Raycast(pointerEventData, raycastList);
+            pointerPressed = false;
 
-            var wasCardSlot = false;
-            foreach (var result in raycastList)
+            slotUnderCursor = GetAvailableCardSlotUnderCursor(eventData);
+
+            var cardPlaced = false;
+            if (slotUnderCursor != null && slotUnderCursor.PlayerCanDropCard)
             {
-                if (result.gameObject.TryGetComponent(out UICardSlot slot))
-                    wasCardSlot = TryPlaceCard(slot);
+                cardPlaced = TryPlaceCard(slotUnderCursor);
             }
-            if (!wasCardSlot)
-            {
+            if(!cardPlaced)
                 transform.DOMove(cardSlot ? cardSlot.transform.position : startPosition, 0.15f).SetEase(Ease.OutBack);
-            }
-
-            canvasGroup.blocksRaycasts = true;
-
+            
             PointerUpEvent?.Invoke(this, false);
         }
 
@@ -181,7 +218,7 @@ namespace Project.UI.Battle
         
         public int SiblingAmount()
         {
-            return cardSlot ? cardSlot.transform.parent.childCount - 1 : 0;
+            return cardSlot && cardSlot.AllowCardCurvePositioning ? cardSlot.transform.parent.childCount - 1 : 0;
         }
 
         public int ParentIndex()
@@ -199,5 +236,26 @@ namespace Project.UI.Battle
             if(uiCardVisual != null)
                 Destroy(uiCardVisual.gameObject);
         }
+        private UICardSlot GetAvailableCardSlotUnderCursor(PointerEventData eventData)
+        {
+            var raycastList = new List<RaycastResult>();
+            canvasGroup.blocksRaycasts = false;
+
+            var pointerEventData = new PointerEventData(EventSystem.current)
+            {
+                position = eventData.position
+            };
+            raycaster.Raycast(pointerEventData, raycastList);
+            canvasGroup.blocksRaycasts = true;
+            
+            foreach (var result in raycastList)
+            {
+                if (result.gameObject.TryGetComponent(out UICardSlot slot) && slot.IsAvailable)
+                    return slot;
+            }
+            
+            return null;
+        }
+        
     }
 }

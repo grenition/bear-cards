@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -83,9 +84,33 @@ namespace Project.UI.Battle
             parentCard.EndDragEvent.AddListener(EndDrag);
             parentCard.PointerDownEvent.AddListener(PointerDown);
             parentCard.PointerUpEvent.AddListener(PointerUp);
+            parentCard.SlotEnterEvent.AddListener(SlotEnter);
+            parentCard.SlotExitEvent.AddListener(SlotExit);
 
             //Initialization
             initalize = true;
+        }
+        private void OnDestroy()
+        {
+            parentCard.PointerEnterEvent.RemoveListener(PointerEnter);
+            parentCard.PointerExitEvent.RemoveListener(PointerExit);
+            parentCard.BeginDragEvent.RemoveListener(BeginDrag);
+            parentCard.EndDragEvent.RemoveListener(EndDrag);
+            parentCard.PointerDownEvent.RemoveListener(PointerDown);
+            parentCard.PointerUpEvent.RemoveListener(PointerUp);
+            parentCard.SlotEnterEvent.RemoveListener(SlotEnter);
+            parentCard.SlotExitEvent.RemoveListener(SlotExit);
+        }
+        
+        private void SlotEnter(UICardMovement card, UICardSlot slot)
+        {
+            if(slot == null) return;
+            slot.SetHighlight(true);
+        }
+        private void SlotExit(UICardMovement card, UICardSlot slot)
+        {
+            if(slot == null) return;
+            slot.SetHighlight(false);
         }
 
         public void UpdateIndex(int length)
@@ -101,7 +126,7 @@ namespace Project.UI.Battle
             SmoothFollow();
             FollowRotation();
             CardTilt();
-
+            
         }
 
         private void HandPositioning()
