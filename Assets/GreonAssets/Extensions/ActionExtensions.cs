@@ -37,5 +37,22 @@ namespace GreonAssets.Extensions
                 }
             }
         }
+        
+        public static void SafeInvoke<T0, T1>(this Action<T0, T1> action, T0 arg0, T1 arg1)
+        {
+            if (action == null) return;
+
+            foreach (var subscriber in action.GetInvocationList())
+            {
+                try
+                {
+                    ((Action<T0, T1>)subscriber).Invoke(arg0, arg1);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error while executing subscriber: {ex.Message}");
+                }
+            }
+        }
     }
 }

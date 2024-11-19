@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Project.Gameplay.Battle.Cards;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -10,14 +11,8 @@ namespace Project.UI.Battle
 {
     public class UICardMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerUpHandler, IPointerDownHandler
     {
-        private Canvas canvas;
-        private Image imageComponent;
-        private UIVisualCardsHandler visualHandler;
-        private Vector3 offset;
-        private CanvasGroup canvasGroup;
-        private Vector3 startPosition;
-        private UICardSlot cardSlot;
-
+        public CardModel AssociatedCardModel { get; set; }
+        
         [field: Header("Movement")]
         [field: SerializeField] public bool Interactable { get; set; } = true;
         [SerializeField] private float moveSpeedLimit = 50;
@@ -43,6 +38,13 @@ namespace Project.UI.Battle
         [HideInInspector] public UnityEvent<UICardMovement, UICardSlot> SlotEnterEvent;
         [HideInInspector] public UnityEvent<UICardMovement, UICardSlot> SlotExitEvent;
 
+        private Canvas canvas;
+        private Image imageComponent;
+        private UIVisualCardsHandler visualHandler;
+        private Vector3 offset;
+        private CanvasGroup canvasGroup;
+        private Vector3 startPosition;
+        private UICardSlot cardSlot;
         private bool pointerEntered = false;
         private bool pointerPressed = false;
         public UICardSlot slotUnderCursor;

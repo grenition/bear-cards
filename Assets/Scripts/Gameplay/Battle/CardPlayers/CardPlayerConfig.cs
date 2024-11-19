@@ -13,6 +13,10 @@ namespace Project.Gameplay.Battle.CardPlayers
         
         [field: Header("Game")]
         [field: SerializeField] public List<CardConfig> Hand { get; private set; }
+        [field: SerializeField] public int HandSize { get; private set; } = 8;
         [field: SerializeField] public List<CardConfig> Deck { get; private set; }
+        [field: SerializeField] public int DeckSize { get; private set; } = 20;
+        [field: SerializeField] public List<CardConfig> Spells { get; private set; }
+        [field: SerializeField] public int SpellsSize { get; private set; } = 5;
     }
 }

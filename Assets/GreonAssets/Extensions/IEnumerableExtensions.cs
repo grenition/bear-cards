@@ -60,6 +60,17 @@ namespace GreonAssets.Extensions
 
             return enumerable.Append(obj);
         }
+        
+        public static T GetAt<T>(this IReadOnlyList<T> list, int index)
+        {
+            if (list.Count <= index) return default;
+            return list[index];
+        }
+        public static T GetAt<T>(this T[] array, int index)
+        {
+            if (array.Length <= index) return default;
+            return array[index];
+        }
     }
 
     public static class DictionaryExtensions

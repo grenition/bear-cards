@@ -7,23 +7,23 @@ namespace Project.Gameplay.Battle.Cards
     }
     public enum CardContainer
     {
-        none,
         deck,
         hand,
-        field
+        field,
+        spells
     }
     
     public struct CardPosition
     {
         public CardContainer container;
         public CardOwner owner;
-        public int position;
+        public int index;
         
-        public CardPosition(CardContainer container, CardOwner owner, int position)
+        public CardPosition(CardContainer container, CardOwner owner, int index)
         {
             this.container = container;
             this.owner = owner;
-            this.position = position;
+            this.index = index;
         }
     }
 }
