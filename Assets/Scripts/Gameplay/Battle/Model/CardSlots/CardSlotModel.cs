@@ -1,7 +1,7 @@
 using System;
-using Project.Gameplay.Battle.Cards;
+using Project.Gameplay.Battle.Model.Cards;
 
-namespace Project.Gameplay.Battle.CardSlots
+namespace Project.Gameplay.Battle.Model.CardSlots
 {
     public struct CardSlotPermissions
     {

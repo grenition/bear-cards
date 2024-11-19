@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Project.Gameplay.Battle.Cards;
+using Project.Gameplay.Battle.Model.Cards;
 using UnityEngine;
 
-namespace Project.Gameplay.Battle.CardPlayers
+namespace Project.Gameplay.Battle.Model.CardPlayers
 {
     [CreateAssetMenu(menuName = "Gameplay/CardPlayerConfig", fileName = "CardPlayer")]
     public class CardPlayerConfig : ScriptableObject
@@ -18,5 +18,7 @@ namespace Project.Gameplay.Battle.CardPlayers
         [field: SerializeField] public int DeckSize { get; private set; } = 20;
         [field: SerializeField] public List<CardConfig> Spells { get; private set; }
         [field: SerializeField] public int SpellsSize { get; private set; } = 5;
+        [field: SerializeField] public int CardsAtFirstTurn { get; private set; } = 4;
+        [field: SerializeField] public int CardsAtAnotherTurns { get; private set; } = 1;
     }
 }

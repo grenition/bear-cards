@@ -1,4 +1,4 @@
-using Project.Gameplay.Battle.Cards;
+using Project.Gameplay.Battle.Model.Cards;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

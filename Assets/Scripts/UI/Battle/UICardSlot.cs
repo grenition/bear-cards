@@ -2,8 +2,8 @@ using System;
 using DG.Tweening;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle;
-using Project.Gameplay.Battle.Cards;
-using Project.Gameplay.Battle.CardSlots;
+using Project.Gameplay.Battle.Model.Cards;
+using Project.Gameplay.Battle.Model.CardSlots;
 using UnityEngine;
 using UnityEngine.UI;
 

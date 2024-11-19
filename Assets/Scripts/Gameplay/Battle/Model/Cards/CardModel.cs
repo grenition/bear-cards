@@ -1,13 +1,13 @@
 using System;
 using GreonAssets.Extensions;
-using Project.Gameplay.Data;
+using Project.Gameplay.Battle.Data;
 
-namespace Project.Gameplay.Battle.Cards
+namespace Project.Gameplay.Battle.Model.Cards
 {
     public class CardModel : IDisposable
     {
         public string Key { get; protected set; }
-        public CardConfig Config => StaticData.Cards.Get(Key);
+        public CardConfig Config => BattleStaticData.Cards.Get(Key);
         public CardPosition Position { get; internal set; }
         public BattleModel BattleModel { get; protected set; }
         public int Damage { get; protected set; }

@@ -2,20 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using GreonAssets.Extensions;
-using Project.Gameplay.Battle.CardPlayers;
-using Project.Gameplay.Battle.Cards;
-using Project.Gameplay.Battle.CardSlots;
-using Project.Gameplay.Data;
+using Project.Gameplay.Battle.Data;
+using Project.Gameplay.Battle.Model.CardPlayers;
+using Project.Gameplay.Battle.Model.Cards;
+using Project.Gameplay.Battle.Model.CardSlots;
 using Project.Infrastructure;
 
-namespace Project.Gameplay.Battle
+namespace Project.Gameplay.Battle.Model
 {
     public class BattleModel : IDisposable
     {
         public event Action<CardModel, CardPosition, CardPosition> OnCardTransfered;
         
         public string Key { get; protected set; }
-        public BattleConfig Config => StaticData.Battles.Get(Key);
+        public BattleConfig Config => BattleStaticData.Battles.Get(Key);
         public CardPlayerModel Player { get; protected set;}
         public CardPlayerModel Enemy { get; protected set; }
         public List<CardSlotModel> PlayerField { get; protected set; } = new();

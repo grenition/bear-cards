@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using GreonAssets.Extensions;
-using Project.Gameplay.Battle.CardSlots;
+using Project.Gameplay.Battle.Model.CardSlots;
 using R3;
 using UnityEngine;
 

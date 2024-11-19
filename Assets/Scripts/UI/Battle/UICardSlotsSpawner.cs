@@ -1,6 +1,6 @@
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle;
-using Project.Gameplay.Battle.Cards;
+using Project.Gameplay.Battle.Model.Cards;
 using UnityEngine;
 
 namespace Project.UI.Battle

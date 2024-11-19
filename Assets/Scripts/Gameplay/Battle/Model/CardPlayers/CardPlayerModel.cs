@@ -1,16 +1,17 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using GreonAssets.Extensions;
-using Project.Gameplay.Battle.Cards;
-using Project.Gameplay.Battle.CardSlots;
-using Project.Gameplay.Data;
+using Project.Gameplay.Battle.Data;
+using Project.Gameplay.Battle.Model.Cards;
+using Project.Gameplay.Battle.Model.CardSlots;
 
-namespace Project.Gameplay.Battle.CardPlayers
+namespace Project.Gameplay.Battle.Model.CardPlayers
 {
     public class CardPlayerModel : IDisposable
     {
         public string Key { get; protected set; }
-        public CardPlayerConfig Config => StaticData.CardPlayers.Get(Key);
+        public CardPlayerConfig Config => BattleStaticData.CardPlayers.Get(Key);
         public BattleModel BattleModel { get; protected set; }
         public CardOwner OwnershipType { get; protected set; }
         public List<CardSlotModel> Hand { get; protected set; } = new();
@@ -47,6 +48,21 @@ namespace Project.Gameplay.Battle.CardPlayers
             Hand.ForEach(x => x.Dispose());
             Deck.ForEach(x => x.Dispose());
             Spells.ForEach(x => x.Dispose());
+        }
+
+        public CardModel GetFirstCardInHand() => Hand.FirstOrDefault(x => x.Card != null)?.Card;
+        public CardModel GetFirstCardInDeck() => Deck.FirstOrDefault(x => x.Card != null)?.Card;
+        public CardModel GetFirstCardInSpells() => Spells.FirstOrDefault(x => x.Card != null)?.Card;
+        public CardSlotModel GetFirstFreeSlotInHand() => Hand.FirstOrDefault(x => x.Card == null);
+        public CardSlotModel GetFirstFreeSlotInDeck() => Deck.FirstOrDefault(x => x.Card == null);
+        public CardSlotModel GetFirstFreeSlotInSpells() => Spells.FirstOrDefault(x => x.Card == null);
+        public void TransferCardFromDeckToHand()
+        {
+            var card = GetFirstCardInDeck();
+            var targetSlot = GetFirstFreeSlotInHand();
+            if (card == null || targetSlot == null) return;
+
+            BattleModel.TryTransferCard(card.Position, targetSlot.Position);
         }
     }
 }

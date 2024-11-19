@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Project.Gameplay.Battle.Cards
+namespace Project.Gameplay.Battle.Model.Cards
 {
     [CreateAssetMenu(menuName = "Gameplay/CardConfig", fileName = "Card")]
     public class CardConfig : ScriptableObject

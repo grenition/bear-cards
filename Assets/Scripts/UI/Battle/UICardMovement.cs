@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
-using Project.Gameplay.Battle.Cards;
+using Project.Gameplay.Battle.Model.Cards;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
