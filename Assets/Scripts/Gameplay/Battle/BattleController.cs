@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Project.Gameplay.Battle
@@ -7,7 +8,11 @@ namespace Project.Gameplay.Battle
         public static BattleModel Model { get; private set; }
         private void Awake()
         {
-            Model = new BattleModel("enemy1");
+            Model = new BattleModel("demo_battle");
+        }
+        private void OnDestroy()
+        {
+            Model.Dispose();
         }
     }
 }

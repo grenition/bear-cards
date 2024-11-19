@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using GreonAssets.Extensions;
-using Project.Gameplay.Battle.Cards;
+using Project.Gameplay.Battle.CardSlots;
 using R3;
 using UnityEngine;
 
@@ -18,19 +18,22 @@ namespace Project.UI.Battle
 
         private List<UICardSlot> slots = new();
 
-        public async void AddCards(IEnumerable<CardModel> cards)
+        public async void AddDynamicSlots(IEnumerable<CardSlotModel> newSlots)
         {
-            foreach (var card in cards.ToList())
+            foreach (var slot in newSlots.ToList())
             {
-                AddCard(card);
+                AddSynamicSlot(slot);
                 await UniTask.WaitForSeconds(cardsSpawnDelay);
             }
         }
         
-        public async void AddCard(CardModel cardModel)
+        public async void AddSynamicSlot(CardSlotModel slotModel)
         {
+            if(slotModel == null || slotModel.Card == null) return;
+            
             var newSlot = Instantiate(cardSlotPrefab, cardSlotsRoot);
             var newCard = Instantiate(cardPrefab, cardsSpawnPoint.position, cardsSpawnPoint.rotation, UICardsHandler.instance.transform);
+            newSlot.Init(slotModel);
             slots.Add(newSlot);
             
             void OnCardRemoved(UICardMovement obj)
@@ -47,7 +50,7 @@ namespace Project.UI.Battle
 
             await UniTask.NextFrame();
             newCard.TryPlaceCard(newSlot);
-            newCard.uiCardVisual.GetComponent<UICard>().Init(cardModel);
+            newCard.uiCardVisual.GetComponent<UICard>().Init(slotModel.Card);
         }
     }
 }

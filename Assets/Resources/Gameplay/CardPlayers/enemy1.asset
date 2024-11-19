@@ -19,5 +19,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bd01e8a9a809349b688ae8a1a516fd36, type: 2}
   - {fileID: 11400000, guid: bd01e8a9a809349b688ae8a1a516fd36, type: 2}
   - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+  <HandSize>k__BackingField: 4
   <Deck>k__BackingField:
   - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
+  <DeckSize>k__BackingField: 20
+  <Spells>k__BackingField: []
+  <SpellsSize>k__BackingField: 5

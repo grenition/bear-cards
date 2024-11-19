@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Project.Gameplay.Battle;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ namespace Project.UI.Battle
         private void Update()
         {
             if(Input.GetKeyDown(KeyCode.Space))
-                AddCards(BattleController.Model.Player.Hand);
+                AddDynamicSlots(BattleController.Model.Player.Hand);
         }
     }
 }

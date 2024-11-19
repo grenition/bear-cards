@@ -3,6 +3,7 @@ using DG.Tweening;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Cards;
+using Project.Gameplay.Battle.CardSlots;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,14 +12,13 @@ namespace Project.UI.Battle
     public class UICardSlot : MonoBehaviour
     {
         public bool IsAvailable => BattleController.Model.IsPlaceAvailableForPlayerCard(CardPosition);
+        public CardSlotModel SlotModel { get; protected set; }
+        public bool PlayerCanPickUpCard => SlotModel.IsAvailableForPickUp(CardOwner.player);
+        public bool PlayerCanDropCard => SlotModel.IsAvailableForDrop(CardOwner.player);
+        public CardPosition CardPosition => SlotModel.Position;
         
-        [field: Header("Game preferences")]
-        [field: SerializeField] public bool AllowCardCurvePositioning { get; protected set; }
-        [field: SerializeField] public bool PlayerCanPickUpCard { get; protected set; }
-        [field: SerializeField] public bool PlayerCanDropCard { get; protected set; }
-        [field: SerializeField] public CardPosition CardPosition { get; set; }
-
         [Header("Visual")]
+        [field: SerializeField] public bool AllowCardCurvePositioning { get; protected set; }
         [SerializeField] private float colorTransition = 0.2f;
         [SerializeField] private Image background;
         [SerializeField] private Color highlightedColor;
@@ -37,7 +37,10 @@ namespace Project.UI.Battle
         {
             baseColor = background.color;
         }
-
+        public void Init(CardSlotModel slotModel)
+        {
+            SlotModel = slotModel;
+        }
         public bool TryPlaceCard(UICardMovement card)
         {
             if(card == null || CurrentCard != null) return false;
