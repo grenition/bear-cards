@@ -12,8 +12,7 @@ namespace Project.Gameplay.Battle
 {
     public class BattleModel : IDisposable
     {
-        public event Action<CardModel, CardPosition> OnCardPlaced;
-        public event Action<CardModel, CardPosition> OnCardPickedUp;
+        public event Action<CardModel, CardPosition, CardPosition> OnCardTransfered;
         
         public string Key { get; protected set; }
         public BattleConfig Config => StaticData.Battles.Get(Key);
@@ -91,92 +90,27 @@ namespace Project.Gameplay.Battle
             return slot != null && slot.IsAvailableForDrop(CardOwner.player);
         }
         #endregion
-        
-        // public CardModel PickUpCard(CardPosition position)
-        // {
-        //     CardModel PickUpFromField(CardModel[] field, int index)
-        //     {
-        //         if (index >= field.Length) return null;
-        //         var savedPtr = field[index];
-        //         field[index] = null;
-        //         return savedPtr;
-        //     }
-        //
-        //     CardModel PickUp()
-        //     {
-        //         switch (position.owner)
-        //         {
-        //             case CardOwner.player:
-        //                 switch (position.container)
-        //                 {
-        //                     case CardContainer.field:
-        //                         return PickUpFromField(PlayerField, position.index);
-        //                     default:
-        //                         return Player.PickUpCard(position);
-        //                 }
-        //             case CardOwner.enemy:
-        //                 switch (position.container)
-        //                 {
-        //                     case CardContainer.field:
-        //                         return PickUpFromField(EnemyField, position.index);
-        //                     default:
-        //                         return Enemy.PickUpCard(position);
-        //                 }
-        //         }
-        //
-        //         return null;
-        //     }
-        //
-        //     var result = PickUp();
-        //     if (result != null)
-        //         OnCardPickedUp.SafeInvoke(result, position);
-        //     
-        //     return result;
-        // }
-        // public bool TryPlaceCard(CardModel model, CardPosition position)
-        // {
-        //     bool TryPlaceToField(CardModel[] field, int index)
-        //     {
-        //         if (index >= field.Length) return false;
-        //         if (field[index] != null) return false;
-        //         field[index] = model;
-        //         return true;
-        //     }
-        //
-        //     bool TryPlace()
-        //     {
-        //
-        //         PickUpCard(model.Position);
-        //
-        //         switch (position.owner)
-        //         {
-        //             case CardOwner.player:
-        //                 switch (position.container)
-        //                 {
-        //                     case CardContainer.field:
-        //                         return TryPlaceToField(PlayerField, position.index);
-        //                     default:
-        //                         return Player.TryPlaceCard(model, position);
-        //                 }
-        //             case CardOwner.enemy:
-        //                 switch (position.container)
-        //                 {
-        //                     case CardContainer.field:
-        //                         return TryPlaceToField(PlayerField, position.index);
-        //                     default:
-        //                         return Enemy.TryPlaceCard(model, position);
-        //                 }
-        //         }
-        //
-        //         return false;
-        //     }
-        //
-        //     var result = TryPlace();
-        //     if (result)
-        //         OnCardPlaced.SafeInvoke(model, position);
-        //     
-        //     return result;
-        // }
+
+        #region Interactions
+
+        public bool TryTransferCard(CardPosition from, CardPosition to)
+        {
+            var slot = GetSlotAtPosition(from);
+            var newSlot = GetSlotAtPosition(to);
+            var owner = slot.Position.owner;
+            
+            if (slot == null || newSlot == null) return false;
+            if (!slot.IsAvailableForPickUp(owner) || !newSlot.IsAvailableForDrop(owner)) return false;
+            
+            var card = slot.TakeCard();
+            newSlot.PlaceCard(card);
+
+            OnCardTransfered.SafeInvoke(card, from, to);
+            
+            return true;
+        }
+
+        #endregion
 
         public void Dispose()
         {

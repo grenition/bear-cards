@@ -81,24 +81,19 @@ namespace Project.Gameplay.Battle.CardSlots
         public bool IsAvailableForPickUp(CardOwner owner) => Permissions.CanPickUp(owner) && Card != null;
         public bool IsAvailableForDrop(CardOwner owner) => Permissions.CanDropCard(owner) && Card == null;
         
-        internal CardModel PickUpCard()
+        internal CardModel TakeCard()
         {
-            if (!IsAvailableForPickUp(Position.owner)) return null;
-            
             var savedPtr = Card;
             Card = null;
             return savedPtr;
         }
 
-        internal bool TryPlaceCard(CardModel card)
+        internal void PlaceCard(CardModel card)
         {
-            if (!IsAvailableForDrop(Position.owner)) return false;
-
             Card = card;
             Card.Position = Position;
-
-            return true;
         }
+        
         public void Dispose()
         {
             BattleModel.UnregisterCardSlot(this);
