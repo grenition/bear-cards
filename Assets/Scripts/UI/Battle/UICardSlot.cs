@@ -12,10 +12,10 @@ namespace Project.UI.Battle
     public class UICardSlot : MonoBehaviour
     {
         public bool IsAvailable => BattleController.Model.IsPlaceAvailableForPlayerCard(CardPosition);
-        public CardSlotModel SlotModel { get; protected set; }
-        public bool PlayerCanPickUpCard => SlotModel.IsAvailableForPickUp(CardOwner.player);
-        public bool PlayerCanDropCard => SlotModel.IsAvailableForDrop(CardOwner.player);
-        public CardPosition CardPosition => SlotModel.Position;
+        public CardSlotModel Model { get; protected set; }
+        public bool PlayerCanPickUpCard => Model.IsAvailableForPickUp(CardOwner.player);
+        public bool PlayerCanDropCard => Model.IsAvailableForDrop(CardOwner.player);
+        public CardPosition CardPosition => Model.Position;
         
         [Header("Visual")]
         [field: SerializeField] public bool AllowCardCurvePositioning { get; protected set; }
@@ -25,42 +25,21 @@ namespace Project.UI.Battle
         [SerializeField] private Ease highlightEase;
         [SerializeField] private bool highlightable = false;
         
-        public UICardMovement CurrentCard { get; protected set; }
-        
-        public Action<UICardMovement> OnCardAdded; 
-        public Action<UICardMovement> OnCardRemoved;
-
         private Color baseColor;
         private bool highlighted;
 
+        public void Init(CardSlotModel slotModel)
+        {
+            Model = slotModel;
+        }
         private void Start()
         {
             baseColor = background.color;
+            UIBattle.Instance.RegisterSlot(this);
         }
-        public void Init(CardSlotModel slotModel)
+        private void OnDestroy()
         {
-            SlotModel = slotModel;
-        }
-        public bool TryPlaceCard(UICardMovement card)
-        {
-            if(card == null || CurrentCard != null) return false;
-            
-            card.transform.position = transform.position;
-            CurrentCard = card;
-
-            card.Interactable = PlayerCanPickUpCard;
-
-            OnCardAdded.SafeInvoke(CurrentCard);
-            SetHighlight(false);
-            return true;
-        }
-        public bool TryRemoveCard(UICardMovement card)
-        {
-            if(card == null || card != CurrentCard) return false;
-
-            CurrentCard = null;
-            OnCardRemoved.SafeInvoke(card);
-            return true;
+            UIBattle.Instance.UnregisterSlot(this);
         }
 
         public void SetHighlight(bool activeSelf)

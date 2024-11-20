@@ -39,5 +39,47 @@ namespace GreonAssets.Extensions
 
             return list;
         }
+
+        public static int GetActiveSiblingIndex(this Transform transform)
+        {
+            if (transform == null) return -1;
+
+            var parent = transform.parent;
+            if (parent == null)
+            {
+                return transform.gameObject.activeSelf ? 0 : -1;
+            }
+
+            int activeIndex = 0;
+            foreach (Transform sibling in parent)
+            {
+                if (sibling.gameObject.activeSelf)
+                {
+                    if (sibling == transform)
+                        return activeIndex;
+
+                    activeIndex++;
+                }
+            }
+
+            return -1;
+        }
+        
+        public static int GetActiveChildCount(this Transform transform)
+        {
+            if (transform == null) return 0;
+
+            int activeCount = 0;
+
+            foreach (Transform child in transform)
+            {
+                if (child.gameObject.activeSelf)
+                {
+                    activeCount++;
+                }
+            }
+
+            return activeCount;
+        }
     }
 }

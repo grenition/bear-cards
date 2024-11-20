@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: demo_battle
   m_EditorClassIdentifier: 
   <Enemy>k__BackingField: {fileID: 11400000, guid: 2c456a4ee4c064a6db1b6f0282752048, type: 2}
-  <FieldSize>k__BackingField: 5
+  <FieldSize>k__BackingField: 4
+  <FirstTurnOwner>k__BackingField: 0

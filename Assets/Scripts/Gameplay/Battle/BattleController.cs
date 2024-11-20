@@ -1,6 +1,7 @@
 using System;
 using Project.Gameplay.Battle.Behaviour;
 using Project.Gameplay.Battle.Model;
+using Project.Gameplay.Battle.Model.Cards;
 using UnityEngine;
 
 namespace Project.Gameplay.Battle
@@ -51,5 +52,7 @@ namespace Project.Gameplay.Battle
             Model.Dispose();
             Behaviour.Dispose();
         }
+
+        public static bool IsPlayerTurn() => Behaviour?.TurnOwner == CardOwner.player;
     }
 }

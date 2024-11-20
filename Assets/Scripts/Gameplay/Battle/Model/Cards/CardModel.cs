@@ -29,5 +29,7 @@ namespace Project.Gameplay.Battle.Model.Cards
         {
             BattleModel.UnregisterCard(this);
         }
+
+        public bool IsAvailableToPickUpByPlayer() => AttachedSlot?.IsAvailableForPickUp(CardOwner.player) ?? false;
     }
 }
