@@ -1,16 +1,18 @@
 using System;
 using GreonAssets.Extensions;
+using R3;
 
 namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
 {
     public abstract class BaseEntityBehaviour : IDisposable
     {
-        public bool TurnEnded { get; private set; } = false;
+        public bool TurnActive { get; private set; } = false;
         public int TurnIndex { get; private set; } = -1;
+        public BattleBehaviour BattleBehaviour { get; protected set; }
         
         public void StartTurn()
         {
-            TurnEnded = false;
+            TurnActive = true;
             TurnIndex++;
             if (TurnIndex == 0)
                 OnFirstTurnStart();
@@ -19,7 +21,7 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
         public void StopTurn()
         {
             OnTurnStop();
-            TurnEnded = true;
+            TurnActive = false;
         }
 
         protected virtual void OnTurnStart() { }
@@ -27,5 +29,10 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
         protected virtual void OnTurnStop() { }
 
         public virtual void Dispose() { }
+
+        public BaseEntityBehaviour(BattleBehaviour battleBehaviour)
+        {
+            BattleBehaviour = battleBehaviour;
+        }
     }
 }

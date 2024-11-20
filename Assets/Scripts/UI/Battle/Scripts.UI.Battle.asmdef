@@ -9,7 +9,8 @@
         "Unity.TextMeshPro",
         "R3.Unity",
         "UniTask",
-        "DOTween.Modules"
+        "DOTween.Modules",
+        "Scripts.UI.Common"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

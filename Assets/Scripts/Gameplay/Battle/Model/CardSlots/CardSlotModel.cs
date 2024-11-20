@@ -73,8 +73,10 @@ namespace Project.Gameplay.Battle.Model.CardSlots
             Position = position;
             Permissions = permissions;
             Card = startCard;
+
+            if (Card != null)
+                Card.AttachedSlot = this;
             
-            if (Card != null) Card.Position = Position;
             BattleModel.RegisterCardSlot(this);
         }
 
@@ -84,6 +86,7 @@ namespace Project.Gameplay.Battle.Model.CardSlots
         internal CardModel TakeCard()
         {
             var savedPtr = Card;
+            Card.AttachedSlot = null;
             Card = null;
             return savedPtr;
         }
@@ -91,7 +94,7 @@ namespace Project.Gameplay.Battle.Model.CardSlots
         internal void PlaceCard(CardModel card)
         {
             Card = card;
-            Card.Position = Position;
+            Card.AttachedSlot = this;
         }
         
         public void Dispose()

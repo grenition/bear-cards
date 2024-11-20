@@ -5,13 +5,8 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
 {
     public class EnemyBehaviour : BaseEntityBehaviour
     {
-        public BattleModel BattleBattleModel { get; protected set; }
-        public CardPlayerModel PlayerModel => BattleBattleModel.Player;
+        public CardPlayerModel PlayerModel => BattleBehaviour.Model.Enemy;
         
-        public EnemyBehaviour(BattleModel battleModel)
-        {
-            BattleBattleModel = battleModel;
-        }
-
+        public EnemyBehaviour(BattleBehaviour battleBehaviour) : base(battleBehaviour) { }
     }
 }
