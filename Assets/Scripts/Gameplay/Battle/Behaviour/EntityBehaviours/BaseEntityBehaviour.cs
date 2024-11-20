@@ -1,6 +1,4 @@
 using System;
-using GreonAssets.Extensions;
-using R3;
 
 namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
 {
