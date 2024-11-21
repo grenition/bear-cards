@@ -89,21 +89,12 @@ namespace Assets.Scripts.Map
             {
                 _patternSet.Add(0, new OnePath());
                 _patternSet.Add(1, new TwoPath());
-                _patternSet.Add(2, new UniunPath());
             }
 
             public List<InteresPointEntity> CreateLevel(ref List<InteresPointEntity> lastLevelPoint,
             List<InterestingPointConfig> pointsSet)
             {
                 int numberPattern = Random.Range(0, _patternSet.Count);
-                if (lastLevelPoint.Count == 1)
-                {
-                    numberPattern = Random.Range(0, _patternSet.Count - 1);
-                }
-                else
-                {
-                    numberPattern = Random.Range(0, _patternSet.Count);
-                }
 
                 return _patternSet[numberPattern].Create(ref lastLevelPoint, pointsSet);
             }
