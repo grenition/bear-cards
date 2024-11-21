@@ -16,11 +16,7 @@ namespace Assets.Scripts.Map
         
         public List<string> Keys;
 
-
         public List<InterestingPointConfig> PricePoint;
         public List<InterestingPointConfig> EnemyPoint;
-
-        [field: SerializeField] public InterestingPointConfig BossPoint { get; private set; }
-        [field: SerializeField] public InterestingPointConfig StartPoint { get; private set; }
     }
 }

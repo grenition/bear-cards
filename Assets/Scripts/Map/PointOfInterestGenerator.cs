@@ -28,7 +28,7 @@ namespace Assets.Scripts.Map
 
             var start = PointFactory.Instance.CreatePoint("Start");
             start.ConnectPoints = new List<InteractivePoint>();
-            start.View = _locationConfigurate.BossPoint.View;
+            start.View = _startPoint.View;
 
             targetLevel.Add(new List<InteractivePoint>() { start });
 
@@ -42,7 +42,7 @@ namespace Assets.Scripts.Map
             var boss = PointFactory.Instance.CreatePoint("Start");
             boss.ConnectPoints = new List<InteractivePoint>();
             boss.Level = _locationConfigurate.LocationLevel;
-            boss.View = _locationConfigurate.BossPoint.View;
+            boss.View = _endPoint.View;
             targetLevel.Add(new List<InteractivePoint>() { boss });
 
             return targetLevel;
