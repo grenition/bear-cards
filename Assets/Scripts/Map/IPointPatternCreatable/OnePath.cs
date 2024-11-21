@@ -5,19 +5,17 @@ namespace Assets.Scripts.Map
 {
     public class OnePath : IPointPatternCreatable
     {
-        public List<PointOfInterestGenerator.InteresPointEntity> Create(
-            ref List<PointOfInterestGenerator.InteresPointEntity> lastLevelPoint,
+        public List<InteractivePoint> Create(
+            ref List<InteractivePoint> lastLevelPoint,
             List<InterestingPointConfig> pointsSet)
         {
             var index = Random.Range(0, pointsSet.Count);
-            var newPoint = new PointOfInterestGenerator.InteresPointEntity()
-            {
-                InteractivePoint = pointsSet[index].CreateInteractivePoint(),
-            };
 
-            lastLevelPoint.First().ConnectPoints.Add(newPoint.InteractivePoint);
+            var newPoint = PointFactory.Instance.CreatePoint(pointsSet[index].Name);
+            newPoint.View = pointsSet[index].View;
+            lastLevelPoint.First().ConnectPoints.Add(newPoint);
 
-            return new List<PointOfInterestGenerator.InteresPointEntity>() { newPoint };
+            return new List<InteractivePoint> { newPoint };
         }
     }
 }

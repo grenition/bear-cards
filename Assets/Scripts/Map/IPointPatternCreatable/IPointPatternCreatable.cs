@@ -4,8 +4,8 @@ namespace Assets.Scripts.Map
 {
     public interface IPointPatternCreatable
     {
-        public List<PointOfInterestGenerator.InteresPointEntity> Create(
-            ref List<PointOfInterestGenerator.InteresPointEntity> lastLevelPoint,
+        public List<InteractivePoint> Create(
+            ref List<InteractivePoint> lastLevelPoint,
             List<InterestingPointConfig> pointsSet);
     }
 }

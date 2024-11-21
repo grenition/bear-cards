@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BossPointConfig
   m_EditorClassIdentifier: 
   <PointCoast>k__BackingField: 0
-  <Name>k__BackingField: 
+  <Name>k__BackingField: Boss
   <Description>k__BackingField: 
   <View>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

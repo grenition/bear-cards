@@ -22,16 +22,15 @@ namespace Assets.Scripts.Map
             _endPoint = endPoint;
         }
 
-        public List<List<InteresPointEntity>> Generate()
+        public List<List<InteractivePoint>> Generate()
         {
-            List<List<InteresPointEntity>> targetLevel = new();
+            List<List<InteractivePoint>> targetLevel = new();
 
-            targetLevel.Add(new List<InteresPointEntity>() { new()
-            {
-                Level = 0,
-                InteractivePoint = _startPoint.CreateInteractivePoint(),
-                ConnectPoints = new()
-            }});
+            var start = PointFactory.Instance.CreatePoint("Start");
+            start.ConnectPoints = new List<InteractivePoint>();
+            start.View = _locationConfigurate.BossPoint.View;
+
+            targetLevel.Add(new List<InteractivePoint>() { start });
 
             for (int i = 1; i < _locationConfigurate.LocationLevel - 1; i++)
             {
@@ -40,22 +39,22 @@ namespace Assets.Scripts.Map
                 _enemyLevel = !_enemyLevel;
             }
 
-            targetLevel.Add(new List<InteresPointEntity>() { new()
-            {
-                Level = _locationConfigurate.LocationLevel,
-                InteractivePoint = _endPoint.CreateInteractivePoint(),
-            }});
+            var boss = PointFactory.Instance.CreatePoint("Start");
+            boss.ConnectPoints = new List<InteractivePoint>();
+            boss.Level = _locationConfigurate.LocationLevel;
+            boss.View = _locationConfigurate.BossPoint.View;
+            targetLevel.Add(new List<InteractivePoint>() { boss });
 
             return targetLevel;
         }
 
-        private List<InteresPointEntity> CreatePoints(List<InteresPointEntity> interesPointEntities, int i)
+        private List<InteractivePoint> CreatePoints(List<InteractivePoint> interesPointEntities, int level)
         {
-            List<InteresPointEntity> levelPoints = new();
+            List<InteractivePoint> levelPoints = new();
             interesPointEntities.ForEach(lastPoint =>
             {
-                List<InteresPointEntity> lastPoints = new() { lastPoint };
-                List<InteresPointEntity> newPoints = new();
+                List<InteractivePoint> lastPoints = new() { lastPoint };
+                List<InteractivePoint> newPoints = new();
 
                 List<InterestingPointConfig> set = new();
                 if (_enemyLevel)
@@ -68,19 +67,13 @@ namespace Assets.Scripts.Map
                 {
                     levelPoints.Add(point);
                     point.ConnectPoints = new();
-                    point.Level = i;
+                    point.Level = level;
                 });
             });
 
             return levelPoints;
         }
 
-        public class InteresPointEntity
-        {
-            public int Level;
-            public InteractivePoint InteractivePoint;
-            public List<InteractivePoint> ConnectPoints;
-        }
 
         public class FactoryLevel
         {
@@ -91,11 +84,11 @@ namespace Assets.Scripts.Map
                 _patternSet.Add(1, new TwoPath());
             }
 
-            public List<InteresPointEntity> CreateLevel(ref List<InteresPointEntity> lastLevelPoint,
-            List<InterestingPointConfig> pointsSet)
+            public List<InteractivePoint> CreateLevel(
+                ref List<InteractivePoint> lastLevelPoint,
+                List<InterestingPointConfig> pointsSet)
             {
                 int numberPattern = Random.Range(0, _patternSet.Count);
-
                 return _patternSet[numberPattern].Create(ref lastLevelPoint, pointsSet);
             }
         }

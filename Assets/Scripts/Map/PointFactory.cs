@@ -16,11 +16,15 @@ namespace Assets.Scripts.Map
         {
             switch (name)
             {
+                case "Start":
+                    return new StartPoint();
                 case "Enemy":
                     return new EnemyPoint();
                 case "Card":
                     return new CardPoint();
                 case "Hill":
+                    return new HillPoint();
+                case "Boss":
                     return new HillPoint();
                 default:
                     throw new NotImplementedException();    

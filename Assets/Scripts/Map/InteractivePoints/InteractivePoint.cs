@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Assets.Scripts.Map
 {
@@ -7,8 +8,10 @@ namespace Assets.Scripts.Map
         public abstract void OnBeginInteract();
         public abstract void OnEndInteract();
         public Sprite View;
+        public List<InteractivePoint> ConnectPoints;
+        public int Level;
 
-        public string Key {  get; protected set; }
+        public string Key { get; protected set; }
 
         public ViewPoint ViewPoint { get; protected set; }
 
@@ -20,7 +23,7 @@ namespace Assets.Scripts.Map
 
         public void Complited()
         {
-            Debug.Log( "{name}:I complited");
+            Debug.Log("{name}:I complited");
         }
 
         public void Pass()

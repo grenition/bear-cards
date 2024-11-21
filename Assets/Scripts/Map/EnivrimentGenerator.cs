@@ -5,11 +5,11 @@ namespace Assets.Scripts.Map
 {
     public class EnivrimentGenerator
     {
-        private List<List<PointOfInterestGenerator.InteresPointEntity>> _points = new();
+        private List<List<InteractivePoint>> _points = new();
         private ViewPoint _viewPoint;
 
         private EnivrimentConfig _config;
-        public EnivrimentGenerator(List<List<PointOfInterestGenerator.InteresPointEntity>> points)
+        public EnivrimentGenerator(List<List<InteractivePoint>> points)
         {
             _points = points;
             _viewPoint = Resources.Load<ViewPoint>("Map/Prefabs/PointView");
@@ -28,7 +28,7 @@ namespace Assets.Scripts.Map
                         level[i].Level * _config.DistanceBeetwenPointByY);
 
                     var viewObject = GameObject.Instantiate(_viewPoint, position, Quaternion.identity);
-                    level[i].InteractivePoint.Initialize(viewObject);
+                    level[i].Initialize(viewObject);
                 }
             });
 
@@ -41,7 +41,7 @@ namespace Assets.Scripts.Map
                     {
                         pointOfLevel.ConnectPoints.ForEach(point =>
                         {
-                            pointOfLevel.InteractivePoint.ViewPoint.CreatePathTo(point.ViewPoint);
+                            pointOfLevel.ViewPoint.CreatePathTo(point.ViewPoint);
                         });
                     }
                 });
@@ -50,7 +50,7 @@ namespace Assets.Scripts.Map
             Debug.Log("Last" + " " + _points[_points.Count - 2].Count());
             _points[_points.Count - 2].ForEach(lastpoint =>
             {
-                lastpoint.InteractivePoint.ViewPoint.CreatePathTo(_points[_points.Count - 1].First().InteractivePoint.ViewPoint);
+                lastpoint.ViewPoint.CreatePathTo(_points[_points.Count - 1].First().ViewPoint);
             });
 
 
