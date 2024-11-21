@@ -14,13 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <VisualName>k__BackingField: "\u0418\u0433\u0440\u043E\u043A"
   <VisualDescription>k__BackingField: 
-  <Hand>k__BackingField:
-  - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
-  - {fileID: 11400000, guid: bd01e8a9a809349b688ae8a1a516fd36, type: 2}
-  - {fileID: 11400000, guid: bd01e8a9a809349b688ae8a1a516fd36, type: 2}
+  <Hand>k__BackingField: []
+  <HandSize>k__BackingField: 8
   <Deck>k__BackingField:
   - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
   - {fileID: 11400000, guid: bd01e8a9a809349b688ae8a1a516fd36, type: 2}
   - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
   - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
   - {fileID: 11400000, guid: b607f1bb8fb6046f4abc688a0ff85210, type: 2}
+  - {fileID: 11400000, guid: b607f1bb8fb6046f4abc688a0ff85210, type: 2}
+  - {fileID: 11400000, guid: b607f1bb8fb6046f4abc688a0ff85210, type: 2}
+  - {fileID: 11400000, guid: b607f1bb8fb6046f4abc688a0ff85210, type: 2}
+  - {fileID: 11400000, guid: b607f1bb8fb6046f4abc688a0ff85210, type: 2}
+  - {fileID: 11400000, guid: b607f1bb8fb6046f4abc688a0ff85210, type: 2}
+  - {fileID: 11400000, guid: b607f1bb8fb6046f4abc688a0ff85210, type: 2}
+  - {fileID: 11400000, guid: b607f1bb8fb6046f4abc688a0ff85210, type: 2}
+  <DeckSize>k__BackingField: 20
+  <Spells>k__BackingField: []
+  <SpellsSize>k__BackingField: 5
+  <CardsAtFirstTurn>k__BackingField: 4
+  <CardsAtAnotherTurns>k__BackingField: 1

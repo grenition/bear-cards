@@ -1,0 +1,24 @@
+{
+    "name": "Scripts.UI.Battle",
+    "rootNamespace": "Project",
+    "references": [
+        "GreonAssets",
+        "Scripts.Gameplay",
+        "Scripts.Gameplay.Battle",
+        "Scripts.Infrastructure",
+        "Unity.TextMeshPro",
+        "R3.Unity",
+        "UniTask",
+        "DOTween.Modules",
+        "Scripts.UI.Common"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,4 +1,4 @@
-using Project.Gameplay.Battle.Cards;
+using Project.Gameplay.Battle.Model.Cards;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,6 +7,8 @@ namespace Project.UI.Battle
 {
     public class UICard : MonoBehaviour
     {
+        public CardModel Model { get; protected set; }
+        
         [SerializeField] private TMP_Text _costText;
         [SerializeField] private TMP_Text _levelText;
         [SerializeField] private Image _iconImage;
@@ -18,6 +20,7 @@ namespace Project.UI.Battle
         public void Init(CardModel cardModel)
         {
             if(cardModel == null) return;
+            Model = cardModel;
 
             _costText.text = cardModel.Config.Cost.ToString();
             _levelText.text = cardModel.Config.Level.ToString();
