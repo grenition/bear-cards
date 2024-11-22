@@ -14,7 +14,7 @@ namespace Project.UI.Battle
         [Header("Visual")]
         [SerializeField] private UICardSlot _cardSlotPrefab;
         
-        private void Start()
+        private void Awake()
         {
             var slots = BattleController.Model.GetSlotsAtPosition(_cardsOwner, _cardsContainerType);
 

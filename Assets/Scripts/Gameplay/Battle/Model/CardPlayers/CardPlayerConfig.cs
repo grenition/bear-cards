@@ -18,7 +18,12 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         [field: SerializeField] public int DeckSize { get; private set; } = 20;
         [field: SerializeField] public List<CardConfig> Spells { get; private set; }
         [field: SerializeField] public int SpellsSize { get; private set; } = 5;
+        
+        [field: Header("PlayerBehaviour")]
         [field: SerializeField] public int CardsAtFirstTurn { get; private set; } = 4;
         [field: SerializeField] public int CardsAtAnotherTurns { get; private set; } = 1;
+
+        [field: Header("EnemyBehaviour")]
+        [field: SerializeField, Range(0f, 1f)] public float PlaceToSlotChance { get; private set; } = 0.5f;
     }
 }

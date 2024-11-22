@@ -1,6 +1,7 @@
 using System;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Data;
+using Project.Gameplay.Battle.Model.CardSlots;
 
 namespace Project.Gameplay.Battle.Model.Cards
 {
@@ -8,7 +9,8 @@ namespace Project.Gameplay.Battle.Model.Cards
     {
         public string Key { get; protected set; }
         public CardConfig Config => BattleStaticData.Cards.Get(Key);
-        public CardPosition Position { get; internal set; }
+        public CardPosition Position => AttachedSlot.Position;
+        public CardSlotModel AttachedSlot { get; internal set; }
         public BattleModel BattleModel { get; protected set; }
         public int Damage { get; protected set; }
         public int Health { get; protected set; }
@@ -27,5 +29,7 @@ namespace Project.Gameplay.Battle.Model.Cards
         {
             BattleModel.UnregisterCard(this);
         }
+
+        public bool IsAvailableToPickUpByPlayer() => AttachedSlot?.IsAvailableForPickUp(CardOwner.player) ?? false;
     }
 }

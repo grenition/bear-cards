@@ -93,6 +93,16 @@ namespace Project.Gameplay.Battle.Model
 
         #region Interactions
 
+        public void AddCardToDeck(CardOwner owner, string cardKey)
+        {
+            var playerModel = owner == CardOwner.player ? Player : Enemy;
+            var freeDeckSlot = playerModel.GetFirstFreeSlotInDeck();
+            if(freeDeckSlot == null) return;
+
+            var card = new CardModel(cardKey, this);
+            freeDeckSlot.PlaceCard(card);
+        }
+        
         public bool TryTransferCard(CardPosition from, CardPosition to)
         {
             var slot = GetSlotAtPosition(from);

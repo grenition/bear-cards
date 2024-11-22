@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace GreonAssets.Extensions
 {
@@ -16,7 +17,7 @@ namespace GreonAssets.Extensions
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error while executing subscriber: {ex.Message}");
+                    Debug.LogError($"Error while executing subscriber: {ex.Message}");
                 }
             }
         }
@@ -33,7 +34,7 @@ namespace GreonAssets.Extensions
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error while executing subscriber: {ex.Message}");
+                    Debug.LogError($"Error while executing subscriber: {ex.Message}");
                 }
             }
         }
@@ -50,7 +51,7 @@ namespace GreonAssets.Extensions
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error while executing subscriber: {ex.Message}");
+                    Debug.LogError($"Error while executing subscriber: {ex.Message}");
                 }
             }
         }
@@ -66,7 +67,7 @@ namespace GreonAssets.Extensions
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error while executing subscriber: {ex.Message}");
+                    Debug.LogError($"Error while executing subscriber: {ex.Message}");
                 }
             }
         }

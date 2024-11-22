@@ -6,14 +6,8 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
 {
     public class PlayerBehaviour : BaseEntityBehaviour
     {
-        public BattleModel BattleModel { get; protected set; }
-        public CardPlayerModel PlayerModel => BattleModel.Player;
+        public CardPlayerModel PlayerModel => BattleBehaviour.Model.Player;
         
-        public PlayerBehaviour(BattleModel battleModel)
-        {
-            BattleModel = battleModel;
-        }
-
         protected override async void OnFirstTurnStart()
         {
             for (int i = 0; i < PlayerModel.Config.CardsAtFirstTurn; i++)
@@ -28,5 +22,7 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
             
             PlayerModel.TransferCardFromDeckToHand();
         }
+        
+        public PlayerBehaviour(BattleBehaviour battleModel) : base(battleModel) { }
     }
 }
