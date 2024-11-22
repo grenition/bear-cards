@@ -479,7 +479,6 @@ GameObject:
   - component: {fileID: 7446722237615776941}
   - component: {fileID: 6426217280175570869}
   - component: {fileID: 4448410597759026312}
-  - component: {fileID: 1951644972920790211}
   - component: {fileID: 6352630000783292954}
   m_Layer: 5
   m_Name: CardVisual
@@ -554,15 +553,14 @@ MonoBehaviour:
   tiltParent: {fileID: 6080188008248009495}
   cardImage: {fileID: 4685302140041374915}
   followSpeed: 25
-  rotationAmount: 20
-  rotationSpeed: 15
+  rotationAmount: 40
+  rotationSpeed: 60
   autoTiltAmount: 7.5
   manualTiltAmount: 15
   tiltSpeed: 20
   scaleAnimations: 1
   scaleOnHover: 1.07
   scaleOnSelect: 1.2
-  scaleOnSlot: 1
   scaleTransition: 0.15
   scaleEase: 27
   selectPunchAmount: 20
@@ -573,29 +571,15 @@ MonoBehaviour:
   swapTransition: 0.2
   swapVibrato: 5
   uiCurve: {fileID: 11400000, guid: d4dd399fb2dab44429d866dc2259bb4b, type: 2}
---- !u!223 &1951644972920790211
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133302518604290077}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
-  m_TargetDisplay: 0
+  damageInTime: 0.05
+  damageOutTime: 0.34
+  dieAnimation: 0.3
+  damagePunchAngle: 10
+  dieScale: 0.7
+  damageColor: {r: 1, g: 0.627451, b: 0.627451, a: 1}
+  attackTime: 0.2
+  attackPunchSize: 0.1
+  attackDistance: 80
 --- !u!225 &6352630000783292954
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -603,8 +587,8 @@ CanvasGroup:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133302518604290077}
-  m_Enabled: 0
-  m_Alpha: 0
+  m_Enabled: 1
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc3fce12eae04c7ba5be9b1bb4823389, type: 3}
   m_Name: nitrogen
   m_EditorClassIdentifier: 
+  <VisualShortName>k__BackingField: 
   <VisualName>k__BackingField: "\u0410\u0437\u043E\u0442"
   <VisualDescription>k__BackingField: 
   <VisualIcon>k__BackingField: {fileID: 0}
   <Cost>k__BackingField: 1
-  <Lelel>k__BackingField: 1
-  <BaseDamage>k__BackingField: 0
+  <Level>k__BackingField: 0
+  <BaseDamage>k__BackingField: 1
   <BaseHealth>k__BackingField: 5

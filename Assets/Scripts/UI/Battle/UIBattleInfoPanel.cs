@@ -1,7 +1,6 @@
-using System;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle;
-using Project.Gameplay.Battle.Model.Cards;
+using Project.Gameplay.Battle.Behaviour;
 using Project.UI.Common.Extensions;
 using R3;
 using TMPro;
@@ -24,17 +23,23 @@ namespace Project.UI.Battle
         }
         private void OnEnable()
         {
-            BattleController.Behaviour.OnTurnStarted += Visualize;
+            BattleController.Behaviour.OnStateChanged += Visualize;
         }
         private void OnDisable()
         {
-            BattleController.Behaviour.OnTurnStarted -= Visualize;
+            BattleController.Behaviour.OnStateChanged -= Visualize;
         }
 
-        private void Visualize(CardOwner owner)
+        private void Visualize(BattleState state)
         {
-            _turnOwnerText.text = owner == CardOwner.player ? "Ваш ход" : "Ход противника";
-            _nextTurnButton.SetActiveWithAnimation(owner == CardOwner.player);
+            _turnOwnerText.text = state switch
+            {
+                BattleState.awaiting => "Ожидание",
+                BattleState.playerTurn => "Ваш ход",
+                BattleState.enemyTurn => "Ход противника"
+            };
+            
+            _nextTurnButton.SetActiveWithAnimation(state == BattleState.playerTurn);
         }
     }
 }

@@ -70,15 +70,18 @@ namespace Project.UI.Battle
             visualHandler = UIVisualCardsHandler.instance;
             uiCardVisual = Instantiate(cardVisualPrefab, visualHandler ? visualHandler.transform : canvas.transform).GetComponent<UICardVisual>();
             uiCardVisual.Initialize(this);
+            uiCardVisual.GetComponent<UICard>().Init(Model);
 
             UIBattle.Instance.RegisterCard(this);
+            Model.OnDeath += OnDeath;
         }
         private void OnDestroy()
         {
-            if (uiCardVisual != null)
+            if (uiCardVisual != null && Model.IsAlive)
                 Destroy(uiCardVisual.gameObject);
 
             UIBattle.Instance.UnregisterCard(this);
+            Model.OnDeath -= OnDeath;
         }
         void Update()
         {
@@ -256,6 +259,9 @@ namespace Project.UI.Battle
 
             return null;
         }
-
+        private void OnDeath()
+        {
+            uiCardVisual.DeathAnimationAndDestroy();
+        }
     }
 }

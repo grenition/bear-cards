@@ -13,6 +13,7 @@ namespace Project.Gameplay.Battle.Model
     public class BattleModel : IDisposable
     {
         public event Action<CardModel, CardPosition, CardPosition> OnCardTransfered;
+        public event Action<CardModel, CardModel> OnCardAttack;
         
         public string Key { get; protected set; }
         public BattleConfig Config => BattleStaticData.Battles.Get(Key);
@@ -72,6 +73,7 @@ namespace Project.Gameplay.Battle.Model
         {
             return Slots
                 .Where(x => x.Key.container == container && x.Key.owner == owner)
+                .Where(x => x.Value.Card != null)
                 .Select(x => x.Value.Card);
         }
         public CardSlotModel GetSlotAtPosition(CardPosition position)
@@ -106,18 +108,46 @@ namespace Project.Gameplay.Battle.Model
         public bool TryTransferCard(CardPosition from, CardPosition to)
         {
             var slot = GetSlotAtPosition(from);
+            if (slot == null) return false;
+
+            CardModel card = null;
+            if (to.container == CardContainer.garbage)
+            {
+                card = slot.TakeCard();
+                OnCardTransfered.SafeInvoke(card, from, to);
+                card.CallOnTransfered(from, to);
+                card.Dispose();
+                return true;
+            }
+            
             var newSlot = GetSlotAtPosition(to);
             var owner = slot.Position.owner;
             
-            if (slot == null || newSlot == null) return false;
+            if (newSlot == null) return false;
             if (!slot.IsAvailableForPickUp(owner) || !newSlot.IsAvailableForDrop(owner)) return false;
             
-            var card = slot.TakeCard();
+            card = slot.TakeCard();
             newSlot.PlaceCard(card);
 
             OnCardTransfered.SafeInvoke(card, from, to);
+            card.CallOnTransfered(from, to);
             
             return true;
+        }
+
+        public void AttackForward(CardPosition attackerPosition)
+        {
+            if(attackerPosition.container != CardContainer.field) return;
+            
+            var card = GetCardAtPosition(attackerPosition);
+            var enemyType = attackerPosition.owner == CardOwner.player ? CardOwner.enemy : CardOwner.player;
+            var enemyPosition = new CardPosition(attackerPosition.container, enemyType, attackerPosition.index);
+            var forwardCard = GetCardAtPosition(enemyPosition);
+            
+            if(card == null || forwardCard == null) return;
+
+            card.CallOnAttack(enemyPosition);
+            forwardCard.Damage(card.AttackDamage);
         }
 
         #endregion

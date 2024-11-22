@@ -53,6 +53,6 @@ namespace Project.Gameplay.Battle
             Behaviour.Dispose();
         }
 
-        public static bool IsPlayerTurn() => Behaviour?.TurnOwner == CardOwner.player;
+        public static bool IsPlayerTurn() => Behaviour.GetCurrentState() == BattleState.playerTurn;
     }
 }

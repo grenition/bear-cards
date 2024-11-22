@@ -10,7 +10,8 @@ namespace Project.Gameplay.Battle.Model.Cards
         deck,
         hand,
         field,
-        spells
+        spells,
+        garbage
     }
     
     public struct CardPosition
@@ -25,5 +26,7 @@ namespace Project.Gameplay.Battle.Model.Cards
             this.owner = owner;
             this.index = index;
         }
+
+        public static CardPosition Garbage() => new CardPosition(CardContainer.garbage, default, default);
     }
 }

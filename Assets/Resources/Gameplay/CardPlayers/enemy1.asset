@@ -24,3 +24,4 @@ MonoBehaviour:
   <SpellsSize>k__BackingField: 5
   <CardsAtFirstTurn>k__BackingField: 4
   <CardsAtAnotherTurns>k__BackingField: 1
+  <PlaceToSlotChance>k__BackingField: 0.5
