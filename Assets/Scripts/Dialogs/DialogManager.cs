@@ -27,12 +27,11 @@ public class DialogData
 
 public class DialogManager : MonoBehaviour
 {
-    public GameObject dialogPanel; // Панель с диалогом
-    public TextMeshProUGUI nameText; // TextMeshPro для имени
-    public TextMeshProUGUI dialogText; // TextMeshPro для текста диалога
-    public Image characterImage; // UI-элемент для изображения персонажа
-    public Button nextButton; // Кнопка для переключения
-
+    public GameObject dialogPanel; 
+    public TextMeshProUGUI nameText; 
+    public TextMeshProUGUI dialogText;
+    public Image characterImage; 
+    public Button nextButton; 
     private DialogData dialogData;
     private Queue<DialogLine> currentLines;
     private System.Action onDialogComplete;
@@ -43,7 +42,7 @@ public class DialogManager : MonoBehaviour
     {
         dialogPanel.SetActive(false);
         currentLines = new Queue<DialogLine>();
-        dialogQueue = new Queue<string>(); // Инициализируем очередь диалогов
+        dialogQueue = new Queue<string>(); 
 
         // Загрузка JSON-файла
         string path = Path.Combine(Application.streamingAssetsPath, "dialog.json");
@@ -86,7 +85,7 @@ public class DialogManager : MonoBehaviour
         }
 
         string nextDialogId = dialogQueue.Dequeue();
-        StartDialog(nextDialogId, StartNextDialog); // Указываем callback для продолжения
+        StartDialog(nextDialogId, StartNextDialog); 
     }
 
     public void StartDialog(string dialogId, System.Action onComplete = null)
@@ -139,45 +138,39 @@ public class DialogManager : MonoBehaviour
 
         DialogLine line = currentLines.Dequeue();
         
-        // Устанавливаем имя и текст
-        nameText.text = line.character; // Устанавливаем имя персонажа
-        dialogText.text = line.text;    // Устанавливаем текст диалога
+        nameText.text = line.character; 
+        dialogText.text = line.text; 
 
-        // Загружаем и устанавливаем изображение персонажа
         Sprite sprite = Resources.Load<Sprite>("Images/" + line.image);
         if (sprite != null)
         {
-            characterImage.sprite = sprite;          // Устанавливаем изображение
-            characterImage.gameObject.SetActive(true); // Активируем изображение
+            characterImage.sprite = sprite;         
+            characterImage.gameObject.SetActive(true); 
         }
         else
         {
-            characterImage.sprite = Resources.Load<Sprite>("Images/default"); // Заглушка
-            characterImage.gameObject.SetActive(true); // Активируем изображение
+            characterImage.sprite = Resources.Load<Sprite>("Images/default"); 
+            characterImage.gameObject.SetActive(true); 
             Debug.LogWarning("Изображение " + line.image + " не найдено. Используется изображение по умолчанию.");
         }
     }
 
     void EndDialog()
     {
-        // Скрываем панель диалога
         dialogPanel.SetActive(false);
 
-        // Очищаем текстовые элементы
         nameText.text = string.Empty;
         dialogText.text = string.Empty;
 
-        // Отключаем изображение персонажа
         if (characterImage != null)
         {
-            characterImage.sprite = null; // Убираем спрайт
-            characterImage.gameObject.SetActive(false); // Отключаем объект
+            characterImage.sprite = null;
+            characterImage.gameObject.SetActive(false); 
         }
 
         // Сбрасываем флаг активности диалога
         isDialogActive = false;
 
-        // Вызываем callback, если он есть
         onDialogComplete?.Invoke();
 
         Debug.Log("Диалог завершен.");
