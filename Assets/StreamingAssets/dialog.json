@@ -1,0 +1,99 @@
+{
+  "dialogs": [
+    {
+      "id": "intro",
+      "lines": [
+        {
+          "character": "Анна",
+          "text": "Добро пожаловать в нашу игру!",
+          "image": "anna"
+        },
+        {
+          "character": "Катя",
+          "text": "Привет, рада тебя видеть!",
+          "image": "kate"
+        }
+      ]
+    },
+    {
+      "id": "quest_start",
+      "lines": [
+        {
+          "character": "Анна",
+          "text": "Ты готова начать свое приключение?",
+          "image": "anna"
+        },
+        {
+          "character": "Катя",
+          "text": "Да, я готова!",
+          "image": "kate"
+        }
+      ]
+    },
+    {
+      "id": "village_intro",
+      "lines": [
+        {
+          "character": "Анна",
+          "text": "Мы прибыли в деревню. Здесь нам нужно найти ключ.",
+          "image": "anna"
+        },
+        {
+          "character": "Катя",
+          "text": "Поняла. Где будем искать?",
+          "image": "kate"
+        },
+        {
+          "character": "Анна",
+          "text": "Давай начнем с дома старосты.",
+          "image": "anna"
+        }
+      ]
+    },
+    {
+      "id": "forest_encounter",
+      "lines": [
+        {
+          "character": "Катя",
+          "text": "В этом лесу так темно... Ты уверена, что это безопасно?",
+          "image": "kate"
+        },
+        {
+          "character": "Анна",
+          "text": "Нам нужно пройти через лес, чтобы найти амулет.",
+          "image": "anna"
+        },
+        {
+          "character": "Катя",
+          "text": "Хорошо, я за тобой.",
+          "image": "kate"
+        }
+      ]
+    },
+    {
+      "id": "final_battle",
+      "lines": [
+        {
+          "character": "Анна",
+          "text": "Это место. Здесь мы встретимся с главой клана.",
+          "image": "anna"
+        },
+        {
+          "character": "Катя",
+          "text": "Надеюсь, у нас получится договориться.",
+          "image": "kate"
+        },
+        {
+          "character": "Анна",
+          "text": "Договориться? Я на это не рассчитываю. Будь готова к бою!",
+          "image": "anna"
+        },
+        {
+          "character": "Катя",
+          "text": "Я готова. За дело!",
+          "image": "kate"
+        }
+      ]
+    }
+  ]
+}
