@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Test : MonoBehaviour
@@ -6,7 +7,8 @@ public class Test : MonoBehaviour
 
     public void StartIntroDialog()
     {
-        dialogManager.StartDialog("intro", OnDialogComplete);
+        List<string> dialogsToRun = new List<string> { "intro", "quest_start", "village_intro" };
+        dialogManager.EnqueueDialogs(dialogsToRun);
     }
 
     public void OnDialogComplete()

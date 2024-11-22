@@ -37,11 +37,13 @@ public class DialogManager : MonoBehaviour
     private Queue<DialogLine> currentLines;
     private System.Action onDialogComplete;
     private bool isDialogActive = false; // Флаг активности диалога
+    private Queue<string> dialogQueue; // Очередь ID диалогов
 
     void Start()
     {
         dialogPanel.SetActive(false);
         currentLines = new Queue<DialogLine>();
+        dialogQueue = new Queue<string>(); // Инициализируем очередь диалогов
 
         // Загрузка JSON-файла
         string path = Path.Combine(Application.streamingAssetsPath, "dialog.json");
@@ -60,6 +62,31 @@ public class DialogManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void EnqueueDialogs(List<string> dialogIds)
+    {
+        foreach (var dialogId in dialogIds)
+        {
+            dialogQueue.Enqueue(dialogId);
+        }
+
+        if (!isDialogActive && dialogQueue.Count > 0)
+        {
+            StartNextDialog();
+        }
+    }
+
+    private void StartNextDialog()
+    {
+        if (dialogQueue.Count == 0)
+        {
+            Debug.Log("Все диалоги завершены.");
+            return;
+        }
+
+        string nextDialogId = dialogQueue.Dequeue();
+        StartDialog(nextDialogId, StartNextDialog); // Указываем callback для продолжения
     }
 
     public void StartDialog(string dialogId, System.Action onComplete = null)
