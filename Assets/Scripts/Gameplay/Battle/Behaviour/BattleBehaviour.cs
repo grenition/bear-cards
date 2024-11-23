@@ -66,6 +66,8 @@ namespace Project.Gameplay.Battle.Behaviour
 
             await DoFight();
             
+            if(Model.BattleEnded) return;
+            
             _nextTurnLocked = false;
             TurnOwner = TurnOwner == CardOwner.player ? CardOwner.enemy : CardOwner.player;
             CurrentBehaviour.StartTurn();

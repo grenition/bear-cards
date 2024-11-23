@@ -51,6 +51,7 @@ namespace Project.Gameplay.Battle
             Behaviour.Stop();
             Model.Dispose();
             Behaviour.Dispose();
+            _initialized = false;
         }
 
         public static bool IsPlayerTurn() => Behaviour.GetCurrentState() == BattleState.playerTurn;

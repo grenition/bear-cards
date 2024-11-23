@@ -17,7 +17,7 @@ namespace GreonAssets.Extensions
                 }
                 catch (Exception ex)
                 {
-                    Debug.LogError($"Error while executing subscriber: {ex.Message}");
+                    Debug.LogError($"Error while executing subscriber: {ex}");
                 }
             }
         }
@@ -34,7 +34,7 @@ namespace GreonAssets.Extensions
                 }
                 catch (Exception ex)
                 {
-                    Debug.LogError($"Error while executing subscriber: {ex.Message}");
+                    Debug.LogError($"Error while executing subscriber: {ex}");
                 }
             }
         }
@@ -51,7 +51,7 @@ namespace GreonAssets.Extensions
                 }
                 catch (Exception ex)
                 {
-                    Debug.LogError($"Error while executing subscriber: {ex.Message}");
+                    Debug.LogError($"Error while executing subscriber: {ex}");
                 }
             }
         }
@@ -67,7 +67,7 @@ namespace GreonAssets.Extensions
                 }
                 catch (Exception ex)
                 {
-                    Debug.LogError($"Error while executing subscriber: {ex.Message}");
+                    Debug.LogError($"Error while executing subscriber: {ex}");
                 }
             }
         }

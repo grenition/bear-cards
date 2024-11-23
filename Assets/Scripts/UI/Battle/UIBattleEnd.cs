@@ -35,6 +35,7 @@ namespace Project.UI.Battle
         private void OnDestroy()
         {
             BattleController.Model.OnBattleEnded -= OnBattleEnd;
+            DOTween.KillAll();
         }
         private async void OnBattleEnd(CardOwner winner)
         {

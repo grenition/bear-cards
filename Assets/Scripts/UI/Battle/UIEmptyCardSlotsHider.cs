@@ -21,7 +21,7 @@ namespace Project.UI.Battle
         }
         private void OnDestroy()
         {
-            BattleController.Model.OnCardTransfered += OnCardTransfered;
+            BattleController.Model.OnCardTransfered -= OnCardTransfered;
         }
 
         private void OnCardTransfered(CardModel cardModel, CardPosition fromPosition, CardPosition toPosition) => UpdateVisualization();
