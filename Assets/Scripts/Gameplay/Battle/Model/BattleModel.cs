@@ -100,6 +100,8 @@ namespace Project.Gameplay.Battle.Model
 
         public void AddCardToDeck(CardOwner owner, string cardKey)
         {
+            if(BattleEnded) return;
+
             var playerModel = owner == CardOwner.player ? Player : Enemy;
             var freeDeckSlot = playerModel.GetFirstFreeSlotInDeck();
             if(freeDeckSlot == null) return;
@@ -110,6 +112,7 @@ namespace Project.Gameplay.Battle.Model
         
         public bool TryTransferCard(CardPosition from, CardPosition to)
         {
+            if(BattleEnded) return false;
             var slot = GetSlotAtPosition(from);
             if (slot == null) return false;
 
@@ -140,6 +143,7 @@ namespace Project.Gameplay.Battle.Model
 
         public void AttackForward(CardPosition attackerPosition)
         {
+            if(BattleEnded) return;
             if(attackerPosition.container != CardContainer.field) return;
             
             var card = GetCardAtPosition(attackerPosition);

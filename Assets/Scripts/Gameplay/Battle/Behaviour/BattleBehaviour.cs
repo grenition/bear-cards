@@ -53,7 +53,7 @@ namespace Project.Gameplay.Battle.Behaviour
         
         public async void NextTurn()
         {
-            if(_nextTurnLocked) return;
+            if(_nextTurnLocked || Model.BattleEnded) return;
             if (!BehaviourActive)
             {
                 Start();
@@ -97,7 +97,7 @@ namespace Project.Gameplay.Battle.Behaviour
 
             await UniTask.WaitForSeconds(1.2f);
         }
-        
+
         public void Dispose()
         {
             _playerBehaviour.Dispose();

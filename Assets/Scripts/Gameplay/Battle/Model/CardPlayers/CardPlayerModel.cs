@@ -61,11 +61,12 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             if(damage <= 0) return;
             
             Health -= damage;
+            Health = Math.Max(0, Health);
+            
             OnDamage.SafeInvoke(damage);
 
             if (Health <= 0)
             {
-                Health = 0;
                 OnDeath.SafeInvoke();
                 BattleModel.EndBattle(OwnershipType == CardOwner.player ? CardOwner.enemy : CardOwner.player);
             }
