@@ -2,6 +2,12 @@ using UnityEngine;
 
 namespace Project.Gameplay.Battle.Model.Cards
 {
+    public enum CardType
+    {
+        Card,
+        Spell
+    }
+    
     [CreateAssetMenu(menuName = "Gameplay/CardConfig", fileName = "Card")]
     public class CardConfig : ScriptableObject
     {
@@ -12,6 +18,7 @@ namespace Project.Gameplay.Battle.Model.Cards
         [field: SerializeField] public Sprite VisualIcon { get; private set; }
         
         [field: Header("Parameters")]
+        [field: SerializeField] public CardType CardType { get; private set; }
         [field: SerializeField] public int Cost { get; private set; }
         [field: SerializeField] public int Level { get; private set; }
         [field: SerializeField] public int BaseDamage { get; private set; }

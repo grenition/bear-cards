@@ -76,6 +76,7 @@ namespace Project.UI.Battle
         private float curveRotationOffset;
         private Color startColor;
         private CanvasGroup canvasGroup;
+        private Canvas canvas;
 
         private void Start()
         {
@@ -92,6 +93,7 @@ namespace Project.UI.Battle
             cardTransform = target.transform;
             shadowCanvas = visualShadow.GetComponent<Canvas>();
             canvasGroup = GetComponent<CanvasGroup>() ?? gameObject.AddComponent<CanvasGroup>();
+            canvas = GetComponent<Canvas>();
 
             //Event Listening
             parentCard.PointerEnterEvent.AddListener(PointerEnter);
@@ -242,6 +244,7 @@ namespace Project.UI.Battle
 
             visualShadow.localPosition = shadowDistance;
             shadowCanvas.overrideSorting = true;
+            canvas.overrideSorting = false;
         }
 
         private void PointerDown(UICardMovement card)
@@ -251,6 +254,7 @@ namespace Project.UI.Battle
             
             visualShadow.localPosition += (-Vector3.up * shadowOffset);
             shadowCanvas.overrideSorting = false;
+            canvas.overrideSorting = true;
         }
 
         private async void OnDamage(int obj)

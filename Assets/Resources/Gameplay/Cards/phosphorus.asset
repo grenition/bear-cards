@@ -16,6 +16,7 @@ MonoBehaviour:
   <VisualName>k__BackingField: "\u0424\u043E\u0441\u0444\u043E\u0440"
   <VisualDescription>k__BackingField: 
   <VisualIcon>k__BackingField: {fileID: 0}
+  <CardType>k__BackingField: 1
   <Cost>k__BackingField: 5
   <Level>k__BackingField: 0
   <BaseDamage>k__BackingField: 1

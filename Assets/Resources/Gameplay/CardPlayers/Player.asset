@@ -31,9 +31,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b607f1bb8fb6046f4abc688a0ff85210, type: 2}
   - {fileID: 11400000, guid: b607f1bb8fb6046f4abc688a0ff85210, type: 2}
   - {fileID: 11400000, guid: b607f1bb8fb6046f4abc688a0ff85210, type: 2}
+  - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
+  - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
+  - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
+  - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
+  - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
+  - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
   <DeckSize>k__BackingField: 20
   <Spells>k__BackingField: []
-  <SpellsSize>k__BackingField: 5
+  <SpellsSize>k__BackingField: 4
   <CardsAtFirstTurn>k__BackingField: 4
   <CardsAtAnotherTurns>k__BackingField: 1
   <PlaceToSlotChance>k__BackingField: 0.5

@@ -16,6 +16,8 @@ namespace Project.Gameplay.Battle.Model.Cards
         public CardConfig Config => BattleStaticData.Cards.Get(Key);
         public CardPosition Position => AttachedSlot.Position;
         public bool IsAlive => Health > 0;
+        public CardType Type => Config.CardType;
+        
         public CardSlotModel AttachedSlot { get; internal set; }
         public BattleModel BattleModel { get; protected set; }
         public int AttackDamage { get; protected set; }
