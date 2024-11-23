@@ -16,6 +16,8 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
 
         protected override async void OnTurnStart()
         {
+            await UniTask.WaitForSeconds(1f);
+            
             for (int i = 0; i < PlayerModel.Config.HandSize; i++)
             {
                 var card = PlayerModel.Hand.GetAt(i);

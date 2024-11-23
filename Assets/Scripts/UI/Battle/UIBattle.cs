@@ -22,7 +22,7 @@ namespace Project.UI.Battle
         
         private void Awake()
         {
-            Instance ??= this;
+            Instance = this;
         }
 
         private void Start()

@@ -10,8 +10,10 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         [field: Header("Visual")]
         [field: SerializeField] public string VisualName { get; private set; }
         [field: SerializeField, TextArea] public string VisualDescription { get; private set; }
+        [field: SerializeField] public Sprite Icon { get; private set; }
         
         [field: Header("Game")]
+        [field: SerializeField] public int Health { get; private set; } = 10;
         [field: SerializeField] public List<CardConfig> Hand { get; private set; }
         [field: SerializeField] public int HandSize { get; private set; } = 8;
         [field: SerializeField] public List<CardConfig> Deck { get; private set; }

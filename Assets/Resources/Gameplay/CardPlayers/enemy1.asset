@@ -15,6 +15,8 @@ MonoBehaviour:
   <VisualName>k__BackingField: "\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
     1"
   <VisualDescription>k__BackingField: 
+  <Icon>k__BackingField: {fileID: 6972477443367478020, guid: 5b6032af77ccc4856a4d98576dfa1673, type: 3}
+  <Health>k__BackingField: 10
   <Hand>k__BackingField: []
   <HandSize>k__BackingField: 4
   <Deck>k__BackingField:
@@ -24,3 +26,4 @@ MonoBehaviour:
   <SpellsSize>k__BackingField: 5
   <CardsAtFirstTurn>k__BackingField: 4
   <CardsAtAnotherTurns>k__BackingField: 1
+  <PlaceToSlotChance>k__BackingField: 0.5

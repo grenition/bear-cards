@@ -1,5 +1,6 @@
-using System;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using Project.Gameplay.Battle.Model.Cards;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +16,6 @@ namespace Project.UI.Battle
         private Vector3 rotationDelta;
         private int savedIndex;
         Vector3 movementDelta;
-        private Canvas canvas;
 
         [Header("References")]
         public Transform visualShadow;
@@ -59,12 +59,28 @@ namespace Project.UI.Battle
         [Header("Curve")]
         [SerializeField] private UICurveParameters uiCurve;
 
+        [Header("Damage")]
+        [SerializeField] private float damageInTime = 0.1f;
+        [SerializeField] private float damageOutTime = 0.5f;
+        [SerializeField] private float dieAnimation = 0.2f;
+        [SerializeField] private float damagePunchAngle = 5;
+        [SerializeField] private float dieScale = 0.5f;
+        [SerializeField] private Color damageColor = Color.red;
+        
+        [Header("Attack")]
+        [SerializeField] private float attackTime = 0.3f;
+        [SerializeField] private float attackPunchSize = 0.1f;
+        [SerializeField] private float attackDistance = 20f;
+
         private float curveYOffset;
         private float curveRotationOffset;
+        private Color startColor;
+        private CanvasGroup canvasGroup;
 
         private void Start()
         {
             shadowDistance = visualShadow.localPosition;
+            startColor = cardImage.color;
         }
 
         public void Initialize(UICardMovement target, int index = 0)
@@ -74,8 +90,8 @@ namespace Project.UI.Battle
             //Declarations
             parentCard = target;
             cardTransform = target.transform;
-            canvas = GetComponent<Canvas>();
             shadowCanvas = visualShadow.GetComponent<Canvas>();
+            canvasGroup = GetComponent<CanvasGroup>() ?? gameObject.AddComponent<CanvasGroup>();
 
             //Event Listening
             parentCard.PointerEnterEvent.AddListener(PointerEnter);
@@ -86,10 +102,13 @@ namespace Project.UI.Battle
             parentCard.PointerUpEvent.AddListener(PointerUp);
             parentCard.SlotEnterEvent.AddListener(SlotEnter);
             parentCard.SlotExitEvent.AddListener(SlotExit);
-
+            parentCard.Model.OnDamage += OnDamage;
+            parentCard.Model.OnAttack += OnAttack;
+            
             //Initialization
             initalize = true;
         }
+        
         private void OnDestroy()
         {
             parentCard.PointerEnterEvent.RemoveListener(PointerEnter);
@@ -100,6 +119,8 @@ namespace Project.UI.Battle
             parentCard.PointerUpEvent.RemoveListener(PointerUp);
             parentCard.SlotEnterEvent.RemoveListener(SlotEnter);
             parentCard.SlotExitEvent.RemoveListener(SlotExit);
+            parentCard.Model.OnDamage -= OnDamage;
+            parentCard.Model.OnAttack -= OnAttack;
         }
         
         private void SlotEnter(UICardMovement card, UICardSlot slot)
@@ -126,7 +147,6 @@ namespace Project.UI.Battle
             SmoothFollow();
             FollowRotation();
             CardTilt();
-            
         }
 
         private void HandPositioning()
@@ -193,13 +213,10 @@ namespace Project.UI.Battle
         {
             if(scaleAnimations)
                 transform.DOScale(scaleOnSelect, scaleTransition).SetEase(scaleEase);
-
-            canvas.overrideSorting = true;
         }
 
         private void EndDrag(UICardMovement card)
         {
-            canvas.overrideSorting = false;
             transform.DOScale(1, scaleTransition).SetEase(scaleEase);
         }
 
@@ -222,7 +239,6 @@ namespace Project.UI.Battle
         {
             if(scaleAnimations)
                 transform.DOScale(scaleOnHover, scaleTransition).SetEase(scaleEase);
-            canvas.overrideSorting = false;
 
             visualShadow.localPosition = shadowDistance;
             shadowCanvas.overrideSorting = true;
@@ -237,5 +253,44 @@ namespace Project.UI.Battle
             shadowCanvas.overrideSorting = false;
         }
 
+        private async void OnDamage(int obj)
+        {
+            shakeParent.DOPunchRotation(Vector3.forward * damagePunchAngle, damageInTime, 20, 1);
+            shakeParent.DOPunchScale(Vector3.one * -0.07f, damageInTime + damageOutTime, 1, 1);
+
+            await cardImage
+                .DOColor(damageColor, damageInTime)
+                .SetEase(Ease.OutQuad)
+                .AsyncWaitForCompletion();
+            
+            await cardImage
+                .DOColor(startColor, damageOutTime)
+                .SetEase(Ease.Linear)
+                .AsyncWaitForCompletion();
+        }
+
+        public async void DeathAnimationAndDestroy()
+        {
+            canvasGroup
+                .DOFade(0f, dieAnimation)
+                .SetEase(Ease.OutBack);
+            
+            await transform
+                .DOScale(dieScale, dieAnimation)
+                .SetEase(Ease.OutBack)
+                .AsyncWaitForCompletion();
+            
+            cardImage.DOKill();
+            shakeParent.DOKill();
+            
+            Destroy(gameObject);
+        }
+        private void OnAttack(CardPosition position)
+        {
+            var direction = position.owner == CardOwner.player ? Vector3.down : Vector3.up;
+            
+            shakeParent.DOPunchScale(Vector3.one * attackPunchSize, attackTime, 1, 1).SetEase(Ease.OutBack);
+            shakeParent.DOPunchPosition(direction * attackDistance, attackTime, 1, 1).SetEase(Ease.OutQuad);
+        }
     }
 }

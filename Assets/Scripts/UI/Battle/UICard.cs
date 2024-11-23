@@ -1,3 +1,4 @@
+using System;
 using Project.Gameplay.Battle.Model.Cards;
 using TMPro;
 using UnityEngine;
@@ -20,15 +21,29 @@ namespace Project.UI.Battle
         public void Init(CardModel cardModel)
         {
             if(cardModel == null) return;
+            
+            if(Model != null) Model.OnDamage -= OnDamage;
             Model = cardModel;
+            Model.OnDamage += OnDamage;
 
-            _costText.text = cardModel.Config.Cost.ToString();
-            _levelText.text = cardModel.Config.Level.ToString();
-            _iconImage.sprite = cardModel.Config.VisualIcon;
-            _shortName.text = cardModel.Config.VisualShortName;
-            _fullName.text = cardModel.Config.VisualName;
-            _damageText.text = cardModel.Damage.ToString();
-            _healthText.text = cardModel.Health.ToString();
+            Visualize();
+        }
+        private void OnDestroy()
+        {
+            if(Model != null)
+                Model.OnDamage -= OnDamage;
+        }
+
+        private void OnDamage(int obj) => Visualize();
+        private void Visualize()
+        {
+            _costText.text = Model.Config.Cost.ToString();
+            _levelText.text = Model.Config.Level.ToString();
+            _iconImage.sprite = Model.Config.VisualIcon;
+            _shortName.text = Model.Config.VisualShortName;
+            _fullName.text = Model.Config.VisualName;
+            _damageText.text = Model.AttackDamage.ToString();
+            _healthText.text = Model.Health.ToString();            
         }
     }
 }

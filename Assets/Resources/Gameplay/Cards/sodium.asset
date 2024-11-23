@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc3fce12eae04c7ba5be9b1bb4823389, type: 3}
   m_Name: sodium
   m_EditorClassIdentifier: 
+  <VisualShortName>k__BackingField: 
   <VisualName>k__BackingField: "\u041D\u0430\u0442\u0440\u0438\u0439"
   <VisualDescription>k__BackingField: 
   <VisualIcon>k__BackingField: {fileID: 0}
   <Cost>k__BackingField: 5
-  <Lelel>k__BackingField: 4
-  <BaseDamage>k__BackingField: 10
+  <Level>k__BackingField: 0
+  <BaseDamage>k__BackingField: 1
   <BaseHealth>k__BackingField: 3
