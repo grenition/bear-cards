@@ -40,6 +40,7 @@ namespace Project.Gameplay.Battle.Model.Cards
 
             if (Health <= 0)
             {
+                Health = 0;
                 OnDeath.SafeInvoke();
                 BattleModel.TryTransferCard(Position, CardPosition.Garbage());
             }

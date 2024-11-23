@@ -10,6 +10,10 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
 {
     public class CardPlayerModel : IDisposable
     {
+        public event Action<int> OnDamage;
+        public event Action OnDeath; 
+        
+        public bool IsAlive => Health > 0;
         public string Key { get; protected set; }
         public CardPlayerConfig Config => BattleStaticData.CardPlayers.Get(Key);
         public BattleModel BattleModel { get; protected set; }
@@ -17,12 +21,14 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         public List<CardSlotModel> Hand { get; protected set; } = new();
         public List<CardSlotModel> Deck { get; protected set; } = new();
         public List<CardSlotModel> Spells { get; protected set; } = new();
+        public int Health { get; protected set; }
 
         public CardPlayerModel(string key, CardOwner ownerhipType, BattleModel battleModel)
         {
             Key = key;
             BattleModel = battleModel;
             OwnershipType = ownerhipType;
+            Health = Config.Health;
 
             for (int i = 0; i < Config.HandSize; i++)
             {
@@ -50,6 +56,21 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             Spells.ForEach(x => x.Dispose());
         }
 
+        internal void Damage(int damage)
+        {
+            if(damage <= 0) return;
+            
+            Health -= damage;
+            OnDamage.SafeInvoke(damage);
+
+            if (Health <= 0)
+            {
+                Health = 0;
+                OnDeath.SafeInvoke();
+                BattleModel.EndBattle(OwnershipType == CardOwner.player ? CardOwner.enemy : CardOwner.player);
+            }
+        }
+        
         public CardModel GetFirstCardInHand() => Hand.FirstOrDefault(x => x.Card != null)?.Card;
         public CardModel GetFirstCardInDeck() => Deck.FirstOrDefault(x => x.Card != null)?.Card;
         public CardModel GetFirstCardInSpells() => Spells.FirstOrDefault(x => x.Card != null)?.Card;

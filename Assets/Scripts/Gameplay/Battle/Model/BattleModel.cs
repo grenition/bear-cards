@@ -14,6 +14,7 @@ namespace Project.Gameplay.Battle.Model
     {
         public event Action<CardModel, CardPosition, CardPosition> OnCardTransfered;
         public event Action<CardModel, CardModel> OnCardAttack;
+        public event Action<CardOwner> OnBattleEnded;
         
         public string Key { get; protected set; }
         public BattleConfig Config => BattleStaticData.Battles.Get(Key);
@@ -23,6 +24,8 @@ namespace Project.Gameplay.Battle.Model
         public List<CardSlotModel> EnemyField { get; protected set; } = new();
         public Dictionary<CardPosition, CardSlotModel> Slots { get; protected set; } = new();
         public List<CardModel> Cards { get; protected set; } = new();
+        public bool BattleEnded { get; protected set; }
+        public CardOwner BattleWinner { get; protected set; }
 
         public BattleModel(string battleKey)
         {
@@ -143,11 +146,26 @@ namespace Project.Gameplay.Battle.Model
             var enemyType = attackerPosition.owner == CardOwner.player ? CardOwner.enemy : CardOwner.player;
             var enemyPosition = new CardPosition(attackerPosition.container, enemyType, attackerPosition.index);
             var forwardCard = GetCardAtPosition(enemyPosition);
+            var enemyPlayer = enemyType == CardOwner.player ? Player : Enemy;
             
-            if(card == null || forwardCard == null) return;
-
+            if(card == null) return;
             card.CallOnAttack(enemyPosition);
+            
+            if (forwardCard == null)
+            {
+                enemyPlayer.Damage(card.AttackDamage);
+                return;
+            }
             forwardCard.Damage(card.AttackDamage);
+        }
+
+        public void EndBattle(CardOwner winner)
+        {
+            if(BattleEnded) return;
+            
+            BattleEnded = true;
+            BattleWinner = winner;
+            OnBattleEnded.SafeInvoke(winner);
         }
 
         #endregion
