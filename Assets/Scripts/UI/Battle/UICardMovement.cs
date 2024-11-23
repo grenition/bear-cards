@@ -212,6 +212,7 @@ namespace Project.UI.Battle
 
             slotUnderCursor = GetAvailableCardSlotUnderCursor(eventData);
             slotUnderCursor?.SetHighlight(false);
+            UIDynamicSelector.Instance?.SetSelection(new List<RectTransform>());
 
             if (!slotUnderCursor || !BattleController.Model.TryTransferCard(Model.Position, slotUnderCursor.CardPosition))
                 transform.DOMove(CardSlot ? CardSlot.transform.position : startPosition, moveTime).SetEase(Ease.OutBack);
@@ -253,7 +254,8 @@ namespace Project.UI.Battle
 
             foreach (var result in raycastList)
             {
-                if (result.gameObject.TryGetComponent(out UICardSlot slot) && slot.IsAvailable)
+                if (result.gameObject.TryGetComponent(out UICardSlot slot)
+                    && ((Model.Type == CardType.Card && slot.IsAvailable) || BattleController.Model.IsSlotAvailableForSpell(slot.Model, Model)))
                     return slot;
             }
 

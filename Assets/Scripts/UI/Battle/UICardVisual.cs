@@ -1,5 +1,9 @@
+using System.Collections.Generic;
+using System.Linq;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using GreonAssets.UI.Extensions;
+using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Model.Cards;
 using UnityEngine;
 using UnityEngine.UI;
@@ -66,7 +70,8 @@ namespace Project.UI.Battle
         [SerializeField] private float damagePunchAngle = 5;
         [SerializeField] private float dieScale = 0.5f;
         [SerializeField] private Color damageColor = Color.red;
-        
+        [SerializeField] private Color spellDamageColor = Color.red;
+
         [Header("Attack")]
         [SerializeField] private float attackTime = 0.3f;
         [SerializeField] private float attackPunchSize = 0.1f;
@@ -87,7 +92,7 @@ namespace Project.UI.Battle
         public void Initialize(UICardMovement target, int index = 0)
         {
             transform.position = target.transform.position;
-            
+
             //Declarations
             parentCard = target;
             cardTransform = target.transform;
@@ -106,11 +111,11 @@ namespace Project.UI.Battle
             parentCard.SlotExitEvent.AddListener(SlotExit);
             parentCard.Model.OnDamage += OnDamage;
             parentCard.Model.OnAttack += OnAttack;
-            
+
             //Initialization
             initalize = true;
         }
-        
+
         private void OnDestroy()
         {
             parentCard.PointerEnterEvent.RemoveListener(PointerEnter);
@@ -124,15 +129,30 @@ namespace Project.UI.Battle
             parentCard.Model.OnDamage -= OnDamage;
             parentCard.Model.OnAttack -= OnAttack;
         }
-        
+
         private void SlotEnter(UICardMovement card, UICardSlot slot)
         {
-            if(slot == null) return;
+            if (slot == null) return;
+            if (parentCard.Model.Type == CardType.Spell)
+            {
+                var slotsModels = BattleController.Model.GetSlotsForSpell(slot.CardPosition, parentCard.Model.Config.SpellPlacing);
+                var slots = UIBattle.Instance.Slots.Where(x => slotsModels.Contains(x.Key)).Select(x => x.Value.GetComponent<RectTransform>());
+                UIDynamicSelector.Instance.SetSelection(slots);
+                return;
+            }
+
             slot.SetHighlight(true);
         }
         private void SlotExit(UICardMovement card, UICardSlot slot)
         {
-            if(slot == null) return;
+            if (slot == null) return;
+
+            if (parentCard.Model.Type == CardType.Spell)
+            {
+                UIDynamicSelector.Instance.SetSelection(new List<RectTransform>());
+                return;
+            }
+
             slot.SetHighlight(false);
         }
 
@@ -196,9 +216,9 @@ namespace Project.UI.Battle
             DOTween.Kill(2, true);
             float dir = state ? 1 : 0;
             shakeParent.DOPunchPosition(shakeParent.up * selectPunchAmount * dir, scaleTransition, 10, 1);
-            shakeParent.DOPunchRotation(Vector3.forward * (hoverPunchAngle/2), hoverTransition, 20, 1).SetId(2);
+            shakeParent.DOPunchRotation(Vector3.forward * (hoverPunchAngle / 2), hoverTransition, 20, 1).SetId(2);
 
-            if(scaleAnimations)
+            if (scaleAnimations)
                 transform.DOScale(scaleOnHover, scaleTransition).SetEase(scaleEase);
         }
 
@@ -213,7 +233,7 @@ namespace Project.UI.Battle
 
         private void BeginDrag(UICardMovement card)
         {
-            if(scaleAnimations)
+            if (scaleAnimations)
                 transform.DOScale(scaleOnSelect, scaleTransition).SetEase(scaleEase);
         }
 
@@ -224,7 +244,7 @@ namespace Project.UI.Battle
 
         private void PointerEnter(UICardMovement card)
         {
-            if(scaleAnimations)
+            if (scaleAnimations)
                 transform.DOScale(scaleOnHover, scaleTransition).SetEase(scaleEase);
 
             DOTween.Kill(2, true);
@@ -239,7 +259,7 @@ namespace Project.UI.Battle
 
         private void PointerUp(UICardMovement card, bool longPress)
         {
-            if(scaleAnimations)
+            if (scaleAnimations)
                 transform.DOScale(scaleOnHover, scaleTransition).SetEase(scaleEase);
 
             visualShadow.localPosition = shadowDistance;
@@ -249,9 +269,9 @@ namespace Project.UI.Battle
 
         private void PointerDown(UICardMovement card)
         {
-            if(scaleAnimations)
+            if (scaleAnimations)
                 transform.DOScale(scaleOnSelect, scaleTransition).SetEase(scaleEase);
-            
+
             visualShadow.localPosition += (-Vector3.up * shadowOffset);
             shadowCanvas.overrideSorting = false;
             canvas.overrideSorting = true;
@@ -263,10 +283,10 @@ namespace Project.UI.Battle
             shakeParent.DOPunchScale(Vector3.one * -0.07f, damageInTime + damageOutTime, 1, 1);
 
             await cardImage
-                .DOColor(damageColor, damageInTime)
+                .DOColor(parentCard.Model.Type == CardType.Card ? damageColor : spellDamageColor, damageInTime)
                 .SetEase(Ease.OutQuad)
                 .AsyncWaitForCompletion();
-            
+
             await cardImage
                 .DOColor(startColor, damageOutTime)
                 .SetEase(Ease.Linear)
@@ -283,16 +303,16 @@ namespace Project.UI.Battle
                 .DOScale(dieScale, dieAnimation)
                 .SetEase(Ease.OutBack)
                 .AsyncWaitForCompletion();
-            
+
             cardImage.DOKill();
             shakeParent.DOKill();
-            
+
             Destroy(gameObject);
         }
         private void OnAttack(CardPosition position)
         {
             var direction = position.owner == CardOwner.player ? Vector3.down : Vector3.up;
-            
+
             shakeParent.DOPunchScale(Vector3.one * attackPunchSize, attackTime, 1, 1).SetEase(Ease.OutBack);
             shakeParent.DOPunchPosition(direction * attackDistance, attackTime, 1, 1).SetEase(Ease.OutQuad);
         }

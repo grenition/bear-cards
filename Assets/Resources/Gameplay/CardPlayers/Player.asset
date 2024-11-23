@@ -32,11 +32,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b607f1bb8fb6046f4abc688a0ff85210, type: 2}
   - {fileID: 11400000, guid: b607f1bb8fb6046f4abc688a0ff85210, type: 2}
   - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
-  - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
-  - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
-  - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
-  - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
-  - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
+  - {fileID: 11400000, guid: c2f9ec4398898461685b1fdae70098c2, type: 2}
+  - {fileID: 11400000, guid: 89ce14a8a469d44a1bf0345724638170, type: 2}
+  - {fileID: 11400000, guid: ce37f72ad2e0f4b7cb3f6444337a4775, type: 2}
+  - {fileID: 11400000, guid: 671fa2882b3e54936990f92ab4093e00, type: 2}
+  - {fileID: 11400000, guid: 630f4a16fb8d0497d92e2a113141d6bf, type: 2}
   <DeckSize>k__BackingField: 20
   <Spells>k__BackingField: []
   <SpellsSize>k__BackingField: 4

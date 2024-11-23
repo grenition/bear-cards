@@ -7,6 +7,15 @@ namespace Project.Gameplay.Battle.Model.Cards
         Card,
         Spell
     }
+    public enum SpellPlacing
+    {
+        PlayerCard,
+        EnemyCard,
+        AnyCard,
+        PlayerField,
+        EnemyField,
+        AllFields
+    }
     
     [CreateAssetMenu(menuName = "Gameplay/CardConfig", fileName = "Card")]
     public class CardConfig : ScriptableObject
@@ -19,6 +28,7 @@ namespace Project.Gameplay.Battle.Model.Cards
         
         [field: Header("Parameters")]
         [field: SerializeField] public CardType CardType { get; private set; }
+        [field: SerializeField] public SpellPlacing SpellPlacing { get; private set; }
         [field: SerializeField] public int Cost { get; private set; }
         [field: SerializeField] public int Level { get; private set; }
         [field: SerializeField] public int BaseDamage { get; private set; }
