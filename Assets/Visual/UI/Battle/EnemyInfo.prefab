@@ -69,6 +69,7 @@ MonoBehaviour:
   _damageAnimationShakeTime: 0.25
   _shakeAmplitude: 5
   _damageColor: {r: 1, g: 0.627451, b: 0.627451, a: 1}
+  _healthColor: {r: 0.627451, g: 1, b: 0.6627451, a: 1}
 --- !u!114 &2906715472370129262
 MonoBehaviour:
   m_ObjectHideFlags: 0

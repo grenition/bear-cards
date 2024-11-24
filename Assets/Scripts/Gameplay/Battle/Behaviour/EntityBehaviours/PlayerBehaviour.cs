@@ -12,15 +12,30 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
         {
             for (int i = 0; i < PlayerModel.Config.CardsAtFirstTurn; i++)
             {
-                PlayerModel.TransferCardFromDeckToHand();
-                await UniTask.WaitForSeconds(0.1f);
+                if(PlayerModel.TransferCardFromDeckToHand());
+                    await UniTask.WaitForSeconds(0.1f);
+            }
+
+            await UniTask.WaitForSeconds(0.1f);
+            
+            for (int i = 0; i < PlayerModel.Config.SpellsSize; i++)
+            {
+                if(PlayerModel.TransferCardFromDeckToSpells());
+                    await UniTask.WaitForSeconds(0.1f);
             }
         }
-        protected override void OnTurnStart()
+        protected override async void OnTurnStart()
         {
             if(TurnIndex == 0) return;
             
             PlayerModel.TransferCardFromDeckToHand();
+            
+            await UniTask.WaitForSeconds(0.1f);
+            for (int i = 0; i < PlayerModel.Config.SpellsSize; i++)
+            {
+                if(PlayerModel.TransferCardFromDeckToSpells());
+                await UniTask.WaitForSeconds(0.1f);
+            }
         }
         
         public PlayerBehaviour(BattleBehaviour battleModel) : base(battleModel) { }

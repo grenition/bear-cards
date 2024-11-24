@@ -21,6 +21,7 @@ namespace Project.UI.Battle
         [SerializeField] private float _damageAnimationShakeTime = 0.25f;
         [SerializeField] private float _shakeAmplitude = 5;
         [SerializeField] private Color _damageColor = Color.red;
+        [SerializeField] private Color _healthColor = Color.green;
 
         private bool _initialized = false;
 
@@ -36,7 +37,7 @@ namespace Project.UI.Battle
             Model = model;
             Visualize();
 
-            Model.OnDamage += OnDamage;
+            Model.OnHealthChanged += OnHealthChanged;
 
             _initialized = true;
         }
@@ -44,7 +45,7 @@ namespace Project.UI.Battle
         {
             if (_initialized)
             {
-                Model.OnDamage -= OnDamage;
+                Model.OnHealthChanged -= OnHealthChanged;
             }
         }
 
@@ -54,18 +55,19 @@ namespace Project.UI.Battle
             _healthText.text = $"ХП {Model.Health}";
         }
 
-        public async void OnDamage(int damage)
+        public async void OnHealthChanged(int modValue)
         {
             _healthText.text = $"ХП {Model.Health}";
 
+            var changeColor = modValue > 0 ? _healthColor : _damageColor;
             transform.DOShakePosition(_damageAnimationShakeTime, _shakeAmplitude).SetEase(Ease.OutBack);
             
             _healthText
-                .DOColor(_damageColor, _damageAnimationInTime)
+                .DOColor(changeColor, _damageAnimationInTime)
                 .SetEase(Ease.OutQuad);
             
             await _iconImage
-                .DOColor(_damageColor, _damageAnimationInTime)
+                .DOColor(changeColor, _damageAnimationInTime)
                 .SetEase(Ease.OutQuad)
                 .AsyncWaitForCompletion();
             

@@ -10,9 +10,9 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
 {
     public class CardPlayerModel : IDisposable
     {
-        public event Action<int> OnDamage;
-        public event Action OnDeath; 
-        
+        public event Action<int> OnHealthChanged;
+        public event Action OnDeath;
+
         public bool IsAlive => Health > 0;
         public string Key { get; protected set; }
         public CardPlayerConfig Config => BattleStaticData.CardPlayers.Get(Key);
@@ -56,14 +56,14 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             Spells.ForEach(x => x.Dispose());
         }
 
-        internal void Damage(int damage)
+        internal void ModifyHealth(int modifyValue)
         {
-            if(damage <= 0) return;
-            
-            Health -= damage;
+            if (modifyValue == 0) return;
+
+            Health += modifyValue;
             Health = Math.Max(0, Health);
-            
-            OnDamage.SafeInvoke(damage);
+
+            OnHealthChanged.SafeInvoke(modifyValue);
 
             if (Health <= 0)
             {
@@ -71,20 +71,30 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
                 BattleModel.EndBattle(OwnershipType == CardOwner.player ? CardOwner.enemy : CardOwner.player);
             }
         }
-        
+
         public CardModel GetFirstCardInHand() => Hand.FirstOrDefault(x => x.Card != null)?.Card;
         public CardModel GetFirstCardInDeck() => Deck.FirstOrDefault(x => x.Card != null)?.Card;
         public CardModel GetFirstCardInSpells() => Spells.FirstOrDefault(x => x.Card != null)?.Card;
         public CardSlotModel GetFirstFreeSlotInHand() => Hand.FirstOrDefault(x => x.Card == null);
         public CardSlotModel GetFirstFreeSlotInDeck() => Deck.FirstOrDefault(x => x.Card == null);
         public CardSlotModel GetFirstFreeSlotInSpells() => Spells.FirstOrDefault(x => x.Card == null);
-        public void TransferCardFromDeckToHand()
+        public bool TransferCardFromDeckToHand()
         {
             var card = GetFirstCardInDeck();
             var targetSlot = GetFirstFreeSlotInHand();
-            if (card == null || targetSlot == null) return;
+            if (card == null || card.Type == CardType.Spell || targetSlot == null) return false;
 
             BattleModel.TryTransferCard(card.Position, targetSlot.Position);
+            return true;
+        }
+        public bool TransferCardFromDeckToSpells()
+        {
+            var spell = Deck.FirstOrDefault(x => x.Card != null && x.Card.Type == CardType.Spell)?.Card;
+            var targetSlot = GetFirstFreeSlotInSpells();
+            if (spell == null || targetSlot == null) return false;
+
+            BattleModel.TryTransferCard(spell.Position, targetSlot.Position);
+            return true;
         }
     }
 }

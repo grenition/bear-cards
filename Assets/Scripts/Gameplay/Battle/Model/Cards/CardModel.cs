@@ -7,7 +7,7 @@ namespace Project.Gameplay.Battle.Model.Cards
 {
     public class CardModel : IDisposable
     {
-        public event Action<int> OnDamage;
+        public event Action<int> OnHealthChange;
         public event Action OnDeath;
         public event Action<CardPosition, CardPosition> OnTransfered;
         public event Action<CardPosition> OnAttack; 
@@ -16,6 +16,8 @@ namespace Project.Gameplay.Battle.Model.Cards
         public CardConfig Config => BattleStaticData.Cards.Get(Key);
         public CardPosition Position => AttachedSlot.Position;
         public bool IsAlive => Health > 0;
+        public CardType Type => Config.CardType;
+        
         public CardSlotModel AttachedSlot { get; internal set; }
         public BattleModel BattleModel { get; protected set; }
         public int AttackDamage { get; protected set; }
@@ -31,14 +33,14 @@ namespace Project.Gameplay.Battle.Model.Cards
             BattleModel.RegisterCard(this);
         }
 
-        internal void Damage(int damage)
+        internal void ModifyHealth(int modifyValue)
         {
-            if(damage <= 0) return;
+            if(modifyValue == 0) return;
             
-            Health -= damage;
+            Health += modifyValue;
             Health = Math.Max(0, Health);
 
-            OnDamage.SafeInvoke(damage);
+            OnHealthChange.SafeInvoke(modifyValue);
 
             if (Health <= 0)
             {

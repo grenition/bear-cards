@@ -480,6 +480,7 @@ GameObject:
   - component: {fileID: 6426217280175570869}
   - component: {fileID: 4448410597759026312}
   - component: {fileID: 6352630000783292954}
+  - component: {fileID: 1595807178748359033}
   m_Layer: 5
   m_Name: CardVisual
   m_TagString: Untagged
@@ -577,6 +578,8 @@ MonoBehaviour:
   damagePunchAngle: 10
   dieScale: 0.7
   damageColor: {r: 1, g: 0.627451, b: 0.627451, a: 1}
+  healthColor: {r: 0.627451, g: 1, b: 0.66244286, a: 1}
+  spellDamageColor: {r: 0.627451, g: 1, b: 1, a: 1}
   attackTime: 0.2
   attackPunchSize: 0.1
   attackDistance: 80
@@ -592,6 +595,29 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!223 &1595807178748359033
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133302518604290077}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &2377891890147022653
 GameObject:
   m_ObjectHideFlags: 0
