@@ -34,9 +34,7 @@ namespace Assets.Scripts.Map
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
-            {
                 ComplitedInteract();
-            }
         }
 
         public void UpdatePoints()

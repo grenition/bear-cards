@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: LocationFirst
   m_EditorClassIdentifier: 
   LocationLevel: 7
-  MinimumFork: 0
-  MaximumFork: 0
+  MinimumFork: 2
+  MaximumFork: 4
   StartResourcesMinimum: 0
   StartResourcesMaximum: 0
   KeysEnemy:

@@ -1,3 +1,4 @@
+using GreonAssets.Extensions;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -29,29 +30,21 @@ namespace Assets.Scripts.Map
                 }
             });
 
-
             _points.ForEach(level =>
             {
-                level.ForEach(pointOfLevel =>
+                level.Where(point => point.ConnectPoints != null && point.ConnectPoints.Count != 0).ForEach(pointOfLevel =>
                 {
-                    if (pointOfLevel.ConnectPoints != null && pointOfLevel.ConnectPoints.Count != 0)
+                    pointOfLevel.ConnectPoints.ForEach(point =>
                     {
-                        pointOfLevel.ConnectPoints.ForEach(point =>
-                        {
-                            pointOfLevel.ViewPoint.CreatePathTo(point.ViewPoint);
-                        });
-                    }
+                        pointOfLevel.ViewPoint.CreatePathTo(point.ViewPoint);
+                    });
                 });
             });
 
             _points[_points.Count - 2].ForEach(lastpoint =>
             {
                 lastpoint.ViewPoint.CreatePathTo(_points[_points.Count - 1].First().ViewPoint);
-                Debug.LogError(_points[_points.Count - 1].First().Key);
             });
-
-
-            //_points.Last()
         }
     }
 }
