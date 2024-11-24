@@ -149,8 +149,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MapController>k__BackingField: {fileID: 498369992}
+  <MapCamera>k__BackingField: {fileID: 1599152386}
   _startPoint: {fileID: 11400000, guid: d6ea3833932066942a24b9f0e4911369, type: 2}
   _endPoint: {fileID: 11400000, guid: d99dbfdf6690a4846927bcebfad2de63, type: 2}
+  _playerPrefab: {fileID: 614500089225420600, guid: 5722744fd40826e4fb151f9cac18ece5, type: 3}
 --- !u!4 &58954307
 Transform:
   m_ObjectHideFlags: 0
@@ -195,7 +197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e692c8754309c245b5dfe689c8470eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 614500089225420600, guid: 5722744fd40826e4fb151f9cac18ece5, type: 3}
 --- !u!4 &498369993
 Transform:
   m_ObjectHideFlags: 0
@@ -223,6 +224,7 @@ GameObject:
   - component: {fileID: 1599152383}
   - component: {fileID: 1599152382}
   - component: {fileID: 1599152385}
+  - component: {fileID: 1599152386}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -348,6 +350,20 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1599152386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599152381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8e8c21f00f06a4db357116968e0b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1.1
+  _stopDistance: 0.24
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
