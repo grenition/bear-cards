@@ -578,7 +578,8 @@ MonoBehaviour:
   damagePunchAngle: 10
   dieScale: 0.7
   damageColor: {r: 1, g: 0.627451, b: 0.627451, a: 1}
-  spellDamageColor: {r: 0.627451, g: 1, b: 0.8256939, a: 1}
+  healthColor: {r: 0.627451, g: 1, b: 0.66244286, a: 1}
+  spellDamageColor: {r: 0.627451, g: 1, b: 1, a: 1}
   attackTime: 0.2
   attackPunchSize: 0.1
   attackDistance: 80

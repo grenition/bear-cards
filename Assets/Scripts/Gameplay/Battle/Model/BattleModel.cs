@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using GreonAssets.Extensions;
-using NUnit.Framework;
 using Project.Gameplay.Battle.Data;
 using Project.Gameplay.Battle.Model.CardPlayers;
 using Project.Gameplay.Battle.Model.Cards;
@@ -179,7 +178,7 @@ namespace Project.Gameplay.Battle.Model
             
             if (IsSlotAvailableForSpell(newSlot, slot.Card))
             {
-                slot.Card.Damage(slot.Card.Health);
+                AttackSpell(slot.Card, to);   
                 return true;
             }
 
@@ -194,6 +193,31 @@ namespace Project.Gameplay.Battle.Model
             return true;
         }
 
+        public void AttackSpell(CardModel spell, CardPosition position)
+        {
+            var slots = GetSlotsForSpell(position, spell.Config.SpellPlacing);
+            
+            if (spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.PlayerAndCards
+                || spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.EnemyAndCards
+                || spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.OnlyCards)
+            {
+                slots.Where(x => x.Card != null).ForEach(x => x.Card.ModifyHealth(-spell.AttackDamage));
+            }
+            
+            if (spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.PlayerOnly
+                || spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.PlayerAndCards)
+            {
+                Player.ModifyHealth(-spell.AttackDamage);
+            }
+            else if (spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.EnemyOnly
+                || spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.EnemyAndCards)
+            {
+                Enemy.ModifyHealth(-spell.AttackDamage);
+            }
+            
+            
+            spell.ModifyHealth(-spell.Health);
+        }
         public void AttackForward(CardPosition attackerPosition)
         {
             if (BattleEnded) return;
@@ -210,10 +234,10 @@ namespace Project.Gameplay.Battle.Model
 
             if (forwardCard == null)
             {
-                enemyPlayer.Damage(card.AttackDamage);
+                enemyPlayer.ModifyHealth(-card.AttackDamage);
                 return;
             }
-            forwardCard.Damage(card.AttackDamage);
+            forwardCard.ModifyHealth(-card.AttackDamage);
         }
 
         public void EndBattle(CardOwner winner)

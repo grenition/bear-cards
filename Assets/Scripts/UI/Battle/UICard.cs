@@ -22,19 +22,19 @@ namespace Project.UI.Battle
         {
             if(cardModel == null) return;
             
-            if(Model != null) Model.OnDamage -= OnDamage;
+            if(Model != null) Model.OnHealthChange -= OnHealthChange;
             Model = cardModel;
-            Model.OnDamage += OnDamage;
+            Model.OnHealthChange += OnHealthChange;
 
             Visualize();
         }
         private void OnDestroy()
         {
             if(Model != null)
-                Model.OnDamage -= OnDamage;
+                Model.OnHealthChange -= OnHealthChange;
         }
 
-        private void OnDamage(int obj) => Visualize();
+        private void OnHealthChange(int obj) => Visualize();
         private void Visualize()
         {
             _costText.text = Model.Config.Cost.ToString();

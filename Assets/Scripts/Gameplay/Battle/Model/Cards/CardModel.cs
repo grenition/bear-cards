@@ -7,7 +7,7 @@ namespace Project.Gameplay.Battle.Model.Cards
 {
     public class CardModel : IDisposable
     {
-        public event Action<int> OnDamage;
+        public event Action<int> OnHealthChange;
         public event Action OnDeath;
         public event Action<CardPosition, CardPosition> OnTransfered;
         public event Action<CardPosition> OnAttack; 
@@ -33,14 +33,14 @@ namespace Project.Gameplay.Battle.Model.Cards
             BattleModel.RegisterCard(this);
         }
 
-        internal void Damage(int damage)
+        internal void ModifyHealth(int modifyValue)
         {
-            if(damage <= 0) return;
+            if(modifyValue == 0) return;
             
-            Health -= damage;
+            Health += modifyValue;
             Health = Math.Max(0, Health);
 
-            OnDamage.SafeInvoke(damage);
+            OnHealthChange.SafeInvoke(modifyValue);
 
             if (Health <= 0)
             {

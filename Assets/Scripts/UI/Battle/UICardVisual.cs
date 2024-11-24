@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
@@ -70,6 +71,7 @@ namespace Project.UI.Battle
         [SerializeField] private float damagePunchAngle = 5;
         [SerializeField] private float dieScale = 0.5f;
         [SerializeField] private Color damageColor = Color.red;
+        [SerializeField] private Color healthColor = Color.green;
         [SerializeField] private Color spellDamageColor = Color.red;
 
         [Header("Attack")]
@@ -109,7 +111,7 @@ namespace Project.UI.Battle
             parentCard.PointerUpEvent.AddListener(PointerUp);
             parentCard.SlotEnterEvent.AddListener(SlotEnter);
             parentCard.SlotExitEvent.AddListener(SlotExit);
-            parentCard.Model.OnDamage += OnDamage;
+            parentCard.Model.OnHealthChange += OnHealthChange;
             parentCard.Model.OnAttack += OnAttack;
 
             //Initialization
@@ -126,7 +128,7 @@ namespace Project.UI.Battle
             parentCard.PointerUpEvent.RemoveListener(PointerUp);
             parentCard.SlotEnterEvent.RemoveListener(SlotEnter);
             parentCard.SlotExitEvent.RemoveListener(SlotExit);
-            parentCard.Model.OnDamage -= OnDamage;
+            parentCard.Model.OnHealthChange -= OnHealthChange;
             parentCard.Model.OnAttack -= OnAttack;
         }
 
@@ -277,13 +279,14 @@ namespace Project.UI.Battle
             canvas.overrideSorting = true;
         }
 
-        private async void OnDamage(int obj)
+        private async void OnHealthChange(int health)
         {
             shakeParent.DOPunchRotation(Vector3.forward * damagePunchAngle, damageInTime, 20, 1);
-            shakeParent.DOPunchScale(Vector3.one * -0.07f, damageInTime + damageOutTime, 1, 1);
+            shakeParent.DOPunchScale(Vector3.one * 0.07f * Math.Sign(health), damageInTime + damageOutTime, 1, 1);
 
+            var changeColor = health > 0 ? healthColor : damageColor;
             await cardImage
-                .DOColor(parentCard.Model.Type == CardType.Card ? damageColor : spellDamageColor, damageInTime)
+                .DOColor(parentCard.Model.Type == CardType.Card ? changeColor : spellDamageColor, damageInTime)
                 .SetEase(Ease.OutQuad)
                 .AsyncWaitForCompletion();
 

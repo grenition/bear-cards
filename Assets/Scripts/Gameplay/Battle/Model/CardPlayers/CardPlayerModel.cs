@@ -10,7 +10,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
 {
     public class CardPlayerModel : IDisposable
     {
-        public event Action<int> OnDamage;
+        public event Action<int> OnHealthChanged;
         public event Action OnDeath;
 
         public bool IsAlive => Health > 0;
@@ -56,14 +56,14 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             Spells.ForEach(x => x.Dispose());
         }
 
-        internal void Damage(int damage)
+        internal void ModifyHealth(int modifyValue)
         {
-            if (damage <= 0) return;
+            if (modifyValue == 0) return;
 
-            Health -= damage;
+            Health += modifyValue;
             Health = Math.Max(0, Health);
 
-            OnDamage.SafeInvoke(damage);
+            OnHealthChanged.SafeInvoke(modifyValue);
 
             if (Health <= 0)
             {

@@ -1,7 +1,5 @@
-using System;
 using Project.Gameplay.Battle.Behaviour;
 using Project.Gameplay.Battle.Model;
-using Project.Gameplay.Battle.Model.Cards;
 using UnityEngine;
 
 namespace Project.Gameplay.Battle
