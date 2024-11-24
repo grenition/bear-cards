@@ -14,8 +14,8 @@ namespace Assets.Scripts.Map
         [field: SerializeField] public MapCamera MapCamera { get; private set; }
         public MapPlayer MapPlayer { get; private set; }
 
-        [SerializeField] private InterestingPointConfig _startPoint;
-        [SerializeField] private InterestingPointConfig _endPoint;
+        [SerializeField] private ViewPoint _startPoint;
+        [SerializeField] private ViewPoint _endPoint;
         [SerializeField] private MapPlayer _playerPrefab;
 
         private List<List<InteractivePoint>> _intersections;

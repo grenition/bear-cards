@@ -8,11 +8,11 @@ namespace Assets.Scripts.Map
 
         private FactoryLevel _factoryLevel;
         private LocationConfigurate _locationConfigurate;
-        private InterestingPointConfig _startPoint;
-        private InterestingPointConfig _endPoint;
+        private ViewPoint _startPoint;
+        private ViewPoint _endPoint;
         public PointOfInterestGenerator(string keyLocation,
-            InterestingPointConfig startPoint,
-            InterestingPointConfig endPoint)
+            ViewPoint startPoint,
+            ViewPoint endPoint)
         {
             PointFactory _ = new();
             _locationConfigurate = Resources.Load<LocationConfigurate>("Map/" + keyLocation);
@@ -28,7 +28,6 @@ namespace Assets.Scripts.Map
 
             var start = PointFactory.Instance.CreatePoint("Start");
             start.ConnectPoints = new List<InteractivePoint>();
-            start.View = _startPoint.View;
             start.Pass();
 
             targetLevel.Add(new List<InteractivePoint>() { start });
@@ -43,7 +42,6 @@ namespace Assets.Scripts.Map
             var boss = PointFactory.Instance.CreatePoint("Start");
             boss.ConnectPoints = new List<InteractivePoint>();
             boss.Level = _locationConfigurate.LocationLevel;
-            boss.View = _endPoint.View;
             targetLevel.Add(new List<InteractivePoint>() { boss });
 
             return targetLevel;
@@ -57,11 +55,11 @@ namespace Assets.Scripts.Map
                 List<InteractivePoint> lastPoints = new() { lastPoint };
                 List<InteractivePoint> newPoints = new();
 
-                List<InterestingPointConfig> set = new();
+                List<string> set = new();
                 if (_enemyLevel)
-                    set = _locationConfigurate.EnemyPoint;
+                    set = _locationConfigurate.KeysEnemy;
                 else
-                    set = _locationConfigurate.PricePoint;
+                    set = _locationConfigurate.KeysPrice;
 
                 newPoints = _factoryLevel.CreateLevel(ref lastPoints, set);
                 newPoints.ForEach(point =>
@@ -87,7 +85,7 @@ namespace Assets.Scripts.Map
 
             public List<InteractivePoint> CreateLevel(
                 ref List<InteractivePoint> lastLevelPoint,
-                List<InterestingPointConfig> pointsSet)
+                List<string> pointsSet)
             {
                 int numberPattern = Random.Range(0, _patternSet.Count);
                 return _patternSet[numberPattern].Create(ref lastLevelPoint, pointsSet);

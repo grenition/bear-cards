@@ -11,10 +11,10 @@ namespace Assets.Scripts.Map
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private PointOfInterestPath _pathPrefabs;
 
-        public void SetSprite(Sprite sprite)
-        {
-            _spriteRenderer.sprite = sprite;
-        }
+        //public void SetSprite(Sprite sprite)
+        //{
+        //    _spriteRenderer.sprite = sprite;
+        //}
 
         public void CreatePathTo(ViewPoint viewPoint)
         {

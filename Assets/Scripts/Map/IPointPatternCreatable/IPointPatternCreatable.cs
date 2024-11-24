@@ -6,6 +6,6 @@ namespace Assets.Scripts.Map
     {
         public List<InteractivePoint> Create(
             ref List<InteractivePoint> lastLevelPoint,
-            List<InterestingPointConfig> pointsSet);
+            List<string> pointsSet);
     }
 }

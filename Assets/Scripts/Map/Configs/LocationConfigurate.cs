@@ -14,9 +14,9 @@ namespace Assets.Scripts.Map
         public int StartResourcesMinimum;
         public int StartResourcesMaximum;
         
-        public List<string> Keys;
-
-        public List<InterestingPointConfig> PricePoint;
-        public List<InterestingPointConfig> EnemyPoint;
+        public List<string> KeysEnemy;
+        public List<string> KeysPrice;
+        //public List<InterestingPointConfig> PricePoint;
+        //public List<InterestingPointConfig> EnemyPoint;
     }
 }

@@ -150,8 +150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MapController>k__BackingField: {fileID: 498369992}
   <MapCamera>k__BackingField: {fileID: 1599152386}
-  _startPoint: {fileID: 11400000, guid: d6ea3833932066942a24b9f0e4911369, type: 2}
-  _endPoint: {fileID: 11400000, guid: d99dbfdf6690a4846927bcebfad2de63, type: 2}
+  _startPoint: {fileID: 1502491044287265359, guid: 8cfc512c13ba029459eab0fd2d51a457, type: 3}
+  _endPoint: {fileID: 3010466979122879971, guid: b3e54c6be36d4fa4abb848a4b4092eb9, type: 3}
   _playerPrefab: {fileID: 614500089225420600, guid: 5722744fd40826e4fb151f9cac18ece5, type: 3}
 --- !u!4 &58954307
 Transform:

@@ -17,11 +17,8 @@ MonoBehaviour:
   MaximumFork: 0
   StartResourcesMinimum: 0
   StartResourcesMaximum: 0
-  Keys: []
-  PricePoint:
-  - {fileID: 11400000, guid: 74c428f23962a3f478cf6f0148492f32, type: 2}
-  - {fileID: 11400000, guid: 56861ffa748c10143a94cc84da71be10, type: 2}
-  EnemyPoint:
-  - {fileID: 11400000, guid: 8757072b962789d4298788cb4c324304, type: 2}
-  <BossPoint>k__BackingField: {fileID: 11400000, guid: d99dbfdf6690a4846927bcebfad2de63, type: 2}
-  <StartPoint>k__BackingField: {fileID: 11400000, guid: d6ea3833932066942a24b9f0e4911369, type: 2}
+  KeysEnemy:
+  - Enemy
+  KeysPrice:
+  - Hill
+  - Card
