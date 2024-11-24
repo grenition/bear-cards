@@ -7,13 +7,11 @@ namespace Assets.Scripts.Map
             Key = "Hill";
         }
         public override void OnBeginInteract()
-        {
-            throw new System.NotImplementedException();
+        { 
         }
 
         public override void OnEndInteract()
         {
-            throw new System.NotImplementedException();
         }
     }
 }

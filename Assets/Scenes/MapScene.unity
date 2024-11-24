@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be2e8bdbca5fab44a81f3db5051c186d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <MapController>k__BackingField: {fileID: 498369992}
   _startPoint: {fileID: 11400000, guid: d6ea3833932066942a24b9f0e4911369, type: 2}
   _endPoint: {fileID: 11400000, guid: d99dbfdf6690a4846927bcebfad2de63, type: 2}
 --- !u!4 &58954307
@@ -194,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e692c8754309c245b5dfe689c8470eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 614500089225420600, guid: 5722744fd40826e4fb151f9cac18ece5, type: 3}
 --- !u!4 &498369993
 Transform:
   m_ObjectHideFlags: 0

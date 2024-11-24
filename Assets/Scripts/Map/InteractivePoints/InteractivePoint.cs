@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Map
 {
-    public abstract class InteractivePoint
+    public abstract class InteractivePoint : IDisposable
     {
         public abstract void OnBeginInteract();
         public abstract void OnEndInteract();
@@ -12,6 +13,9 @@ namespace Assets.Scripts.Map
         public int Level;
 
         public bool PointActive { get; private set; }
+        public bool PointComplited { get; private set; }
+        public bool PointPass { get; private set; }
+        public bool PointLock { get; private set; }
 
         public string Key { get; protected set; }
 
@@ -21,30 +25,64 @@ namespace Assets.Scripts.Map
         {
             ViewPoint = viewPoint;
             ViewPoint.SetSprite(View);
+
+            ViewPoint.OnClickAction += () =>
+            {
+                if (PointActive)
+                {
+                    MapCompositionRoot.Instance.MapController.MoveTo(ViewPoint);
+                }
+            };
+
+            ViewPoint.OnPlayerInteract += () =>
+            {
+                Complited();
+                MapCompositionRoot.Instance.MapController.PlayerInteractWithPoint(this);
+            };
         }
 
         public void Complited()
         {
             PointActive = false;
-            Debug.Log("{name}:I complited");
+            PointActive = false;
+            PointComplited = true;
+            Debug.Log($"{Key}:I complited");
         }
 
         public void Pass()
         {
             PointActive = false;
-            Debug.Log("{name}:I pass");
+            PointPass = true;
+            Debug.Log($"{Key}:I pass");
         }
 
         public void Active()
         {
             PointActive = true;
-            Debug.Log("{name}:I active");
+            Debug.Log($"{Key}:I active");
         }
 
         public void Lock()
         {
+            PointLock = true;
             PointActive = false;
-            Debug.Log("{name}:I lock");
+            Debug.Log($"{Key}:I lock");
+        }
+
+        public void Dispose()
+        {
+            ViewPoint.OnClickAction -= () =>
+            {
+                if (PointActive)
+                {
+                    MapCompositionRoot.Instance.MapController.MoveTo(ViewPoint);
+                }
+            };
+            ViewPoint.OnPlayerInteract -= () =>
+            {
+                Complited();
+                MapCompositionRoot.Instance.MapController.PlayerInteractWithPoint(this);
+            };
         }
     }
 }

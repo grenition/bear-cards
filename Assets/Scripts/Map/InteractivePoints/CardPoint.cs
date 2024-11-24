@@ -10,12 +10,10 @@ namespace Assets.Scripts.Map
         }
         public override void OnBeginInteract()
         {
-            throw new NotImplementedException();
         }
 
         public override void OnEndInteract()
         {
-            throw new NotImplementedException();
         }
     }
 }

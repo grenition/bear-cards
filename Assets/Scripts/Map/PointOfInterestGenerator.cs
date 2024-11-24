@@ -29,6 +29,7 @@ namespace Assets.Scripts.Map
             var start = PointFactory.Instance.CreatePoint("Start");
             start.ConnectPoints = new List<InteractivePoint>();
             start.View = _startPoint.View;
+            start.Pass();
 
             targetLevel.Add(new List<InteractivePoint>() { start });
 
