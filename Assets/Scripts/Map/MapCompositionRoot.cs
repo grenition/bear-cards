@@ -19,15 +19,16 @@ namespace Assets.Scripts.Map
         [SerializeField] private MapPlayer _playerPrefab;
 
         private List<List<InteractivePoint>> _intersections;
-
+        private LocationConfigurate _activeLocation;
         private void Awake()
         {
             Instance = this;
-            _intersections = new PointOfInterestGenerator("LocationFirst", _startPoint,_endPoint).Generate();
+            _activeLocation = Resources.Load<LocationConfigurate>("Map/" + "LocationFirst");
+            _intersections = new PointOfInterestGenerator(_startPoint,_endPoint, _activeLocation).Generate();
             var generator = new EnivrimentGenerator(_intersections);
             generator.Generate();
             MapPlayer = Instantiate(_playerPrefab, _intersections[0][0].ViewPoint.transform.position, Quaternion.identity);
-            MapController.Create(_intersections);
+            MapController.Create(_intersections, _activeLocation);
         }
 
         private void OnDisable()

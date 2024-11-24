@@ -10,13 +10,14 @@ namespace Assets.Scripts.Map
         private LocationConfigurate _locationConfigurate;
         private ViewPoint _startPoint;
         private ViewPoint _endPoint;
-        public PointOfInterestGenerator(string keyLocation,
+
+        public PointOfInterestGenerator(
             ViewPoint startPoint,
-            ViewPoint endPoint)
+            ViewPoint endPoint,
+            LocationConfigurate locationConfigurate)
         {
             PointFactory _ = new();
-            _locationConfigurate = Resources.Load<LocationConfigurate>("Map/" + keyLocation);
-
+            _locationConfigurate = locationConfigurate;
             _factoryLevel = new();
             _startPoint = startPoint;
             _endPoint = endPoint;
@@ -39,7 +40,7 @@ namespace Assets.Scripts.Map
                 _enemyLevel = !_enemyLevel;
             }
 
-            var boss = PointFactory.Instance.CreatePoint("Start");
+            var boss = PointFactory.Instance.CreatePoint("Boss");
             boss.ConnectPoints = new List<InteractivePoint>();
             boss.Level = _locationConfigurate.LocationLevel;
             targetLevel.Add(new List<InteractivePoint>() { boss });

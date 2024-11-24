@@ -9,11 +9,13 @@ namespace Assets.Scripts.Map
         private MapPlayer _mapPlayer;
         private List<List<InteractivePoint>> _pointCollections;
         private InteractivePoint _currentInteractPoint;
+        private LocationConfigurate _locationConfigurate;
         private bool _interact;
 
-        public void Create(List<List<InteractivePoint>> pointCollection)
+        public void Create(List<List<InteractivePoint>> pointCollection, LocationConfigurate locationConfigurate)
         {
             _pointCollections = pointCollection;
+            _locationConfigurate = locationConfigurate;
 
             pointCollection[0][0].Complited();
             UpdatePoints();
@@ -48,6 +50,9 @@ namespace Assets.Scripts.Map
                         connect => connect.Active());
                 });
             });
+
+            if (_currentInteractPoint != null && _currentInteractPoint.Level == _locationConfigurate.LocationLevel - 2)
+                _pointCollections.Last().Last().Active();
         }
 
         public void MoveTo(ViewPoint viewPoint)
@@ -68,7 +73,15 @@ namespace Assets.Scripts.Map
         {
             if (_currentInteractPoint == null)
                 return;
+
             _currentInteractPoint.OnEndInteract();
+
+            if(_currentInteractPoint.Level == _locationConfigurate.LocationLevel)
+            {
+                _pointCollections.Last().Last().Complited();
+                Debug.Log("Location win!");
+                return;
+            }
 
             _pointCollections[_currentInteractPoint.Level].Where(
                 point => point != _currentInteractPoint).ForEach(
@@ -77,6 +90,7 @@ namespace Assets.Scripts.Map
             _currentInteractPoint.Pass();
             _interact = false;
             UpdatePoints();
+            _currentInteractPoint = null;
         }
     }
 }

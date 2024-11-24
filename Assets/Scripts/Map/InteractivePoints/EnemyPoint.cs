@@ -6,6 +6,7 @@ namespace Assets.Scripts.Map
         {
             Key = "Enemy";
         }
+
         public override void OnBeginInteract()
         {
         }

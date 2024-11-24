@@ -47,6 +47,7 @@ namespace Assets.Scripts.Map
             _points[_points.Count - 2].ForEach(lastpoint =>
             {
                 lastpoint.ViewPoint.CreatePathTo(_points[_points.Count - 1].First().ViewPoint);
+                Debug.LogError(_points[_points.Count - 1].First().Key);
             });
 
 

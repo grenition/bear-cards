@@ -32,7 +32,7 @@ namespace Assets.Scripts.Map
                 case "Hill":
                     return new HillPoint();
                 case "Boss":
-                    return new HillPoint();
+                    return new BossPoint();
                 default:
                     throw new NotImplementedException();
             }
