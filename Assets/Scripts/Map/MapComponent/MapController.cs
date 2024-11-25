@@ -77,7 +77,7 @@ namespace Assets.Scripts.Map
             if(_currentInteractPoint.Level == _locationConfigurate.LocationLevel)
             {
                 _pointCollections.Last().Last().Complited();
-                Debug.Log("Location win!");
+                LocationComplited();
                 return;
             }
 
@@ -89,6 +89,11 @@ namespace Assets.Scripts.Map
             _interact = false;
             UpdatePoints();
             _currentInteractPoint = null;
+        }
+
+        public void LocationComplited()
+        {
+
         }
     }
 }

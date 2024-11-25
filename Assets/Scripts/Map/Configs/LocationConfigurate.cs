@@ -6,17 +6,13 @@ namespace Assets.Scripts.Map
     public class LocationConfigurate : ScriptableObject
     {
         [Tooltip("Count level for location")]
-        public int LocationLevel;
+        [field: SerializeField] public int LocationLevel { get; private set; }
 
-        public int MinimumFork;
-        public int MaximumFork;
-      
-        public int StartResourcesMinimum;
-        public int StartResourcesMaximum;
-        
-        public List<string> KeysEnemy;
-        public List<string> KeysPrice;
-        //public List<InterestingPointConfig> PricePoint;
-        //public List<InterestingPointConfig> EnemyPoint;
+        [field: SerializeField] public int MinimumFork { get; private set; }
+        [field: SerializeField] public int MaximumFork { get; private set; }
+
+        [field: SerializeField] public List<string> KeysEnemy { get; private set; }
+        [field: SerializeField] public List<string> KeysPrice { get; private set; }
+        [field: SerializeField] public bool FirsEnemyPoint {  get; private set; }
     }
 }

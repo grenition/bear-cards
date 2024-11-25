@@ -8,7 +8,6 @@ namespace Assets.Scripts.Map
     {
         public abstract void OnBeginInteract();
         public abstract void OnEndInteract();
-        //public Sprite View;
         public List<InteractivePoint> ConnectPoints;
         public int Level;
 
@@ -24,7 +23,6 @@ namespace Assets.Scripts.Map
         public void Initialize(ViewPoint viewPoint)
         {
             ViewPoint = viewPoint;
-            //ViewPoint.SetSprite(View);
 
             ViewPoint.OnClickAction += () =>
             {

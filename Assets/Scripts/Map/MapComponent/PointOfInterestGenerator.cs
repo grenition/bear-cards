@@ -28,6 +28,8 @@ namespace Assets.Scripts.Map
         {
             List<List<InteractivePoint>> targetLevel = new();
 
+            _enemyLevel = _locationConfigurate.FirsEnemyPoint;
+
             var start = PointFactory.Instance.CreatePoint("Start");
             start.ConnectPoints = new List<InteractivePoint>();
             start.Pass();
@@ -55,8 +57,8 @@ namespace Assets.Scripts.Map
             {
                 List<InteractivePoint> lastPoints = new() { lastPoint };
                 List<InteractivePoint> newPoints = new();
-
                 List<string> set = new();
+
                 if (_enemyLevel)
                     set = _locationConfigurate.KeysEnemy;
                 else
