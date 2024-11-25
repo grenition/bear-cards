@@ -32,11 +32,11 @@ namespace Assets.Scripts.Map
 
             _points.ForEach(level =>
             {
-                level.Where(point => point.ConnectPoints != null && point.ConnectPoints.Count != 0).ForEach(pointOfLevel =>
+                level.Where(point => point.NeighborsID != null && point.NeighborsID.Count != 0).ForEach(pointOfLevel =>
                 {
-                    pointOfLevel.ConnectPoints.ForEach(point =>
+                    pointOfLevel.NeighborsID.ForEach(point =>
                     {
-                        pointOfLevel.ViewPoint.CreatePathTo(point.ViewPoint);
+                        pointOfLevel.ViewPoint.CreatePathTo(FindPointByID(point).ViewPoint);
                     });
                 });
             });
@@ -45,6 +45,24 @@ namespace Assets.Scripts.Map
             {
                 lastpoint.ViewPoint.CreatePathTo(_points[_points.Count - 1].First().ViewPoint);
             });
+        }
+
+        private InteractivePoint FindPointByID(int id)
+        {
+            InteractivePoint findPoint = null;
+            _points.ForEach(level =>
+            {
+                level.ForEach(point =>
+                {
+                    if (point.ID == id)
+                        findPoint = point;
+                });
+            });
+
+            if (findPoint != null)
+                return findPoint;
+
+            throw new System.Exception($"Point with id:{id} is not found!");
         }
     }
 }

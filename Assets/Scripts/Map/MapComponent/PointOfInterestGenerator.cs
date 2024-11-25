@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 namespace Assets.Scripts.Map
 {
@@ -31,7 +30,7 @@ namespace Assets.Scripts.Map
             _enemyLevel = _locationConfigurate.FirsEnemyPoint;
 
             var start = PointFactory.Instance.CreatePoint("Start");
-            start.ConnectPoints = new List<InteractivePoint>();
+            start.NeighborsID = new List<int>();
             start.Pass();
             targetLevel.Add(new List<InteractivePoint>() { start });
 
@@ -43,7 +42,7 @@ namespace Assets.Scripts.Map
             }
 
             var boss = PointFactory.Instance.CreatePoint("Boss");
-            boss.ConnectPoints = new List<InteractivePoint>();
+            boss.NeighborsID = new List<int>();
             boss.Level = _locationConfigurate.LocationLevel;
             targetLevel.Add(new List<InteractivePoint>() { boss });
 
@@ -64,15 +63,15 @@ namespace Assets.Scripts.Map
                 else
                     set = _locationConfigurate.KeysPrice;
 
-                 newPoints = FactoryPath(ref lastPoints, set);
+                newPoints = FactoryPath(ref lastPoints, set);
 
-                if (lastPoint.ConnectPoints.Count > 1)
+                if (lastPoint.NeighborsID.Count > 1)
                     _countFork++;
 
                 newPoints.ForEach(point =>
                 {
                     levelPoints.Add(point);
-                    point.ConnectPoints = new();
+                    point.NeighborsID = new();
                     point.Level = level;
                 });
             });

@@ -29,7 +29,7 @@ namespace Assets.Scripts.Map
                 pointData.Add(new List<PointData>());
                 for (int j = 0; j < currentLevelPoint[i].Count(); j++)
                 {
-                    for (int z = 0; z < currentLevelPoint[i][j].ConnectPoints.Count(); z++)
+                    for (int z = 0; z < currentLevelPoint[i][j].NeighborsID.Count(); z++)
                     {
 
                     }
@@ -37,7 +37,7 @@ namespace Assets.Scripts.Map
                     {
                         KeyPoints = currentLevelPoint[i][j].Key,
                         LevelPoint = currentLevelPoint[i][j].Level,
-                        IdConnectPoints = new int[currentLevelPoint[i][j].ConnectPoints.Count()]
+                        IdConnectPoints = new int[currentLevelPoint[i][j].NeighborsID.Count()]
                     });
                 }
             }

@@ -8,7 +8,8 @@ namespace Assets.Scripts.Map
     {
         public abstract void OnBeginInteract();
         public abstract void OnEndInteract();
-        public List<InteractivePoint> ConnectPoints;
+        public int ID;
+        public List<int> NeighborsID;
         public int Level;
 
         public bool PointActive { get; private set; }

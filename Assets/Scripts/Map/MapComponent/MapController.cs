@@ -43,9 +43,13 @@ namespace Assets.Scripts.Map
             {
                 level.Where(point => point.PointPass).ForEach(point =>
                 {
-                    point.ConnectPoints.Where(
-                        connect => !connect.PointPass && !connect.PointLock).ForEach(
-                        connect => connect.Active());
+                    for (int i = 0; i < point.NeighborsID.Count(); i++)
+                    {
+                        var neighbor = FindPointByID(point.NeighborsID[i]);
+
+                        if(!neighbor.PointPass && !neighbor.PointLock)
+                            neighbor.Active();
+                    }
                 });
             });
 
@@ -94,6 +98,24 @@ namespace Assets.Scripts.Map
         public void LocationComplited()
         {
 
+        }
+
+        private InteractivePoint FindPointByID(int id)
+        {
+            InteractivePoint findPoint = null;
+            _pointCollections.ForEach(level =>
+            {
+                level.ForEach(point =>
+                {
+                    if (point.ID == id)
+                        findPoint = point;
+                });
+            });
+
+            if (findPoint != null)
+                return findPoint;
+
+            throw new System.Exception($"Point with id:{id} is not found!");
         }
     }
 }

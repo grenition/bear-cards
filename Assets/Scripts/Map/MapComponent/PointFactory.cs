@@ -8,6 +8,8 @@ namespace Assets.Scripts.Map
     {
         public static PointFactory Instance { get; private set; }
         private Dictionary<string, ViewPoint> _viewPointsMap = new();
+
+        private int _uniqId;
         public PointFactory()
         {
             Instance = this;
@@ -19,23 +21,21 @@ namespace Assets.Scripts.Map
             _viewPointsMap.Add("Boss", Resources.Load<ViewPoint>("Map/Prefabs/BossPoint"));
         }
 
-        public InteractivePoint CreatePoint(string name)
+        public InteractivePoint CreatePoint(string key)
         {
-            switch (name)
+            InteractivePoint newPoint = key switch
             {
-                case "Start":
-                    return new StartPoint();
-                case "Enemy":
-                    return new EnemyPoint();
-                case "Card":
-                    return new CardPoint();
-                case "Hill":
-                    return new HillPoint();
-                case "Boss":
-                    return new BossPoint();
-                default:
-                    throw new NotImplementedException();
-            }
+                "Start" => new StartPoint(),
+                "Enemy" => new EnemyPoint(),
+                "Card" => new CardPoint(),
+                "Hill" => new HillPoint(),
+                "Boss" => new BossPoint(),
+                _ => throw new NotImplementedException(),
+            };
+
+            newPoint.ID = _uniqId;
+            _uniqId++;
+            return newPoint;
         }
 
         public ViewPoint CreateViewPoint(string key)

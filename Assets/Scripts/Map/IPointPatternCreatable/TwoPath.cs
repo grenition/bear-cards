@@ -16,8 +16,7 @@ namespace Assets.Scripts.Map
             {
                 var index = Random.Range(0, pointsSet.Count);
                 var newPoint = PointFactory.Instance.CreatePoint(pointsSet[index]);
-
-                lastLevelPoint.First().ConnectPoints.Add(newPoint);
+                lastLevelPoint.First().NeighborsID.Add(newPoint.ID);
                 addedPoints.Add(newPoint);
             }
             return addedPoints;
