@@ -16,7 +16,10 @@ MonoBehaviour:
   <VisualName>k__BackingField: "\u041D\u0430\u0442\u0440\u0438\u0439"
   <VisualDescription>k__BackingField: 
   <VisualIcon>k__BackingField: {fileID: 0}
+  <CardType>k__BackingField: 0
   <Cost>k__BackingField: 5
   <Level>k__BackingField: 0
-  <BaseDamage>k__BackingField: 1
   <BaseHealth>k__BackingField: 3
+  <BaseDamage>k__BackingField: 1
+  <SpellPlacing>k__BackingField: 0
+  <SpellPlayersPlacing>k__BackingField: 0

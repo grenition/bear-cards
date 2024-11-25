@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zoloto_0: 2349157741772424808
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

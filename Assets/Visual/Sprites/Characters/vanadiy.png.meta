@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      vanadiy_0: 2721723665195061361
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
