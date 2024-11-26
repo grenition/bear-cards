@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cislorod_0: -7950956905253194622
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

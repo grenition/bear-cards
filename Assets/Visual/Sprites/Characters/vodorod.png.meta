@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      vodorod_0: -4386966766726050890
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      uglerod_0: 6972477443367478020
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
