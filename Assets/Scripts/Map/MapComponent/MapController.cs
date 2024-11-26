@@ -100,13 +100,13 @@ namespace Assets.Scripts.Map
 
             _interact = false;
             UpdatePoints();
-            MapCompositionRoot.Instance.Progress.SaveDate(_pointCollections, _locationConfigurate.LocationLevel, _locationConfigurate.LocationKey);
+            MapStaticData.SaveData(_pointCollections, _locationConfigurate.LocationLevel, _locationConfigurate.LocationKey);
         }
 
         public void LocationComplited()
         {
             var keyLocation = MapCompositionRoot.Instance.GetNextLocationKey();
-            MapCompositionRoot.Instance.Progress.SaveDate(_pointCollections,0, keyLocation);
+            MapStaticData.SaveData(_pointCollections,0, keyLocation);
             MapCompositionRoot.Instance.ReloadMap();
         }
 

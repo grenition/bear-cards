@@ -45,9 +45,28 @@ namespace Assets.Scripts.Map
             File.WriteAllText(Application.streamingAssetsPath + "/locationProgress.json", json);
         }
 
+        public void SaveData(PointEntity[] currentLevelPoint, int levelLocation, int keyNumber)
+        {
+            LocationData locationData = new()
+            {
+                KeyLocation = keyNumber,
+                LocationLevel = levelLocation,
+                Points = currentLevelPoint
+            };
+
+            string json = JsonUtility.ToJson(locationData);
+            File.WriteAllText(Application.streamingAssetsPath + "/locationProgress.json", json);
+        }
+
         public void DeleteData()
         {
+            string path = Path.Combine(Application.streamingAssetsPath, "locationProgress.json");
 
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+                Debug.Log("Save was deleted");
+            }
         }
 
         [Serializable]

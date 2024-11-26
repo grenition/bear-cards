@@ -10,7 +10,6 @@ namespace Assets.Scripts.Map
         [field: SerializeField] public MapController MapController { get; private set; }
         [field: SerializeField] public MapCamera MapCamera { get; private set; }
         public MapPlayer MapPlayer { get; private set; }
-        public LocationProgress Progress { get; private set; }
 
         [SerializeField] private ViewPoint _startPoint;
         [SerializeField] private ViewPoint _endPoint;
@@ -25,10 +24,9 @@ namespace Assets.Scripts.Map
 
         private void Awake()
         {
-            Progress = new LocationProgress();
             Instance = this;
 
-            var progres = Progress.LoadData();
+            var progres = MapStaticData.LoadData();
             _curentLocationNumber = progres.KeyLocation;
             _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber]}");
             _pointOfInterestGenerator = new PointOfInterestGenerator(_startPoint, _endPoint, _activeLocation);
@@ -39,13 +37,16 @@ namespace Assets.Scripts.Map
             else
                 _locationPoints = _pointOfInterestGenerator.Generate(progres.Points.ToList());
 
-            Progress.SaveDate(_locationPoints, _activeLocation.LocationLevel, _activeLocation.LocationKey);
+            MapStaticData.SaveData(_locationPoints, _activeLocation.LocationLevel, _activeLocation.LocationKey);
             _enivrimentGenerator.Generate(_locationPoints);
             MapPlayer = Instantiate(_playerPrefab, _locationPoints[0].ViewPoint.transform.position, Quaternion.identity);
             MapController.Create(_locationPoints, _activeLocation);
 
             MapCamera.MoveCameraToPlayer();
         }
+
+        [ContextMenu("Deleted")]
+        public void Deleted() => MapStaticData.GameFail();
 
         public int GetNextLocationKey()
         {
