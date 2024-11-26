@@ -22,7 +22,7 @@ namespace Assets.Scripts.Map
                 {
 
                     var position = new Vector2((float)(level.Count * i) / (float)level.Count - (float)level.Count / 2.0f,
-                        level[i].Level * _config.DistanceBeetwenPointByY);
+                        level[i].PointEntity.Level * _config.DistanceBeetwenPointByY);
 
                     var viewObject = PointFactory.Instance.CreateViewPoint(level[i].Key);
                     viewObject.transform.position = position;
@@ -32,9 +32,9 @@ namespace Assets.Scripts.Map
 
             _points.ForEach(level =>
             {
-                level.Where(point => point.NeighborsID != null && point.NeighborsID.Count != 0).ForEach(pointOfLevel =>
+                level.Where(point => point.PointEntity.NeighborsID != null && point.PointEntity.NeighborsID.Count != 0).ForEach(pointOfLevel =>
                 {
-                    pointOfLevel.NeighborsID.ForEach(point =>
+                    pointOfLevel.PointEntity.NeighborsID.ForEach(point =>
                     {
                         pointOfLevel.ViewPoint.CreatePathTo(FindPointByID(point).ViewPoint);
                     });
@@ -54,7 +54,7 @@ namespace Assets.Scripts.Map
             {
                 level.ForEach(point =>
                 {
-                    if (point.ID == id)
+                    if (point.PointEntity.ID == id)
                         findPoint = point;
                 });
             });

@@ -30,7 +30,7 @@ namespace Assets.Scripts.Map
             _enemyLevel = _locationConfigurate.FirsEnemyPoint;
 
             var start = PointFactory.Instance.CreatePoint("Start");
-            start.NeighborsID = new List<int>();
+            start.PointEntity.NeighborsID = new List<int>();
             start.Pass();
             targetLevel.Add(new List<InteractivePoint>() { start });
 
@@ -42,8 +42,8 @@ namespace Assets.Scripts.Map
             }
 
             var boss = PointFactory.Instance.CreatePoint("Boss");
-            boss.NeighborsID = new List<int>();
-            boss.Level = _locationConfigurate.LocationLevel;
+            boss.PointEntity.NeighborsID = new List<int>();
+            boss.PointEntity.Level = _locationConfigurate.LocationLevel-1;
             targetLevel.Add(new List<InteractivePoint>() { boss });
 
             return targetLevel;
@@ -65,14 +65,14 @@ namespace Assets.Scripts.Map
 
                 newPoints = FactoryPath(ref lastPoints, set);
 
-                if (lastPoint.NeighborsID.Count > 1)
+                if (lastPoint.PointEntity.NeighborsID.Count > 1)
                     _countFork++;
 
                 newPoints.ForEach(point =>
                 {
                     levelPoints.Add(point);
-                    point.NeighborsID = new();
-                    point.Level = level;
+                    point.PointEntity.NeighborsID = new();
+                    point.PointEntity.Level = level;
                 });
             });
 

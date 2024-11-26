@@ -3,59 +3,60 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 namespace Assets.Scripts.Map
 {
     public class LocationProgress
     {
-        public LocationData LoadData()
+        public List<List<InteractivePoint>> LoadData()
         {
             string path = Path.Combine(Application.streamingAssetsPath, "locationProgress.json");
-            if (File.Exists(path))
-            {
-                string json = File.ReadAllText(path);
-                var data = JsonUtility.FromJson<LocationData>(json);
-                return data;
-            }
+            //if (File.Exists(path))
+            //{
+            //    string json = File.ReadAllText(path);
+            //    var data = JsonUtility.FromJson<LocationData>(json);
+
+            //    List<List<InteractivePoint>> locationPointCollection = new(data.LocationLevel);
+
+            //    locationPointCollection.ForEach(level =>
+            //    {
+            //        for (int i = 0; i < length; i++)
+            //        {
+
+            //        }
+            //        level.Add()
+            //    })
+
+            //    return data;
+            //}
 
             return null;
         }
 
         public void SaveDate(List<List<InteractivePoint>> currentLevelPoint)
         {
-            List<List<PointData>> pointData = new List<List<PointData>>();
-            for (int i = 0; i < currentLevelPoint.Count(); i++)
+
+            List<PointEntity> points = new List<PointEntity>();
+
+            currentLevelPoint.ForEach(level =>
             {
-                pointData.Add(new List<PointData>());
-                for (int j = 0; j < currentLevelPoint[i].Count(); j++)
+                level.ForEach(point =>
                 {
-                    for (int z = 0; z < currentLevelPoint[i][j].NeighborsID.Count(); z++)
-                    {
+                    points.Add(point.PointEntity);
+                });
+            });
 
-                    }
-                    pointData[i].Add(new PointData()
-                    {
-                        KeyPoints = currentLevelPoint[i][j].Key,
-                        LevelPoint = currentLevelPoint[i][j].Level,
-                        IdConnectPoints = new int[currentLevelPoint[i][j].NeighborsID.Count()]
-                    });
-                }
-            }
-
-            //currentLevelPoint.ForEach(level =>
-            //{
-            //    pointData.Add(new List<PointData>());
-            //    level.ForEach(point =>
-            //    {
-
-            //    });
-            //});
-
-            LocationData locationData = new LocationData()
+            LocationData locationData = new()
             {
                 LocationProgress = 0,
-                // Points = new PointData[currentLevelPoint.Count]
+                LocationLevel = 5,
+                Points = points.ToArray()
             };
+
+            string json = JsonUtility.ToJson(locationData);
+            File.WriteAllText(Application.streamingAssetsPath + "/locationProgress.json", json);
+            Debug.Log(Application.streamingAssetsPath + "/locationProgress.json");
         }
 
         public void DeleteData()
@@ -67,14 +68,13 @@ namespace Assets.Scripts.Map
         public class LocationData
         {
             public int LocationProgress;
-            public PointData[][] Points;
-        }
-        [Serializable]
-        public class PointData
-        {
-            public int[] IdConnectPoints;
-            public string KeyPoints;
-            public int LevelPoint;
+            public int LocationLevel;
+
+            public PointEntity[] Points;
+            //public int[] ID;
+            //public int[] LevelPoints;
+            //public int[] Keys;
+            //public Vector2Int[] Neighbor;
         }
     }
 }

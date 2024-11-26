@@ -4,18 +4,28 @@ using UnityEngine;
 
 namespace Assets.Scripts.Map
 {
-    public abstract class InteractivePoint : IDisposable
+    [Serializable]
+    public class PointEntity
     {
-        public abstract void OnBeginInteract();
-        public abstract void OnEndInteract();
         public int ID;
         public List<int> NeighborsID;
         public int Level;
 
-        public bool PointActive { get; private set; }
-        public bool PointComplited { get; private set; }
-        public bool PointPass { get; private set; }
-        public bool PointLock { get; private set; }
+        public bool PointActive;
+        public bool PointComplited;
+        public bool PointPass;
+        public bool PointLock;
+    }
+
+    public abstract class InteractivePoint : IDisposable
+    {
+        public InteractivePoint()
+        {
+            PointEntity = new();
+        }
+        public abstract void OnBeginInteract();
+        public abstract void OnEndInteract();
+        public PointEntity PointEntity;
 
         public string Key { get; protected set; }
 
@@ -27,7 +37,7 @@ namespace Assets.Scripts.Map
 
             ViewPoint.OnClickAction += () =>
             {
-                if (PointActive)
+                if (PointEntity.PointActive)
                     MapCompositionRoot.Instance.MapController.MoveTo(ViewPoint);
             };
 
@@ -40,29 +50,29 @@ namespace Assets.Scripts.Map
 
         public void Complited()
         {
-            PointActive = false;
-            PointActive = false;
-            PointComplited = true;
+            PointEntity.PointActive = false;
+            PointEntity.PointActive = false;
+            PointEntity.PointComplited = true;
             Debug.Log($"{Key}:I complited");
         }
 
         public void Pass()
         {
-            PointActive = false;
-            PointPass = true;
+            PointEntity.PointActive = false;
+            PointEntity.PointPass = true;
             Debug.Log($"{Key}:I pass");
         }
 
         public void Active()
         {
-            PointActive = true;
+            PointEntity.PointActive = true;
             Debug.Log($"{Key}:I active");
         }
 
         public void Lock()
         {
-            PointLock = true;
-            PointActive = false;
+            PointEntity.PointLock = true;
+            PointEntity.PointActive = false;
             Debug.Log($"{Key}:I lock");
         }
 
@@ -70,7 +80,7 @@ namespace Assets.Scripts.Map
         {
             ViewPoint.OnClickAction -= () =>
             {
-                if (PointActive)
+                if (PointEntity.PointActive)
                     MapCompositionRoot.Instance.MapController.MoveTo(ViewPoint);
             };
             ViewPoint.OnPlayerInteract -= () =>

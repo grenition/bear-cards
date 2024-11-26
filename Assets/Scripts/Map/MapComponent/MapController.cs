@@ -41,19 +41,19 @@ namespace Assets.Scripts.Map
         {
             _pointCollections.ForEach(level =>
             {
-                level.Where(point => point.PointPass).ForEach(point =>
+                level.Where(point => point.PointEntity.PointPass).ForEach(point =>
                 {
-                    for (int i = 0; i < point.NeighborsID.Count(); i++)
+                    for (int i = 0; i < point.PointEntity.NeighborsID.Count(); i++)
                     {
-                        var neighbor = FindPointByID(point.NeighborsID[i]);
+                        var neighbor = FindPointByID(point.PointEntity.NeighborsID[i]);
 
-                        if(!neighbor.PointPass && !neighbor.PointLock)
+                        if(!neighbor.PointEntity.PointPass && !neighbor.PointEntity.PointLock)
                             neighbor.Active();
                     }
                 });
             });
 
-            if (_currentInteractPoint != null && _currentInteractPoint.Level == _locationConfigurate.LocationLevel - 2)
+            if (_currentInteractPoint != null && _currentInteractPoint.PointEntity.Level == _locationConfigurate.LocationLevel - 2)
                 _pointCollections.Last().Last().Active();
         }
 
@@ -78,14 +78,14 @@ namespace Assets.Scripts.Map
 
             _currentInteractPoint.OnEndInteract();
 
-            if(_currentInteractPoint.Level == _locationConfigurate.LocationLevel)
+            if(_currentInteractPoint.PointEntity.Level == _locationConfigurate.LocationLevel)
             {
                 _pointCollections.Last().Last().Complited();
                 LocationComplited();
                 return;
             }
 
-            _pointCollections[_currentInteractPoint.Level].Where(
+            _pointCollections[_currentInteractPoint.PointEntity.Level].Where(
                 point => point != _currentInteractPoint).ForEach(
                 point => point.Lock());
 
@@ -107,7 +107,7 @@ namespace Assets.Scripts.Map
             {
                 level.ForEach(point =>
                 {
-                    if (point.ID == id)
+                    if (point.PointEntity.ID == id)
                         findPoint = point;
                 });
             });

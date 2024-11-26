@@ -33,7 +33,7 @@ namespace Assets.Scripts.Map
                 _ => throw new NotImplementedException(),
             };
 
-            newPoint.ID = _uniqId;
+            newPoint.PointEntity.ID = _uniqId;
             _uniqId++;
             return newPoint;
         }
