@@ -7,17 +7,17 @@ namespace Assets.Scripts.Map
     public class MapController : MonoBehaviour
     {
         private MapPlayer _mapPlayer;
-        private List<List<InteractivePoint>> _pointCollections;
+        private List<InteractivePoint> _pointCollections;
         private InteractivePoint _currentInteractPoint;
         private LocationConfigurate _locationConfigurate;
         private bool _interact;
 
-        public void Create(List<List<InteractivePoint>> pointCollection, LocationConfigurate locationConfigurate)
+        public void Create(List<InteractivePoint> pointCollection, LocationConfigurate locationConfigurate)
         {
             _pointCollections = pointCollection;
             _locationConfigurate = locationConfigurate;
 
-            pointCollection[0][0].Complited();
+            pointCollection[0].Complited();
             UpdatePoints();
             _mapPlayer = MapCompositionRoot.Instance.MapPlayer;
         }
@@ -39,22 +39,19 @@ namespace Assets.Scripts.Map
 
         public void UpdatePoints()
         {
-            _pointCollections.ForEach(level =>
+            _pointCollections.Where(point => point.PointEntity.PointPass).ForEach(point =>
             {
-                level.Where(point => point.PointEntity.PointPass).ForEach(point =>
+                for (int i = 0; i < point.PointEntity.NeighborsID.Count(); i++)
                 {
-                    for (int i = 0; i < point.PointEntity.NeighborsID.Count(); i++)
-                    {
-                        var neighbor = FindPointByID(point.PointEntity.NeighborsID[i]);
+                    var neighbor = FindPointByID(point.PointEntity.NeighborsID[i]);
 
-                        if(!neighbor.PointEntity.PointPass && !neighbor.PointEntity.PointLock)
-                            neighbor.Active();
-                    }
-                });
+                    if (!neighbor.PointEntity.PointPass && !neighbor.PointEntity.PointLock)
+                        neighbor.Active();
+                }
             });
 
             if (_currentInteractPoint != null && _currentInteractPoint.PointEntity.Level == _locationConfigurate.LocationLevel - 2)
-                _pointCollections.Last().Last().Active();
+                _pointCollections.Last().Active();
         }
 
         public void MoveTo(ViewPoint viewPoint)
@@ -80,12 +77,12 @@ namespace Assets.Scripts.Map
 
             if(_currentInteractPoint.PointEntity.Level == _locationConfigurate.LocationLevel)
             {
-                _pointCollections.Last().Last().Complited();
+                _pointCollections.Last().Complited();
                 LocationComplited();
                 return;
             }
 
-            _pointCollections[_currentInteractPoint.PointEntity.Level].Where(
+            _pointCollections.Where(
                 point => point != _currentInteractPoint).ForEach(
                 point => point.Lock());
 
@@ -102,15 +99,7 @@ namespace Assets.Scripts.Map
 
         private InteractivePoint FindPointByID(int id)
         {
-            InteractivePoint findPoint = null;
-            _pointCollections.ForEach(level =>
-            {
-                level.ForEach(point =>
-                {
-                    if (point.PointEntity.ID == id)
-                        findPoint = point;
-                });
-            });
+            InteractivePoint findPoint = _pointCollections.Find(point => point.PointEntity.ID == id);
 
             if (findPoint != null)
                 return findPoint;

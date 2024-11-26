@@ -4,7 +4,7 @@ namespace Assets.Scripts.Map
     {
         public BossPoint()
         {
-            Key = "Boss";
+            PointEntity.Key = "Boss";
         }
 
         public override void OnBeginInteract()

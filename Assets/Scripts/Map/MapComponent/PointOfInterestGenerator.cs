@@ -1,4 +1,6 @@
+using GreonAssets.Extensions;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 namespace Assets.Scripts.Map
 {
@@ -23,33 +25,43 @@ namespace Assets.Scripts.Map
             _endPoint = endPoint;
         }
 
-        public List<List<InteractivePoint>> Generate()
+        public List<InteractivePoint> Generate()
         {
-            List<List<InteractivePoint>> targetLevel = new();
+            List<InteractivePoint> targetLevel = new();
 
             _enemyLevel = _locationConfigurate.FirsEnemyPoint;
 
             var start = PointFactory.Instance.CreatePoint("Start");
             start.PointEntity.NeighborsID = new List<int>();
+            start.PointEntity.Level = 0;
             start.Pass();
-            targetLevel.Add(new List<InteractivePoint>() { start });
+            targetLevel.Add(start);
 
             for (int i = 1; i < _locationConfigurate.LocationLevel - 1; i++)
             {
-                var points = CreatePoints(targetLevel[i - 1], i);
-                targetLevel.Add(points);
+                List<InteractivePoint> lastLevelPoints = new List<InteractivePoint>();
+                targetLevel.Where(point => point.PointEntity.Level == i - 1).ForEach(point =>
+                {
+                    lastLevelPoints.Add(point);
+                });
+                var newPoints = CreatePoints(lastLevelPoints, i);
+                newPoints.ForEach(addedPoint =>
+                {
+                    targetLevel.Add(addedPoint);
+                });
+
                 _enemyLevel = !_enemyLevel;
             }
 
             var boss = PointFactory.Instance.CreatePoint("Boss");
             boss.PointEntity.NeighborsID = new List<int>();
             boss.PointEntity.Level = _locationConfigurate.LocationLevel-1;
-            targetLevel.Add(new List<InteractivePoint>() { boss });
+            targetLevel.Add(boss);
 
             return targetLevel;
         }
 
-        private List<InteractivePoint> CreatePoints(List<InteractivePoint> interesPointEntities, int level)
+        private List<InteractivePoint> CreatePoints( List<InteractivePoint> interesPointEntities, int level)
         {
             List<InteractivePoint> levelPoints = new();
             interesPointEntities.ForEach(lastPoint =>

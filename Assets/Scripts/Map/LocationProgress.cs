@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using UnityEngine;
@@ -9,49 +10,28 @@ namespace Assets.Scripts.Map
 {
     public class LocationProgress
     {
-        public List<List<InteractivePoint>> LoadData()
+        public List<InteractivePoint> LoadData()
         {
             string path = Path.Combine(Application.streamingAssetsPath, "locationProgress.json");
-            //if (File.Exists(path))
-            //{
-            //    string json = File.ReadAllText(path);
-            //    var data = JsonUtility.FromJson<LocationData>(json);
-
-            //    List<List<InteractivePoint>> locationPointCollection = new(data.LocationLevel);
-
-            //    locationPointCollection.ForEach(level =>
-            //    {
-            //        for (int i = 0; i < length; i++)
-            //        {
-
-            //        }
-            //        level.Add()
-            //    })
-
-            //    return data;
-            //}
 
             return null;
         }
 
-        public void SaveDate(List<List<InteractivePoint>> currentLevelPoint)
+        public void SaveDate(List<InteractivePoint> currentLevelPoint)
         {
 
-            List<PointEntity> points = new List<PointEntity>();
+            List<PointEntity> pointsData = new List<PointEntity>();
 
-            currentLevelPoint.ForEach(level =>
+            currentLevelPoint.ForEach(point =>
             {
-                level.ForEach(point =>
-                {
-                    points.Add(point.PointEntity);
-                });
+                pointsData.Add(point.PointEntity);
             });
 
             LocationData locationData = new()
             {
                 LocationProgress = 0,
                 LocationLevel = 5,
-                Points = points.ToArray()
+                Points = pointsData.ToArray()
             };
 
             string json = JsonUtility.ToJson(locationData);
@@ -71,10 +51,6 @@ namespace Assets.Scripts.Map
             public int LocationLevel;
 
             public PointEntity[] Points;
-            //public int[] ID;
-            //public int[] LevelPoints;
-            //public int[] Keys;
-            //public Vector2Int[] Neighbor;
         }
     }
 }

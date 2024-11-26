@@ -14,7 +14,7 @@ namespace Assets.Scripts.Map
         [SerializeField] private ViewPoint _endPoint;
         [SerializeField] private MapPlayer _playerPrefab;
 
-        private List<List<InteractivePoint>> _intersections;
+        private List<InteractivePoint> _locationPoints;
         private LocationConfigurate _activeLocation;
         private string[] _locationKey = { "LocationFirst", "LocationSecond", "LocationThreed" };
 
@@ -25,15 +25,15 @@ namespace Assets.Scripts.Map
             _progress = new LocationProgress();
             Instance = this;
             _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[0]}");
-            _intersections = new PointOfInterestGenerator(_startPoint, _endPoint, _activeLocation).Generate();
+            _locationPoints = new PointOfInterestGenerator(_startPoint, _endPoint, _activeLocation).Generate();
 
-            var generator = new EnivrimentGenerator(_intersections);
+            var generator = new EnivrimentGenerator(_locationPoints,_activeLocation.LocationLevel);
             generator.Generate();
 
-            MapPlayer = Instantiate(_playerPrefab, _intersections[0][0].ViewPoint.transform.position, Quaternion.identity);
-            MapController.Create(_intersections, _activeLocation);
+            MapPlayer = Instantiate(_playerPrefab, _locationPoints[0].ViewPoint.transform.position, Quaternion.identity);
+            MapController.Create(_locationPoints, _activeLocation);
 
-            _progress.SaveDate(_intersections);
+            _progress.SaveDate(_locationPoints);
         }
 
         private void OnDisable()
@@ -41,9 +41,9 @@ namespace Assets.Scripts.Map
             Instance = null;
             MapController = null;
 
-            _intersections.ForEach(inter =>
+            _locationPoints.ForEach(point =>
             {
-                inter.ForEach(point => { point.Dispose(); });
+                point.Dispose();
             });
         }
     }

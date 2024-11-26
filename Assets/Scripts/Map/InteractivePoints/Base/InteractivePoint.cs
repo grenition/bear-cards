@@ -10,6 +10,7 @@ namespace Assets.Scripts.Map
         public int ID;
         public List<int> NeighborsID;
         public int Level;
+        public string Key;
 
         public bool PointActive;
         public bool PointComplited;
@@ -26,8 +27,6 @@ namespace Assets.Scripts.Map
         public abstract void OnBeginInteract();
         public abstract void OnEndInteract();
         public PointEntity PointEntity;
-
-        public string Key { get; protected set; }
 
         public ViewPoint ViewPoint { get; protected set; }
 
@@ -53,27 +52,27 @@ namespace Assets.Scripts.Map
             PointEntity.PointActive = false;
             PointEntity.PointActive = false;
             PointEntity.PointComplited = true;
-            Debug.Log($"{Key}:I complited");
+            Debug.Log($"{PointEntity.Key}:I complited");
         }
 
         public void Pass()
         {
             PointEntity.PointActive = false;
             PointEntity.PointPass = true;
-            Debug.Log($"{Key}:I pass");
+            Debug.Log($"{PointEntity.Key}:I pass");
         }
 
         public void Active()
         {
             PointEntity.PointActive = true;
-            Debug.Log($"{Key}:I active");
+            Debug.Log($"{PointEntity.Key}:I active");
         }
 
         public void Lock()
         {
             PointEntity.PointLock = true;
             PointEntity.PointActive = false;
-            Debug.Log($"{Key}:I lock");
+            Debug.Log($"{PointEntity.Key}:I lock");
         }
 
         public void Dispose()

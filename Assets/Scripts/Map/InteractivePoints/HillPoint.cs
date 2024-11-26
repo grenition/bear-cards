@@ -4,7 +4,7 @@ namespace Assets.Scripts.Map
     {
         public HillPoint()
         {
-            Key = "Hill";
+            PointEntity.Key = "Hill";
         }
         public override void OnBeginInteract()
         { 

@@ -6,7 +6,7 @@ namespace Assets.Scripts.Map
     {
         public CardPoint()
         {
-            Key = "Card";
+            PointEntity.Key = "Card";
         }
         public override void OnBeginInteract()
         {

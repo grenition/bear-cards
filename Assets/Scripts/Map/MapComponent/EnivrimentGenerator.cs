@@ -1,63 +1,70 @@
 using GreonAssets.Extensions;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 namespace Assets.Scripts.Map
 {
     public class EnivrimentGenerator
     {
-        private List<List<InteractivePoint>> _points = new();
+        private List<InteractivePoint> _points = new();
         private EnivrimentConfig _config;
-        public EnivrimentGenerator(List<List<InteractivePoint>> points)
+        private int _levelLocation;
+        public EnivrimentGenerator(List<InteractivePoint> points, int levelLocation)
         {
             _points = points;
+            _levelLocation = levelLocation;
             _config = Resources.Load<EnivrimentConfig>("Map/EnuvrimentConfig");
         }
 
         public void Generate()
         {
-            _points.ForEach(level =>
+            InteractivePointGenerated();
+            PathGenerated();
+        }
+
+        private void InteractivePointGenerated()
+        {
+            for (int numberLevel = 0; numberLevel < _levelLocation; numberLevel++)
             {
-                for (int i = 0; i < level.Count; i++)
+                List<InteractivePoint> pointsInLevel = _points.Where(point => point.PointEntity.Level == numberLevel).ToList();
+
+                for (int numberPointInLevel = 0; numberPointInLevel < pointsInLevel.Count(); numberPointInLevel++)
                 {
+                    var position = new Vector2((float)(pointsInLevel.Count() * numberPointInLevel) /pointsInLevel.Count()
+                        - pointsInLevel.Count() / 2.0f,
+                        (float)numberLevel * _config.DistanceBeetwenPointByY);
 
-                    var position = new Vector2((float)(level.Count * i) / (float)level.Count - (float)level.Count / 2.0f,
-                        level[i].PointEntity.Level * _config.DistanceBeetwenPointByY);
-
-                    var viewObject = PointFactory.Instance.CreateViewPoint(level[i].Key);
+                    var viewObject = PointFactory.Instance.CreateViewPoint(pointsInLevel[numberPointInLevel].PointEntity.Key);
                     viewObject.transform.position = position;
-                    level[i].Initialize(viewObject);
+                    pointsInLevel[numberPointInLevel].Initialize(viewObject);
                 }
-            });
+            }
+        }
 
-            _points.ForEach(level =>
-            {
-                level.Where(point => point.PointEntity.NeighborsID != null && point.PointEntity.NeighborsID.Count != 0).ForEach(pointOfLevel =>
+        private void PathGenerated()
+        {
+            _points.Where(point => point.PointEntity.NeighborsID != null && point.PointEntity.NeighborsID.Count != 0).ForEach
+                (point =>
                 {
-                    pointOfLevel.PointEntity.NeighborsID.ForEach(point =>
+                    point.PointEntity.NeighborsID.ForEach(idNeighbor =>
                     {
-                        pointOfLevel.ViewPoint.CreatePathTo(FindPointByID(point).ViewPoint);
+                        point.ViewPoint.CreatePathTo(FindPointByID(idNeighbor).ViewPoint);
                     });
                 });
-            });
 
-            _points[_points.Count - 2].ForEach(lastpoint =>
+            var bossPoint = _points.Find(point => point.PointEntity.Key == "Boss");
+            _points.Where(point => point.PointEntity.Level == _levelLocation - 2).ForEach(point =>
             {
-                lastpoint.ViewPoint.CreatePathTo(_points[_points.Count - 1].First().ViewPoint);
+                point.ViewPoint.CreatePathTo(bossPoint.ViewPoint);
             });
         }
 
+
         private InteractivePoint FindPointByID(int id)
         {
-            InteractivePoint findPoint = null;
-            _points.ForEach(level =>
-            {
-                level.ForEach(point =>
-                {
-                    if (point.PointEntity.ID == id)
-                        findPoint = point;
-                });
-            });
+            InteractivePoint findPoint = _points.Find(point => point.PointEntity.ID == id);
 
             if (findPoint != null)
                 return findPoint;
