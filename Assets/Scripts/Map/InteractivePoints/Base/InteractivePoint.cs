@@ -50,7 +50,6 @@ namespace Assets.Scripts.Map
         public void Complited()
         {
             PointEntity.PointActive = false;
-            PointEntity.PointActive = false;
             PointEntity.PointComplited = true;
             Debug.Log($"{PointEntity.Key}:I complited");
         }
@@ -59,12 +58,14 @@ namespace Assets.Scripts.Map
         {
             PointEntity.PointActive = false;
             PointEntity.PointPass = true;
+            PointEntity.PointComplited = false;
             Debug.Log($"{PointEntity.Key}:I pass");
         }
 
         public void Active()
         {
             PointEntity.PointActive = true;
+            PointEntity.PointLock = false;
             Debug.Log($"{PointEntity.Key}:I active");
         }
 

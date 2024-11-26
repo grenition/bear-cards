@@ -1,26 +1,33 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 namespace Assets.Scripts.Map
 {
     public class LocationProgress
     {
-        public List<InteractivePoint> LoadData()
+        public LocationData LoadData()
         {
             string path = Path.Combine(Application.streamingAssetsPath, "locationProgress.json");
 
-            return null;
+            if (File.Exists(path))
+            {
+                string json = File.ReadAllText(path);
+                var data = JsonUtility.FromJson<LocationData>(json);
+                return data;
+            }
+
+            return new LocationData()
+            {
+                LocationProgress = 0,
+                LocationLevel = 0,
+            };
         }
 
-        public void SaveDate(List<InteractivePoint> currentLevelPoint)
+        public void SaveDate(List<InteractivePoint> currentLevelPoint, int levelLocation, int numberLocation)
         {
-
-            List<PointEntity> pointsData = new List<PointEntity>();
+            List<PointEntity> pointsData = new();
 
             currentLevelPoint.ForEach(point =>
             {
@@ -29,14 +36,13 @@ namespace Assets.Scripts.Map
 
             LocationData locationData = new()
             {
-                LocationProgress = 0,
-                LocationLevel = 5,
+                LocationProgress = numberLocation,
+                LocationLevel = levelLocation,
                 Points = pointsData.ToArray()
             };
 
             string json = JsonUtility.ToJson(locationData);
             File.WriteAllText(Application.streamingAssetsPath + "/locationProgress.json", json);
-            Debug.Log(Application.streamingAssetsPath + "/locationProgress.json");
         }
 
         public void DeleteData()

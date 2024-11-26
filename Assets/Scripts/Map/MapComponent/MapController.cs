@@ -1,4 +1,3 @@
-using GreonAssets.Extensions;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -17,9 +16,16 @@ namespace Assets.Scripts.Map
             _pointCollections = pointCollection;
             _locationConfigurate = locationConfigurate;
 
-            pointCollection[0].Complited();
-            UpdatePoints();
+            InteractivePoint activePoint = _pointCollections.Find(point => point.PointEntity.PointComplited);
+
+            if (activePoint == null)
+                throw new System.Exception("Last Level Complited is not detected!");
+
             _mapPlayer = MapCompositionRoot.Instance.MapPlayer;
+            _mapPlayer.transform.position = activePoint.ViewPoint.transform.position;
+            _currentInteractPoint = activePoint;
+
+            UpdatePoints();
         }
 
         private void Update()
@@ -34,21 +40,21 @@ namespace Assets.Scripts.Map
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
-                ComplitedInteract();
+                ComplitePoint();
         }
 
         public void UpdatePoints()
         {
-            _pointCollections.Where(point => point.PointEntity.PointPass).ForEach(point =>
-            {
-                for (int i = 0; i < point.PointEntity.NeighborsID.Count(); i++)
-                {
-                    var neighbor = FindPointByID(point.PointEntity.NeighborsID[i]);
+            var point = _pointCollections.Find(point => point.PointEntity.PointComplited);
 
-                    if (!neighbor.PointEntity.PointPass && !neighbor.PointEntity.PointLock)
-                        neighbor.Active();
-                }
-            });
+            if (point == null)
+                throw new System.Exception("Last Level Complited is not detected!");
+
+            for (int i = 0; i < point.PointEntity.NeighborsID.Count(); i++)
+            {
+                var neighbor = FindPointByID(point.PointEntity.NeighborsID[i]);
+                neighbor.Active();
+            }
 
             if (_currentInteractPoint != null && _currentInteractPoint.PointEntity.Level == _locationConfigurate.LocationLevel - 2)
                 _pointCollections.Last().Active();
@@ -68,28 +74,33 @@ namespace Assets.Scripts.Map
             MapCompositionRoot.Instance.MapCamera.MoveCameraToPlayer();
         }
 
-        public void ComplitedInteract()
+        public void ComplitePoint()
         {
             if (_currentInteractPoint == null)
                 return;
 
-            _currentInteractPoint.OnEndInteract();
-
-            if(_currentInteractPoint.PointEntity.Level == _locationConfigurate.LocationLevel)
+            if (_currentInteractPoint.PointEntity.Level == _locationConfigurate.LocationLevel)
             {
                 _pointCollections.Last().Complited();
                 LocationComplited();
                 return;
             }
 
-            _pointCollections.Where(
-                point => point != _currentInteractPoint).ForEach(
-                point => point.Lock());
+            _pointCollections.ForEach(point =>
+            {
+                point.Lock();
+                if (point.PointEntity.PointComplited)
+                {
+                    point.Pass();
+                }
+            });
+            _currentInteractPoint.OnEndInteract();
+            _currentInteractPoint.Complited();
+            _currentInteractPoint = null;
 
-            _currentInteractPoint.Pass();
             _interact = false;
             UpdatePoints();
-            _currentInteractPoint = null;
+            MapCompositionRoot.Instance.Progress.SaveDate(_pointCollections, _locationConfigurate.LocationLevel, 0);
         }
 
         public void LocationComplited()

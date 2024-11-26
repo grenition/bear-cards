@@ -1,7 +1,6 @@
 using GreonAssets.Extensions;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 namespace Assets.Scripts.Map
 {
     public class PointOfInterestGenerator
@@ -23,18 +22,18 @@ namespace Assets.Scripts.Map
             _factoryLevel = new();
             _startPoint = startPoint;
             _endPoint = endPoint;
+
+            _enemyLevel = _locationConfigurate.FirsEnemyPoint;
         }
 
         public List<InteractivePoint> Generate()
         {
             List<InteractivePoint> targetLevel = new();
 
-            _enemyLevel = _locationConfigurate.FirsEnemyPoint;
-
             var start = PointFactory.Instance.CreatePoint("Start");
             start.PointEntity.NeighborsID = new List<int>();
             start.PointEntity.Level = 0;
-            start.Pass();
+            start.Complited();
             targetLevel.Add(start);
 
             for (int i = 1; i < _locationConfigurate.LocationLevel - 1; i++)
@@ -55,13 +54,26 @@ namespace Assets.Scripts.Map
 
             var boss = PointFactory.Instance.CreatePoint("Boss");
             boss.PointEntity.NeighborsID = new List<int>();
-            boss.PointEntity.Level = _locationConfigurate.LocationLevel-1;
+            boss.PointEntity.Level = _locationConfigurate.LocationLevel - 1;
             targetLevel.Add(boss);
 
             return targetLevel;
         }
 
-        private List<InteractivePoint> CreatePoints( List<InteractivePoint> interesPointEntities, int level)
+        public List<InteractivePoint> Generate(List<PointEntity> loadPoints)
+        {
+            List<InteractivePoint> generatedPoints = new();
+            loadPoints.ForEach(point =>
+            {
+                var newPoint = PointFactory.Instance.CreatePoint(point.Key);
+                newPoint.PointEntity = point;
+                generatedPoints.Add(newPoint);
+            });
+
+            return generatedPoints;
+        }
+
+        private List<InteractivePoint> CreatePoints(List<InteractivePoint> interesPointEntities, int level)
         {
             List<InteractivePoint> levelPoints = new();
             interesPointEntities.ForEach(lastPoint =>
@@ -122,7 +134,7 @@ namespace Assets.Scripts.Map
 
             public List<InteractivePoint> CreateRandomPoint(ref List<InteractivePoint> lastLevelPoint, List<string> pointsSet)
             {
-                int numberPattern = Random.Range(0, _patternSet.Count);
+                int numberPattern = UnityEngine.Random.Range(0, _patternSet.Count);
                 return _patternSet[numberPattern].Create(ref lastLevelPoint, pointsSet);
             }
         }

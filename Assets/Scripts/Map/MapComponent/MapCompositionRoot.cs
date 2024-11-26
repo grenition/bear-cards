@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Assets.Scripts.Map
@@ -9,6 +10,7 @@ namespace Assets.Scripts.Map
         [field: SerializeField] public MapController MapController { get; private set; }
         [field: SerializeField] public MapCamera MapCamera { get; private set; }
         public MapPlayer MapPlayer { get; private set; }
+        public LocationProgress Progress { get; private set; }
 
         [SerializeField] private ViewPoint _startPoint;
         [SerializeField] private ViewPoint _endPoint;
@@ -17,23 +19,30 @@ namespace Assets.Scripts.Map
         private List<InteractivePoint> _locationPoints;
         private LocationConfigurate _activeLocation;
         private string[] _locationKey = { "LocationFirst", "LocationSecond", "LocationThreed" };
-
-        private LocationProgress _progress;
+        private PointOfInterestGenerator _pointOfInterestGenerator;
+        private EnivrimentGenerator _enivrimentGenerator;
 
         private void Awake()
         {
-            _progress = new LocationProgress();
+            Progress = new LocationProgress();
             Instance = this;
-            _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[0]}");
-            _locationPoints = new PointOfInterestGenerator(_startPoint, _endPoint, _activeLocation).Generate();
 
-            var generator = new EnivrimentGenerator(_locationPoints,_activeLocation.LocationLevel);
-            generator.Generate();
+            var progres = Progress.LoadData();
+            _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[progres.LocationProgress]}");
+            _pointOfInterestGenerator = new PointOfInterestGenerator(_startPoint, _endPoint, _activeLocation);
+            _enivrimentGenerator = new EnivrimentGenerator(_activeLocation.LocationLevel);
 
+            if (progres.LocationLevel == 0)
+                _locationPoints = _pointOfInterestGenerator.Generate();
+            else
+                _locationPoints = _pointOfInterestGenerator.Generate(progres.Points.ToList());
+
+            Progress.SaveDate(_locationPoints, _activeLocation.LocationLevel, 0);
+            _enivrimentGenerator.Generate(_locationPoints);
             MapPlayer = Instantiate(_playerPrefab, _locationPoints[0].ViewPoint.transform.position, Quaternion.identity);
             MapController.Create(_locationPoints, _activeLocation);
 
-            _progress.SaveDate(_locationPoints);
+            MapCamera.MoveCameraToPlayer();
         }
 
         private void OnDisable()
