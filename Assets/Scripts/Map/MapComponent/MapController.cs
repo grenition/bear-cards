@@ -56,7 +56,7 @@ namespace Assets.Scripts.Map
                 neighbor.Active();
             }
 
-            if (_currentInteractPoint != null && _currentInteractPoint.PointEntity.Level == _locationConfigurate.LocationLevel - 2)
+            if (point.PointEntity.Level == _locationConfigurate.LocationLevel - 2)
                 _pointCollections.Last().Active();
         }
 
@@ -79,7 +79,7 @@ namespace Assets.Scripts.Map
             if (_currentInteractPoint == null)
                 return;
 
-            if (_currentInteractPoint.PointEntity.Level == _locationConfigurate.LocationLevel)
+            if (_currentInteractPoint.PointEntity.Level == _locationConfigurate.LocationLevel-1)
             {
                 _pointCollections.Last().Complited();
                 LocationComplited();
@@ -100,12 +100,14 @@ namespace Assets.Scripts.Map
 
             _interact = false;
             UpdatePoints();
-            MapCompositionRoot.Instance.Progress.SaveDate(_pointCollections, _locationConfigurate.LocationLevel, 0);
+            MapCompositionRoot.Instance.Progress.SaveDate(_pointCollections, _locationConfigurate.LocationLevel, _locationConfigurate.LocationKey);
         }
 
         public void LocationComplited()
         {
-
+            var keyLocation = MapCompositionRoot.Instance.GetNextLocationKey();
+            MapCompositionRoot.Instance.Progress.SaveDate(_pointCollections,0, keyLocation);
+            MapCompositionRoot.Instance.ReloadMap();
         }
 
         private InteractivePoint FindPointByID(int id)

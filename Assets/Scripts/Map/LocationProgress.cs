@@ -20,12 +20,12 @@ namespace Assets.Scripts.Map
 
             return new LocationData()
             {
-                LocationProgress = 0,
+                KeyLocation = 0,
                 LocationLevel = 0,
             };
         }
 
-        public void SaveDate(List<InteractivePoint> currentLevelPoint, int levelLocation, int numberLocation)
+        public void SaveDate(List<InteractivePoint> currentLevelPoint, int levelLocation, int keyNumber)
         {
             List<PointEntity> pointsData = new();
 
@@ -36,7 +36,7 @@ namespace Assets.Scripts.Map
 
             LocationData locationData = new()
             {
-                LocationProgress = numberLocation,
+                KeyLocation = keyNumber,
                 LocationLevel = levelLocation,
                 Points = pointsData.ToArray()
             };
@@ -53,7 +53,7 @@ namespace Assets.Scripts.Map
         [Serializable]
         public class LocationData
         {
-            public int LocationProgress;
+            public int KeyLocation;
             public int LocationLevel;
 
             public PointEntity[] Points;

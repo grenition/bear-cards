@@ -21,6 +21,7 @@ namespace Assets.Scripts.Map
         private string[] _locationKey = { "LocationFirst", "LocationSecond", "LocationThreed" };
         private PointOfInterestGenerator _pointOfInterestGenerator;
         private EnivrimentGenerator _enivrimentGenerator;
+        private int _curentLocationNumber;
 
         private void Awake()
         {
@@ -28,7 +29,8 @@ namespace Assets.Scripts.Map
             Instance = this;
 
             var progres = Progress.LoadData();
-            _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[progres.LocationProgress]}");
+            _curentLocationNumber = progres.KeyLocation;
+            _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber]}");
             _pointOfInterestGenerator = new PointOfInterestGenerator(_startPoint, _endPoint, _activeLocation);
             _enivrimentGenerator = new EnivrimentGenerator(_activeLocation.LocationLevel);
 
@@ -37,12 +39,30 @@ namespace Assets.Scripts.Map
             else
                 _locationPoints = _pointOfInterestGenerator.Generate(progres.Points.ToList());
 
-            Progress.SaveDate(_locationPoints, _activeLocation.LocationLevel, 0);
+            Progress.SaveDate(_locationPoints, _activeLocation.LocationLevel, _activeLocation.LocationKey);
             _enivrimentGenerator.Generate(_locationPoints);
             MapPlayer = Instantiate(_playerPrefab, _locationPoints[0].ViewPoint.transform.position, Quaternion.identity);
             MapController.Create(_locationPoints, _activeLocation);
 
             MapCamera.MoveCameraToPlayer();
+        }
+
+        public int GetNextLocationKey()
+        {
+            if(_curentLocationNumber++ >= _locationKey.Length)
+            {
+                //Game win
+                _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber]}");
+                return _activeLocation.LocationKey;
+            }
+
+            _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber++]}");
+            return _activeLocation.LocationKey; 
+        }
+
+        public void ReloadMap()
+        {
+            //Scene reload
         }
 
         private void OnDisable()

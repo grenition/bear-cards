@@ -41,8 +41,12 @@ namespace Assets.Scripts.Map
         }
 
         private void PathGenerated(List<InteractivePoint> points)
-        {
-            points.Where(point => point.PointEntity.NeighborsID != null && point.PointEntity.NeighborsID.Count != 0).ForEach
+        {            
+
+
+            points.Where(point => point.PointEntity.NeighborsID != null &&
+            point.PointEntity.NeighborsID.Count != 0 &&
+            point.PointEntity.Key != "Boss").ForEach
                 (point =>
                 {
                     point.PointEntity.NeighborsID.ForEach(idNeighbor =>
