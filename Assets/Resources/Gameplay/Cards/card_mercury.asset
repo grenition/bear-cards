@@ -15,8 +15,10 @@ MonoBehaviour:
   <VisualShortName>k__BackingField: Hg
   <VisualName>k__BackingField: "\u0420\u0442\u0443\u0442\u044C"
   <VisualDescription>k__BackingField: 
+  <ElectroFormula>k__BackingField: 
   <VisualIcon>k__BackingField: {fileID: 0}
-  <CardType>k__BackingField: 0
+  <CardType>k__BackingField: 1
+  <Rarity>k__BackingField: 0
   <Cost>k__BackingField: 12
   <Level>k__BackingField: 6
   <BaseHealth>k__BackingField: 3

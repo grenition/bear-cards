@@ -1,4 +1,3 @@
-using System;
 using Project.Gameplay.Battle.Model.Cards;
 using TMPro;
 using UnityEngine;
@@ -10,8 +9,7 @@ namespace Project.UI.Battle
     {
         public CardModel Model { get; protected set; }
         
-        [SerializeField] private TMP_Text _costText;
-        [SerializeField] private TMP_Text _levelText;
+        [SerializeField] private TMP_Text _electroText;
         [SerializeField] private Image _iconImage;
         [SerializeField] private TMP_Text _shortName;
         [SerializeField] private TMP_Text _fullName;
@@ -37,13 +35,12 @@ namespace Project.UI.Battle
         private void OnHealthChange(int obj) => Visualize();
         private void Visualize()
         {
-            _costText.text = Model.Config.Cost.ToString();
-            _levelText.text = Model.Config.Level.ToString();
-            _iconImage.sprite = Model.Config.VisualIcon;
-            _shortName.text = Model.Config.VisualShortName;
-            _fullName.text = Model.Config.VisualName;
-            _damageText.text = Model.AttackDamage.ToString();
-            _healthText.text = Model.Health.ToString();            
+            if(_electroText) _electroText.text = Model.Config.ElectroFormula;
+            if(_iconImage) _iconImage.sprite = Model.Config.VisualIcon;
+            if(_shortName) _shortName.text = Model.Config.VisualShortName;
+            if(_fullName) _fullName.text = Model.Config.VisualName;
+            if(_damageText) _damageText.text = Model.AttackDamage.ToString();
+            if(_healthText) _healthText.text = Model.Health.ToString();            
         }
     }
 }

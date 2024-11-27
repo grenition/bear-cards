@@ -292,7 +292,7 @@ namespace Project.UI.Battle
 
             var changeColor = health > 0 ? healthColor : damageColor;
             await cardImage
-                .DOColor(parentCard.Model.Type == CardType.Card ? changeColor : spellDamageColor, damageInTime)
+                .DOColor(parentCard.Model.Type != CardType.Spell ? changeColor : spellDamageColor, damageInTime)
                 .SetEase(Ease.OutQuad)
                 .AsyncWaitForCompletion();
 

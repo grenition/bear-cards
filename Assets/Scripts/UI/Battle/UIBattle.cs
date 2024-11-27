@@ -13,7 +13,19 @@ namespace Project.UI.Battle
         public IReadOnlyDictionary<CardSlotModel, UICardSlot> Slots => _slots;
         public IReadOnlyDictionary<CardModel, UICardMovement> Cards => _cards;
 
-        [SerializeField] private UICardMovement _cardPrefab;
+        [Header("Bsse movement prefab")]
+        [SerializeField] private UICardMovement _cardMovementPrefab;
+        [Header("Card visuals")]
+        [SerializeField] private UICardVisual _hydrogenCardPrefab;
+        [SerializeField] private UICardVisual _spellCardPrefab;
+        [SerializeField] private UICardVisual _metalStandartCardPrefab;
+        [SerializeField] private UICardVisual _metalRareCardPrefab;
+        [SerializeField] private UICardVisual _metalVeryRareCardPrefab;
+        [SerializeField] private UICardVisual _metalLegendaryCardPrefab;        
+        [SerializeField] private UICardVisual _nonMetalStandartCardPrefab;
+        [SerializeField] private UICardVisual _nonMetalRareCardPrefab;
+        [SerializeField] private UICardVisual _nonMetalVeryRareCardPrefab;
+        [SerializeField] private UICardVisual _nonMetalLegendaryCardPrefab;
 
         private Dictionary<CardSlotModel, UICardSlot> _slots = new();
         private Dictionary<CardModel, UICardMovement> _cards = new();
@@ -40,10 +52,41 @@ namespace Project.UI.Battle
             if (card == null)
             {
                 var deck = fromPosition.owner == CardOwner.player ? _playerDeck : _enemyDeck;
-                card = Instantiate(_cardPrefab, UICardsHandler.instance.transform);
-                card.Init(cardModel);
+                card = Instantiate(_cardMovementPrefab, UICardsHandler.instance.transform);
+                card.Init(cardModel, GetCardPrefab(cardModel));
                 card.transform.position = deck.transform.position;
             }
+        }
+
+        private UICardVisual GetCardPrefab(CardModel model)
+        {
+            if (model.Key == "card_hydrogen")
+                return _hydrogenCardPrefab;
+
+            switch (model.Type)
+            {
+                case CardType.Spell: return _spellCardPrefab;
+                case CardType.Metal:
+                    switch (model.Config.Rarity)
+                    {
+                        case CardRarity.Standart: return _metalStandartCardPrefab;
+                        case CardRarity.Rare: return _metalRareCardPrefab;
+                        case CardRarity.VeryRare: return _metalVeryRareCardPrefab;
+                        case CardRarity.Legendary: return _metalLegendaryCardPrefab;
+                    }
+                    break;
+                case CardType.NonMetal:
+                    switch (model.Config.Rarity)
+                    {
+                        case CardRarity.Standart: return _nonMetalStandartCardPrefab;
+                        case CardRarity.Rare: return _nonMetalRareCardPrefab;
+                        case CardRarity.VeryRare: return _nonMetalVeryRareCardPrefab;
+                        case CardRarity.Legendary: return _nonMetalLegendaryCardPrefab;
+                    }
+                    break;
+            }
+            
+            return _hydrogenCardPrefab;
         }
 
         #region Registry

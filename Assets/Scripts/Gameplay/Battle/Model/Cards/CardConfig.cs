@@ -4,8 +4,16 @@ namespace Project.Gameplay.Battle.Model.Cards
 {
     public enum CardType
     {
-        Card,
+        Metal,
+        NonMetal,
         Spell
+    }
+    public enum CardRarity
+    {
+        Standart,
+        Rare,
+        VeryRare,
+        Legendary
     }
     public enum SpellPlacing
     {
@@ -32,10 +40,12 @@ namespace Project.Gameplay.Battle.Model.Cards
         [field: SerializeField] public string VisualShortName { get; private set; }
         [field: SerializeField] public string VisualName { get; private set; }
         [field: SerializeField, TextArea] public string VisualDescription { get; private set; }
+        [field: SerializeField] public string ElectroFormula { get; private set; }
         [field: SerializeField] public Sprite VisualIcon { get; private set; }
         
         [field: Header("Parameters")]
         [field: SerializeField] public CardType CardType { get; private set; }
+        [field: SerializeField] public CardRarity Rarity { get; private set; }
         [field: SerializeField] public int Cost { get; private set; }
         [field: SerializeField] public int Level { get; private set; }
         [field: SerializeField] public int BaseHealth { get; private set; }

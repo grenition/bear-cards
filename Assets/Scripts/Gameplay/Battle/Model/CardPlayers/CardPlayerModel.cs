@@ -91,6 +91,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         public CardSlotModel GetFirstFreeSlotInHand() => Hand.FirstOrDefault(x => x.Card == null);
         public CardSlotModel GetFirstFreeSlotInDeck() => Deck.FirstOrDefault(x => x.Card == null);
         public CardSlotModel GetFirstFreeSlotInSpells() => Spells.FirstOrDefault(x => x.Card == null);
+        public bool IsAllCardInDeckHigherThanPlayerLevel() => Deck.Where(x => x.Card != null).All(x => x.Card.Level > Level);
         public bool TransferCardFromDeckToHand()
         {
             var card = GetFirstCardInDeck();

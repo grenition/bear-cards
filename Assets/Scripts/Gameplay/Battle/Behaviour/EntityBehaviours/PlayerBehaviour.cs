@@ -61,7 +61,7 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
                 }
             }
             
-            if (PlayerModel.GetFirstCardInDeck() == null)
+            if (PlayerModel.GetFirstCardInDeck() == null || PlayerModel.IsAllCardInDeckHigherThanPlayerLevel())
             {
                 foreach (var postCard in BattleBehaviour.Config.PostDeckCards)
                 {

@@ -54,9 +54,10 @@ namespace Project.UI.Battle
         public UICardSlot slotUnderCursor;
         private GraphicRaycaster raycaster;
 
-        public void Init(CardModel cardModel)
+        public void Init(CardModel cardModel, UICardVisual overrideVisual = null)
         {
             Model = cardModel;
+            if (overrideVisual) cardVisualPrefab = overrideVisual.gameObject;
         }
         void Start()
         {
@@ -256,7 +257,7 @@ namespace Project.UI.Battle
             foreach (var result in raycastList)
             {
                 if (result.gameObject.TryGetComponent(out UICardSlot slot)
-                    && ((Model.Type == CardType.Card && slot.IsAvailable) || BattleController.Model.IsSlotAvailableForSpell(slot.Model, Model)))
+                    && ((Model.Type != CardType.Spell && slot.IsAvailable) || BattleController.Model.IsSlotAvailableForSpell(slot.Model, Model)))
                     return slot;
             }
 
