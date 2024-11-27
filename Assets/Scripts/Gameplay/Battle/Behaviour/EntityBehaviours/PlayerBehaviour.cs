@@ -1,4 +1,7 @@
+using System.Collections.Generic;
+using System.Linq;
 using Cysharp.Threading.Tasks;
+using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Model;
 using Project.Gameplay.Battle.Model.CardPlayers;
 using Project.Gameplay.Battle.Model.Cards;
@@ -8,7 +11,9 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
     public class PlayerBehaviour : BaseEntityBehaviour
     {
         public CardPlayerModel PlayerModel => BattleBehaviour.Model.Player;
-        
+
+        private List<CardConfig> _shouldGivedCards = new();
+
         protected override async void OnFirstTurnStart()
         {
             await UniTask.NextFrame();
@@ -16,9 +21,15 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
             {
                 BattleBehaviour.Model.AddCardToDeck(CardOwner.player, preCard.name);
             }
+
+            _shouldGivedCards = new(BattleBehaviour.Model.Player.Config.Deck);
             foreach (var deckCard in BattleBehaviour.Model.Player.Config.Deck)
             {
-                BattleBehaviour.Model.AddCardToDeck(CardOwner.player, deckCard.name);
+                if (!BattleBehaviour.Config.GiveCardsByActualLevel || deckCard.Level <= PlayerModel.Level)
+                {
+                    BattleBehaviour.Model.AddCardToDeck(CardOwner.player, deckCard.name);
+                    _shouldGivedCards.TryRemove(deckCard);
+                }
             }
             
             for (int i = 0; i < BattleBehaviour.Config.CardsAtFirstTurn; i++)
@@ -41,6 +52,15 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
             
             if(TurnIndex == 0) return;
 
+            foreach (var deckCard in _shouldGivedCards.ToList())
+            {
+                if (!BattleBehaviour.Config.GiveCardsByActualLevel || deckCard.Level <= PlayerModel.Level)
+                {
+                    BattleBehaviour.Model.AddCardToDeck(CardOwner.player, deckCard.name);
+                    _shouldGivedCards.TryRemove(deckCard);
+                }
+            }
+            
             if (PlayerModel.GetFirstCardInDeck() == null)
             {
                 foreach (var postCard in BattleBehaviour.Config.PostDeckCards)

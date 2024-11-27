@@ -21,6 +21,7 @@ namespace Project.Gameplay.Battle.Model
         [field: Header("PlayerBehaviour")]
         [field: SerializeField] public int CardsAtFirstTurn { get; private set; } = 4;
         [field: SerializeField] public int CardsAtAnotherTurns { get; private set; } = 1;
+        [field: SerializeField] public bool GiveCardsByActualLevel { get; private set; } = true;
         [field: SerializeField] public List<CardConfig> PreDeckCards { get; private set; }
         [field: SerializeField] public List<CardConfig> PostDeckCards { get; private set; }
     }
