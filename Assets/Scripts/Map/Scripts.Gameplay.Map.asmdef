@@ -1,12 +1,11 @@
 {
-    "name": "Scripts.Gameplay.Battle",
+    "name": "Scripts.Gameplay.Map",
     "rootNamespace": "Project",
     "references": [
         "GUID:7c58e94f7244543a8ad6d25695827221",
         "GUID:66e6c27d3e6ee4a59891e39187bc8328",
         "GUID:77221876cc6b8244180b96e320b1bcd4",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:f3764a02f238b4d4c8dcb279a5a49cd1"
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

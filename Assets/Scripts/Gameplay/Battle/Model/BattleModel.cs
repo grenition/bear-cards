@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts.Map;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Data;
 using Project.Gameplay.Battle.Model.CardPlayers;
@@ -261,6 +262,11 @@ namespace Project.Gameplay.Battle.Model
             BattleEnded = true;
             BattleWinner = winner;
             OnBattleEnded.SafeInvoke(winner);
+
+            if (winner == CardOwner.player)
+                MapStaticData.LevelComplited();
+            else
+                MapStaticData.GameFail();
         }
 
         #endregion

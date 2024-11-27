@@ -21,8 +21,6 @@ namespace Assets.Scripts.Map
             _locationProgress.SaveDate(points, locationLevel, keyLocation);
         }
 
-
-
         public static void GameFail()
         {
             Initialize();
@@ -37,6 +35,7 @@ namespace Assets.Scripts.Map
             locationData.Points.ToList().ForEach(point =>
             {
                 point.PointLock = true;
+                point.PointComplited = false;
             });
 
             locationData.Points.ToList().Find(point => point.ID == _idBattlePoint).PointComplited = true;
@@ -50,8 +49,7 @@ namespace Assets.Scripts.Map
 
         private static void Initialize()
         {
-            if( _locationProgress == null )
-                _locationProgress = new LocationProgress();
+            _locationProgress ??= new LocationProgress();
         }
     }
 }
