@@ -244,7 +244,7 @@ namespace Project.Gameplay.Battle.Model
             var forwardCard = GetCardAtPosition(enemyPosition);
             var enemyPlayer = enemyType == CardOwner.player ? Player : Enemy;
 
-            if (card == null) return;
+            if (card == null || card.AttackDamage == 0) return;
             card.CallOnAttack(enemyPosition);
 
             if (forwardCard == null)

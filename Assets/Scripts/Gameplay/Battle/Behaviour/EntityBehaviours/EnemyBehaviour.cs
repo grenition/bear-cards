@@ -32,7 +32,7 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
             for (int i = 0; i < PlayerModel.Config.HandSize; i++)
             {
                 var card = BattleStaticData.Cards
-                    .Where(x => x.Value.CardType != CardType.Spell)
+                    .Where(x => x.Value.CardType != CardType.Spell && x.Value.Level <= BattleBehaviour.Model.Player.Level)
                     .ToDictionary(x => x.Key, x => x.Value)
                     .GetRandomValue();
                 
