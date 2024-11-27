@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc3fce12eae04c7ba5be9b1bb4823389, type: 3}
   m_Name: card_hydrogen
   m_EditorClassIdentifier: 
-  <VisualShortName>k__BackingField: 
+  <VisualShortName>k__BackingField: H
   <VisualName>k__BackingField: "\u0412\u043E\u0434\u043E\u0440\u043E\u0434"
   <VisualDescription>k__BackingField: 
   <VisualIcon>k__BackingField: {fileID: 0}

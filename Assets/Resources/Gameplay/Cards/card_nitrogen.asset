@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc3fce12eae04c7ba5be9b1bb4823389, type: 3}
   m_Name: card_nitrogen
   m_EditorClassIdentifier: 
-  <VisualShortName>k__BackingField: 
+  <VisualShortName>k__BackingField: N
   <VisualName>k__BackingField: "\u0410\u0437\u043E\u0442"
   <VisualDescription>k__BackingField: 
   <VisualIcon>k__BackingField: {fileID: 0}
@@ -20,6 +20,6 @@ MonoBehaviour:
   <Cost>k__BackingField: 5
   <Level>k__BackingField: 2
   <BaseHealth>k__BackingField: 5
-  <BaseDamage>k__BackingField: 1
+  <BaseDamage>k__BackingField: 2
   <SpellPlacing>k__BackingField: 0
   <SpellPlayersPlacing>k__BackingField: 0

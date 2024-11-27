@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc3fce12eae04c7ba5be9b1bb4823389, type: 3}
-  m_Name: card_fluorine
+  m_Name: card_titanium
   m_EditorClassIdentifier: 
-  <VisualShortName>k__BackingField: F
-  <VisualName>k__BackingField: "\u0424\u0442\u043E\u0440"
+  <VisualShortName>k__BackingField: Ti
+  <VisualName>k__BackingField: "\u0422\u0438\u0442\u0430\u043D"
   <VisualDescription>k__BackingField: 
   <VisualIcon>k__BackingField: {fileID: 0}
   <CardType>k__BackingField: 0
-  <Cost>k__BackingField: 7
-  <Level>k__BackingField: 2
-  <BaseHealth>k__BackingField: 2
-  <BaseDamage>k__BackingField: 4
+  <Cost>k__BackingField: 4
+  <Level>k__BackingField: 4
+  <BaseHealth>k__BackingField: 6
+  <BaseDamage>k__BackingField: 3
   <SpellPlacing>k__BackingField: 0
   <SpellPlayersPlacing>k__BackingField: 0

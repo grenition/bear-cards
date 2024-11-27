@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc3fce12eae04c7ba5be9b1bb4823389, type: 3}
   m_Name: card_helium
   m_EditorClassIdentifier: 
-  <VisualShortName>k__BackingField: 
-  <VisualName>k__BackingField: "\u0412\u043E\u0434\u043E\u0440\u043E\u0434"
+  <VisualShortName>k__BackingField: He
+  <VisualName>k__BackingField: "\u0413\u0435\u043B\u0438\u0439"
   <VisualDescription>k__BackingField: 
   <VisualIcon>k__BackingField: {fileID: 0}
   <CardType>k__BackingField: 0
   <Cost>k__BackingField: 2
   <Level>k__BackingField: 1
-  <BaseHealth>k__BackingField: 1
-  <BaseDamage>k__BackingField: 1
+  <BaseHealth>k__BackingField: 3
+  <BaseDamage>k__BackingField: 0
   <SpellPlacing>k__BackingField: 0
   <SpellPlayersPlacing>k__BackingField: 0
