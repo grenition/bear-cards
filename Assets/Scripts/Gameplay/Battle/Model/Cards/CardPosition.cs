@@ -28,5 +28,13 @@ namespace Project.Gameplay.Battle.Model.Cards
         }
 
         public static CardPosition Garbage() => new CardPosition(CardContainer.garbage, default, default);
+        public bool IsPlayerField() => container == CardContainer.field && owner == CardOwner.player;
+        public bool IsEnemyField() => container == CardContainer.field && owner == CardOwner.enemy;
+        public bool IsPlayerHand() => container == CardContainer.hand && owner == CardOwner.player;
+        public bool IsEnemyHand() => container == CardContainer.hand && owner == CardOwner.enemy;
+        public bool IsPlayerDeck() => container == CardContainer.deck && owner == CardOwner.player;
+        public bool IsEnemyDeck() => container == CardContainer.deck && owner == CardOwner.enemy;
+        public bool IsPlayerSpells() => container == CardContainer.spells && owner == CardOwner.player;
+        public bool IsEnemySpells() => container == CardContainer.spells && owner == CardOwner.enemy;
     }
 }

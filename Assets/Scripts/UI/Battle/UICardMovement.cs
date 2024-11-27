@@ -15,6 +15,7 @@ namespace Project.UI.Battle
     {
         public CardModel Model { get; protected set; }
         public bool Interactable => Model.IsAvailableToPickUpByPlayer() && BattleController.IsPlayerTurn();
+        public bool IsLocked => !Model.IsPlayerHaveEnoughElectronsForPickUp();
         private UICardSlot CardSlot => UIBattle.Instance.Slots.Get(Model.AttachedSlot);
 
         [field: Header("Movement")]

@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using GreonAssets.UI.Extensions;
 using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Model.Cards;
 using UnityEngine;
@@ -79,6 +77,10 @@ namespace Project.UI.Battle
         [SerializeField] private float attackPunchSize = 0.1f;
         [SerializeField] private float attackDistance = 20f;
 
+        [Header("Intractable")]
+        [SerializeField] private CanvasGroup interactionLockedGroup;
+        [SerializeField] private float interactableFadeTime = 0.2f;
+
         private float curveYOffset;
         private float curveRotationOffset;
         private Color startColor;
@@ -113,7 +115,10 @@ namespace Project.UI.Battle
             parentCard.SlotExitEvent.AddListener(SlotExit);
             parentCard.Model.OnHealthChange += OnHealthChange;
             parentCard.Model.OnAttack += OnAttack;
+            BattleController.Model.Player.OnHandElectronsChanged += UpdateAvailableState;
 
+            UpdateAvailableState();
+            
             //Initialization
             initalize = true;
         }
@@ -130,6 +135,7 @@ namespace Project.UI.Battle
             parentCard.SlotExitEvent.RemoveListener(SlotExit);
             parentCard.Model.OnHealthChange -= OnHealthChange;
             parentCard.Model.OnAttack -= OnAttack;
+            BattleController.Model.Player.OnHandElectronsChanged -= UpdateAvailableState;
         }
 
         private void SlotEnter(UICardMovement card, UICardSlot slot)
@@ -318,6 +324,14 @@ namespace Project.UI.Battle
 
             shakeParent.DOPunchScale(Vector3.one * attackPunchSize, attackTime, 1, 1).SetEase(Ease.OutBack);
             shakeParent.DOPunchPosition(direction * attackDistance, attackTime, 1, 1).SetEase(Ease.OutQuad);
+        }
+        private void UpdateAvailableState(int electrons = 0)
+        {
+            var available = parentCard.Model.IsPlayerHaveEnoughElectronsForPickUp();
+            interactionLockedGroup
+                .DOFade(available ? 0f : 1f, interactableFadeTime)
+                .SetEase(Ease.OutBack);
+            interactionLockedGroup.blocksRaycasts = !available;
         }
     }
 }

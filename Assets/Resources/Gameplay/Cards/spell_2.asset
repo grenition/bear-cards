@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc3fce12eae04c7ba5be9b1bb4823389, type: 3}
-  m_Name: sodium
+  m_Name: spell_2
   m_EditorClassIdentifier: 
   <VisualShortName>k__BackingField: 
-  <VisualName>k__BackingField: "\u041D\u0430\u0442\u0440\u0438\u0439"
+  <VisualName>k__BackingField: "\u041B\u0435\u0447\u0435\u043D\u0438\u0435 \u043A\u0430\u0440\u0442
+    \u0438 \u0438\u0433\u0440\u043E\u043A\u0430"
   <VisualDescription>k__BackingField: 
   <VisualIcon>k__BackingField: {fileID: 0}
-  <CardType>k__BackingField: 0
+  <CardType>k__BackingField: 1
   <Cost>k__BackingField: 5
   <Level>k__BackingField: 0
-  <BaseHealth>k__BackingField: 3
-  <BaseDamage>k__BackingField: 1
-  <SpellPlacing>k__BackingField: 0
-  <SpellPlayersPlacing>k__BackingField: 0
+  <BaseHealth>k__BackingField: 2
+  <BaseDamage>k__BackingField: -1
+  <SpellPlacing>k__BackingField: 3
+  <SpellPlayersPlacing>k__BackingField: 1

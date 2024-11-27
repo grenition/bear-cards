@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cf37953c6c8481685257cdbc86851fc, type: 3}
-  m_Name: player
+  m_Name: Player
   m_EditorClassIdentifier: 
   <VisualName>k__BackingField: "\u0418\u0433\u0440\u043E\u043A"
   <VisualDescription>k__BackingField: 
   <Icon>k__BackingField: {fileID: -8937025750965970537, guid: 50742801b4cda49eab9de8a718b60987, type: 3}
   <Health>k__BackingField: 10
-  <Hand>k__BackingField: []
   <HandSize>k__BackingField: 8
+  <DeckSize>k__BackingField: 100
+  <SpellsSize>k__BackingField: 4
+  <PlaceToSlotChance>k__BackingField: 0.5
   <Deck>k__BackingField:
   - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
   - {fileID: 11400000, guid: bd01e8a9a809349b688ae8a1a516fd36, type: 2}
@@ -37,9 +39,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ce37f72ad2e0f4b7cb3f6444337a4775, type: 2}
   - {fileID: 11400000, guid: 671fa2882b3e54936990f92ab4093e00, type: 2}
   - {fileID: 11400000, guid: 630f4a16fb8d0497d92e2a113141d6bf, type: 2}
-  <DeckSize>k__BackingField: 20
-  <Spells>k__BackingField: []
-  <SpellsSize>k__BackingField: 4
-  <CardsAtFirstTurn>k__BackingField: 4
-  <CardsAtAnotherTurns>k__BackingField: 1
-  <PlaceToSlotChance>k__BackingField: 0.5

@@ -137,6 +137,15 @@ namespace Project.Gameplay.Battle.Model
             var slots = GetSlotsForSpell(slot.Position, card.Config.SpellPlacing);
             return slots.Contains(slot);
         }
+        public int GetElectronLevel(int electrons)
+        {
+            for (int i = 0; i < Config.LevelElectrons.Length; i++)
+            {
+                if (electrons < Config.LevelElectrons[i])
+                    return i;
+            }
+            return Config.LevelElectrons.Length;
+        }
 
         #endregion
 
@@ -181,12 +190,17 @@ namespace Project.Gameplay.Battle.Model
                 AttackSpell(slot.Card, to);   
                 return true;
             }
+            
+            if (from.IsPlayerHand() && !slot.Card.IsPlayerHaveEnoughElectronsForPickUp())
+                return false;
 
             if (!newSlot.IsAvailableForDrop(owner)) return false;
 
             card = slot.TakeCard();
             newSlot.PlaceCard(card);
 
+            if (from.IsPlayerHand()) Player.ModifeHandElectrons(-card.Cost);
+            
             OnCardTransfered.SafeInvoke(card, from, to);
             card.CallOnTransfered(from, to);
 

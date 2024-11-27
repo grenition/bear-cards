@@ -12,8 +12,11 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
     {
         public event Action<int> OnHealthChanged;
         public event Action OnDeath;
+        public event Action<int> OnLevelElectronsChanged;
+        public event Action<int> OnHandElectronsChanged;
 
         public bool IsAlive => Health > 0;
+        public int Level => BattleModel.GetElectronLevel(LevelElectrons);
         public string Key { get; protected set; }
         public CardPlayerConfig Config => BattleStaticData.CardPlayers.Get(Key);
         public BattleModel BattleModel { get; protected set; }
@@ -22,6 +25,8 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         public List<CardSlotModel> Deck { get; protected set; } = new();
         public List<CardSlotModel> Spells { get; protected set; } = new();
         public int Health { get; protected set; }
+        public int HandElectrons { get; protected set; }
+        public int LevelElectrons { get; protected set; }
 
         public CardPlayerModel(string key, CardOwner ownerhipType, BattleModel battleModel)
         {
@@ -32,21 +37,15 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
 
             for (int i = 0; i < Config.HandSize; i++)
             {
-                var cardConfig = Config.Hand.GetAt(i);
-                var card = cardConfig ? new CardModel(cardConfig.name, BattleModel) : null;
-                Hand.Add(new CardSlotModel(BattleModel, new CardPosition(CardContainer.hand, OwnershipType, i), CardSlotPermissions.Hand(OwnershipType), card));
+                Hand.Add(new CardSlotModel(BattleModel, new CardPosition(CardContainer.hand, OwnershipType, i), CardSlotPermissions.Hand(OwnershipType)));
             }
             for (int i = 0; i < Config.DeckSize; i++)
             {
-                var cardConfig = Config.Deck.GetAt(i);
-                var card = cardConfig ? new CardModel(cardConfig.name, BattleModel) : null;
-                Deck.Add(new CardSlotModel(BattleModel, new CardPosition(CardContainer.deck, OwnershipType, i), CardSlotPermissions.Deck(OwnershipType), card));
+                Deck.Add(new CardSlotModel(BattleModel, new CardPosition(CardContainer.deck, OwnershipType, i), CardSlotPermissions.Deck(OwnershipType)));
             }
             for (int i = 0; i < Config.SpellsSize; i++)
             {
-                var cardConfig = Config.Spells.GetAt(i);
-                var card = cardConfig ? new CardModel(cardConfig.name, BattleModel) : null;
-                Spells.Add(new CardSlotModel(BattleModel, new CardPosition(CardContainer.spells, OwnershipType, i), CardSlotPermissions.Hand(OwnershipType), card));
+                Spells.Add(new CardSlotModel(BattleModel, new CardPosition(CardContainer.spells, OwnershipType, i), CardSlotPermissions.Hand(OwnershipType)));
             }
         }
         public void Dispose()
@@ -70,6 +69,20 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
                 OnDeath.SafeInvoke();
                 BattleModel.EndBattle(OwnershipType == CardOwner.player ? CardOwner.enemy : CardOwner.player);
             }
+        }
+        internal void ModifyLevelElectrons(int modifyValue)
+        {
+            LevelElectrons += modifyValue;
+            LevelElectrons = Math.Max(0, LevelElectrons);
+            
+            OnLevelElectronsChanged.SafeInvoke(LevelElectrons);
+        }
+        internal void ModifeHandElectrons(int modifyValue)
+        {
+            HandElectrons += modifyValue;
+            HandElectrons = Math.Max(0, HandElectrons);
+            
+            OnHandElectronsChanged.SafeInvoke(HandElectrons);
         }
 
         public CardModel GetFirstCardInHand() => Hand.FirstOrDefault(x => x.Card != null)?.Card;
@@ -96,5 +109,6 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             BattleModel.TryTransferCard(spell.Position, targetSlot.Position);
             return true;
         }
+        public void AddTurnElectrons() => ModifeHandElectrons(BattleModel.Config.ElectronsAtTurn);
     }
 }

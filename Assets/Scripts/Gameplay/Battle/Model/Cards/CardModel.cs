@@ -17,6 +17,8 @@ namespace Project.Gameplay.Battle.Model.Cards
         public CardPosition Position => AttachedSlot.Position;
         public bool IsAlive => Health > 0;
         public CardType Type => Config.CardType;
+        public int Cost => Config.Cost;
+        public int Level => Config.Level;
         
         public CardSlotModel AttachedSlot { get; internal set; }
         public BattleModel BattleModel { get; protected set; }
@@ -45,6 +47,8 @@ namespace Project.Gameplay.Battle.Model.Cards
             if (Health <= 0)
             {
                 OnDeath.SafeInvoke();
+                if (Position.IsPlayerField()) BattleModel.Player.ModifyLevelElectrons(Cost);                 
+                    
                 BattleModel.TryTransferCard(Position, CardPosition.Garbage());
             }
         }
@@ -56,6 +60,7 @@ namespace Project.Gameplay.Battle.Model.Cards
 
         internal void CallOnTransfered(CardPosition fromPosition, CardPosition toPosition) => OnTransfered.SafeInvoke(fromPosition, toPosition);
         internal void CallOnAttack(CardPosition toPosition) => OnAttack.SafeInvoke(toPosition);
-        public bool IsAvailableToPickUpByPlayer() => AttachedSlot?.IsAvailableForPickUp(CardOwner.player) ?? false;
+        public bool IsPlayerHaveEnoughElectronsForPickUp() => (Cost <= BattleModel.Player.HandElectrons && Level <= BattleModel.Player.Level) || !Position.IsPlayerHand();
+        public bool IsAvailableToPickUpByPlayer() => (AttachedSlot?.IsAvailableForPickUp(CardOwner.player) ?? false) && IsPlayerHaveEnoughElectronsForPickUp();
     }
 }

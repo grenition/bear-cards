@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc3fce12eae04c7ba5be9b1bb4823389, type: 3}
-  m_Name: spell 3
+  m_Name: spell_3
   m_EditorClassIdentifier: 
   <VisualShortName>k__BackingField: 
   <VisualName>k__BackingField: "\u0423\u0440\u043E\u043D \u043E\u0434\u043D\u043E\u0439

@@ -15,3 +15,14 @@ MonoBehaviour:
   <Enemy>k__BackingField: {fileID: 11400000, guid: 2c456a4ee4c064a6db1b6f0282752048, type: 2}
   <FieldSize>k__BackingField: 4
   <FirstTurnOwner>k__BackingField: 0
+  <MaxHandElectrons>k__BackingField: 15
+  <ElectronsAtTurn>k__BackingField: 2
+  <LevelElectrons>k__BackingField: 00000000020000000a00000012000000240000003600000048000000
+  <CardsAtFirstTurn>k__BackingField: 4
+  <CardsAtAnotherTurns>k__BackingField: 1
+  <PreDeckCards>k__BackingField:
+  - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+  - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+  - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+  <PostDeckCards>k__BackingField:
+  - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
