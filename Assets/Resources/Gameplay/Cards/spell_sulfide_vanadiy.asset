@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc3fce12eae04c7ba5be9b1bb4823389, type: 3}
-  m_Name: spell_4
+  m_Name: spell_sulfide_vanadiy
   m_EditorClassIdentifier: 
-  <VisualShortName>k__BackingField: 
-  <VisualName>k__BackingField: "\u0423\u0440\u043E\u043D \u0432\u0441\u0435\u0445
-    \u043A\u0430\u0440\u0442 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u0430"
-  <VisualDescription>k__BackingField: 
+  <VisualShortName>k__BackingField: VS2
+  <VisualName>k__BackingField: "\u0421\u0443\u043B\u044C\u0444\u0438\u0434 \u0432\u0430\u043D\u0430\u0434\u0438\u044F"
+  <VisualDescription>k__BackingField: "\u041D\u0430\u043D\u043E\u0441\u0438\u0442
+    {dmg} \u0443\u0440\u043E\u043D\u0430 \u0432\u044B\u0431\u0440\u0430\u043D\u043D\u043E\u0439
+    \u043A\u0430\u0440\u0442\u0435"
   <ElectroFormula>k__BackingField: 
   <VisualIcon>k__BackingField: {fileID: 0}
   <CardType>k__BackingField: 2
@@ -23,6 +24,6 @@ MonoBehaviour:
   <Cost>k__BackingField: 5
   <Level>k__BackingField: 0
   <BaseHealth>k__BackingField: 2
-  <BaseDamage>k__BackingField: 1
-  <SpellPlacing>k__BackingField: 4
+  <BaseDamage>k__BackingField: 5
+  <SpellPlacing>k__BackingField: 2
   <SpellPlayersPlacing>k__BackingField: 0
