@@ -25,7 +25,7 @@ namespace Project.UI.Battle
             var electrons = BattleController.Model.Player.LevelElectrons;
             var level = BattleController.Model.Player.Level;
 
-            _levelText.text = $"Lvl {level}; El {electrons}";
+            _levelText.text = $"{level}";
         }
     }
 }

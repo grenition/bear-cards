@@ -52,12 +52,12 @@ namespace Project.UI.Battle
         public void Visualize()
         {
             _iconImage.sprite = Model.Config.Icon;
-            _healthText.text = $"ХП {Model.Health}";
+            _healthText.text = $"{Model.Health}";
         }
 
         public async void OnHealthChanged(int modValue)
         {
-            _healthText.text = $"ХП {Model.Health}";
+            _healthText.text = $"{Model.Health}";
 
             var changeColor = modValue > 0 ? _healthColor : _damageColor;
             transform.DOShakePosition(_damageAnimationShakeTime, _shakeAmplitude).SetEase(Ease.OutBack);

@@ -1,3 +1,4 @@
+using System;
 using Project.Gameplay.Battle.Model.Cards;
 using TMPro;
 using UnityEngine;
@@ -15,6 +16,7 @@ namespace Project.UI.Battle
         [SerializeField] private TMP_Text _fullName;
         [SerializeField] private TMP_Text _damageText;
         [SerializeField] private TMP_Text _healthText;
+        [SerializeField] private TMP_Text _descriptionText;
         
         public void Init(CardModel cardModel)
         {
@@ -41,6 +43,7 @@ namespace Project.UI.Battle
             if(_fullName) _fullName.text = Model.Config.VisualName;
             if(_damageText) _damageText.text = Model.AttackDamage.ToString();
             if(_healthText) _healthText.text = Model.Health.ToString();            
+            if(_descriptionText) _descriptionText.text = Model.Config.VisualDescription.Replace("{dmg}", Math.Abs(Model.AttackDamage).ToString());            
         }
     }
 }

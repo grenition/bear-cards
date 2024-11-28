@@ -23,7 +23,7 @@ namespace Project.UI.Battle
         {
             var electrons = BattleController.Model.Player.HandElectrons;
 
-            _electronsText.text = $"El {electrons}";
+            _electronsText.text = $"{electrons}";
         }
     }
 }
