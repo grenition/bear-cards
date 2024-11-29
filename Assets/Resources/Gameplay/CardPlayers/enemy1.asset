@@ -20,6 +20,6 @@ MonoBehaviour:
   <HandSize>k__BackingField: 4
   <DeckSize>k__BackingField: 20
   <SpellsSize>k__BackingField: 5
-  <PlaceToSlotChance>k__BackingField: 0.5
+  <PlaceToSlotChance>k__BackingField: 0.6
   <Deck>k__BackingField:
   - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}

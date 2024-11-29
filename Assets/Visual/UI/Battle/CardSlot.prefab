@@ -91,6 +91,6 @@ MonoBehaviour:
   <AllowCardCurvePositioning>k__BackingField: 0
   colorTransition: 0.15
   background: {fileID: 9052642449491183137}
-  highlightedColor: {r: 0.30962977, g: 0.9245283, b: 0.3946689, a: 0.8627451}
+  highlightedColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   highlightEase: 3
   highlightable: 0

@@ -59,10 +59,11 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         {
             if (modifyValue == 0) return;
 
+            var startValue = Health;
             Health += modifyValue;
             Health = Math.Max(0, Health);
 
-            OnHealthChanged.SafeInvoke(modifyValue);
+            OnHealthChanged.SafeInvoke(Health - startValue);
 
             if (Health <= 0)
             {
@@ -72,17 +73,19 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         }
         internal void ModifyLevelElectrons(int modifyValue)
         {
+            var startValue = LevelElectrons;
             LevelElectrons += modifyValue;
             LevelElectrons = Math.Max(0, LevelElectrons);
             
-            OnLevelElectronsChanged.SafeInvoke(LevelElectrons);
+            OnLevelElectronsChanged.SafeInvoke(LevelElectrons - startValue);
         }
         internal void ModifeHandElectrons(int modifyValue)
         {
+            var startValue = HandElectrons;
             HandElectrons += modifyValue;
             HandElectrons = Math.Max(0, HandElectrons);
             
-            OnHandElectronsChanged.SafeInvoke(HandElectrons);
+            OnHandElectronsChanged.SafeInvoke(HandElectrons - startValue);
         }
 
         public CardModel GetFirstCardInHand() => Hand.FirstOrDefault(x => x.Card != null)?.Card;

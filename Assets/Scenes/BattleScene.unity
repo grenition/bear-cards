@@ -1771,11 +1771,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2074635280}
+  m_Father: {fileID: 968465912}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -134.5}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &715643806
@@ -1791,14 +1791,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.30980393, g: 0.9254902, b: 0.39607844, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -9222635249057974617, guid: d14000a56e77f491db8fc8e0f297263a, type: 3}
+  m_Sprite: {fileID: 2086976579309540767, guid: 4208825eb20264b41a6ea22ae8898024, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2.5
+  m_PixelsPerUnitMultiplier: 2
 --- !u!222 &715643807
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1838,7 +1838,7 @@ MonoBehaviour:
   _animationEase: 3
   _border: {fileID: 715643806}
   _pulsePeriod: 0.5
-  _pulseColor: {r: 0.30980393, g: 0.9254902, b: 0.39607844, a: 1}
+  _pulseColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   _canvasGroup: {fileID: 715643809}
 --- !u!225 &715643809
 CanvasGroup:
@@ -2076,6 +2076,7 @@ GameObject:
   - component: {fileID: 828707479}
   - component: {fileID: 828707478}
   - component: {fileID: 828707477}
+  - component: {fileID: 828707480}
   m_Layer: 5
   m_Name: Orbit (3)
   m_TagString: Untagged
@@ -2154,6 +2155,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828707475}
   m_CullTransparentMesh: 1
+--- !u!114 &828707480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828707475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: -0.46, y: -0.63}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &842862771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2434,6 +2450,7 @@ GameObject:
   - component: {fileID: 887206435}
   - component: {fileID: 887206434}
   - component: {fileID: 887206433}
+  - component: {fileID: 887206436}
   m_Layer: 5
   m_Name: Levels
   m_TagString: Untagged
@@ -2515,6 +2532,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887206431}
   m_CullTransparentMesh: 1
+--- !u!114 &887206436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887206431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79f68e91c139471693045744e8e1f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _electronPrefab: {fileID: 7464985461559546946, guid: 6937aaad13c2640dea46f27200db4a58, type: 3}
+  _orbits:
+  - {fileID: 2039554395}
+  - {fileID: 1167648438}
+  - {fileID: 1295874301}
+  - {fileID: 828707476}
+  - {fileID: 979421863}
+  - {fileID: 1417386709}
+  _spawnDelay: 0.1
+  _rotatingSpeedOffset: 10
 --- !u!1 &968465911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2548,6 +2587,7 @@ RectTransform:
   - {fileID: 240870603}
   - {fileID: 174425987}
   - {fileID: 566346999}
+  - {fileID: 715643805}
   - {fileID: 1407970662}
   - {fileID: 570155393}
   - {fileID: 1152778033}
@@ -2580,6 +2620,7 @@ GameObject:
   - component: {fileID: 979421866}
   - component: {fileID: 979421865}
   - component: {fileID: 979421864}
+  - component: {fileID: 979421867}
   m_Layer: 5
   m_Name: Orbit (4)
   m_TagString: Untagged
@@ -2658,6 +2699,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979421862}
   m_CullTransparentMesh: 1
+--- !u!114 &979421867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979421862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: -0.46, y: -0.63}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1016341115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3226,6 +3282,7 @@ GameObject:
   - component: {fileID: 1167648441}
   - component: {fileID: 1167648440}
   - component: {fileID: 1167648439}
+  - component: {fileID: 1167648442}
   m_Layer: 5
   m_Name: Orbit (1)
   m_TagString: Untagged
@@ -3304,6 +3361,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167648437}
   m_CullTransparentMesh: 1
+--- !u!114 &1167648442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167648437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: -0.46, y: -0.63}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1185229578
 GameObject:
   m_ObjectHideFlags: 0
@@ -3317,7 +3389,7 @@ GameObject:
   - component: {fileID: 1185229581}
   - component: {fileID: 1185229580}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3550,6 +3622,7 @@ GameObject:
   - component: {fileID: 1295874304}
   - component: {fileID: 1295874303}
   - component: {fileID: 1295874302}
+  - component: {fileID: 1295874305}
   m_Layer: 5
   m_Name: Orbit (2)
   m_TagString: Untagged
@@ -3628,6 +3701,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295874300}
   m_CullTransparentMesh: 1
+--- !u!114 &1295874305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295874300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: -0.46, y: -0.63}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1407970661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3731,6 +3819,7 @@ GameObject:
   - component: {fileID: 1417386712}
   - component: {fileID: 1417386711}
   - component: {fileID: 1417386710}
+  - component: {fileID: 1417386713}
   m_Layer: 5
   m_Name: Orbit (5)
   m_TagString: Untagged
@@ -3809,6 +3898,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417386708}
   m_CullTransparentMesh: 1
+--- !u!114 &1417386713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417386708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: -0.46, y: -0.63}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1423804997
 GameObject:
   m_ObjectHideFlags: 0
@@ -5564,7 +5668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6203594772985755731, guid: faba65b8bb61c40faa8273a8c1c914ae, type: 3}
       propertyPath: m_fontSize
-      value: 24.95
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 6203594772985755731, guid: faba65b8bb61c40faa8273a8c1c914ae, type: 3}
       propertyPath: m_fontColor.b
@@ -6031,6 +6135,7 @@ GameObject:
   - component: {fileID: 2039554398}
   - component: {fileID: 2039554397}
   - component: {fileID: 2039554396}
+  - component: {fileID: 2039554399}
   m_Layer: 5
   m_Name: Orbit
   m_TagString: Untagged
@@ -6109,6 +6214,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039554394}
   m_CullTransparentMesh: 1
+--- !u!114 &2039554399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039554394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: -0.46, y: -0.63}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2074635276
 GameObject:
   m_ObjectHideFlags: 0
@@ -6207,7 +6327,6 @@ RectTransform:
   - {fileID: 1755868717}
   - {fileID: 968465912}
   - {fileID: 295871635}
-  - {fileID: 715643805}
   - {fileID: 538047727}
   - {fileID: 2022921164}
   - {fileID: 1090595574}
@@ -6590,7 +6709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5107331521304125363, guid: a1f4b5609c2d746d6928792e0fc236ff, type: 3}
       propertyPath: m_fontSize
-      value: 24.95
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5107331521304125363, guid: a1f4b5609c2d746d6928792e0fc236ff, type: 3}
       propertyPath: m_fontStyle
