@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using GreonAssets.Extensions;
+using Project.Audio;
 using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Model.Cards;
 using R3;
@@ -20,6 +21,8 @@ namespace Project.UI.Battle
         [SerializeField] private Button _exitButton;
         [SerializeField] private float _holdTime = 0.5f;
         [SerializeField] private float _fadeTime = 0.5f;
+        [SerializeField] private AudioClip _winClip;
+        [SerializeField] private AudioClip _loseClip;
             
         private void Start()
         {
@@ -47,6 +50,8 @@ namespace Project.UI.Battle
 
             await UniTask.WaitForSeconds(_holdTime);
             _panel.DOFade(1f, _fadeTime).SetEase(Ease.OutBack);
+            
+            GameAudio.MusicSource.PlayOneShot(winner == CardOwner.player ? _winClip : _loseClip);
         }
     }
 }

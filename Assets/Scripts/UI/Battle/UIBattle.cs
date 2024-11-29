@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using GreonAssets.Extensions;
+using Project.Audio;
 using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Battle.Model.CardSlots;
@@ -12,6 +13,9 @@ namespace Project.UI.Battle
         public static UIBattle Instance;
         public IReadOnlyDictionary<CardSlotModel, UICardSlot> Slots => _slots;
         public IReadOnlyDictionary<CardModel, UICardMovement> Cards => _cards;
+
+        [Header("Audio")]
+        [SerializeField] private AudioClip _cardTransferedClip;
 
         [Header("Bsse movement prefab")]
         [SerializeField] private UICardMovement _cardMovementPrefab;
@@ -40,6 +44,8 @@ namespace Project.UI.Battle
         private void Start()
         {
             BattleController.Model.OnCardTransfered += OnCardTransfered;
+            GameAudio.MusicSource.clip = BattleController.Model.Config.Music;
+            GameAudio.MusicSource.Play();
         }
         private void OnDestroy()
         {
@@ -56,6 +62,8 @@ namespace Project.UI.Battle
                 card.Init(cardModel, GetCardPrefab(cardModel));
                 card.transform.position = deck.transform.position;
             }
+
+            GameAudio.MusicSource.PlayOneShot(_cardTransferedClip, 0.3f);
         }
 
         private UICardVisual GetCardPrefab(CardModel model)

@@ -1,4 +1,5 @@
 using GreonAssets.Extensions;
+using Project.Audio;
 using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Behaviour;
 using Project.UI.Common.Extensions;
@@ -13,6 +14,8 @@ namespace Project.UI.Battle
     {
         [SerializeField] private TMP_Text _turnOwnerText;
         [SerializeField] private Button _nextTurnButton;
+        [SerializeField] private AudioClip _turnStarted;
+        [SerializeField] private AudioClip _turnEnded;
 
         private void Start()
         {
@@ -40,6 +43,8 @@ namespace Project.UI.Battle
             };
             
             _nextTurnButton.SetActiveWithAnimation(state == BattleState.playerTurn);
+            
+            GameAudio.MusicSource.PlayOneShot(state == BattleState.awaiting ? _turnEnded : _turnStarted);
         }
     }
 }

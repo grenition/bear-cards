@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using Project.Audio;
 using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Model.Cards;
 using UnityEngine;
@@ -12,6 +13,11 @@ namespace Project.UI.Battle
     public class UICardVisual : MonoBehaviour
     {
         private bool initalize = false;
+
+        [Header("UICardMovement")]
+        [SerializeField] private AudioClip pointerDownClip;
+        [SerializeField] private AudioClip damageHitClip;
+        [SerializeField] private AudioClip spellUseClip;
 
         [Header("UICardMovement")]
         public UICardMovement parentCard;
@@ -273,6 +279,8 @@ namespace Project.UI.Battle
             visualShadow.localPosition = shadowDistance;
             shadowCanvas.overrideSorting = true;
             canvas.overrideSorting = false;
+            
+            GameAudio.MusicSource.PlayOneShot(pointerDownClip, 0.7f);
         }
 
         private void PointerDown(UICardMovement card)
@@ -283,6 +291,8 @@ namespace Project.UI.Battle
             visualShadow.localPosition += (-Vector3.up * shadowOffset);
             shadowCanvas.overrideSorting = false;
             canvas.overrideSorting = true;
+
+            GameAudio.MusicSource.PlayOneShot(pointerDownClip);
         }
 
         private async void OnHealthChange(int health)
@@ -312,7 +322,10 @@ namespace Project.UI.Battle
                 .DOScale(dieScale, dieAnimation)
                 .SetEase(Ease.OutBack)
                 .AsyncWaitForCompletion();
-
+            
+            if(parentCard.Model.Type == CardType.Spell)
+                GameAudio.MusicSource.PlayOneShot(spellUseClip);
+            
             cardImage.DOKill();
             shakeParent.DOKill();
 
@@ -324,6 +337,8 @@ namespace Project.UI.Battle
 
             shakeParent.DOPunchScale(Vector3.one * attackPunchSize, attackTime, 1, 1).SetEase(Ease.OutBack);
             shakeParent.DOPunchPosition(direction * attackDistance, attackTime, 1, 1).SetEase(Ease.OutQuad);
+            
+            GameAudio.MusicSource.PlayOneShot(damageHitClip);
         }
         private void UpdateAvailableState(int electrons = 0)
         {

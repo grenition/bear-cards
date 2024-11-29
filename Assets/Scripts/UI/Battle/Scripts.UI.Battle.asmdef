@@ -10,7 +10,8 @@
         "R3.Unity",
         "UniTask",
         "DOTween.Modules",
-        "Scripts.UI.Common"
+        "Scripts.UI.Common",
+        "Scripts.Audio"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

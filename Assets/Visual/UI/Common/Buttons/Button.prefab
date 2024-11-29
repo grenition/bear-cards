@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7618968784574030012}
   - component: {fileID: 3430972718464586209}
   - component: {fileID: 1414313385856756627}
+  - component: {fileID: 2596978236102102794}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -171,6 +172,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &2596978236102102794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2160504774316595035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4f1aeef25c04757a75c7b7c35400e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hoverClip: {fileID: 8300000, guid: d64bcd925f8314e899932e60b09c55ca, type: 3}
+  _clickClip: {fileID: 8300000, guid: 191e55392692744deb0f6edb2640a481, type: 3}
 --- !u!1001 &3545622012206057590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -269,7 +284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7431798089634033701, guid: 7d86b0502c66d4bd69169a56198d22ef, type: 3}
       propertyPath: m_fontSize
-      value: 39.95
+      value: 29.7
       objectReference: {fileID: 0}
     - target: {fileID: 7431798089634033701, guid: 7d86b0502c66d4bd69169a56198d22ef, type: 3}
       propertyPath: m_fontColor.b

@@ -457,6 +457,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c73809c3b87e04a6dae1308b12ab4749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointerDownClip: {fileID: 8300000, guid: d862847883bae452fad95eff5afc3447, type: 3}
+  damageHitClip: {fileID: 8300000, guid: 398612665e9784fa294dfff3409b430f, type: 3}
+  spellUseClip: {fileID: 8300000, guid: 561296f82fa674940a81428906908ac4, type: 3}
   parentCard: {fileID: 0}
   visualShadow: {fileID: 215231967835195824}
   shadowOffset: 40

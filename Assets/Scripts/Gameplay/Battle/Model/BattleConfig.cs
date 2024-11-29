@@ -8,6 +8,9 @@ namespace Project.Gameplay.Battle.Model
     [CreateAssetMenu(menuName = "Gameplay/BattleConfig", fileName = "BattleConfig")]
     public class BattleConfig : ScriptableObject
     {
+        [field: Header("Audio and visual")]
+        [field: SerializeField] public AudioClip Music { get; private set; }
+        
         [field: Header("Game")]
         [field: SerializeField] public CardPlayerConfig Enemy { get; private set; }
         [field: SerializeField] public int FieldSize { get; private set; } = 4;

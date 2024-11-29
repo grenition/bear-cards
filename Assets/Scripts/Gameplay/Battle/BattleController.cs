@@ -37,7 +37,7 @@ namespace Project.Gameplay.Battle
         }
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && Behaviour.GetCurrentState() == BattleState.playerTurn)
                 Behaviour.NextTurn();
         }
         private void Start()
