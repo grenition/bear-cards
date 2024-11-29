@@ -32,7 +32,7 @@ namespace Project.UI.Battle
 
             _exitButton.Bind(() =>
             {
-                SceneManager.LoadScene("BattleScene");
+                SceneManager.LoadScene("MainMenu");
             }).AddTo(this);
         }
         private void OnDestroy()
