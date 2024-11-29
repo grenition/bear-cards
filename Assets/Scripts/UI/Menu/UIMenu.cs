@@ -25,8 +25,7 @@ namespace Project.UI.Menu
 
         private void Start()
         {
-            GameAudio.MusicSource.clip = _musicClip;
-            GameAudio.MusicSource.Play();
+            GameAudio.MusicSource.PlayOneShot(_musicClip);
         }
     }
 }
