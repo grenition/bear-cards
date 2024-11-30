@@ -398,10 +398,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1371120683}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -370}
-  m_SizeDelta: {x: 500, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 250, y: 0}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &114703916
 MonoBehaviour:
@@ -955,10 +955,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1164198582}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -370}
-  m_SizeDelta: {x: 500, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 250, y: 0}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880724837
 MonoBehaviour:
@@ -1889,7 +1889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _settingsButton: {fileID: 1037770539}
   _startGameButton: {fileID: 17697982}
-  _sceneName: BattleScene
+  _sceneName: MapScene
   _musicClip: {fileID: 8300000, guid: 8f7ddb3d0b67e4e18a0065bb230847cd, type: 3}
 --- !u!1001 &186046205756360349
 PrefabInstance:

@@ -1,3 +1,4 @@
+using Assets.Scripts.Map;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using GreonAssets.Extensions;
@@ -32,7 +33,7 @@ namespace Project.UI.Battle
 
             _exitButton.Bind(() =>
             {
-                SceneManager.LoadScene("MainMenu");
+                ScneneLoaderStatic.LoadSceneAsync("MapScene");
             }).AddTo(this);
         }
         private void OnDestroy()

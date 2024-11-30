@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b04a454349ce7b4cbd98de73f135c2d, type: 3}
   m_Name: LocationFirst
   m_EditorClassIdentifier: 
+  <LocationKey>k__BackingField: 0
   <LocationLevel>k__BackingField: 5
   <MinimumFork>k__BackingField: 1
   <MaximumFork>k__BackingField: 3
@@ -21,3 +22,6 @@ MonoBehaviour:
   - Card
   - Hill
   <FirsEnemyPoint>k__BackingField: 0
+  <EnemyFight>k__BackingField:
+  - demo_battle
+  <BossFight>k__BackingField: demo_battle

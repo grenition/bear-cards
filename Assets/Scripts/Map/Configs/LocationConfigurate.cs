@@ -4,7 +4,7 @@ namespace Assets.Scripts.Map
 {
     [CreateAssetMenu(fileName = "LocationConfigurate", menuName = "Configs/Map/LocationConfigurate", order = 0)]
     public class LocationConfigurate : ScriptableObject
-    {        
+    {
         [field: SerializeField] public int LocationKey { get; private set; }
         [Tooltip("Count level for location")]
         [field: SerializeField] public int LocationLevel { get; private set; }
@@ -15,6 +15,13 @@ namespace Assets.Scripts.Map
         [field: SerializeField] public List<string> KeysEnemy { get; private set; }
         [field: SerializeField] public List<string> KeysPrice { get; private set; }
         [Tooltip("first point is enemy?")]
-        [field: SerializeField] public bool FirsEnemyPoint {  get; private set; }
+        [field: SerializeField] public bool FirsEnemyPoint { get; private set; }
+
+        [field: SerializeField] public string[] EnemyFight { get; private set; }
+
+        [field: SerializeField] public string BossFight { get; private set; }
+
+        public string GetFightKey()=>
+            EnemyFight[Random.Range(0, EnemyFight.Length)];
     }
 }

@@ -38,7 +38,7 @@ namespace Assets.Scripts.Map
             else
                 _locationPoints = _pointOfInterestGenerator.Generate(progres.Points.ToList());
 
-            MapStaticData.SaveData(_locationPoints, _activeLocation.LocationLevel, _activeLocation.LocationKey);
+            MapStaticData.SaveData(_locationPoints.Select(point => point.PointEntity).ToArray(), _activeLocation.LocationLevel, _activeLocation.LocationKey);
             _enivrimentGenerator.Generate(_locationPoints);
             MapPlayer = Instantiate(_playerPrefab, _locationPoints[0].ViewPoint.transform.position, Quaternion.identity);
             MapController.Create(_locationPoints, _activeLocation);

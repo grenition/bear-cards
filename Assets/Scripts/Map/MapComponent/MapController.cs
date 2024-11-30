@@ -71,7 +71,12 @@ namespace Assets.Scripts.Map
         {
             _currentInteractPoint = interactivePoint;
             _currentInteractPoint.OnBeginInteract();
-            MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID);
+
+            if(_currentInteractPoint.PointEntity.Level != _locationConfigurate.LocationLevel - 1)
+                MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetFightKey());
+            else
+                MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.BossFight);
+
             MapCompositionRoot.Instance.MapCamera.MoveCameraToPlayer();
         }
 
@@ -101,13 +106,13 @@ namespace Assets.Scripts.Map
 
             _interact = false;
             UpdatePoints();
-            MapStaticData.SaveData(_pointCollections, _locationConfigurate.LocationLevel, _locationConfigurate.LocationKey);
+            MapStaticData.SaveData(_pointCollections.Select(point => point.PointEntity).ToArray(), _locationConfigurate.LocationLevel, _locationConfigurate.LocationKey);
         }
 
         public void LocationComplited()
         {
             var keyLocation = MapCompositionRoot.Instance.GetNextLocationKey();
-            MapStaticData.SaveData(_pointCollections,0, keyLocation);
+            MapStaticData.SaveData(_pointCollections.Select(point => point.PointEntity).ToArray(),0, keyLocation);
             MapCompositionRoot.Instance.ReloadMap();
         }
 

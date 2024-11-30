@@ -11,7 +11,8 @@
         "UniTask",
         "DOTween.Modules",
         "Scripts.UI.Common",
-        "Scripts.Audio"
+        "Scripts.Audio",
+        "Scripts.Gameplay.Loader"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
