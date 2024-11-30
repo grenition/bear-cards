@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using Project.Gameplay.Common;
 using Project.Audio;
 using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Model.Cards;
+using Project.UI.Common;
 using UnityEngine;
 using UnityEngine.UI;
 

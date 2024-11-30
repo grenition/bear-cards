@@ -5,6 +5,7 @@
         "GreonAssets",
         "Scripts.Gameplay",
         "Scripts.Gameplay.Battle",
+        "Scripts.Gameplay.Common",
         "Scripts.Infrastructure",
         "Unity.TextMeshPro",
         "R3.Unity",

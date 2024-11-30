@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Project.UI.Battle
+namespace Project.UI.Common
 {
     [CreateAssetMenu(fileName = "CurveParameters", menuName = "Hand Curve Parameters")]
     public class UICurveParameters : ScriptableObject

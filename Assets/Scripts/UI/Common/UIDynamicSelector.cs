@@ -5,7 +5,7 @@ using GreonAssets.UI.Extensions;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Project.UI.Battle
+namespace Project.UI.Common
 {
     public class UIDynamicSelector : MonoBehaviour
     {

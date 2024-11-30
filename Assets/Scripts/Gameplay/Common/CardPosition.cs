@@ -1,4 +1,4 @@
-namespace Project.Gameplay.Battle.Model.Cards
+namespace Project.Gameplay.Common
 {
     public enum CardOwner
     {

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Assets.Scripts.Map;
+using Project.Gameplay.Common;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Data;
 using Project.Gameplay.Battle.Model.CardPlayers;

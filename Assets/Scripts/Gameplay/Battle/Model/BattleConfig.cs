@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Project.Gameplay.Battle.Model.CardPlayers;
 using Project.Gameplay.Battle.Model.Cards;
+using Project.Gameplay.Common;
 using UnityEngine;
 
 namespace Project.Gameplay.Battle.Model

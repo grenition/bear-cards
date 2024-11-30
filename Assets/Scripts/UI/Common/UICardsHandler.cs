@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Project.UI.Battle
+namespace Project.UI.Common
 {
     public class UICardsHandler : MonoBehaviour
     {

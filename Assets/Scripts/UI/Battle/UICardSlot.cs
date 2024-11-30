@@ -2,6 +2,7 @@ using DG.Tweening;
 using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Battle.Model.CardSlots;
+using Project.Gameplay.Common;
 using UnityEngine;
 using UnityEngine.UI;
 

@@ -1,5 +1,6 @@
 using System;
 using Project.Gameplay.Battle.Model.Cards;
+using Project.Gameplay.Common;
 using UnityEngine;
 
 namespace Project.UI.Battle

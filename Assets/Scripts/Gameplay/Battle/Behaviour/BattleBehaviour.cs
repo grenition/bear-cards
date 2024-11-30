@@ -6,6 +6,7 @@ using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Behaviour.EntityBehaviours;
 using Project.Gameplay.Battle.Model;
 using Project.Gameplay.Battle.Model.Cards;
+using Project.Gameplay.Common;
 
 namespace Project.Gameplay.Battle.Behaviour
 {

@@ -1,4 +1,4 @@
-namespace Project.UI.Battle
+﻿namespace Project.UI.Common
 {
     public static class UIExtensionMethods
     {
@@ -6,6 +6,5 @@ namespace Project.UI.Battle
         {
             return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
         }
-
     }
 }

@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Project.Gameplay.Common;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Model.Cards;
+using Project.UI.Common;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;

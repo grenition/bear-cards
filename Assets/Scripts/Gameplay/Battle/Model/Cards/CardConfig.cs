@@ -1,38 +1,9 @@
+using Project.Gameplay.Common;
 using UnityEngine;
 
 namespace Project.Gameplay.Battle.Model.Cards
 {
-    public enum CardType
-    {
-        Metal,
-        NonMetal,
-        Spell
-    }
-    public enum CardRarity
-    {
-        Standart,
-        Rare,
-        VeryRare,
-        Legendary
-    }
-    public enum SpellPlacing
-    {
-        PlayerCard,
-        EnemyCard,
-        AnyCard,
-        PlayerField,
-        EnemyField,
-        AllFields
-    }
-    public enum SpellPlayersPlacing
-    {
-        OnlyCards,
-        PlayerAndCards,
-        EnemyAndCards,
-        PlayerOnly,
-        EnemyOnly
-    }
-    
+
     [CreateAssetMenu(menuName = "Gameplay/CardConfig", fileName = "Card")]
     public class CardConfig : ScriptableObject
     {
