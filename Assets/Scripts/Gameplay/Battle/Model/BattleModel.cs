@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Assets.Scripts.Map;
 using Project.Gameplay.Common;
 using GreonAssets.Extensions;
@@ -9,6 +6,9 @@ using Project.Gameplay.Battle.Model.CardPlayers;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Battle.Model.CardSlots;
 using Project.Infrastructure;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Project.Gameplay.Battle.Model
 {
@@ -31,7 +31,7 @@ namespace Project.Gameplay.Battle.Model
 
         public BattleModel(string battleKey)
         {
-            Key = battleKey;
+            Key = battleKey != null? battleKey: "demo_battle";
             Player = new CardPlayerModel(Constants.Player, CardOwner.player, this);
             Enemy = new CardPlayerModel(Config.Enemy.name, CardOwner.enemy, this);
 
@@ -186,13 +186,13 @@ namespace Project.Gameplay.Battle.Model
 
             if (!slot.IsAvailableForPickUp(owner)) return false;
             if (newSlot == null) return false;
-            
+
             if (IsSlotAvailableForSpell(newSlot, slot.Card))
             {
-                AttackSpell(slot.Card, to);   
+                AttackSpell(slot.Card, to);
                 return true;
             }
-            
+
             if (from.IsPlayerHand() && !slot.Card.IsPlayerHaveEnoughElectronsForPickUp())
                 return false;
 
@@ -202,7 +202,7 @@ namespace Project.Gameplay.Battle.Model
             newSlot.PlaceCard(card);
 
             if (from.IsPlayerHand()) Player.ModifeHandElectrons(-card.Cost);
-            
+
             OnCardTransfered.SafeInvoke(card, from, to);
             card.CallOnTransfered(from, to);
 
@@ -212,14 +212,14 @@ namespace Project.Gameplay.Battle.Model
         public void AttackSpell(CardModel spell, CardPosition position)
         {
             var slots = GetSlotsForSpell(position, spell.Config.SpellPlacing);
-            
+
             if (spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.PlayerAndCards
                 || spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.EnemyAndCards
                 || spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.OnlyCards)
             {
                 slots.Where(x => x.Card != null).ForEach(x => x.Card.ModifyHealth(-spell.AttackDamage));
             }
-            
+
             if (spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.PlayerOnly
                 || spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.PlayerAndCards)
             {
@@ -230,8 +230,8 @@ namespace Project.Gameplay.Battle.Model
             {
                 Enemy.ModifyHealth(-spell.AttackDamage);
             }
-            
-            
+
+
             spell.ModifyHealth(-spell.Health);
         }
         public void AttackForward(CardPosition attackerPosition)

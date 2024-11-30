@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,6 +5,8 @@ namespace Assets.Scripts.Map
 {
     public static class MapStaticData
     {
+        public static string KeyBattle { get; private set; }
+
         private static LocationProgress _locationProgress;
         private static int _idBattlePoint;
 
@@ -15,10 +16,10 @@ namespace Assets.Scripts.Map
             return _locationProgress.LoadData();
         }
 
-        public static void SaveData(List<InteractivePoint> points,int locationLevel, int keyLocation)
+        public static void SaveData(PointEntity[] points, int locationLevel, int keyLocation)
         {
             Initialize();
-            _locationProgress.SaveDate(points, locationLevel, keyLocation);
+            _locationProgress.SaveData(points, locationLevel, keyLocation);
         }
 
         public static void GameFail()
@@ -42,9 +43,10 @@ namespace Assets.Scripts.Map
             _locationProgress.SaveData(locationData.Points, locationData.LocationLevel, locationData.KeyLocation);
         }
 
-        public static void BattlePointStart(int ID)
+        public static void BattlePointStart(int ID, string keyBattle)
         {
             _idBattlePoint = ID;
+            KeyBattle = keyBattle;
         }
 
         private static void Initialize()

@@ -1,3 +1,4 @@
+using Assets.Scripts.Map;
 using Project.Gameplay.Battle.Behaviour;
 using Project.Gameplay.Battle.Model;
 using UnityEngine;
@@ -27,7 +28,7 @@ namespace Project.Gameplay.Battle
         {
             if(_initialized) return;
             
-            _model = new BattleModel("demo_battle");
+            _model = new BattleModel(MapStaticData.KeyBattle);
             _behaviour = new BattleBehaviour(_model);
             _initialized = true;
         }

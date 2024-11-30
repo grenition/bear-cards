@@ -1,9 +1,8 @@
-using System;
+using Assets.Scripts.Map;
 using GreonAssets.Extensions;
 using Project.Audio;
 using R3;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Project.UI.Menu
@@ -12,14 +11,14 @@ namespace Project.UI.Menu
     {
         [SerializeField] private Button _settingsButton;
         [SerializeField] private Button _startGameButton;
-        [SerializeField] private string _sceneName = "BattleScene";
+        [SerializeField] private string _sceneName = "MapScene";
         [SerializeField] private AudioClip _musicClip;
 
         private void Awake()
         {
             _startGameButton.Bind(() =>
             {
-                SceneManager.LoadScene(_sceneName);
+                ScneneLoaderStatic.LoadSceneAsync(_sceneName);
             }).AddTo(this);
         }
 

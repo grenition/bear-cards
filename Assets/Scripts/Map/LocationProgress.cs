@@ -25,26 +25,6 @@ namespace Assets.Scripts.Map
             };
         }
 
-        public void SaveDate(List<InteractivePoint> currentLevelPoint, int levelLocation, int keyNumber)
-        {
-            List<PointEntity> pointsData = new();
-
-            currentLevelPoint.ForEach(point =>
-            {
-                pointsData.Add(point.PointEntity);
-            });
-
-            LocationData locationData = new()
-            {
-                KeyLocation = keyNumber,
-                LocationLevel = levelLocation,
-                Points = pointsData.ToArray()
-            };
-
-            string json = JsonUtility.ToJson(locationData);
-            File.WriteAllText(Application.streamingAssetsPath + "/locationProgress.json", json);
-        }
-
         public void SaveData(PointEntity[] currentLevelPoint, int levelLocation, int keyNumber)
         {
             LocationData locationData = new()

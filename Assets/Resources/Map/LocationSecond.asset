@@ -22,3 +22,6 @@ MonoBehaviour:
   - Card
   - Hill
   <FirsEnemyPoint>k__BackingField: 0
+  <EnemyFight>k__BackingField:
+  - demo_battle
+  <BossFight>k__BackingField: demo_battle

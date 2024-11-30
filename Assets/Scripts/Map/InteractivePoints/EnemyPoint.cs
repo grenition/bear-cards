@@ -1,6 +1,3 @@
-using UnityEditor.SearchService;
-using UnityEngine.SceneManagement;
-
 namespace Assets.Scripts.Map
 {
     public class EnemyPoint : InteractivePoint
@@ -12,7 +9,7 @@ namespace Assets.Scripts.Map
 
         public override void OnBeginInteract()
         {
-            SceneManager.LoadScene(1);
+            ScneneLoaderStatic.LoadSceneAsync("BattleScene");
         }
 
         public override void OnEndInteract()
