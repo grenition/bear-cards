@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace Assets.Scripts.Map
 {
@@ -10,6 +11,11 @@ namespace Assets.Scripts.Map
         }
         public override void OnBeginInteract()
         {
+            MapCompositionRoot.Instance.MapUI.ActiveUIByKey("giveCard", () =>
+            {
+                Debug.Log("You get card!");
+                MapCompositionRoot.Instance.MapController.ComplitePoint();
+            });
         }
 
         public override void OnEndInteract()

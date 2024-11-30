@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Assets.Scripts.Map
 {
     public class HillPoint : InteractivePoint
@@ -7,7 +9,12 @@ namespace Assets.Scripts.Map
             PointEntity.Key = "Hill";
         }
         public override void OnBeginInteract()
-        { 
+        {
+            MapCompositionRoot.Instance.MapUI.ActiveUIByKey("hill", () =>
+            {
+                Debug.Log("You hill hit point");
+                MapCompositionRoot.Instance.MapController.ComplitePoint();
+            });
         }
 
         public override void OnEndInteract()

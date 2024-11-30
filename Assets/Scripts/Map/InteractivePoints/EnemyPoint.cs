@@ -9,7 +9,8 @@ namespace Assets.Scripts.Map
 
         public override void OnBeginInteract()
         {
-            ScneneLoaderStatic.LoadSceneAsync("BattleScene");
+            //ScneneLoaderStatic.LoadSceneAsync("BattleScene");
+            MapCompositionRoot.Instance.MapUI.ActiveUIByKey("fight", null);
         }
 
         public override void OnEndInteract()

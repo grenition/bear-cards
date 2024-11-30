@@ -1,13 +1,14 @@
 {
-    "name": "Scripts.Gameplay.Map",
+    "name": "Scripts.UI.Map",
     "rootNamespace": "Project",
     "references": [
-        "GUID:7c58e94f7244543a8ad6d25695827221",
-        "GUID:66e6c27d3e6ee4a59891e39187bc8328",
-        "GUID:77221876cc6b8244180b96e320b1bcd4",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:d4b11181c385ebf43b13edbe7c4e1ef1",
-        "GUID:88cf8ca0e590df44a89a7dc04060f6ad"
+        "GreonAssets",
+        "Unity.TextMeshPro",
+        "R3.Unity",
+        "UniTask",
+        "DOTween.Modules",
+        "Scripts.Audio",
+        "Scripts.Gameplay.Loader"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
