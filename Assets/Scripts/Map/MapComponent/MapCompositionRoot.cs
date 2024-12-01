@@ -14,9 +14,13 @@ namespace Assets.Scripts.Map
         [field: SerializeField] public MapUI MapUI { get; private set; }
         public MapPlayer MapPlayer { get; private set; }
 
+        private List<string> _deck = new List<string>() { "card_phosphorus" };
+
         [SerializeField] private ViewPoint _startPoint;
         [SerializeField] private ViewPoint _endPoint;
         [SerializeField] private MapPlayer _playerPrefab;
+        [SerializeField] private GameObject _cardGiverUI;
+        [SerializeField] private SpriteRenderer _backGround;
 
         private List<InteractivePoint> _locationPoints;
         private LocationConfigurate _activeLocation;
@@ -30,6 +34,7 @@ namespace Assets.Scripts.Map
             Instance = this;
 
             var progres = MapStaticData.LoadData();
+            _deck = progres.Deck.ToList();
             _curentLocationNumber = progres.KeyLocation;
             _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber]}");
             _pointOfInterestGenerator = new PointOfInterestGenerator(_startPoint, _endPoint, _activeLocation);
@@ -40,16 +45,21 @@ namespace Assets.Scripts.Map
             else
                 _locationPoints = _pointOfInterestGenerator.Generate(progres.Points.ToList());
 
-            MapStaticData.SaveData(_locationPoints.Select(point => point.PointEntity).ToArray(), _activeLocation.LocationLevel, _activeLocation.LocationKey);
+            MapStaticData.SaveData(_locationPoints.Select(point => point.PointEntity).ToArray(), _activeLocation.LocationLevel, _activeLocation.LocationKey, _deck);
             _enivrimentGenerator.Generate(_locationPoints);
             MapPlayer = Instantiate(_playerPrefab, _locationPoints[0].ViewPoint.transform.position, Quaternion.identity);
             MapController.Create(_locationPoints, _activeLocation);
 
             MapCamera.MoveCameraToPlayer();
+
+            _backGround.sprite = _activeLocation.BackGround;
+
         }
 
         [ContextMenu("Deleted")]
         public void Deleted() => MapStaticData.GameFail();
+
+        public void ShowCardGiver() => _cardGiverUI.SetActive(true);
 
         public int GetNextLocationKey()
         {

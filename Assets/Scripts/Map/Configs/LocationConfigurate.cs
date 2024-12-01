@@ -20,6 +20,7 @@ namespace Assets.Scripts.Map
         [field: SerializeField] public string[] EnemyFight { get; private set; }
 
         [field: SerializeField] public string BossFight { get; private set; }
+        [field: SerializeField] public Sprite BackGround { get; private set; }
 
         public string GetFightKey()=>
             EnemyFight[Random.Range(0, EnemyFight.Length)];

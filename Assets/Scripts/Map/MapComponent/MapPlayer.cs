@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 namespace Assets.Scripts.Map
 {
@@ -6,6 +7,7 @@ namespace Assets.Scripts.Map
         [SerializeField, Range(0,2)] private float _speed;
         [SerializeField, Range(0, 1)] private float _stopDistance;
         private ViewPoint _viewPoint;
+
         public void MoveTo(ViewPoint point)
         {
             _viewPoint = point;

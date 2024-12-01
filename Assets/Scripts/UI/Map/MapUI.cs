@@ -9,7 +9,6 @@ namespace Project
     {
         [SerializeField] private MapPanelUI _fightUI;
         [SerializeField] private MapPanelUI _hillUI;
-        [SerializeField] private MapPanelUI _giveCard;
 
         private Dictionary<string, MapPanelUI> _panelMap = new();
 
@@ -17,15 +16,14 @@ namespace Project
         {
             _panelMap.Add("fight", _fightUI);
             _panelMap.Add("hill", _hillUI);
-            _panelMap.Add("giveCard", _giveCard);
 
             UIActiveAll(false);
         }
 
-        public void ActiveUIByKey(string key, Action action)
+        public MapPanelUI ActiveUIByKey(string key)
         {
             _panelMap[key].gameObject.SetActive(true);
-            _panelMap[key].Confirm(action);
+            return _panelMap[key];
         }
 
         private void UIActiveAll(bool activeUI)

@@ -25,3 +25,4 @@ MonoBehaviour:
   <EnemyFight>k__BackingField:
   - demo_battle
   <BossFight>k__BackingField: demo_battle
+  <BackGround>k__BackingField: {fileID: -9089483960609258987, guid: 867f6589ad610f64ebf4876ec43b9061, type: 3}

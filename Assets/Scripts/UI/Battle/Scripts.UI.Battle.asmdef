@@ -13,7 +13,8 @@
         "DOTween.Modules",
         "Scripts.UI.Common",
         "Scripts.Audio",
-        "Scripts.Gameplay.Loader"
+        "Scripts.Gameplay.Loader",
+        "Scripts.Gameplay.Map"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

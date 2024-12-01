@@ -1,3 +1,5 @@
+using Project;
+
 namespace Assets.Scripts.Map
 {
     public class BossPoint : InteractivePoint
@@ -9,7 +11,7 @@ namespace Assets.Scripts.Map
 
         public override void OnBeginInteract()
         {
-            MapCompositionRoot.Instance.MapUI.ActiveUIByKey("fight", null);
+            var fightPanel = (FightUI)MapCompositionRoot.Instance.MapUI.ActiveUIByKey("fight");
         }
 
         public override void OnEndInteract()

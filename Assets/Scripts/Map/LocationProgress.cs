@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 
 namespace Assets.Scripts.Map
@@ -22,20 +23,71 @@ namespace Assets.Scripts.Map
             {
                 KeyLocation = 0,
                 LocationLevel = 0,
+                Deck = new string[] { "card_phosphorus", "card_sulfur", "card_oxygen", "card_sodium", "spell_2", "spell_3", "spell_sulfide_rtut" }
             };
         }
 
-        public void SaveData(PointEntity[] currentLevelPoint, int levelLocation, int keyNumber)
+        public void SaveData(PointEntity[] currentLevelPoint, int levelLocation, int keyNumber, List<string> deck)
         {
             LocationData locationData = new()
             {
                 KeyLocation = keyNumber,
                 LocationLevel = levelLocation,
-                Points = currentLevelPoint
+                Points = currentLevelPoint,
+                Deck = deck.ToArray()
             };
 
             string json = JsonUtility.ToJson(locationData);
             File.WriteAllText(Application.streamingAssetsPath + "/locationProgress.json", json);
+        }
+
+        public void SaveData(PointEntity[] currentLevelPoint, int levelLocation, int keyNumber)
+        {
+            string path = Path.Combine(Application.streamingAssetsPath, "locationProgress.json");
+            string[] deck = new string[] { "card_phosphorus", "card_sulfur", "card_oxygen", "card_sodium", "spell_2", "spell_3", "spell_sulfide_rtut" };
+
+            if (File.Exists(path))
+            {
+                string loadjson = File.ReadAllText(path);
+                var data = JsonUtility.FromJson<LocationData>(loadjson);
+
+                deck = data.Deck;
+            }
+
+            LocationData locationData = new()
+            {
+                KeyLocation = keyNumber,
+                LocationLevel = levelLocation,
+                Points = currentLevelPoint,
+                Deck = deck
+            };
+
+            string json = JsonUtility.ToJson(locationData);
+            File.WriteAllText(Application.streamingAssetsPath + "/locationProgress.json", json);
+        }
+
+        public void SaveDeck(List<string> deck)
+        {
+            string path = Path.Combine(Application.streamingAssetsPath, "locationProgress.json");
+
+            if (File.Exists(path))
+            {
+                string loadjson = File.ReadAllText(path);
+                var data = JsonUtility.FromJson<LocationData>(loadjson);
+
+                var newDeck = data.Deck.ToList();
+                newDeck.AddRange(deck);
+
+                LocationData locationData = new()
+                {
+                    KeyLocation = data.KeyLocation,
+                    LocationLevel = data.LocationLevel,
+                    Points = data.Points,
+                    Deck = newDeck.ToArray()
+                };
+                string json = JsonUtility.ToJson(locationData);
+                File.WriteAllText(Application.streamingAssetsPath + "/locationProgress.json", json);
+            }
         }
 
         public void DeleteData()
@@ -56,6 +108,7 @@ namespace Assets.Scripts.Map
             public int LocationLevel;
 
             public PointEntity[] Points;
+            public string[] Deck;
         }
     }
 }

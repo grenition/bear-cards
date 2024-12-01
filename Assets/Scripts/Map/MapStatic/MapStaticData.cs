@@ -16,10 +16,22 @@ namespace Assets.Scripts.Map
             return _locationProgress.LoadData();
         }
 
+        public static void SaveData(PointEntity[] points, int locationLevel, int keyLocation, List<string> deck)
+        {
+            Initialize();
+            _locationProgress.SaveData(points, locationLevel, keyLocation, deck);
+        }
+
         public static void SaveData(PointEntity[] points, int locationLevel, int keyLocation)
         {
             Initialize();
             _locationProgress.SaveData(points, locationLevel, keyLocation);
+        }
+
+        public static void SaveDeck(List<string> deck)
+        {
+            Initialize();
+            _locationProgress.SaveDeck(deck);
         }
 
         public static void GameFail()

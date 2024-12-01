@@ -11,29 +11,23 @@ namespace Project
 {
     public abstract class MapPanelUI : MonoBehaviour
     {
-        [SerializeField] private TMP_Text _descriptionField;
         [SerializeField] private Button _button;
         [SerializeField] private UIPanelAnimator _animatorPanel;
-        private Action _onInteractComplitedAction;
+        protected Action OnInteractComplitedAction;
 
         private void Awake()
         {
             _button.Bind(() =>
             {
                 InteractComplited();
-                _onInteractComplitedAction?.Invoke();
+                OnInteractComplitedAction?.Invoke();
+                _animatorPanel.Hide();
             }).AddTo(this);
         }
-        public void Confirm(Action action)
-        {
-            _onInteractComplitedAction = action;
-        }
-
-        private void HidePanel() => 
-            gameObject.SetActive(false);
 
         public abstract void InteractComplited();
 
-
+        private void HidePanel() => 
+            gameObject.SetActive(false);
     }
 }

@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts.Map;
 using Cysharp.Threading.Tasks;
 using GreonAssets.Extensions;
+using Project.Gameplay.Battle.Data;
 using Project.Gameplay.Battle.Model;
 using Project.Gameplay.Battle.Model.CardPlayers;
 using Project.Gameplay.Battle.Model.Cards;
@@ -23,7 +25,14 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
                 BattleBehaviour.Model.AddCardToDeck(CardOwner.player, preCard.name);
             }
 
-            _shouldGivedCards = new(BattleBehaviour.Model.Player.Config.Deck);
+            var deck = MapStaticData.LoadData();
+
+            _shouldGivedCards = new();
+            deck.Deck.ForEach(card =>
+            {
+                _shouldGivedCards.Add(BattleStaticData.Cards.Get(card));
+            });
+
             foreach (var deckCard in BattleBehaviour.Model.Player.Config.Deck)
             {
                 if (!BattleBehaviour.Config.GiveCardsByActualLevel || deckCard.Level <= PlayerModel.Level)

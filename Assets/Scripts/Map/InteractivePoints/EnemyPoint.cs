@@ -1,3 +1,6 @@
+using Project;
+using UnityEngine;
+
 namespace Assets.Scripts.Map
 {
     public class EnemyPoint : InteractivePoint
@@ -9,8 +12,7 @@ namespace Assets.Scripts.Map
 
         public override void OnBeginInteract()
         {
-            //ScneneLoaderStatic.LoadSceneAsync("BattleScene");
-            MapCompositionRoot.Instance.MapUI.ActiveUIByKey("fight", null);
+            var fightPanel = (FightUI)MapCompositionRoot.Instance.MapUI.ActiveUIByKey("fight");
         }
 
         public override void OnEndInteract()
