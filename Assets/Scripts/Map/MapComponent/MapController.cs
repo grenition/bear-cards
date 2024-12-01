@@ -45,9 +45,6 @@ namespace Assets.Scripts.Map
                     viewpoint.ClickOnPoint();
                 }
             }
-
-            if (Input.GetKeyDown(KeyCode.Space))
-                ComplitePoint();
         }
 
         public void UpdatePoints()

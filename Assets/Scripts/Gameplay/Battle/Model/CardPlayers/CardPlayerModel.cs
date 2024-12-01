@@ -6,6 +6,7 @@ using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Data;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Battle.Model.CardSlots;
+using Assets.Scripts.Map;
 
 namespace Project.Gameplay.Battle.Model.CardPlayers
 {
@@ -34,7 +35,8 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             Key = key;
             BattleModel = battleModel;
             OwnershipType = ownerhipType;
-            Health = Config.Health;
+            // Health = Config.Health;
+            Health = MapStaticData.LoadPlayerData();
 
             for (int i = 0; i < Config.HandSize; i++)
             {

@@ -7,6 +7,8 @@ namespace Project
 {
     public class HillUI : MapPanelUI
     {
+        public event Action<int> OnModificateHP;
+
         [SerializeField] private Image _mainIcon;
         [SerializeField] private TMP_Text _effectText;
         [SerializeField] private TMP_Text _name;
@@ -29,6 +31,7 @@ namespace Project
         public override void InteractComplited()
         {
             //modificate hit point
+            OnModificateHP?.Invoke(_modificatorHP);
             Debug.Log("You get hp point");
         }
     }

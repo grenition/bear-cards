@@ -12,6 +12,7 @@ namespace Assets.Scripts.Map
         [field: SerializeField] public MapController MapController { get; private set; }
         [field: SerializeField] public MapCamera MapCamera { get; private set; }
         [field: SerializeField] public MapUI MapUI { get; private set; }
+        [field: SerializeField] public int HitPoint{ get; private set; }
         public MapPlayer MapPlayer { get; private set; }
 
         private List<string> _deck = new List<string>() { "card_phosphorus" };
@@ -28,12 +29,20 @@ namespace Assets.Scripts.Map
         private PointOfInterestGenerator _pointOfInterestGenerator;
         private EnivrimentGenerator _enivrimentGenerator;
         private int _curentLocationNumber;
+        private HillUI _hillPanel;
 
         private void Awake()
         {
             Instance = this;
 
             var progres = MapStaticData.LoadData();
+            HitPoint = MapStaticData.LoadPlayerData();
+
+
+            MapUI.Initialize();
+            _hillPanel = MapUI.GetUIByKey("hill") as HillUI;
+            _hillPanel.OnModificateHP += SavePlayerStat;
+
             _deck = progres.Deck.ToList();
             _curentLocationNumber = progres.KeyLocation;
             _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber]}");
@@ -79,11 +88,17 @@ namespace Assets.Scripts.Map
             SceneManager.LoadScene(2);
         }
 
+        public void SavePlayerStat(int modificator)
+        {
+            HitPoint += modificator;
+            MapStaticData.SavePlayerData(HitPoint);
+        }
+
         private void OnDisable()
         {
             Instance = null;
             MapController = null;
-
+            _hillPanel.OnModificateHP -= SavePlayerStat;
             _locationPoints.ForEach(point =>
             {
                 point.Dispose();

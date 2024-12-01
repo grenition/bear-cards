@@ -1,3 +1,4 @@
+using Project;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,6 +9,8 @@ namespace Assets.Scripts.Map
         public static string KeyBattle { get; private set; }
 
         private static LocationProgress _locationProgress;
+        private static PlayerStatsData _playerData;
+
         private static int _idBattlePoint;
 
         public static LocationProgress.LocationData LoadData()
@@ -38,6 +41,7 @@ namespace Assets.Scripts.Map
         {
             Initialize();
             _locationProgress.DeleteData();
+            _playerData.DeletedStat();
         }
 
         public static void LevelComplited()
@@ -61,9 +65,29 @@ namespace Assets.Scripts.Map
             KeyBattle = keyBattle;
         }
 
+
+        public static int LoadPlayerData()
+        {
+            Initialize();
+            return _playerData.LoadStat();
+        }
+
+        public static void SavePlayerData(int hitPoint)
+        {
+            Initialize();
+            _playerData.SaveStat(hitPoint);
+        }
+
+        public static void DeletedPlayerData()
+        {
+            Initialize();
+            _playerData.DeletedStat();
+        }
+
         private static void Initialize()
         {
             _locationProgress ??= new LocationProgress();
+            _playerData ??= new PlayerStatsData();
         }
     }
 }
