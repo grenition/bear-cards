@@ -25,6 +25,13 @@ namespace Assets.Scripts.Map
             _mapPlayer.transform.position = activePoint.ViewPoint.transform.position;
             _currentInteractPoint = activePoint;
 
+            if(activePoint.PointEntity.Level == _locationConfigurate.LocationLevel - 1)
+            {
+                _pointCollections.Last().Complited();
+                LocationComplited();
+                return;
+            }
+
             UpdatePoints();
         }
 

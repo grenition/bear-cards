@@ -2378,6 +2378,10 @@ MonoBehaviour:
   - card_helium
   - card_hydrogen
   - card_iron
+  - card_potassium
+  - card_chromium
+  - card_calcium
+  - card_nitrogen
   _buttons:
   - {fileID: 972231256}
   - {fileID: 142422301}

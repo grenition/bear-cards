@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cysharp.Threading.Tasks;
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,14 +11,10 @@ namespace Assets.Scripts.Map
         {
             PointEntity.Key = "Card";
         }
-        public override void OnBeginInteract()
+        public override async void OnBeginInteract()
         {
             MapCompositionRoot.Instance.ShowCardGiver();
-        }
-
-        private IEnumerator Deley()
-        {
-            yield return new WaitForSeconds(0.6f);
+            await UniTask.WaitForSeconds(1);
             MapCompositionRoot.Instance.MapController.ComplitePoint();
         }
 
