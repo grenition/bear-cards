@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Random = UnityEngine.Random;
 
 namespace GreonAssets.Extensions
 {
@@ -60,12 +61,36 @@ namespace GreonAssets.Extensions
 
             return enumerable.Append(obj);
         }
+        
+        public static T GetAt<T>(this IReadOnlyList<T> list, int index)
+        {
+            if (list.Count <= index) return default;
+            return list[index];
+        }
+        public static T GetAt<T>(this T[] array, int index)
+        {
+            if (array.Length <= index) return default;
+            return array[index];
+        }
+        
+        public static T GetRandomElement<T>(this IReadOnlyList<T> list)
+        {
+            if (list.Count == 0) return default;
+            return list[Random.Range(0, list.Count)];
+        }
+        public static T GetRandomElement<T>(this T[] array)
+        {
+            if (array.Length == 0) return default;
+            return array[Random.Range(0, array.Length)];
+        }
     }
 
     public static class DictionaryExtensions
     {
         public static void Set<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TKey key, TValue value)
         {
+            if (key == null) return;
+            
             if (!dictionary.ContainsKey(key))
             {
                 dictionary.Add(key, value);
@@ -77,7 +102,7 @@ namespace GreonAssets.Extensions
 
         public static void Delete<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TKey key)
         {
-            if (!dictionary.ContainsKey(key))
+            if (key == null || !dictionary.ContainsKey(key))
                 return;
 
             dictionary.Remove(key);
@@ -85,7 +110,7 @@ namespace GreonAssets.Extensions
         
         public static void DeleteIdenticals<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TKey key, TValue value)
         {
-            if (!dictionary.ContainsKey(key) && dictionary[key].Equals(value))
+            if (key == null || !dictionary.ContainsKey(key) && dictionary[key].Equals(value))
                 return;
 
             dictionary.Remove(key);
@@ -97,6 +122,14 @@ namespace GreonAssets.Extensions
                 return default;
 
             return dictionary[key];
+        }
+        
+        public static TValue GetRandomValue<TKey, TValue>(this IReadOnlyDictionary<TKey, TValue> dictionary)
+        {
+            if(dictionary.Count == 0)
+                return default;
+
+            return dictionary[dictionary.Keys.ToList().GetRandomElement()];
         }
     }
 }

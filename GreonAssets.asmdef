@@ -1,7 +1,10 @@
 {
     "name": "GreonAssets",
+    "rootNamespace": "",
     "references": [
-        "GUID:f547b183e7119419d88303cc8c922ef1"
+        "UniTask",
+        "DOTween.Modules",
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
