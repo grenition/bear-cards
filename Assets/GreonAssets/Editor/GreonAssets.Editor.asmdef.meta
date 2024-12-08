@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/GreonAssets/Editor/GreonAssets.Editor.asmdef.meta
 guid: 00073f665394742f186b1c8f3c310766
 AssemblyDefinitionImporter:
+========
+guid: a5c3750b405784f5fb4556b74b9a9811
+folderAsset: yes
+DefaultImporter:
+>>>>>>>> 365dd381a4d3aa125ee7bf753d78a8e4aa06638d:Assets/GreonAssets/Features.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
