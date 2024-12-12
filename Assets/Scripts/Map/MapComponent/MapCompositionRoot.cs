@@ -21,6 +21,7 @@ namespace Assets.Scripts.Map
         [SerializeField] private ViewPoint _endPoint;
         [SerializeField] private MapPlayer _playerPrefab;
         [SerializeField] private GameObject _cardGiverUI;
+        [SerializeField] private GameObject _craftGiverUI;
         [SerializeField] private SpriteRenderer _backGround;
 
         private List<InteractivePoint> _locationPoints;
@@ -70,6 +71,8 @@ namespace Assets.Scripts.Map
 
         public void ShowCardGiver() => _cardGiverUI.SetActive(true);
 
+        public void ShowCraftGiver() => _craftGiverUI.SetActive(true);
+        
         public int GetNextLocationKey()
         {
             if(_curentLocationNumber++ >= _locationKey.Length)

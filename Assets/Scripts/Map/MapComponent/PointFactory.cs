@@ -17,6 +17,7 @@ namespace Assets.Scripts.Map
             _viewPointsMap.Add("Start", Resources.Load<ViewPoint>("Map/Prefabs/StartPoint"));
             _viewPointsMap.Add("Enemy", Resources.Load<ViewPoint>("Map/Prefabs/EnemyPoint"));
             _viewPointsMap.Add("Card", Resources.Load<ViewPoint>("Map/Prefabs/CardPoint"));
+            _viewPointsMap.Add("Craft", Resources.Load<ViewPoint>("Map/Prefabs/CraftPoint"));
             _viewPointsMap.Add("Hill", Resources.Load<ViewPoint>("Map/Prefabs/HillPoint"));
             _viewPointsMap.Add("Boss", Resources.Load<ViewPoint>("Map/Prefabs/BossPoint"));
         }
