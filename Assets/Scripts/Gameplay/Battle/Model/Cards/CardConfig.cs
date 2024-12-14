@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Project.Gameplay.Common;
 using UnityEngine;
 
@@ -25,5 +26,9 @@ namespace Project.Gameplay.Battle.Model.Cards
         [field: SerializeField] public int BaseDamage { get; private set; }
         [field: SerializeField] public SpellPlacing SpellPlacing { get; private set; }
         [field: SerializeField] public SpellPlayersPlacing SpellPlayersPlacing { get; private set; }
+        
+        [field: Header("Special")]
+        [field: SerializeField] public List<EffectTypes> Effects { get; protected set; }
+        
     }
 }

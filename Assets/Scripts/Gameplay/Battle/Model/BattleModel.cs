@@ -248,12 +248,16 @@ namespace Project.Gameplay.Battle.Model
             if (card == null || card.AttackDamage == 0) return;
             card.CallOnAttack(enemyPosition);
 
-            if (forwardCard == null)
+            if (forwardCard == null || (card.HasEffect(EffectTypes.Flying) && !forwardCard.HasEffect(EffectTypes.BlockFlying)))
             {
                 enemyPlayer.ModifyHealth(-card.AttackDamage);
                 return;
             }
-            forwardCard.ModifyHealth(-card.AttackDamage);
+            
+            if(!card.HasEffect(EffectTypes.Poison) || forwardCard.HasEffect(EffectTypes.PoisonResistance))
+                forwardCard.ModifyHealth(-card.AttackDamage);
+            else
+                forwardCard.ModifyHealth(-forwardCard.Health);
         }
 
         public void EndBattle(CardOwner winner)

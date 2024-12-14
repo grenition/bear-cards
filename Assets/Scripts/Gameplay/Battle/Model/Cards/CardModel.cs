@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Project.Gameplay.Common;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Data;
@@ -9,6 +10,7 @@ namespace Project.Gameplay.Battle.Model.Cards
     public class CardModel : IDisposable
     {
         public event Action<int> OnHealthChange;
+        public event Action<int> OnAttackDamageChange;
         public event Action OnDeath;
         public event Action<CardPosition, CardPosition> OnTransfered;
         public event Action<CardPosition> OnAttack; 
@@ -23,16 +25,18 @@ namespace Project.Gameplay.Battle.Model.Cards
         
         public CardSlotModel AttachedSlot { get; internal set; }
         public BattleModel BattleModel { get; protected set; }
+        public List<EffectTypes> Effects { get; protected set; }
         public int AttackDamage { get; protected set; }
         public int Health { get; protected set; }
+        public int MaxHealth { get; protected set; }
 
         public CardModel(string key, BattleModel battleModel)
         {
             Key = key;
             BattleModel = battleModel;
             AttackDamage = Config.BaseDamage;
-            Health = Config.BaseHealth;
-
+            Health = MaxHealth = Config.BaseHealth;
+            Effects = Config.Effects;
             BattleModel.RegisterCard(this);
         }
 
@@ -42,7 +46,8 @@ namespace Project.Gameplay.Battle.Model.Cards
             
             Health += modifyValue;
             Health = Math.Max(0, Health);
-
+            Health = Math.Min(Health, MaxHealth);
+            
             OnHealthChange.SafeInvoke(modifyValue);
 
             if (Health <= 0)
@@ -52,6 +57,48 @@ namespace Project.Gameplay.Battle.Model.Cards
                     
                 BattleModel.TryTransferCard(Position, CardPosition.Garbage());
             }
+        }
+        
+        internal void ModifyMaxHealth(int modifyValue)
+        {
+            if(modifyValue == 0) return;
+            
+            Health = MaxHealth += modifyValue;
+            Health = MaxHealth = Math.Max(0, MaxHealth);
+            
+            OnHealthChange.SafeInvoke(modifyValue);
+
+            if (MaxHealth <= 0)
+            {
+                OnDeath.SafeInvoke();
+                if (Position.IsPlayerField()) BattleModel.Player.ModifyLevelElectrons(Cost);                 
+                    
+                BattleModel.TryTransferCard(Position, CardPosition.Garbage());
+            }
+        }
+        
+        internal void ModifyAttackDamage(int modifyValue)
+        {
+            if(modifyValue == 0) return;
+            
+            AttackDamage += modifyValue;
+            AttackDamage = Math.Max(0, Health);
+
+            OnAttackDamageChange.SafeInvoke(modifyValue);
+        }
+        
+        public void AddEffect(CardEffect effect)
+        {
+            effect.ApplyEffect(this);
+        }
+        public void AddEffect(EffectTypes effect)
+        {
+            Effects.Add(effect);
+        }
+
+        public bool HasEffect(EffectTypes effect)
+        {
+            return Effects.Contains(effect);
         }
         
         public void Dispose()

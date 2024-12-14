@@ -21,20 +21,29 @@ namespace Project.UI.Battle
         public void Init(CardModel cardModel)
         {
             if(cardModel == null) return;
-            
-            if(Model != null) Model.OnHealthChange -= OnHealthChange;
+
+            if (Model != null)
+            {
+                Model.OnHealthChange -= OnHealthChange;
+                Model.OnAttackDamageChange -= OnAttackDamageChange;
+            }
             Model = cardModel;
             Model.OnHealthChange += OnHealthChange;
+            Model.OnAttackDamageChange += OnAttackDamageChange;
 
             Visualize();
         }
         private void OnDestroy()
         {
-            if(Model != null)
+            if (Model != null)
+            {
                 Model.OnHealthChange -= OnHealthChange;
+                Model.OnAttackDamageChange -= OnAttackDamageChange;
+            }
         }
 
         private void OnHealthChange(int obj) => Visualize();
+        private void OnAttackDamageChange(int obj) => Visualize();
         private void Visualize()
         {
             if(_electroText) _electroText.text = Model.Config.ElectroFormula;
