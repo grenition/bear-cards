@@ -7,6 +7,7 @@ using Project.Gameplay.Battle.Data;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Battle.Model.CardSlots;
 using Assets.Scripts.Map;
+using Project.Gameplay.Common.Datas;
 
 namespace Project.Gameplay.Battle.Model.CardPlayers
 {

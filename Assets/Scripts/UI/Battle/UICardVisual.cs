@@ -6,6 +6,7 @@ using Project.Gameplay.Common;
 using Project.Audio;
 using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Model.Cards;
+using Project.Gameplay.Common.Datas;
 using Project.UI.Common;
 using UnityEngine;
 using UnityEngine.UI;

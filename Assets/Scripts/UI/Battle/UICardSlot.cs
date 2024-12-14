@@ -3,6 +3,7 @@ using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Battle.Model.CardSlots;
 using Project.Gameplay.Common;
+using Project.Gameplay.Common.Datas;
 using UnityEngine;
 using UnityEngine.UI;
 

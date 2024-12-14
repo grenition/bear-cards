@@ -1,6 +1,7 @@
 using System;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Common;
+using Project.Gameplay.Common.Datas;
 
 namespace Project.Gameplay.Battle.Model.CardSlots
 {

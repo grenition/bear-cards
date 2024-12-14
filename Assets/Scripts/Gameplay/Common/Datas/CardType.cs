@@ -1,4 +1,4 @@
-﻿namespace Project.Gameplay.Common
+﻿namespace Project.Gameplay.Common.Datas
 {
     public enum CardType
     {

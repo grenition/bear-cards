@@ -9,6 +9,7 @@ using Project.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Project.Gameplay.Common.Datas;
 
 namespace Project.Gameplay.Battle.Model
 {

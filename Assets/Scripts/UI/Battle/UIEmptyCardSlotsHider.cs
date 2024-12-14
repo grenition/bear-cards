@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Common;
+using Project.Gameplay.Common.Datas;
 using UnityEngine;
 
 namespace Project.UI.Battle

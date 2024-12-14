@@ -4,6 +4,7 @@ using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Model.CardPlayers;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Common;
+using Project.Gameplay.Common.Datas;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

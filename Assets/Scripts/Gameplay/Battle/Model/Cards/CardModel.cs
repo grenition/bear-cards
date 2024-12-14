@@ -4,6 +4,7 @@ using Project.Gameplay.Common;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Data;
 using Project.Gameplay.Battle.Model.CardSlots;
+using Project.Gameplay.Common.Datas;
 
 namespace Project.Gameplay.Battle.Model.Cards
 {
