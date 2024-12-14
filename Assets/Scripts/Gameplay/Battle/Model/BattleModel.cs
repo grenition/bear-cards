@@ -246,6 +246,11 @@ namespace Project.Gameplay.Battle.Model
             var enemyPlayer = enemyType == CardOwner.player ? Player : Enemy;
 
             if (card == null || card.AttackDamage == 0) return;
+            if (card.HasEffect(EffectTypes.Explosion))
+            {
+                AttackLeft(attackerPosition);
+                AttackRight(attackerPosition);
+            }
             card.CallOnAttack(enemyPosition);
 
             if (forwardCard == null || (card.HasEffect(EffectTypes.Flying) && !forwardCard.HasEffect(EffectTypes.BlockFlying)))
@@ -259,7 +264,71 @@ namespace Project.Gameplay.Battle.Model
             else
                 forwardCard.ModifyHealth(-forwardCard.Health);
         }
+        
+        public void AttackLeft(CardPosition attackerPosition)
+        {
+            if (BattleEnded) return;
+            if (attackerPosition.container != CardContainer.field) return;
 
+            var card = GetCardAtPosition(attackerPosition);
+            var enemyType = attackerPosition.owner == CardOwner.player ? CardOwner.enemy : CardOwner.player;
+            var enemyPlayer = enemyType == CardOwner.player ? Player : Enemy;
+            var enemyPosition = new CardPosition(attackerPosition.container, enemyType, attackerPosition.index - 1); //!!!
+            var leftCard = GetCardAtPosition(enemyPosition);
+
+            if (card == null || card.AttackDamage == 0) return;
+            card.CallOnAttack(enemyPosition);
+            
+            if (attackerPosition.index - 1 < 0) //!!!
+            {
+                enemyPlayer.ModifyHealth(-card.AttackDamage);
+                return;
+            }
+
+            if (leftCard == null || (card.HasEffect(EffectTypes.Flying) && !leftCard.HasEffect(EffectTypes.BlockFlying)))
+            {
+                enemyPlayer.ModifyHealth(-card.AttackDamage);
+                return;
+            }
+            
+            if(!card.HasEffect(EffectTypes.Poison) || leftCard.HasEffect(EffectTypes.PoisonResistance))
+                leftCard.ModifyHealth(-card.AttackDamage);
+            else
+                leftCard.ModifyHealth(-leftCard.Health);
+        }
+        
+        public void AttackRight(CardPosition attackerPosition)
+        {
+            if (BattleEnded) return;
+            if (attackerPosition.container != CardContainer.field) return;
+
+            var card = GetCardAtPosition(attackerPosition);
+            var enemyType = attackerPosition.owner == CardOwner.player ? CardOwner.enemy : CardOwner.player;
+            var enemyPlayer = enemyType == CardOwner.player ? Player : Enemy;
+            var enemyPosition = new CardPosition(attackerPosition.container, enemyType, attackerPosition.index + 1);
+            var leftCard = GetCardAtPosition(enemyPosition);
+
+            if (card == null || card.AttackDamage == 0) return;
+            card.CallOnAttack(enemyPosition);
+            
+            if (attackerPosition.index + 1 >= Config.FieldSize) 
+            {
+                enemyPlayer.ModifyHealth(-card.AttackDamage);
+                return;
+            }
+
+            if (leftCard == null || (card.HasEffect(EffectTypes.Flying) && !leftCard.HasEffect(EffectTypes.BlockFlying)))
+            {
+                enemyPlayer.ModifyHealth(-card.AttackDamage);
+                return;
+            }
+            
+            if(!card.HasEffect(EffectTypes.Poison) || leftCard.HasEffect(EffectTypes.PoisonResistance))
+                leftCard.ModifyHealth(-card.AttackDamage);
+            else
+                leftCard.ModifyHealth(-leftCard.Health);
+        }
+            
         public void EndBattle(CardOwner winner)
         {
             if (BattleEnded) return;
