@@ -21,12 +21,13 @@ namespace Assets.Scripts.Map
             }
             else
             {
+                var Deck = startDeck != null ? startDeck.ToArray() : new string[] { "card_phosphorus", "card_sulfur", "card_oxygen", "card_sodium", "spell_2", "spell_3", "spell_sulfide_rtut" };
                 LocationData locationData = new()
                 {
                     KeyLocation = 0,
                     LocationLevel = 0,
                     Points = new PointEntity[0],
-                    Deck = startDeck.ToArray()
+                    Deck = Deck
                 };
 
                 string json = JsonUtility.ToJson(locationData);
