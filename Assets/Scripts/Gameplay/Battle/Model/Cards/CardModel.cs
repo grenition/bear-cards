@@ -14,6 +14,7 @@ namespace Project.Gameplay.Battle.Model.Cards
     {
         public event Action<int> OnHealthChange;
         public event Action<int> OnAttackDamageChange;
+        public event Action OnEffectsChange;
         public event Action OnDeath;
         public event Action<CardPosition, CardPosition> OnTransfered;
         public event Action<CardPosition> OnAttack; 
@@ -107,6 +108,7 @@ namespace Project.Gameplay.Battle.Model.Cards
             {
                 effect.Key.ApplyEffect(this, effect.Value);
             }
+            OnEffectsChange.SafeInvoke();
         }
         
         public void AddEffects(List<EffectTypes> effects)
