@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using UnityEngine;
 
 namespace Assets.Scripts.Map
@@ -10,7 +11,7 @@ namespace Assets.Scripts.Map
     {
         public LocationData LoadData(IEnumerable<string> startDeck = null)
         {
-            string path = Path.Combine(Application.persistentDataPath, "locationProgress.json");
+            string path = Application.persistentDataPath + "/locationProgress.json";
 
             if (File.Exists(path))
             {
@@ -18,14 +19,22 @@ namespace Assets.Scripts.Map
                 var data = JsonUtility.FromJson<LocationData>(json);
                 return data;
             }
-
-            return new LocationData()
+            else
             {
-                KeyLocation = 0,
-                LocationLevel = 0,
-                Deck = startDeck != null ? startDeck.ToArray() :
-                    new string[] { "card_phosphorus", "card_sulfur", "card_oxygen", "card_sodium", "spell_2", "spell_3", "spell_sulfide_rtut" }
-            };
+                var Deck = startDeck != null ? startDeck.ToArray() : new string[] { "card_phosphorus", "card_sulfur", "card_oxygen", "card_sodium", "spell_2", "spell_3", "spell_sulfide_rtut" };
+                LocationData locationData = new()
+                {
+                    KeyLocation = 0,
+                    LocationLevel = 0,
+                    Points = new PointEntity[0],
+                    Deck = Deck
+                };
+
+                string json = JsonUtility.ToJson(locationData);
+                File.WriteAllText(Application.persistentDataPath + "/locationProgress.json", json);
+
+                return locationData;
+            }
         }
 
         public void SaveData(PointEntity[] currentLevelPoint, int levelLocation, int keyNumber, List<string> deck)
