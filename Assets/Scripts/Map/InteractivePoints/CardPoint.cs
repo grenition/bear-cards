@@ -1,7 +1,4 @@
 ﻿using Cysharp.Threading.Tasks;
-using System;
-using System.Collections;
-using UnityEngine;
 
 namespace Assets.Scripts.Map
 {
@@ -13,7 +10,7 @@ namespace Assets.Scripts.Map
         }
         public override async void OnBeginInteract()
         {
-            MapCompositionRoot.Instance.ShowCardGiver();
+            MapCompositionRoot.Instance.ShowCardGiver("easy");
             await UniTask.WaitForSeconds(1);
             MapCompositionRoot.Instance.MapController.ComplitePoint();
         }

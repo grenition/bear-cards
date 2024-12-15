@@ -21,7 +21,9 @@ namespace Assets.Scripts.Map
         [SerializeField] private ViewPoint _startPoint;
         [SerializeField] private ViewPoint _endPoint;
         [SerializeField] private MapPlayer _playerPrefab;
-        [SerializeField] private GameObject _cardGiverUI;
+        [SerializeField] private GameObject _cardGiverUIEasy;
+        [SerializeField] private GameObject _cardGiverUIMeadle;
+        [SerializeField] private GameObject _cardGiverUIStrong;
         [SerializeField] private GameObject _craftGiverUI;
         [SerializeField] private SpriteRenderer _backGround;
         [SerializeField] private UIProgress _progressUI;
@@ -69,7 +71,21 @@ namespace Assets.Scripts.Map
             _backGround.sprite = _activeLocation.BackGround;
         }
 
-        public void ShowCardGiver() => _cardGiverUI.SetActive(true);
+        public void ShowCardGiver(string power)
+        {
+            switch (power)
+            {
+                case "easy":
+                    _cardGiverUIEasy.SetActive(true);
+                    break;
+                case "meadle":
+                    _cardGiverUIMeadle.SetActive(true);
+                    break;
+                case "strong":
+                    _cardGiverUIStrong.SetActive(true);
+                    break;
+            }
+        }
 
         public void ShowCraftGiver() => _craftGiverUI.SetActive(true);
         
