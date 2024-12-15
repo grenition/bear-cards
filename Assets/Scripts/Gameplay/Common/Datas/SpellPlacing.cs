@@ -7,6 +7,7 @@
         AnyCard,
         PlayerField,
         EnemyField,
-        AllFields
+        AnyFields,
+        AllField
     }
 }

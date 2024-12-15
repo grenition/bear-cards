@@ -36,8 +36,10 @@ namespace Project.Gameplay.Battle.Model.Cards
         
         [field: Header("Special")]
         [field: SerializeField] public List<EffectTypes> Effects { get; protected set; }
+        
         [field: SerializeField]
-        private List<CardEffectEntry> cardEffects = new List<CardEffectEntry>();
+        private List<CardEffectEntry> cardEffects;
+
         public Dictionary<CardEffect, int> SpellEffects { get; private set; } = new Dictionary<CardEffect, int>();
         
         private void SyncDictionaryWithList()
@@ -51,11 +53,9 @@ namespace Project.Gameplay.Battle.Model.Cards
                 }
             }
         }
-        
         private void OnValidate()
         {
             SyncDictionaryWithList();
         }
-        
     }
 }

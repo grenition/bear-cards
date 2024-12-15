@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Project.Gameplay.Common;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Data;
 using Project.Gameplay.Battle.Model.CardSlots;
 using Project.Gameplay.Common.Datas;
+using UnityEngine;
 
 namespace Project.Gameplay.Battle.Model.Cards
 {
@@ -38,8 +40,8 @@ namespace Project.Gameplay.Battle.Model.Cards
             BattleModel = battleModel;
             AttackDamage = Config.BaseDamage;
             Health = MaxHealth = Config.BaseHealth;
-            SpellEffects = Config.SpellEffects;
-            Effects = Config.Effects;
+            SpellEffects = new Dictionary<CardEffect, int>(Config.SpellEffects);
+            Effects = Config.Effects.ToList();
             BattleModel.RegisterCard(this);
         }
 

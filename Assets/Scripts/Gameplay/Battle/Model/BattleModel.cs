@@ -127,9 +127,14 @@ namespace Project.Gameplay.Battle.Model
                     if (position.owner == CardOwner.enemy)
                         slots.AddRange(GetSlotsAtPosition(position.owner, position.container));
                     break;
-                case SpellPlacing.AllFields:
+                case SpellPlacing.AnyFields:
                     slots.AddRange(GetSlotsAtPosition(position.owner, position.container));
                     break;
+                case SpellPlacing.AllField:
+                    slots.AddRange(GetSlotsAtPosition(CardOwner.player, position.container));
+                    slots.AddRange(GetSlotsAtPosition(CardOwner.enemy, position.container));
+                    break;
+                
             }
             return slots;
         }
