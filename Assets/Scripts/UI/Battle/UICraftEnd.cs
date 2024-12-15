@@ -4,6 +4,8 @@ using DG.Tweening;
 using GreonAssets.Extensions;
 using Project.Audio;
 using Project.Gameplay.Battle;
+using Project.Gameplay.Battle.Behaviour;
+using Project.Gameplay.Battle.Craft;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Common;
 using Project.Gameplay.Common.Datas;
@@ -51,12 +53,14 @@ namespace Project.UI.Battle
         }
         private async void OnBattleEnd(CardOwner winner)
         {
-            _resultText.text = winner == CardOwner.player ? "Получена карта" : "Крафт не удался";
-            _resultText.color = winner == CardOwner.player ? _battleWinColor : _battleLooseColor;
+            var win = ((CraftBattleBehaviour)BattleController.Behaviour).CraftSuccessed;
+            
+            _resultText.text = win ? "Получена карта" : "Крафт не удался";
+            _resultText.color = win ? _battleWinColor : _battleLooseColor;
 
-            _cardPlaceholder.gameObject.SetActive(winner == CardOwner.player);
+            _cardPlaceholder.gameObject.SetActive(win);
 
-            if (winner == CardOwner.player)
+            if (win)
             {
                 await UniTask.WaitForSeconds(_threshold);
                 _targetCardSlot.transform.DOMove(_cardTargetTransforms.position, _moveTime).SetEase(_moveEase);
@@ -71,7 +75,7 @@ namespace Project.UI.Battle
             await UniTask.WaitForSeconds(_holdTime);
             _panel.DOFade(1f, _fadeTime).SetEase(Ease.OutBack);
             
-            GameAudio.MusicSource.PlayOneShot(winner == CardOwner.player ? _winClip : _loseClip);
+            GameAudio.MusicSource.PlayOneShot(win ? _winClip : _loseClip);
         }
     }
 }

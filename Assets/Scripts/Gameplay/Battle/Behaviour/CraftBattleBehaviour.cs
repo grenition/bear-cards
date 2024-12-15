@@ -11,6 +11,7 @@ namespace Project.Gameplay.Battle.Behaviour
 {
     public class CraftBattleBehaviour : BattleBehaviour
     {
+        public bool CraftSuccessed { get; private set; }
         protected bool _nextTurnLocked = false;
 
         public CraftBattleBehaviour(BattleModel model)
@@ -83,6 +84,8 @@ namespace Project.Gameplay.Battle.Behaviour
                     Model.AddCardToDeck(CardOwner.player, craft.Output.name);
 
                     await UniTask.WaitForSeconds(0.5f);
+
+                    CraftSuccessed = true;
                     Model.EndBattle(CardOwner.player);
                     
                     break;
@@ -90,7 +93,9 @@ namespace Project.Gameplay.Battle.Behaviour
             }
             
             await UniTask.WaitForSeconds(0.5f);
-            Model.EndBattle(CardOwner.enemy);
+
+            CraftSuccessed = false;
+            Model.EndBattle(CardOwner.player);
         }
         public override void Stop()
         {
