@@ -501,8 +501,10 @@ MonoBehaviour:
   _startPoint: {fileID: 1502491044287265359, guid: 8cfc512c13ba029459eab0fd2d51a457, type: 3}
   _endPoint: {fileID: 3010466979122879971, guid: b3e54c6be36d4fa4abb848a4b4092eb9, type: 3}
   _playerPrefab: {fileID: 614500089225420600, guid: 5722744fd40826e4fb151f9cac18ece5, type: 3}
-  _cardGiverUI: {fileID: 5766398006566704106}
-  _craftGiverUI: {fileID: 0}
+  _cardGiverUIEasy: {fileID: 5766398006566704106}
+  _cardGiverUIMeadle: {fileID: 941878560}
+  _cardGiverUIStrong: {fileID: 731619563}
+  _craftGiverUI: {fileID: 3505943365728420008}
   _backGround: {fileID: 1178448340}
   _progressUI: {fileID: 1306685485}
 --- !u!4 &58954307
@@ -10727,10 +10729,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116aeb82fcf94999b07de983e7c8ff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openScale: 1
-  closeScale: 0.5
+  openCloseAnimation: 0
   openDuration: 0.15
   closeDuration: 0.1
+  openDelay: 0
+  closeDelay: 0
+  openEase: 27
+  closeEase: 26
+  openScale: 1
+  closeScale: 0.5
+  slideOffsetX: 1920
+  slideOffsetY: 1080
 --- !u!114 &1502599788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13069,10 +13078,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116aeb82fcf94999b07de983e7c8ff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openScale: 1
-  closeScale: 0.5
+  openCloseAnimation: 0
   openDuration: 0.15
   closeDuration: 0.1
+  openDelay: 0
+  closeDelay: 0
+  openEase: 27
+  closeEase: 26
+  openScale: 1
+  closeScale: 0.5
+  slideOffsetX: 1920
+  slideOffsetY: 1080
 --- !u!114 &2012351307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14911,6 +14927,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66291d9d31b9d2c4eb3350ff4c5ab726, type: 3}
+--- !u!1 &3505943365728420008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6639847382628139638, guid: 66291d9d31b9d2c4eb3350ff4c5ab726, type: 3}
+  m_PrefabInstance: {fileID: 3505943365728420007}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4358278812451166570
 GameObject:
   m_ObjectHideFlags: 0
@@ -15034,10 +15055,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116aeb82fcf94999b07de983e7c8ff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openScale: 1
-  closeScale: 0.5
+  openCloseAnimation: 0
   openDuration: 0.15
   closeDuration: 0.1
+  openDelay: 0
+  closeDelay: 0
+  openEase: 27
+  closeEase: 26
+  openScale: 1
+  closeScale: 0.5
+  slideOffsetX: 1920
+  slideOffsetY: 1080
 --- !u!1 &7613359664322361307
 GameObject:
   m_ObjectHideFlags: 0
