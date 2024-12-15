@@ -1,4 +1,5 @@
 using Assets.Scripts.Map;
+using Cysharp.Threading.Tasks;
 using Project.Gameplay.Battle.Behaviour;
 using Project.Gameplay.Battle.Model;
 using UnityEngine;
@@ -50,12 +51,15 @@ namespace Project.Gameplay.Battle
         {
             Behaviour.Start();
         }
-        protected virtual void OnDestroy()
+        protected async virtual void OnDestroy()
         {
             Behaviour.Stop();
             Model.Dispose();
             Behaviour.Dispose();
             _initialized = false;
+
+            await UniTask.NextFrame();
+            Instance = null;
         }
 
         public static bool IsPlayerTurn() => Behaviour.GetCurrentState() == BattleState.playerTurn;

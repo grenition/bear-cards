@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Project.Gameplay.Common;
 using Project.Audio;
@@ -99,6 +100,7 @@ namespace Project.UI.Battle
         private CanvasGroup canvasGroup;
         private Canvas canvas;
         private bool overrideCanvasSorting;
+        private bool attackAnimationLocked = false;
 
         private void Start()
         {
@@ -345,14 +347,19 @@ namespace Project.UI.Battle
 
             Destroy(gameObject);
         }
-        private void OnAttack(CardPosition position)
+        private async void OnAttack(CardPosition position)
         {
+            if(attackAnimationLocked) return;
+            
+            attackAnimationLocked = true;
             var direction = position.owner == CardOwner.player ? Vector3.down : Vector3.up;
 
             shakeParent.DOPunchScale(Vector3.one * attackPunchSize, attackTime, 1, 1).SetEase(Ease.OutBack);
             shakeParent.DOPunchPosition(direction * attackDistance, attackTime, 1, 1).SetEase(Ease.OutQuad);
             
             GameAudio.MusicSource.PlayOneShot(damageHitClip);
+            await UniTask.WaitForSeconds(attackTime);
+            attackAnimationLocked = false;
         }
         private void UpdateAvailableState(int electrons = 0)
         {
