@@ -34,6 +34,15 @@ namespace Project.Gameplay.Battle.Model.Cards
         public int Health { get; protected set; }
         public int MaxHealth { get; protected set; }
 
+        public CardModel(string key)
+        {
+            Key = key;
+            AttackDamage = Config.BaseDamage;
+            Health = MaxHealth = Config.BaseHealth;
+            SpellEffects = new Dictionary<CardEffect, int>(Config.SpellEffects);
+            Effects = Config.Effects.ToList();
+        }
+
         public CardModel(string key, BattleModel battleModel)
         {
             Key = key;
