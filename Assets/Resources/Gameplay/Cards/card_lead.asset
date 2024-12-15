@@ -30,6 +30,8 @@ MonoBehaviour:
   <Cost>k__BackingField: 14
   <Level>k__BackingField: 6
   <BaseHealth>k__BackingField: 10
-  <BaseDamage>k__BackingField: 5
+  <BaseDamage>k__BackingField: 4
   <SpellPlacing>k__BackingField: 0
   <SpellPlayersPlacing>k__BackingField: 0
+  <Effects>k__BackingField: 0000000004000000
+  cardEffects: []

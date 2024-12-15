@@ -28,7 +28,9 @@ MonoBehaviour:
   <Rarity>k__BackingField: 2
   <Cost>k__BackingField: 5
   <Level>k__BackingField: 3
-  <BaseHealth>k__BackingField: 1
-  <BaseDamage>k__BackingField: 4
+  <BaseHealth>k__BackingField: 8
+  <BaseDamage>k__BackingField: 2
   <SpellPlacing>k__BackingField: 0
   <SpellPlayersPlacing>k__BackingField: 0
+  <Effects>k__BackingField: 
+  cardEffects: []

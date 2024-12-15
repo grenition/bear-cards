@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Project.Gameplay.Common;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Data;
 using Project.Gameplay.Battle.Model.CardSlots;
 using Project.Gameplay.Common.Datas;
+using UnityEngine;
 
 namespace Project.Gameplay.Battle.Model.Cards
 {
@@ -26,6 +28,7 @@ namespace Project.Gameplay.Battle.Model.Cards
         
         public CardSlotModel AttachedSlot { get; internal set; }
         public BattleModel BattleModel { get; protected set; }
+        public Dictionary<CardEffect, int> SpellEffects { get; protected set; }
         public List<EffectTypes> Effects { get; protected set; }
         public int AttackDamage { get; protected set; }
         public int Health { get; protected set; }
@@ -37,7 +40,8 @@ namespace Project.Gameplay.Battle.Model.Cards
             BattleModel = battleModel;
             AttackDamage = Config.BaseDamage;
             Health = MaxHealth = Config.BaseHealth;
-            Effects = Config.Effects;
+            SpellEffects = new Dictionary<CardEffect, int>(Config.SpellEffects);
+            Effects = Config.Effects.ToList();
             BattleModel.RegisterCard(this);
         }
 
@@ -54,7 +58,7 @@ namespace Project.Gameplay.Battle.Model.Cards
             if (Health <= 0)
             {
                 OnDeath.SafeInvoke();
-                if (Position.IsPlayerField()) BattleModel.Player.ModifyLevelElectrons(Cost);                 
+                BattleModel.Player.ModifyLevelElectrons(Cost);                 
                     
                 BattleModel.TryTransferCard(Position, CardPosition.Garbage());
             }
@@ -88,11 +92,22 @@ namespace Project.Gameplay.Battle.Model.Cards
             OnAttackDamageChange.SafeInvoke(modifyValue);
         }
         
-        public void AddEffect(CardEffect effect)
+        public void AddEffects(Dictionary<CardEffect, int> effects)
         {
-            effect.ApplyEffect(this);
+            foreach (var effect in effects)
+            {
+                effect.Key.ApplyEffect(this, effect.Value);
+            }
         }
-        public void AddEffect(EffectTypes effect)
+        
+        public void AddEffects(List<EffectTypes> effects)
+        {
+            foreach (var effect in effects)
+            {
+                Effects.Add(effect);
+            }
+        }
+        public void AddEffects(EffectTypes effect)
         {
             Effects.Add(effect);
         }

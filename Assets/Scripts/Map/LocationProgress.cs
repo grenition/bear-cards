@@ -10,7 +10,7 @@ namespace Assets.Scripts.Map
     {
         public LocationData LoadData()
         {
-            string path = Path.Combine(Application.streamingAssetsPath, "locationProgress.json");
+            string path = Path.Combine(Application.persistentDataPath, "locationProgress.json");
 
             if (File.Exists(path))
             {
@@ -38,12 +38,12 @@ namespace Assets.Scripts.Map
             };
 
             string json = JsonUtility.ToJson(locationData);
-            File.WriteAllText(Application.streamingAssetsPath + "/locationProgress.json", json);
+            File.WriteAllText(Application.persistentDataPath + "/locationProgress.json", json);
         }
 
         public void SaveData(PointEntity[] currentLevelPoint, int levelLocation, int keyNumber)
         {
-            string path = Path.Combine(Application.streamingAssetsPath, "locationProgress.json");
+            string path = Path.Combine(Application.persistentDataPath, "locationProgress.json");
             string[] deck = new string[] { "card_phosphorus", "card_sulfur", "card_oxygen", "card_sodium", "spell_2", "spell_3", "spell_sulfide_rtut" };
 
             if (File.Exists(path))
@@ -63,12 +63,12 @@ namespace Assets.Scripts.Map
             };
 
             string json = JsonUtility.ToJson(locationData);
-            File.WriteAllText(Application.streamingAssetsPath + "/locationProgress.json", json);
+            File.WriteAllText(Application.persistentDataPath + "/locationProgress.json", json);
         }
 
         public void SaveDeck(List<string> deck)
         {
-            string path = Path.Combine(Application.streamingAssetsPath, "locationProgress.json");
+            string path = Path.Combine(Application.persistentDataPath, "locationProgress.json");
 
             if (File.Exists(path))
             {
@@ -86,13 +86,13 @@ namespace Assets.Scripts.Map
                     Deck = newDeck.ToArray()
                 };
                 string json = JsonUtility.ToJson(locationData);
-                File.WriteAllText(Application.streamingAssetsPath + "/locationProgress.json", json);
+                File.WriteAllText(Application.persistentDataPath + "/locationProgress.json", json);
             }
         }
 
         public void DeleteData()
         {
-            string path = Path.Combine(Application.streamingAssetsPath, "locationProgress.json");
+            string path = Path.Combine(Application.persistentDataPath, "locationProgress.json");
 
             if (File.Exists(path))
             {

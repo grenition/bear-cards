@@ -6,7 +6,6 @@ namespace Project
 {
     public class PlayerStatsData
     {
-
         public void SaveStat(int HitPoint)
         {
             PlayerData locationData = new()
@@ -15,12 +14,12 @@ namespace Project
             };
 
             string json = JsonUtility.ToJson(locationData);
-            File.WriteAllText(Application.streamingAssetsPath + "/playerStatData.json", json);
+            File.WriteAllText(Application.persistentDataPath + "/playerStatData.json", json);
         }
 
         public int LoadStat()
         {
-            string path = Path.Combine(Application.streamingAssetsPath, "playerStatData.json");
+            string path = Path.Combine(Application.persistentDataPath, "playerStatData.json");
 
             if (File.Exists(path))
             {
@@ -34,7 +33,7 @@ namespace Project
 
         public void DeletedStat()
         {
-            string path = Path.Combine(Application.streamingAssetsPath, "playerStatData.json");
+            string path = Path.Combine(Application.persistentDataPath, "playerStatData.json");
 
             if (File.Exists(path))
             {

@@ -1,3 +1,5 @@
+using GreonAssets.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -5,6 +7,9 @@ namespace Assets.Scripts.Map
 {
     public class MapController : MonoBehaviour
     {
+        public event Action OnPointBeginInteract;
+        public event Action OnMapProgressUpdate;
+
         private MapPlayer _mapPlayer;
         private List<InteractivePoint> _pointCollections;
         private InteractivePoint _currentInteractPoint;
@@ -49,18 +54,26 @@ namespace Assets.Scripts.Map
 
         public void UpdatePoints()
         {
-            var point = _pointCollections.Find(point => point.PointEntity.PointComplited);
+            var complitedPoint = _pointCollections.Find(point => point.PointEntity.PointComplited);
 
-            if (point == null)
+            if (complitedPoint == null)
                 throw new System.Exception("Last Level Complited is not detected!");
 
-            for (int i = 0; i < point.PointEntity.NeighborsID.Count(); i++)
+            _pointCollections.ForEach(point =>
             {
-                var neighbor = FindPointByID(point.PointEntity.NeighborsID[i]);
+                if (point.PointEntity.ID <= complitedPoint.PointEntity.ID)
+                    point.Pass();
+                else
+                    point.Lock();
+            });
+
+            for (int i = 0; i < complitedPoint.PointEntity.NeighborsID.Count(); i++)
+            {
+                var neighbor = FindPointByID(complitedPoint.PointEntity.NeighborsID[i]);
                 neighbor.Active();
             }
 
-            if (point.PointEntity.Level == _locationConfigurate.LocationLevel - 2)
+            if (complitedPoint.PointEntity.Level == _locationConfigurate.LocationLevel - 2)
                 _pointCollections.Last().Active();
         }
 
@@ -82,6 +95,7 @@ namespace Assets.Scripts.Map
                 MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.BossFight);
 
             MapCompositionRoot.Instance.MapCamera.MoveCameraToPlayer();
+            OnPointBeginInteract?.Invoke();
         }
 
         public void ComplitePoint()
@@ -111,6 +125,8 @@ namespace Assets.Scripts.Map
             _interact = false;
             UpdatePoints();
             MapStaticData.SaveData(_pointCollections.Select(point => point.PointEntity).ToArray(), _locationConfigurate.LocationLevel, _locationConfigurate.LocationKey);
+
+            OnMapProgressUpdate?.Invoke();
         }
 
         public void LocationComplited()

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe7214a2daac074788d9844551357a7, type: 3}
   m_Name: EnuvrimentConfig
   m_EditorClassIdentifier: 
-  <DistanceBeetwenPointByX>k__BackingField: 1
-  <DistanceBeetwenPointByY>k__BackingField: 1
+  <DistanceBeetwenPointByX>k__BackingField: 2
+  <DistanceBeetwenPointByY>k__BackingField: 2
