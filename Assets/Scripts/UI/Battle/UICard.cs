@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Project.Gameplay.Battle.Model.Cards;
 using TMPro;
 using UnityEngine;
@@ -17,6 +18,7 @@ namespace Project.UI.Battle
         [SerializeField] private TMP_Text _damageText;
         [SerializeField] private TMP_Text _healthText;
         [SerializeField] private TMP_Text _descriptionText;
+        [SerializeField] private UIEffectsImages _effects;
         
         public void Init(CardModel cardModel)
         {
@@ -26,10 +28,12 @@ namespace Project.UI.Battle
             {
                 Model.OnHealthChange -= OnHealthChange;
                 Model.OnAttackDamageChange -= OnAttackDamageChange;
+                Model.OnEffectsChange -= OnEffectsChange;
             }
             Model = cardModel;
             Model.OnHealthChange += OnHealthChange;
             Model.OnAttackDamageChange += OnAttackDamageChange;
+            Model.OnEffectsChange += OnEffectsChange;
 
             Visualize();
         }
@@ -39,11 +43,13 @@ namespace Project.UI.Battle
             {
                 Model.OnHealthChange -= OnHealthChange;
                 Model.OnAttackDamageChange -= OnAttackDamageChange;
+                Model.OnEffectsChange -= OnEffectsChange;
             }
         }
 
         private void OnHealthChange(int obj) => Visualize();
         private void OnAttackDamageChange(int obj) => Visualize();
+        private void OnEffectsChange() => Visualize();
         private void Visualize()
         {
             if(_electroText) _electroText.text = Model.Config.ElectroFormula;
@@ -52,7 +58,8 @@ namespace Project.UI.Battle
             if(_fullName) _fullName.text = Model.Config.VisualName;
             if(_damageText) _damageText.text = Model.AttackDamage.ToString();
             if(_healthText) _healthText.text = Model.Health.ToString();            
-            if(_descriptionText) _descriptionText.text = Model.Config.VisualDescription.Replace("{dmg}", Math.Abs(Model.AttackDamage).ToString());            
+            if(_descriptionText) _descriptionText.text = Model.Config.VisualDescription.Replace("{dmg}", Math.Abs(Model.AttackDamage).ToString());    
+            if(_effects) _effects.Effects = Model.Effects;
         }
     }
 }
