@@ -58,7 +58,7 @@ namespace Project.Gameplay.Battle.Model.Cards
             if (Health <= 0)
             {
                 OnDeath.SafeInvoke();
-                if (Position.IsPlayerField()) BattleModel.Player.ModifyLevelElectrons(Cost);                 
+                BattleModel.Player.ModifyLevelElectrons(Cost);                 
                     
                 BattleModel.TryTransferCard(Position, CardPosition.Garbage());
             }
