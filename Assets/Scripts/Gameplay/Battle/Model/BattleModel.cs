@@ -218,21 +218,20 @@ namespace Project.Gameplay.Battle.Model
                 || spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.EnemyAndCards
                 || spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.OnlyCards)
             {
-                slots.Where(x => x.Card != null).ForEach(x => x.Card.ModifyHealth(-spell.AttackDamage));
+                slots.Where(x => x.Card != null).ForEach(x => x.Card.AddEffects(spell.SpellEffects));
             }
 
             if (spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.PlayerOnly
                 || spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.PlayerAndCards)
             {
-                Player.ModifyHealth(-spell.AttackDamage);
+                Player.AddEffects(spell.SpellEffects);
             }
             else if (spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.EnemyOnly
                 || spell.Config.SpellPlayersPlacing == SpellPlayersPlacing.EnemyAndCards)
             {
-                Enemy.ModifyHealth(-spell.AttackDamage);
+                Enemy.AddEffects(spell.SpellEffects);
             }
-
-
+            
             spell.ModifyHealth(-spell.Health);
         }
         public void AttackForward(CardPosition attackerPosition)

@@ -117,6 +117,15 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             BattleModel.TryTransferCard(spell.Position, targetSlot.Position);
             return true;
         }
+        
+        public void AddEffects(Dictionary<CardEffect, int> effects)
+        {
+            foreach (var effect in effects)
+            {
+                effect.Key.ApplyEffect(this, effect.Value);
+            }
+        }
+        
         public void AddTurnElectrons() => ModifeHandElectrons(BattleModel.Config.ElectronsAtTurn);
     }
 }

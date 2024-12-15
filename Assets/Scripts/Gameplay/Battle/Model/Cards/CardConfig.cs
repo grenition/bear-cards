@@ -5,7 +5,13 @@ using UnityEngine;
 
 namespace Project.Gameplay.Battle.Model.Cards
 {
-
+    [System.Serializable]
+    public class CardEffectEntry
+    {
+        public CardEffect Effect;
+        public int Value;       
+    }
+    
     [CreateAssetMenu(menuName = "Gameplay/CardConfig", fileName = "Card")]
     public class CardConfig : ScriptableObject
     {
@@ -30,6 +36,26 @@ namespace Project.Gameplay.Battle.Model.Cards
         
         [field: Header("Special")]
         [field: SerializeField] public List<EffectTypes> Effects { get; protected set; }
+        [field: SerializeField]
+        private List<CardEffectEntry> cardEffects = new List<CardEffectEntry>();
+        public Dictionary<CardEffect, int> SpellEffects { get; private set; } = new Dictionary<CardEffect, int>();
+        
+        private void SyncDictionaryWithList()
+        {
+            SpellEffects.Clear();
+            foreach (var entry in cardEffects)
+            {
+                if (entry.Effect != null)
+                {
+                    SpellEffects[entry.Effect] = entry.Value;
+                }
+            }
+        }
+        
+        private void OnValidate()
+        {
+            SyncDictionaryWithList();
+        }
         
     }
 }
