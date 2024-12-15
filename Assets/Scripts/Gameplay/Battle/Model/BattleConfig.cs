@@ -16,6 +16,7 @@ namespace Project.Gameplay.Battle.Model
         [field: Header("Game")]
         [field: SerializeField] public CardPlayerConfig Enemy { get; private set; }
         [field: SerializeField] public int FieldSize { get; private set; } = 4;
+        [field: SerializeField] public bool AllowPlayerCardReposition { get; private set; } = false;
         [field: SerializeField] public CardOwner FirstTurnOwner { get; private set; } = CardOwner.player;
         
         [field: Header("Electrons")]

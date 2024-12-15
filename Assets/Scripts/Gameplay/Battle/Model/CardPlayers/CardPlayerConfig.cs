@@ -17,6 +17,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         [field: SerializeField] public int HandSize { get; private set; } = 8;
         [field: SerializeField] public int DeckSize { get; private set; } = 20;
         [field: SerializeField] public int SpellsSize { get; private set; } = 5;
+        [field: SerializeField] public int StartLevelElectrons { get; private set; } = 0;
 
         [field: Header("EnemyBehaviour")]
         [field: SerializeField, Range(0f, 1f)] public float PlaceToSlotChance { get; private set; } = 0.5f;

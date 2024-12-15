@@ -17,6 +17,9 @@ namespace Project.UI.Battle
     {
         private bool initalize = false;
 
+        [Header("Awake")]
+        [SerializeField] private float _awakeFadeTime = 0.35f;
+        
         [Header("UICardMovement")]
         [SerializeField] private AudioClip pointerDownClip;
         [SerializeField] private AudioClip damageHitClip;
@@ -95,11 +98,16 @@ namespace Project.UI.Battle
         private Color startColor;
         private CanvasGroup canvasGroup;
         private Canvas canvas;
+        private bool overrideCanvasSorting;
 
         private void Start()
         {
             shadowDistance = visualShadow.localPosition;
             startColor = cardImage.color;
+
+            canvasGroup.alpha = 0f;
+            canvasGroup.DOFade(1f, _awakeFadeTime).SetEase(Ease.OutSine);
+            transform.localScale = Vector3.zero;
         }
 
         public void Initialize(UICardMovement target, int index = 0)
@@ -199,6 +207,9 @@ namespace Project.UI.Battle
         {
             Vector3 verticalOffset = (Vector3.up * (parentCard.isDragging ? 0 : curveYOffset));
             transform.position = Vector3.Lerp(transform.position, cardTransform.position + verticalOffset, followSpeed * Time.deltaTime);
+
+            Vector3 targetScale = parentCard.CardSlot != null ? parentCard.CardSlot.transform.localScale : Vector3.one;
+            transform.localScale = Vector3.Lerp(transform.localScale, targetScale, followSpeed * Time.deltaTime);
         }
 
         private void FollowRotation()
@@ -350,6 +361,12 @@ namespace Project.UI.Battle
                 .DOFade(available ? 0f : 1f, interactableFadeTime)
                 .SetEase(Ease.OutBack);
             interactionLockedGroup.blocksRaycasts = !available;
+        }
+
+        public void SetCanvasOverride(bool overrideState)
+        {
+            overrideCanvasSorting = overrideState;
+            canvas.overrideSorting = overrideCanvasSorting;
         }
     }
 }

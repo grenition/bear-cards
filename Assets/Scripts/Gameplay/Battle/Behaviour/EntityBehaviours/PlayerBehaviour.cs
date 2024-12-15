@@ -26,7 +26,6 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
                 BattleBehaviour.Model.AddCardToDeck(CardOwner.player, preCard.name);
             }
 
-            //_shouldGivedCards = new(BattleBehaviour.Model.Player.Config.Deck);
             var deck = MapStaticData.LoadData();
 
             _shouldGivedCards = new();

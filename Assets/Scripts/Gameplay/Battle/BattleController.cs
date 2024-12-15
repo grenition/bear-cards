@@ -9,43 +9,48 @@ namespace Project.Gameplay.Battle
     {
         public static BattleModel Model {
             get {
-                Init();
-                return _model;
+                Instance ??= FindAnyObjectByType<BattleController>();
+                Instance.Init();
+                return Instance._model;
             }
         }
         public static BattleBehaviour Behaviour {
             get {
-                Init();
-                return _behaviour;
+                Instance ??= FindAnyObjectByType<BattleController>();
+                Instance.Init();
+                return Instance._behaviour;
             }
         }
-
-        private static bool _initialized = false;
-        private static BattleModel _model;
-        private static BattleBehaviour _behaviour;
         
-        private static void Init()
+        public static BattleController Instance { get; private set; }
+
+        protected bool _initialized = false;
+        protected BattleModel _model;
+        protected BattleBehaviour _behaviour;
+        
+        protected virtual void Init()
         {
             if(_initialized) return;
             
             _model = new BattleModel(MapStaticData.KeyBattle);
-            _behaviour = new BattleBehaviour(_model);
+            _behaviour = new StandartBattleBehaviour(_model);
             _initialized = true;
         }
-        private void Awake()
+        protected virtual void Awake()
         {
+            Instance = this;
             Init();
         }
-        private void Update()
+        protected virtual void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space) && Behaviour.GetCurrentState() == BattleState.playerTurn)
                 Behaviour.NextTurn();
         }
-        private void Start()
+        protected virtual void Start()
         {
             Behaviour.Start();
         }
-        private void OnDestroy()
+        protected virtual void OnDestroy()
         {
             Behaviour.Stop();
             Model.Dispose();

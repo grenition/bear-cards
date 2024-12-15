@@ -38,6 +38,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             OwnershipType = ownerhipType;
             // Health = Config.Health;
             Health = MapStaticData.LoadPlayerData();
+            LevelElectrons = Config.StartLevelElectrons;
 
             for (int i = 0; i < Config.HandSize; i++)
             {
