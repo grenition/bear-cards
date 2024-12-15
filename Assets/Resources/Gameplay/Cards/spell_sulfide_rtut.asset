@@ -24,5 +24,9 @@ MonoBehaviour:
   <Level>k__BackingField: 0
   <BaseHealth>k__BackingField: 2
   <BaseDamage>k__BackingField: 5
-  <SpellPlacing>k__BackingField: 5
+  <SpellPlacing>k__BackingField: 6
   <SpellPlayersPlacing>k__BackingField: 0
+  <Effects>k__BackingField: 
+  cardEffects:
+  - Effect: {fileID: 11400000, guid: bcd37394747a4a744991effd63615ac0, type: 2}
+    Value: -5
