@@ -345,8 +345,8 @@ namespace Project.Gameplay.Battle.Model
 
             if (winner == CardOwner.player)
                 MapStaticData.LevelComplited(Player.Deck.Where(x => x.Card != null).Select(x => x.Card.Key));
-            else
-                MapStaticData.GameFail();
+            //else
+            //    MapStaticData.GameFail();
         }
 
         #endregion
