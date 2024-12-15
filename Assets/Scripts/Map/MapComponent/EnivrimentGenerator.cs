@@ -27,11 +27,15 @@ namespace Assets.Scripts.Map
             {
                 List<InteractivePoint> pointsInLevel = points.Where(point => point.PointEntity.Level == numberLevel).ToList();
 
+                float halfDistance = (pointsInLevel.Count() - 1) * _config.DistanceBeetwenPointByX / 2.0f;
+
+
                 for (int numberPointInLevel = 0; numberPointInLevel < pointsInLevel.Count(); numberPointInLevel++)
                 {
-                    var position = new Vector2((float)(pointsInLevel.Count() * numberPointInLevel) / pointsInLevel.Count()
-                        - pointsInLevel.Count() / 2.0f,
-                        (float)numberLevel * _config.DistanceBeetwenPointByY);
+                    var position = new Vector2(
+        (numberPointInLevel * _config.DistanceBeetwenPointByX) - halfDistance,
+        numberLevel * _config.DistanceBeetwenPointByY
+    );
 
                     var viewObject = PointFactory.Instance.CreateViewPoint(pointsInLevel[numberPointInLevel].PointEntity.Key);
                     viewObject.transform.position = position;
@@ -41,13 +45,10 @@ namespace Assets.Scripts.Map
         }
 
         private void PathGenerated(List<InteractivePoint> points)
-        {            
-
-
+        {
             points.Where(point => point.PointEntity.NeighborsID != null &&
             point.PointEntity.NeighborsID.Count != 0 &&
-            point.PointEntity.Key != "Boss").ForEach
-                (point =>
+            point.PointEntity.Key != "Boss").ForEach(point =>
                 {
                     point.PointEntity.NeighborsID.ForEach(idNeighbor =>
                     {

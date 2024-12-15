@@ -8,21 +8,77 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: _colorPass.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: _colorPass.b
+      value: 0.105966486
+      objectReference: {fileID: 0}
+    - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: _colorPass.g
+      value: 0.4566037
+      objectReference: {fileID: 0}
+    - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: _colorPass.r
+      value: 0.14024623
+      objectReference: {fileID: 0}
+    - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: _colorActive.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: _colorActive.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: _colorActive.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: _colorActive.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: _colorInactive.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: _colorInactive.b
+      value: 0.2754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: _colorInactive.g
+      value: 0.2754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: _colorInactive.r
+      value: 0.2754717
+      objectReference: {fileID: 0}
     - target: {fileID: 1982595992962122621, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ac5de94053f294b929e8105eced63bbe, type: 3}
+    - target: {fileID: 1982595992962122621, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982595992962122621, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1044252925
+      objectReference: {fileID: 0}
     - target: {fileID: 2625828526175066264, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.74999994
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2625828526175066264, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.74999994
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2625828526175066264, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.74999994
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2625828526175066264, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2625828526175066264, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 2625828526175066264, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_LocalRotation.w

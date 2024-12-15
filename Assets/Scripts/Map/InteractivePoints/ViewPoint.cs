@@ -11,11 +11,21 @@ namespace Assets.Scripts.Map
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private PointOfInterestPath _pathPrefabs;
 
-        public void CreatePathTo(ViewPoint viewPoint)
+
+        [Header("PointView")]
+        [SerializeField] private Color _colorActive;
+        [SerializeField] private Color _colorInactive;
+        [SerializeField] private Color _colorPass;
+
+        public void CreatePathTo(ViewPoint viewPoint )
         {
             var path = Instantiate(_pathPrefabs, transform.localPosition, Quaternion.identity);
             path.CreatePath(viewPoint);
         }
+
+        public void Active() => _spriteRenderer.color = _colorActive;
+        public void Lock() => _spriteRenderer.color = _colorInactive;
+        public void Pass() => _spriteRenderer.color = _colorPass;
 
         public void ClickOnPoint() =>
             OnClickAction?.Invoke();

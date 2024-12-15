@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Codice.Client.BaseCommands.ProgressStatus;
 
 namespace Assets.Scripts.Map
 {
@@ -23,6 +24,7 @@ namespace Assets.Scripts.Map
         [SerializeField] private GameObject _cardGiverUI;
         [SerializeField] private GameObject _craftGiverUI;
         [SerializeField] private SpriteRenderer _backGround;
+        [SerializeField] private UIProgress _progressUI;
 
         private List<InteractivePoint> _locationPoints;
         private LocationConfigurate _activeLocation;
@@ -38,7 +40,6 @@ namespace Assets.Scripts.Map
 
             var progres = MapStaticData.LoadData();
             HitPoint = MapStaticData.LoadPlayerData();
-
 
             MapUI.Initialize();
             _hillPanel = MapUI.GetUIByKey("hill") as HillUI;
@@ -60,14 +61,13 @@ namespace Assets.Scripts.Map
             MapPlayer = Instantiate(_playerPrefab, _locationPoints[0].ViewPoint.transform.position, Quaternion.identity);
             MapController.Create(_locationPoints, _activeLocation);
 
+            MapController.OnPointBeginInteract +=() => _progressUI.Hide();
+            MapController.OnMapProgressUpdate += ProgressInit;
             MapCamera.MoveCameraToPlayer();
 
+            ProgressInit();
             _backGround.sprite = _activeLocation.BackGround;
-
         }
-
-        [ContextMenu("Deleted")]
-        public void Deleted() => MapStaticData.GameFail();
 
         public void ShowCardGiver() => _cardGiverUI.SetActive(true);
 
@@ -94,14 +94,32 @@ namespace Assets.Scripts.Map
         public void SavePlayerStat(int modificator)
         {
             HitPoint += modificator;
+            _progressUI.UpdateHitPoint(HitPoint);
             MapStaticData.SavePlayerData(HitPoint);
+        }
+
+        private void ProgressInit()
+        {
+            _progressUI.gameObject.SetActive(true);
+
+            var progres = MapStaticData.LoadData();
+            HitPoint = MapStaticData.LoadPlayerData();
+
+            _progressUI.UpdateLocation(progres.KeyLocation);
+            _progressUI.UpdateHitPoint(HitPoint);
+            _progressUI.UpdateCardElement(progres.Deck.Where(card => card.StartsWith("card")).Count());
+            _progressUI.UpdateCardMajesty(progres.Deck.Where(card => card.StartsWith("spell")).Count());
         }
 
         private void OnDisable()
         {
+            _hillPanel.OnModificateHP -= SavePlayerStat;
+            MapController.OnMapProgressUpdate -= ProgressInit;
+            MapController.OnPointBeginInteract -= () => _progressUI.Hide();
+
             Instance = null;
             MapController = null;
-            _hillPanel.OnModificateHP -= SavePlayerStat;
+
             _locationPoints.ForEach(point =>
             {
                 point.Dispose();

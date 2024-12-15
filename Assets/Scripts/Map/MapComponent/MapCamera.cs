@@ -5,6 +5,7 @@ namespace Assets.Scripts.Map
     {
         [SerializeField, Range(0, 2)] private float _speed;
         [SerializeField, Range(0, 2)] private float _stopDistance;
+        [SerializeField] private Vector3 _cameraDifference;
 
         private bool _cameraChangePosition;
         private MapPlayer _player;
@@ -17,9 +18,9 @@ namespace Assets.Scripts.Map
         private void Update()
         {
             if (_cameraChangePosition)
-                transform.Translate(_speed * Time.deltaTime * (_player.transform.position - transform.position));
+                transform.Translate(_speed * Time.deltaTime * ((_player.transform.position + _cameraDifference) - transform.position));
 
-            if (Vector2.Distance(transform.position, _player.transform.position) < _stopDistance)
+            if (Vector2.Distance(transform.position, (_player.transform.position + _cameraDifference)) < _stopDistance)
             {
                 _cameraChangePosition = false;
                 transform.position = new Vector3(transform.position.x, transform.position.y, -10);

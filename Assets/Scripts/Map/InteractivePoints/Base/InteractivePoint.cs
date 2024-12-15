@@ -59,6 +59,7 @@ namespace Assets.Scripts.Map
             PointEntity.PointActive = false;
             PointEntity.PointPass = true;
             PointEntity.PointComplited = false;
+            ViewPoint.Pass();
             Debug.Log($"{PointEntity.Key}:I pass");
         }
 
@@ -66,6 +67,7 @@ namespace Assets.Scripts.Map
         {
             PointEntity.PointActive = true;
             PointEntity.PointLock = false;
+            ViewPoint.Active();
             Debug.Log($"{PointEntity.Key}:I active");
         }
 
@@ -73,6 +75,7 @@ namespace Assets.Scripts.Map
         {
             PointEntity.PointLock = true;
             PointEntity.PointActive = false;
+            ViewPoint.Lock();
             Debug.Log($"{PointEntity.Key}:I lock");
         }
 
