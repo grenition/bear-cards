@@ -80,6 +80,7 @@ namespace Project.Gameplay.Battle.Behaviour
 
                     Model.AddCardToDeck(CardOwner.enemy, craft.Output.name);
                     Model.Enemy.TransferCardFromDeckToHand();
+                    Model.AddCardToDeck(CardOwner.player, craft.Output.name);
 
                     await UniTask.WaitForSeconds(0.5f);
                     Model.EndBattle(CardOwner.player);
