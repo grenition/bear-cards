@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
-using Project.Gameplay.Common;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle;
+using Project.Gameplay.Battle.Craft;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Common.Datas;
 using Project.UI.Common;
@@ -220,7 +220,18 @@ namespace Project.UI.Battle
             UIDynamicSelector.Instance?.SetSelection(new List<RectTransform>());
 
             if (!slotUnderCursor || !BattleController.Model.TryTransferCard(Model.Position, slotUnderCursor.CardPosition))
-                transform.DOMove(CardSlot ? CardSlot.transform.position : startPosition, moveTime).SetEase(Ease.OutBack);
+            {
+                if (BattleController.Model.Config.AllowPlayerCardReposition && Model.Position.container == CardContainer.field)
+                {
+                    var handSlot = BattleController.Model.Player.GetFirstFreeSlotInHand();
+                    if (handSlot == null || !BattleController.Model.TryTransferCard(Model.Position, handSlot.Position))
+                        transform.DOMove(CardSlot ? CardSlot.transform.position : startPosition, moveTime).SetEase(Ease.OutBack);
+                    else
+                        uiCardVisual.transform.SetAsLastSibling();
+                }
+                else
+                    transform.DOMove(CardSlot ? CardSlot.transform.position : startPosition, moveTime).SetEase(Ease.OutBack);
+            }
 
             PointerUpEvent?.Invoke(this, false);
         }
