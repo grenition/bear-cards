@@ -1,6 +1,7 @@
 using Project;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace Assets.Scripts.Map
 {
@@ -13,10 +14,10 @@ namespace Assets.Scripts.Map
 
         private static int _idBattlePoint;
 
-        public static LocationProgress.LocationData LoadData()
+        public static LocationProgress.LocationData LoadData(IEnumerable<string> startDeck = null)
         {
             Initialize();
-            return _locationProgress.LoadData();
+            return _locationProgress.LoadData(startDeck);
         }
 
         public static void SaveData(PointEntity[] points, int locationLevel, int keyLocation, List<string> deck)
@@ -44,11 +45,11 @@ namespace Assets.Scripts.Map
             _playerData.DeletedStat();
         }
 
-        public static void LevelComplited()
+        public static void LevelComplited(IEnumerable<string> deck)
         {
             Initialize();
 
-            var locationData = LoadData();
+            var locationData = LoadData(deck);
             locationData.Points.ToList().ForEach(point =>
             {
                 point.PointLock = true;

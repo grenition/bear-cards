@@ -344,7 +344,7 @@ namespace Project.Gameplay.Battle.Model
             OnBattleEnded.SafeInvoke(winner);
 
             if (winner == CardOwner.player)
-                MapStaticData.LevelComplited();
+                MapStaticData.LevelComplited(Player.Deck.Where(x => x.Card != null).Select(x => x.Card.Key));
             else
                 MapStaticData.GameFail();
         }

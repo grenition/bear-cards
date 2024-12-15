@@ -26,7 +26,7 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
                 BattleBehaviour.Model.AddCardToDeck(CardOwner.player, preCard.name);
             }
 
-            var deck = MapStaticData.LoadData();
+            var deck = MapStaticData.LoadData(BattleBehaviour.Model.Player.Config.Deck.Select(x => x.name));
 
             _shouldGivedCards = new();
             deck.Deck.ForEach(card =>
@@ -34,7 +34,7 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
                 _shouldGivedCards.Add(BattleStaticData.Cards.Get(card));
             });
 
-            foreach (var deckCard in BattleBehaviour.Model.Player.Config.Deck)
+            foreach (var deckCard in _shouldGivedCards.ToList())
             {
                 if (!BattleBehaviour.Config.GiveCardsByActualLevel || deckCard.Level <= PlayerModel.Level)
                 {

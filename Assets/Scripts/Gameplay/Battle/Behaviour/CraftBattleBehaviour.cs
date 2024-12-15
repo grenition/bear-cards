@@ -5,6 +5,7 @@ using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Data;
 using Project.Gameplay.Battle.Model;
 using Project.Gameplay.Common.Datas;
+using Project.Infrastructure;
 
 namespace Project.Gameplay.Battle.Behaviour
 {
@@ -29,14 +30,10 @@ namespace Project.Gameplay.Battle.Behaviour
             Model.Player.AddTurnElectrons();
             
             await UniTask.NextFrame();
-            
-            var deck = MapStaticData.LoadData();
-            
-            foreach (var deckCard in Model.Player.Config.Deck)
-            {
-                Model.AddCardToDeck(CardOwner.player, deckCard.name);
-            }
 
+            var playerConfig = BattleStaticData.CardPlayers.Get(Constants.Player);
+            var deck = MapStaticData.LoadData(playerConfig.Deck.Select(x => x.name));
+            
             deck.Deck.ForEach(card =>
             {
                 Model.AddCardToDeck(CardOwner.player, card);
