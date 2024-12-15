@@ -1,0 +1,18 @@
+{
+    "name": "GreonAssets.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6b49df8aa18e9448d806f4fb4135ec85"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
