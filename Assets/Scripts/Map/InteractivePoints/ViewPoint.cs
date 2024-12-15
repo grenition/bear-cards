@@ -10,6 +10,7 @@ namespace Assets.Scripts.Map
 
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private PointOfInterestPath _pathPrefabs;
+        [SerializeField] private Animator _animator;
 
 
         [Header("PointView")]
@@ -21,6 +22,18 @@ namespace Assets.Scripts.Map
         {
             var path = Instantiate(_pathPrefabs, transform.localPosition, Quaternion.identity);
             path.CreatePath(viewPoint);
+        }
+
+        private void OnMouseEnter()
+        {
+            if(_spriteRenderer.color == _colorActive)
+            {
+                _animator.SetTrigger("active");
+            }
+            else if(_spriteRenderer.color == _colorInactive)
+            {
+                _animator.SetTrigger("lock");
+            }
         }
 
         public void Active() => _spriteRenderer.color = _colorActive;
