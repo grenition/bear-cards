@@ -31,3 +31,5 @@ MonoBehaviour:
   <BaseDamage>k__BackingField: 0
   <SpellPlacing>k__BackingField: 0
   <SpellPlayersPlacing>k__BackingField: 0
+  <Effects>k__BackingField: 03000000
+  cardEffects: []
