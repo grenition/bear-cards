@@ -3,6 +3,7 @@ using GreonAssets.Extensions;
 using R3;
 using System;
 using System.Linq;
+using GreonAssets.UI.Extensions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,6 +21,7 @@ namespace Project
         [Header("Other")]
         [SerializeField] private TMP_Text _dialogues;
         [SerializeField] private Button _nextStep;
+        [SerializeField] private float _typewriterEffectDuration = 2f;
 
         private int _numberStep;
         private DialogueConfig _config;
@@ -41,7 +43,7 @@ namespace Project
             UpdateDialogue();
         }
 
-        private void UpdateDialogue()
+        private async void UpdateDialogue()
         {
             if (_config.Dialogues.Length <= _numberStep)
             {
@@ -54,11 +56,14 @@ namespace Project
                     data.KeyDialogueWasComplited = levelWasComplited.ToArray();
                     DialoguesStatic.SaveData(data);
                 }
+
+                await gameObject.CloseWithChildrensAnimationAsync();
                 Destroy(gameObject);
                 return;
             }
 
-            _dialogues.text = _config.Dialogues[_numberStep].TextDialogue;
+            var dialogueText = _config.Dialogues[_numberStep].TextDialogue;
+            _dialogues.TypewriterEffect(dialogueText, _typewriterEffectDuration);
 
             if (_config.Dialogues[_numberStep].ActorPosition == DialogueConfig.Actor.LeftActor)
             {
@@ -75,17 +80,17 @@ namespace Project
 
         private void UpdateActor(Actor activeActor, Actor deactivateActor, string name, Sprite icon)
         {
+            deactivateActor.Root.SetActiveWithAnimation(false);
+            activeActor.Root.SetActiveWithAnimation(true);
             activeActor.NameActor.text = name;
             activeActor.ImageActor.sprite = icon;
-            activeActor.AnimatorActor?.SetTrigger("active");
-            deactivateActor.AnimatorActor?.SetTrigger("disable");
         }
 
         [Serializable]
         private class Actor
         {
+            public GameObject Root;
             public TMP_Text NameActor;
-            public Animator AnimatorActor;
             public Image ImageActor;
         }
     }

@@ -25,4 +25,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 11400000, guid: 0a288e552d13279458565bdc391a2564, type: 2}
   <Output>k__BackingField: {fileID: 11400000, guid: c9794b798402846e8b9d41f159a06587, type: 2}
-  <Formula>k__BackingField: Cu = 2Fe + 3O
+  <Formula>k__BackingField: ' '
