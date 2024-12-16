@@ -35,7 +35,7 @@ namespace Assets.Scripts.Map
         private int _curentLocationNumber;
         private HillUI _hillPanel;
 
-        private void Awake()
+        public void Initialize()
         {
             Instance = this;
 

@@ -2,13 +2,19 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
 using UnityEngine;
 
 namespace Assets.Scripts.Map
 {
     public class LocationProgress
     {
+        private string[] _startDeck;
+
+        public void SetStartDeck(string[] startDeck)
+        {
+            _startDeck = startDeck;
+        }
+
         public LocationData LoadData(IEnumerable<string> startDeck = null)
         {
             string path = Application.persistentDataPath + "/locationProgress.json";
@@ -21,7 +27,7 @@ namespace Assets.Scripts.Map
             }
             else
             {
-                var Deck = startDeck != null ? startDeck.ToArray() : new string[] { };
+                var Deck = startDeck != null ? startDeck.ToArray() : _startDeck;
                 LocationData locationData = new()
                 {
                     KeyLocation = 0,
