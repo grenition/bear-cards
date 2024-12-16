@@ -384,6 +384,10 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 58.15
       objectReference: {fileID: 0}
+    - target: {fileID: 6203594772985755731, guid: faba65b8bb61c40faa8273a8c1c914ae, type: 3}
+      propertyPath: m_TextWrappingMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -700,7 +704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7431798089634033701, guid: 7d86b0502c66d4bd69169a56198d22ef, type: 3}
       propertyPath: m_text
-      value: "\u0411\u043E\u0439"
+      value: "\u0411\u041E\u0419"
       objectReference: {fileID: 0}
     - target: {fileID: 7431798089634033701, guid: 7d86b0502c66d4bd69169a56198d22ef, type: 3}
       propertyPath: m_fontSize
@@ -711,6 +715,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f98bf342938a84f8da97bc13b059e411, type: 2}
     - target: {fileID: 7431798089634033701, guid: 7d86b0502c66d4bd69169a56198d22ef, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7431798089634033701, guid: 7d86b0502c66d4bd69169a56198d22ef, type: 3}
       propertyPath: m_fontSizeBase
       value: 100
       objectReference: {fileID: 0}
@@ -718,6 +726,14 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 6220789511217746617, guid: f98bf342938a84f8da97bc13b059e411, type: 2}
+    - target: {fileID: 7431798089634033701, guid: 7d86b0502c66d4bd69169a56198d22ef, type: 3}
+      propertyPath: m_TextWrappingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7431798089634033701, guid: 7d86b0502c66d4bd69169a56198d22ef, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7431798089634033701, guid: 7d86b0502c66d4bd69169a56198d22ef, type: 3}
       propertyPath: m_VerticalAlignment
       value: 512

@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using GreonAssets.Extensions;
+using GreonAssets.UI.Extensions;
 using R3;
 using TMPro;
 using UnityEngine;
@@ -16,9 +17,7 @@ namespace Project
         [SerializeField] private string _hitPointName;
         [SerializeField] private string _cardElementName;
         [SerializeField] private string _cardMajestyName;
-
-        [SerializeField] private Animator _animator;
-
+        
         private int _locationNumber;
         private int _hitPoint;
         private int _cardElementCount;
@@ -32,10 +31,7 @@ namespace Project
             }).AddTo(this);
         }
 
-        public void Hide() => _animator.SetTrigger("hide");
-
-        private void OnHide() => gameObject.SetActive(false);
-
+        public void Hide() => gameObject.CloseWithChildrensAnimation();
 
         public void UpdateLocation(int locationNumber)
         {
