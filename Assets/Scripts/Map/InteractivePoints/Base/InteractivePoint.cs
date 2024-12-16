@@ -58,7 +58,7 @@ namespace Assets.Scripts.Map
         {
             PointEntity.PointActive = false;
             PointEntity.PointPass = true;
-            PointEntity.PointComplited = false;
+            //PointEntity.PointComplited = false;
             ViewPoint.Pass();
             Debug.Log($"{PointEntity.Key}:I pass");
         }

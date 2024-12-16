@@ -12,6 +12,10 @@ namespace Assets.Scripts.Map
 
         public override void OnBeginInteract()
         {
+            var data = DialoguesStatic.LoadData();
+            data.CountEnemyComming++;
+            DialoguesStatic.SaveData(data);
+
             var fightPanel = (FightUI)MapCompositionRoot.Instance.MapUI.ActiveUIByKey("fight");
         }
 

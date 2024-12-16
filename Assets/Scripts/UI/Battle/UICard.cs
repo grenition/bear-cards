@@ -37,6 +37,7 @@ namespace Project.UI.Battle
 
             Visualize();
         }
+
         private void OnDestroy()
         {
             if (Model != null)

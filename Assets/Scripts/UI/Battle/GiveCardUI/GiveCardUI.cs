@@ -56,6 +56,10 @@ namespace Project
             _countCardAdded = 0;
             _button.interactable = false;
 
+            var data = DialoguesStatic.LoadData();
+            data.CountCardGiveComming++;
+            DialoguesStatic.SaveData(data);
+
             Load();
             SetViewCard();
         }

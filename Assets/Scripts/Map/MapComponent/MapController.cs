@@ -1,4 +1,4 @@
-using GreonAssets.Extensions;
+using Project;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,16 +21,18 @@ namespace Assets.Scripts.Map
             _pointCollections = pointCollection;
             _locationConfigurate = locationConfigurate;
 
-            InteractivePoint activePoint = _pointCollections.Find(point => point.PointEntity.PointComplited);
+            var activePoint = GetLasPointComplited();
 
             if (activePoint == null)
+            {
                 throw new System.Exception("Last Level Complited is not detected!");
+            }
 
             _mapPlayer = MapCompositionRoot.Instance.MapPlayer;
             _mapPlayer.transform.position = activePoint.ViewPoint.transform.position;
             _currentInteractPoint = activePoint;
 
-            if(activePoint.PointEntity.Level == _locationConfigurate.LocationLevel - 1)
+            if (activePoint.PointEntity.Level == _locationConfigurate.LocationLevel - 1)
             {
                 _pointCollections.Last().Complited();
                 LocationComplited();
@@ -38,6 +40,10 @@ namespace Assets.Scripts.Map
             }
 
             UpdatePoints();
+
+            var data = DialoguesStatic.LoadData();
+            data.FirstStart = true;
+            DialoguesStatic.SaveData(data);
         }
 
         private void Update()
@@ -54,7 +60,7 @@ namespace Assets.Scripts.Map
 
         public void UpdatePoints()
         {
-            var complitedPoint = _pointCollections.Find(point => point.PointEntity.PointComplited);
+            var complitedPoint = GetLasPointComplited();
 
             if (complitedPoint == null)
                 throw new System.Exception("Last Level Complited is not detected!");
@@ -89,7 +95,7 @@ namespace Assets.Scripts.Map
             _currentInteractPoint = interactivePoint;
             _currentInteractPoint.OnBeginInteract();
 
-            if(_currentInteractPoint.PointEntity.Level != _locationConfigurate.LocationLevel - 1)
+            if (_currentInteractPoint.PointEntity.Level != _locationConfigurate.LocationLevel - 1)
                 MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetFightKey());
             else
                 MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.BossFight);
@@ -103,7 +109,7 @@ namespace Assets.Scripts.Map
             if (_currentInteractPoint == null)
                 return;
 
-            if (_currentInteractPoint.PointEntity.Level == _locationConfigurate.LocationLevel-1)
+            if (_currentInteractPoint.PointEntity.Level == _locationConfigurate.LocationLevel - 1)
             {
                 _pointCollections.Last().Complited();
                 LocationComplited();
@@ -132,7 +138,7 @@ namespace Assets.Scripts.Map
         public void LocationComplited()
         {
             var keyLocation = MapCompositionRoot.Instance.GetNextLocationKey();
-            MapStaticData.SaveData(_pointCollections.Select(point => point.PointEntity).ToArray(),0, keyLocation);
+            MapStaticData.SaveData(_pointCollections.Select(point => point.PointEntity).ToArray(), 0, keyLocation);
             MapCompositionRoot.Instance.ReloadMap();
         }
 
@@ -144,6 +150,12 @@ namespace Assets.Scripts.Map
                 return findPoint;
 
             throw new System.Exception($"Point with id:{id} is not found!");
+        }
+
+        private InteractivePoint GetLasPointComplited()
+        {
+            List<InteractivePoint> activePointCollection = _pointCollections.Where(point => point.PointEntity.PointComplited).ToList();
+            return activePointCollection.Last();
         }
     }
 }
