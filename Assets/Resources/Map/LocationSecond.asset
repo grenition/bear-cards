@@ -17,10 +17,12 @@ MonoBehaviour:
   <MinimumFork>k__BackingField: 3
   <MaximumFork>k__BackingField: 5
   <KeysEnemy>k__BackingField:
-  - Enemy
+  - EnemyMeadle
+  - EnemyLegend
   <KeysPrice>k__BackingField:
-  - Card
-  - Hill
+  - CraftMeadle
+  - HillEasy
+  - CardLegend
   <FirsEnemyPoint>k__BackingField: 0
   <EnemyFight>k__BackingField:
   - demo_battle
