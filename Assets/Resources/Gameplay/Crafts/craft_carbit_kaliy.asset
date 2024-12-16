@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be001e74c6d346738555627e3db8182e, type: 3}
+  m_Name: craft_carbit_kaliy
+  m_EditorClassIdentifier: 
+  <Metals>k__BackingField:
+  - {fileID: 11400000, guid: 6558f620cf6a37f4499b33f05eac2a78, type: 2}
+  - {fileID: 11400000, guid: 6558f620cf6a37f4499b33f05eac2a78, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  <NonMetals>k__BackingField:
+  - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
+  - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  <Output>k__BackingField: {fileID: 11400000, guid: 2fd93747a9c262b438374a463063632c, type: 2}
+  <Formula>k__BackingField: K<sub>2</sub>C<sub>2</sub>
