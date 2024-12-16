@@ -3082,7 +3082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 127894300095456238, guid: 7d86b0502c66d4bd69169a56198d22ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 127894300095456238, guid: 7d86b0502c66d4bd69169a56198d22ef, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3302,6 +3302,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d37810b9b46314edd87e12478623248d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &371270876 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6431702420379091533, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
+  m_PrefabInstance: {fileID: 1331437897}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &375368644
@@ -5462,9 +5473,7 @@ GameObject:
   - component: {fileID: 731619564}
   - component: {fileID: 731619570}
   - component: {fileID: 731619569}
-  - component: {fileID: 731619568}
   - component: {fileID: 731619567}
-  - component: {fileID: 731619566}
   - component: {fileID: 731619565}
   m_Layer: 5
   m_Name: UICardGiverStrong
@@ -5553,19 +5562,6 @@ MonoBehaviour:
     Count: 2
   - Rarity: 3
     Count: 1
---- !u!114 &731619566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731619563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843844ef65431ba45b4a0470cfa89083, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 731619568}
 --- !u!225 &731619567
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5578,28 +5574,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!95 &731619568
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731619563}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68d5cba62b7d2d94bba8ca67ea015681, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &731619569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6656,9 +6630,7 @@ GameObject:
   - component: {fileID: 941878561}
   - component: {fileID: 941878567}
   - component: {fileID: 941878566}
-  - component: {fileID: 941878565}
   - component: {fileID: 941878564}
-  - component: {fileID: 941878563}
   - component: {fileID: 941878562}
   m_Layer: 5
   m_Name: UICardGiverMeadle
@@ -6745,19 +6717,6 @@ MonoBehaviour:
     Count: 2
   - Rarity: 2
     Count: 1
---- !u!114 &941878563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941878560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843844ef65431ba45b4a0470cfa89083, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 941878565}
 --- !u!225 &941878564
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6770,28 +6729,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!95 &941878565
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941878560}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68d5cba62b7d2d94bba8ca67ea015681, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &941878566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8456,7 +8393,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 383.71997, y: -84.25}
+  m_AnchoredPosition: {x: 383.71997, y: -84.25003}
   m_SizeDelta: {x: 650, y: -171.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1306685483
@@ -9026,6 +8963,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1169609767}
     m_Modifications:
+    - target: {fileID: 2096437374553248494, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.8654785
+      objectReference: {fileID: 0}
     - target: {fileID: 5766398004964390555, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
       propertyPath: m_Name
       value: UIHill
@@ -9147,39 +9088,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5766398004964390555, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
   m_PrefabInstance: {fileID: 1331437897}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1331437901 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8276345191448658357, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
-  m_PrefabInstance: {fileID: 1331437897}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331437900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843844ef65431ba45b4a0470cfa89083, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1331437902 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4071443191824113029, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
-  m_PrefabInstance: {fileID: 1331437897}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1331437903 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3326914346112702842, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
-  m_PrefabInstance: {fileID: 1331437897}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1331437904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9193,10 +9101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _button: {fileID: 1331437899}
-  _animatorPanel: {fileID: 1331437901}
-  _mainIcon: {fileID: 1331437903}
+  _mainIcon: {fileID: 371270876}
   _effectText: {fileID: 825711298}
-  _name: {fileID: 1331437902}
+  _name: {fileID: 2106599388}
 --- !u!1001 &1342004047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13198,6 +13105,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1169609767}
     m_Modifications:
+    - target: {fileID: 2096437374553248494, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.8654785
+      objectReference: {fileID: 0}
     - target: {fileID: 2162859511249916257, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
       propertyPath: m_text
       value: "\u0412 \u0431\u043E\u0439"
@@ -13220,6 +13131,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5766398004964390555, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665352904670885244, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 231.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665352904670885244, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665352904670885244, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8969919881374906577, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
@@ -13331,17 +13254,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5766398004964390555, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
   m_PrefabInstance: {fileID: 2035102010}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2035102015 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8276345191448658357, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
-  m_PrefabInstance: {fileID: 2035102010}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2035102014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843844ef65431ba45b4a0470cfa89083, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2035102016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13355,7 +13267,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _button: {fileID: 2035102013}
-  _animatorPanel: {fileID: 2035102015}
 --- !u!1 &2068171340
 GameObject:
   m_ObjectHideFlags: 0
@@ -13774,6 +13685,17 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &2106599388 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2208126399185823415, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
+  m_PrefabInstance: {fileID: 1331437897}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2119080224 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6426217280175570869, guid: 86e43702194b54ccaa33b7e737f03cd2, type: 3}
@@ -14678,28 +14600,6 @@ MonoBehaviour:
   hoverOutlineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   hoverOutlineWidth: 2
   outlineAnimationDuration: 0.02
---- !u!95 &2983813288861565666
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5766398006566704106}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68d5cba62b7d2d94bba8ca67ea015681, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &3390168005393456551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14969,9 +14869,7 @@ GameObject:
   - component: {fileID: 8969919882977156512}
   - component: {fileID: 7176320774236710542}
   - component: {fileID: 3390168005393456551}
-  - component: {fileID: 2983813288861565666}
   - component: {fileID: 7102791189417869723}
-  - component: {fileID: 8276345193067635908}
   - component: {fileID: 1635886455}
   m_Layer: 5
   m_Name: UICardGiverEasy
@@ -15106,19 +15004,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4358278812451166570}
   m_CullTransparentMesh: 1
---- !u!114 &8276345193067635908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5766398006566704106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843844ef65431ba45b4a0470cfa89083, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 2983813288861565666}
 --- !u!114 &8587563124247834505
 MonoBehaviour:
   m_ObjectHideFlags: 0

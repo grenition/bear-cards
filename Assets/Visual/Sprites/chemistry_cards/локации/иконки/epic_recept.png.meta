@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      epic_recept_0: -9031032757959046491
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

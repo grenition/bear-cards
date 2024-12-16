@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      epic_vrag_0: -7981184639766068530
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

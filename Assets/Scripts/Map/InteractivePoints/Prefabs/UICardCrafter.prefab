@@ -707,10 +707,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116aeb82fcf94999b07de983e7c8ff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openScale: 1
-  closeScale: 0.5
+  openCloseAnimation: 0
   openDuration: 0.15
   closeDuration: 0.1
+  openDelay: 0
+  closeDelay: 0
+  openEase: 27
+  closeEase: 26
+  openScale: 1
+  closeScale: 0.5
+  slideOffsetX: 1920
+  slideOffsetY: 1080
 --- !u!225 &1779222507386617139
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1029,10 +1036,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116aeb82fcf94999b07de983e7c8ff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openScale: 1
-  closeScale: 0.5
+  openCloseAnimation: 0
   openDuration: 0.15
   closeDuration: 0.1
+  openDelay: 0
+  closeDelay: 0
+  openEase: 27
+  closeEase: 26
+  openScale: 1
+  closeScale: 0.5
+  slideOffsetX: 1920
+  slideOffsetY: 1080
 --- !u!225 &9217383829336586452
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1351,10 +1365,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116aeb82fcf94999b07de983e7c8ff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openScale: 1
-  closeScale: 0.5
+  openCloseAnimation: 0
   openDuration: 0.15
   closeDuration: 0.1
+  openDelay: 0
+  closeDelay: 0
+  openEase: 27
+  closeEase: 26
+  openScale: 1
+  closeScale: 0.5
+  slideOffsetX: 1920
+  slideOffsetY: 1080
 --- !u!225 &1213839289885779682
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1537,10 +1558,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116aeb82fcf94999b07de983e7c8ff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openScale: 1
-  closeScale: 0.5
+  openCloseAnimation: 0
   openDuration: 0.15
   closeDuration: 0.1
+  openDelay: 0
+  closeDelay: 0
+  openEase: 27
+  closeEase: 26
+  openScale: 1
+  closeScale: 0.5
+  slideOffsetX: 1920
+  slideOffsetY: 1080
 --- !u!225 &357971980838696958
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1723,10 +1751,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116aeb82fcf94999b07de983e7c8ff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openScale: 1
-  closeScale: 0.5
+  openCloseAnimation: 0
   openDuration: 0.15
   closeDuration: 0.1
+  openDelay: 0
+  closeDelay: 0
+  openEase: 27
+  closeEase: 26
+  openScale: 1
+  closeScale: 0.5
+  slideOffsetX: 1920
+  slideOffsetY: 1080
 --- !u!225 &9047935454900580322
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1909,10 +1944,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116aeb82fcf94999b07de983e7c8ff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openScale: 1
-  closeScale: 0.5
+  openCloseAnimation: 0
   openDuration: 0.15
   closeDuration: 0.1
+  openDelay: 0
+  closeDelay: 0
+  openEase: 27
+  closeEase: 26
+  openScale: 1
+  closeScale: 0.5
+  slideOffsetX: 1920
+  slideOffsetY: 1080
 --- !u!225 &8492488823764083593
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1950,9 +1992,7 @@ GameObject:
   - component: {fileID: 5807134275632202518}
   - component: {fileID: 6453396265933168835}
   - component: {fileID: 3537190401683337194}
-  - component: {fileID: 5936327692952645986}
   - component: {fileID: 3831922681204010704}
-  - component: {fileID: 709646254508790138}
   - component: {fileID: 7786873455947538586}
   m_Layer: 5
   m_Name: UICardCrafter
@@ -2021,28 +2061,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &5936327692952645986
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6639847382628139638}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68d5cba62b7d2d94bba8ca67ea015681, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!225 &3831922681204010704
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2055,19 +2073,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &709646254508790138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6639847382628139638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843844ef65431ba45b4a0470cfa89083, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 5936327692952645986}
 --- !u!114 &7786873455947538586
 MonoBehaviour:
   m_ObjectHideFlags: 0

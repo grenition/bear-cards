@@ -2,6 +2,7 @@ using Assets.Scripts.Map;
 using Cysharp.Threading.Tasks;
 using Project.Gameplay.Battle.Behaviour;
 using Project.Gameplay.Battle.Model;
+using Project.Gameplay.Common.Datas;
 using UnityEngine;
 
 namespace Project.Gameplay.Battle
@@ -46,6 +47,9 @@ namespace Project.Gameplay.Battle
         {
             if (Input.GetKeyDown(KeyCode.Space) && Behaviour.GetCurrentState() == BattleState.playerTurn)
                 Behaviour.NextTurn();
+
+            if (Input.GetKeyDown(KeyCode.P))
+                Model.EndBattle(CardOwner.player);
         }
         protected virtual void Start()
         {
