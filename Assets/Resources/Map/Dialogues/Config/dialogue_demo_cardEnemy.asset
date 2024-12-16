@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e0ab9da0c1e804ea4e907336885c97, type: 3}
   m_Name: dialogue_demo_cardEnemy
   m_EditorClassIdentifier: 
+  <LeftActorStart>k__BackingField: {fileID: 11400000, guid: 5ffe02817873ef84d91503f89e23a444, type: 2}
+  <RightActorStart>k__BackingField: {fileID: 11400000, guid: 0b4ad33c9ea99ca4f8872fb111beb94f, type: 2}
   <Dialogues>k__BackingField:
   - ActorPosition: 0
     ActorConfig: {fileID: 11400000, guid: 5ffe02817873ef84d91503f89e23a444, type: 2}
@@ -23,5 +25,5 @@ MonoBehaviour:
     ActorConfig: {fileID: 11400000, guid: 5ffe02817873ef84d91503f89e23a444, type: 2}
     TextDialogue: "*\u041F\u044B\u0442\u0430\u0435\u0442\u0441\u044F \u0441\u044A\u0435\u0431\u0430\u0442\u044C\u0441\u044F*"
   <Comand>k__BackingField: Equals(CountEnemyComming,1)
-  <StartUnlimited>k__BackingField: 1
+  <StartUnlimited>k__BackingField: 0
   IsComplited: 0

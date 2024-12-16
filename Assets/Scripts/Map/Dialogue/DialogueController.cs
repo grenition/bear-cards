@@ -22,23 +22,28 @@ namespace Project
         [SerializeField] private Button _nextStep;
 
         private int _numberStep;
-        private DIalogueConfig _config;
+        private DialogueConfig _config;
 
         private void Start()
         {
             _nextStep.onClick.Bind(() => UpdateDialogue()).AddTo(this);
         }
 
-        public void Initialize(DIalogueConfig dIalogueConfig)
+        public void Initialize(DialogueConfig dialogueConfig)
         {
-            _config = dIalogueConfig;
+            _leftActor.NameActor.text = dialogueConfig.LeftActorStart.Name;
+            _leftActor.ImageActor.sprite = dialogueConfig.LeftActorStart.Icon;
+            _rightActor.NameActor.text = dialogueConfig.RightActorStart.Name;
+            _rightActor.ImageActor.sprite = dialogueConfig.RightActorStart.Icon;
+
+            _config = dialogueConfig;
             _numberStep = 0;
             UpdateDialogue();
         }
 
         private void UpdateDialogue()
         {
-            if (_config.Dialogues.Length == _numberStep)
+            if (_config.Dialogues.Length <= _numberStep)
             {
                 var data = DialoguesStatic.LoadData();
                 var levelWasComplited = data.KeyDialogueWasComplited.ToList();
@@ -49,12 +54,13 @@ namespace Project
                     data.KeyDialogueWasComplited = levelWasComplited.ToArray();
                     DialoguesStatic.SaveData(data);
                 }
+                Destroy(gameObject);
                 return;
             }
 
             _dialogues.text = _config.Dialogues[_numberStep].TextDialogue;
 
-            if (_config.Dialogues[_numberStep].ActorPosition == DIalogueConfig.Actor.LeftActor)
+            if (_config.Dialogues[_numberStep].ActorPosition == DialogueConfig.Actor.LeftActor)
             {
                 UpdateActor(_leftActor, _rightActor, _config.Dialogues[_numberStep].ActorConfig.Name,
                     _config.Dialogues[_numberStep].ActorConfig.Icon);
@@ -71,8 +77,8 @@ namespace Project
         {
             activeActor.NameActor.text = name;
             activeActor.ImageActor.sprite = icon;
-            //activeActor.AnimatorActor?.SetTrigger("active");
-            //deactivateActor.AnimatorActor?.SetTrigger("disable");
+            activeActor.AnimatorActor?.SetTrigger("active");
+            deactivateActor.AnimatorActor?.SetTrigger("disable");
         }
 
         [Serializable]

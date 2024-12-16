@@ -9,10 +9,10 @@ namespace Project
     public class Dialogues
     {
         private Dictionary<string, DialogueCondition> _conditionsMap = new();
-        private DIalogueConfig _currentConfig;
+        private DialogueConfig _currentConfig;
 
         private DialogueController _prefabsDialogues;
-        private List<DIalogueConfig> _dialogueConfig = new List<DIalogueConfig>();
+        private List<DialogueConfig> _dialogueConfig = new List<DialogueConfig>();
         private List<string> _keyComplitedDialogues;
 
         private LocationVariabelsData _locationVariabelsData;
@@ -20,7 +20,7 @@ namespace Project
         {
             _prefabsDialogues = Resources.Load<DialogueController>("Map/Dialogues/Prefabs/Dialogues");
 
-            _dialogueConfig = Resources.LoadAll<DIalogueConfig>("Map/Dialogues/Config").ToList();
+            _dialogueConfig = Resources.LoadAll<DialogueConfig>("Map/Dialogues/Config").ToList();
             _locationVariabelsData = DialoguesStatic.LoadData();
             _dialogueConfig.ForEach(config =>
             {
@@ -47,7 +47,7 @@ namespace Project
             }
         }
 
-        private void StartDialogue(DIalogueConfig config)
+        private void StartDialogue(DialogueConfig config)
         {
             var data = DialoguesStatic.LoadData();
 
@@ -68,7 +68,7 @@ namespace Project
             });
         }
 
-        private string GetComand(DIalogueConfig config)
+        private string GetComand(DialogueConfig config)
         {
             var comand = config.Comand;
             var finalComand = comand.Substring(0, comand.IndexOf('('));

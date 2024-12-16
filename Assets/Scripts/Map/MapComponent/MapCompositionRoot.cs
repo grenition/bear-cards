@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static Codice.Client.BaseCommands.ProgressStatus;
 
 namespace Assets.Scripts.Map
 {
@@ -13,7 +12,7 @@ namespace Assets.Scripts.Map
         [field: SerializeField] public MapController MapController { get; private set; }
         [field: SerializeField] public MapCamera MapCamera { get; private set; }
         [field: SerializeField] public MapUI MapUI { get; private set; }
-        [field: SerializeField] public int HitPoint{ get; private set; }
+        [field: SerializeField] public int HitPoint { get; private set; }
         public MapPlayer MapPlayer { get; private set; }
 
         private List<string> _deck = new List<string>() { "card_phosphorus" };
@@ -63,7 +62,7 @@ namespace Assets.Scripts.Map
             MapPlayer = Instantiate(_playerPrefab, _locationPoints[0].ViewPoint.transform.position, Quaternion.identity);
             MapController.Create(_locationPoints, _activeLocation);
 
-            MapController.OnPointBeginInteract +=() => _progressUI.Hide();
+            MapController.OnPointBeginInteract += () => _progressUI.Hide();
             MapController.OnMapProgressUpdate += ProgressInit;
             MapCamera.MoveCameraToPlayer();
 
@@ -88,18 +87,21 @@ namespace Assets.Scripts.Map
         }
 
         public void ShowCraftGiver() => _craftGiverUI.SetActive(true);
-        
+
         public int GetNextLocationKey()
         {
-            if(_curentLocationNumber++ >= _locationKey.Length)
+            if (_curentLocationNumber++ >= _locationKey.Length)
             {
-                //Game win
+                var data = DialoguesStatic.LoadData();
+                data.GameWinCount++;
+                DialoguesStatic.SaveData(data);
+
                 _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber]}");
                 return _activeLocation.LocationKey;
             }
 
             _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber++]}");
-            return _activeLocation.LocationKey; 
+            return _activeLocation.LocationKey;
         }
 
         public void ReloadMap()

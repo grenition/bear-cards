@@ -137,6 +137,10 @@ namespace Assets.Scripts.Map
 
         public void LocationComplited()
         {
+            var data = DialoguesStatic.LoadData();
+            data.LocationUpdate++;
+            DialoguesStatic.SaveData(data);
+
             var keyLocation = MapCompositionRoot.Instance.GetNextLocationKey();
             MapStaticData.SaveData(_pointCollections.Select(point => point.PointEntity).ToArray(), 0, keyLocation);
             MapCompositionRoot.Instance.ReloadMap();

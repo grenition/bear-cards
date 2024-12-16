@@ -14,6 +14,10 @@ namespace Assets.Scripts.Map
 
         public override void OnBeginInteract()
         {
+            var data = DialoguesStatic.LoadData();
+            data.CountHillComming++;
+            DialoguesStatic.SaveData(data);
+
             var hillPanel = (HillUI)MapCompositionRoot.Instance.MapUI.ActiveUIByKey("hill");
             hillPanel.Apper(() => MapCompositionRoot.Instance.MapController.ComplitePoint(),
                 _config.Icon, _config.Description, _config.HPModificator, _config.Name);
