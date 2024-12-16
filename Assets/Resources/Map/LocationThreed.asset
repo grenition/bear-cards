@@ -19,7 +19,6 @@ MonoBehaviour:
   <KeysEnemy>k__BackingField:
   - EnemyLegend
   <KeysPrice>k__BackingField:
-  - Card
   - HillEasy
   - CraftMeadle
   <FirsEnemyPoint>k__BackingField: 0

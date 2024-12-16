@@ -25,7 +25,7 @@ MonoBehaviour:
   - CardMeadle
   - HillEasy
   - HillLegend
-  <FirsEnemyPoint>k__BackingField: 0
+  <FirsEnemyPoint>k__BackingField: 1
   <EnemyFight>k__BackingField:
   - demo_battle
   <BossFight>k__BackingField: demo_battle
