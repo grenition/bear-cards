@@ -21,10 +21,7 @@ MonoBehaviour:
   - EnemyMeadle
   - EnemyLegend
   <KeysPrice>k__BackingField:
-  - CardEasy
-  - CardMeadle
-  - HillEasy
-  - HillLegend
+  - CraftMeadle
   <FirsEnemyPoint>k__BackingField: 1
   <EnemyFight>k__BackingField:
   - demo_battle

@@ -14,7 +14,9 @@ namespace Project
             LocationUpdate = 0;
             GameWinCount = 0;
             GameFail = 0;
+
             KeyDialogueWasComplited = new string[0];
+            Recepts = new string[0];
         }
 
         public bool FirstStart;
@@ -26,6 +28,7 @@ namespace Project
         public int GameWinCount;
         public int GameFail;
 
+        public string[] Recepts;
         public string[] KeyDialogueWasComplited;
     }
 }
