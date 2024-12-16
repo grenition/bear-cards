@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be001e74c6d346738555627e3db8182e, type: 3}
+  m_Name: craft_nitrid_rtut
+  m_EditorClassIdentifier: 
+  <Metals>k__BackingField:
+  - {fileID: 11400000, guid: 833bc332758ede44dac2174297f79d59, type: 2}
+  - {fileID: 11400000, guid: 833bc332758ede44dac2174297f79d59, type: 2}
+  - {fileID: 11400000, guid: 833bc332758ede44dac2174297f79d59, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  <NonMetals>k__BackingField:
+  - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
+  - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  <Output>k__BackingField: {fileID: 11400000, guid: e2371c5f6ea52f94fa14ff77f6399114, type: 2}
+  <Formula>k__BackingField: Hg<sub>3</sub>N<sub>2</sub>

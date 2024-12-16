@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be001e74c6d346738555627e3db8182e, type: 3}
+  m_Name: craft_carbit_serebro
+  m_EditorClassIdentifier: 
+  <Metals>k__BackingField:
+  - {fileID: 11400000, guid: 9bf260b8c28677448a40ef004b4e0f3e, type: 2}
+  - {fileID: 11400000, guid: 9bf260b8c28677448a40ef004b4e0f3e, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  <NonMetals>k__BackingField:
+  - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  <Output>k__BackingField: {fileID: 11400000, guid: 8f956a40ea0bb5b4f9d77140b0e1da14, type: 2}
+  <Formula>k__BackingField: Ag<sub>2</sub>C
