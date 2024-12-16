@@ -10,5 +10,6 @@ namespace Project.Gameplay.Battle.Craft
         [field: SerializeField] public CardConfig[] NonMetals { get; private set; } = new CardConfig[5];
 
         [field: SerializeField] public CardConfig Output { get; private set; }
+        [field: SerializeField] public string Formula { get; private set; }
     }
 }

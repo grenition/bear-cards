@@ -225,5 +225,13 @@ namespace GreonAssets.UI.ComponentAnimations
         {
             gameObject.SetActive(false);
         }
+
+        public void SwitchActiveState()
+        {
+            if (!gameObject.activeSelf)
+                Open();
+            else
+                Close();
+        }
     }
 }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be001e74c6d346738555627e3db8182e, type: 3}
-  m_Name: test_craft 1
+  m_Name: test_craft 2
   m_EditorClassIdentifier: 
   <Metals>k__BackingField:
   - {fileID: 11400000, guid: c9794b798402846e8b9d41f159a06587, type: 2}
