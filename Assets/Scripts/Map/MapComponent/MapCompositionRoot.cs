@@ -62,7 +62,7 @@ namespace Assets.Scripts.Map
             MapPlayer = Instantiate(_playerPrefab, _locationPoints[0].ViewPoint.transform.position, Quaternion.identity);
             MapController.Create(_locationPoints, _activeLocation);
 
-            MapController.OnPointBeginInteract += () => _progressUI.Hide();
+            MapController.OnPointBeginInteract += HideProgress;
             MapController.OnMapProgressUpdate += ProgressInit;
             MapCamera.MoveCameraToPlayer();
 
@@ -129,11 +129,12 @@ namespace Assets.Scripts.Map
             _progressUI.UpdateCardMajesty(progres.Deck.Where(card => card.StartsWith("spell")).Count());
         }
 
+        private void HideProgress() => _progressUI.Hide();
         private void OnDisable()
         {
             _hillPanel.OnModificateHP -= SavePlayerStat;
             MapController.OnMapProgressUpdate -= ProgressInit;
-            MapController.OnPointBeginInteract -= () => _progressUI.Hide();
+            MapController.OnPointBeginInteract -= HideProgress;
 
             Instance = null;
             MapController = null;
