@@ -11,11 +11,9 @@ namespace Assets.Scripts.Map
         {
             PointEntity.Key = "CraftMeadle";
         }
-        public override async void OnBeginInteract()
+        public override  void OnBeginInteract()
         {
             MapCompositionRoot.Instance.ShowCraftGiver();
-            await UniTask.WaitForSeconds(1);
-            MapCompositionRoot.Instance.MapController.ComplitePoint();
         }
 
         public override void OnEndInteract()
