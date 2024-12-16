@@ -1,19 +1,16 @@
 ﻿using Cysharp.Threading.Tasks;
-using System;
-using System.Collections;
-using UnityEngine;
 
 namespace Assets.Scripts.Map
 {
-    internal class CraftPoint : InteractivePoint
+    internal class CardPoint : InteractivePoint
     {
-        public CraftPoint()
+        public CardPoint()
         {
-            PointEntity.Key = "CraftMeadle";
+            PointEntity.Key = "CardEasy";
         }
         public override async void OnBeginInteract()
         {
-            MapCompositionRoot.Instance.ShowCraftGiver();
+            MapCompositionRoot.Instance.ShowCardGiver("easy");
             await UniTask.WaitForSeconds(1);
             MapCompositionRoot.Instance.MapController.ComplitePoint();
         }
