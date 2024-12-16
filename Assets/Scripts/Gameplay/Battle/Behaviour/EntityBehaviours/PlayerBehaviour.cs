@@ -36,6 +36,7 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
 
             foreach (var deckCard in _shouldGivedCards.ToList())
             {
+                if(deckCard == null) continue;
                 if (!BattleBehaviour.Config.GiveCardsByActualLevel || deckCard.Level <= PlayerModel.Level)
                 {
                     BattleBehaviour.Model.AddCardToDeck(CardOwner.player, deckCard.name);
@@ -65,6 +66,8 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
 
             foreach (var deckCard in _shouldGivedCards.ToList())
             {
+                if(deckCard == null) continue;
+                
                 if (!BattleBehaviour.Config.GiveCardsByActualLevel || deckCard.Level <= PlayerModel.Level)
                 {
                     BattleBehaviour.Model.AddCardToDeck(CardOwner.player, deckCard.name);
