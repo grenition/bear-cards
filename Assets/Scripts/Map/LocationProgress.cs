@@ -21,7 +21,7 @@ namespace Assets.Scripts.Map
             }
             else
             {
-                var Deck = startDeck != null ? startDeck.ToArray() : new string[] { "card_phosphorus", "card_sulfur", "card_oxygen", "card_sodium", "spell_2", "spell_3", "spell_sulfide_rtut" };
+                var Deck = startDeck != null ? startDeck.ToArray() : new string[] { };
                 LocationData locationData = new()
                 {
                     KeyLocation = 0,
@@ -54,7 +54,7 @@ namespace Assets.Scripts.Map
         public void SaveData(PointEntity[] currentLevelPoint, int levelLocation, int keyNumber)
         {
             string path = Path.Combine(Application.persistentDataPath, "locationProgress.json");
-            string[] deck = new string[] { "card_phosphorus", "card_sulfur", "card_oxygen", "card_sodium", "spell_2", "spell_3", "spell_sulfide_rtut" };
+            string[] deck = new string[] { };
 
             if (File.Exists(path))
             {
