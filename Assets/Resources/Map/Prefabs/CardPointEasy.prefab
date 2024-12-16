@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: _animator
       value: 
-      objectReference: {fileID: -137634157566931593}
+      objectReference: {fileID: -3097290396015470351}
     - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: _colorPass.a
       value: 1
@@ -63,7 +63,7 @@ PrefabInstance:
     - target: {fileID: 1982595992962122621, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 5708770886307594227, guid: ead9875ab44f5644fb6f9de8a7d9651a, type: 3}
+      objectReference: {fileID: 500428835326084701, guid: db20377281ee9c241b7489d209ff80a0, type: 3}
     - target: {fileID: 1982595992962122621, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -128,17 +128,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3482232740029946504, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1615237463687516646, guid: d236118f06d3d6a4b964e5b0ef408db0, type: 3}
     - target: {fileID: 4330666968279123397, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1
+      value: 1.03
       objectReference: {fileID: 0}
     - target: {fileID: 4330666968279123397, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 1.03
       objectReference: {fileID: 0}
     - target: {fileID: 7215914982196421627, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_Name
-      value: CraftPoint
+      value: CardPointEasy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -146,17 +150,17 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7215914982196421627, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2926370142142623996}
+      addedObject: {fileID: 4366072102437068179}
     - targetCorrespondingSourceObject: {fileID: 7215914982196421627, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -137634157566931593}
+      addedObject: {fileID: -3097290396015470351}
   m_SourcePrefab: {fileID: 100100000, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
 --- !u!1 &2750655892128260775 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7215914982196421627, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
   m_PrefabInstance: {fileID: 4758156927590941020}
   m_PrefabAsset: {fileID: 0}
---- !u!225 &-2926370142142623996
+--- !u!225 &4366072102437068179
 CanvasGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +172,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!95 &-137634157566931593
+--- !u!95 &-3097290396015470351
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0

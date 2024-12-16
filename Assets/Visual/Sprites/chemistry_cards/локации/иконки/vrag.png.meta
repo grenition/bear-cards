@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: db20377281ee9c241b7489d209ff80a0
+guid: 69d68f46e980d084f88e46361c65ac3c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 500428835326084701
-    second: slianie_cards 1_0
+      213: -6490837914548769159
+    second: vrag_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slianie_cards 1_0
+      name: vrag_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 103
-        height: 103
+        width: 209
+        height: 209
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5649f4df51e1f600800000000000000
-      internalID: 500428835326084701
+      spriteID: 97eeea08e49ebe5a0800000000000000
+      internalID: -6490837914548769159
       vertices: []
       indices: 
       edges: []
@@ -186,8 +186,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      slianie_cards 1_0: 500428835326084701
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

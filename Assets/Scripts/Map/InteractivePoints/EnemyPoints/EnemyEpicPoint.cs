@@ -1,13 +1,12 @@
-using Project;
-using UnityEngine;
+using Assets.Scripts.Map;
 
-namespace Assets.Scripts.Map
+namespace Project
 {
-    public class EnemyPoint : InteractivePoint
+    public class EnemyEpicPoint : InteractivePoint
     {
-        public EnemyPoint()
+        public EnemyEpicPoint()
         {
-            PointEntity.Key = "Enemy";
+            PointEntity.Key = "EnemyMeadle";
         }
 
         public override void OnBeginInteract()

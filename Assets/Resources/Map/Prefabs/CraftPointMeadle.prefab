@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6193662105594493128
+--- !u!1001 &4758156927590941020
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: _animator
       value: 
-      objectReference: {fileID: -4535023697027408797}
+      objectReference: {fileID: -137634157566931593}
     - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: _colorPass.a
       value: 1
@@ -63,7 +63,7 @@ PrefabInstance:
     - target: {fileID: 1982595992962122621, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1500434286138515679, guid: 1e66e1ac5e40f400596ba8ead97c955e, type: 3}
+      objectReference: {fileID: -6562036712779350920, guid: 96eca45a43853fc41902270ee7ddd4db, type: 3}
     - target: {fileID: 1982595992962122621, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -74,15 +74,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2625828526175066264, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.04
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2625828526175066264, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.04
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2625828526175066264, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.04
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2625828526175066264, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -128,17 +128,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3482232740029946504, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6562036712779350920, guid: 96eca45a43853fc41902270ee7ddd4db, type: 3}
     - target: {fileID: 4330666968279123397, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.29
+      value: 2.09
       objectReference: {fileID: 0}
     - target: {fileID: 4330666968279123397, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.29
+      value: 2.09
       objectReference: {fileID: 0}
     - target: {fileID: 7215914982196421627, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_Name
-      value: HillPoint
+      value: CraftPointMeadle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -146,36 +150,36 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7215914982196421627, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6997058374665378002}
+      addedObject: {fileID: -2926370142142623996}
     - targetCorrespondingSourceObject: {fileID: 7215914982196421627, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -4535023697027408797}
+      addedObject: {fileID: -137634157566931593}
   m_SourcePrefab: {fileID: 100100000, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
---- !u!1 &3589468611854293811 stripped
+--- !u!1 &2750655892128260775 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7215914982196421627, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
-  m_PrefabInstance: {fileID: 6193662105594493128}
+  m_PrefabInstance: {fileID: 4758156927590941020}
   m_PrefabAsset: {fileID: 0}
---- !u!225 &6997058374665378002
+--- !u!225 &-2926370142142623996
 CanvasGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3589468611854293811}
+  m_GameObject: {fileID: 2750655892128260775}
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!95 &-4535023697027408797
+--- !u!95 &-137634157566931593
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3589468611854293811}
+  m_GameObject: {fileID: 2750655892128260775}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ac60642045268e54ca7a210b490d2745, type: 2}

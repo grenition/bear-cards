@@ -1,15 +1,15 @@
-using Project;
+using Assets.Scripts.Map;
 using UnityEngine;
 
-namespace Assets.Scripts.Map
+namespace Project
 {
-    public class HillPoint : InteractivePoint
+    public class HillLegendPoint : InteractivePoint
     {
         private HillDescriptionConfig _config;
-        public HillPoint()
+        public HillLegendPoint()
         {
-            PointEntity.Key = "Hill";
-            _config = Resources.Load<HillDescriptionConfig>("Map/DescConfig/HillDescriptionConfig");
+            PointEntity.Key = "HillLegend";
+            _config = Resources.Load<HillDescriptionConfig>("Map/DescConfig/HillLegendConfig");
         }
 
         public override void OnBeginInteract()

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7069992601688121940
+--- !u!1001 &3315411227956688621
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: _animator
       value: 
-      objectReference: {fileID: -8302140710609358442}
+      objectReference: {fileID: -902212323132231024}
     - target: {fileID: 560107949336996622, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: _colorPass.a
       value: 1
@@ -62,15 +62,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1982595992962122621, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_Size.x
-      value: 0.99
+      value: 1.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982595992962122621, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: m_Size.y
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: 1982595992962122621, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7261323403473509586, guid: d7e5547c89b1ab046a0362750104f878, type: 3}
+      objectReference: {fileID: -6490837914548769159, guid: 69d68f46e980d084f88e46361c65ac3c, type: 3}
     - target: {fileID: 1982595992962122621, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982595992962122621, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1982595992962122621, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_SortingLayerID
@@ -135,22 +143,26 @@ PrefabInstance:
     - target: {fileID: 3482232740029946504, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -2424553518018739129, guid: 9e6121499477d0c4cac5cd5f00fb297e, type: 3}
+      objectReference: {fileID: -6490837914548769159, guid: 69d68f46e980d084f88e46361c65ac3c, type: 3}
     - target: {fileID: 4330666968279123397, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 0.99
+      value: 1.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330666968279123397, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: 4330666968279123397, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.99
+      value: 2.09
       objectReference: {fileID: 0}
     - target: {fileID: 4330666968279123397, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 2.09
       objectReference: {fileID: 0}
     - target: {fileID: 7215914982196421627, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       propertyPath: m_Name
-      value: BossPoint
+      value: EnemyEasyPoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -158,36 +170,36 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7215914982196421627, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3993418215782502950}
+      addedObject: {fileID: 3808150625695048723}
     - targetCorrespondingSourceObject: {fileID: 7215914982196421627, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -8302140710609358442}
+      addedObject: {fileID: -902212323132231024}
   m_SourcePrefab: {fileID: 100100000, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
---- !u!1 &448597041056973231 stripped
+--- !u!1 &5343134496542659862 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7215914982196421627, guid: 64bd22c87d8155548970702c09975bb6, type: 3}
-  m_PrefabInstance: {fileID: 7069992601688121940}
+  m_PrefabInstance: {fileID: 3315411227956688621}
   m_PrefabAsset: {fileID: 0}
---- !u!225 &3993418215782502950
+--- !u!225 &3808150625695048723
 CanvasGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448597041056973231}
+  m_GameObject: {fileID: 5343134496542659862}
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!95 &-8302140710609358442
+--- !u!95 &-902212323132231024
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448597041056973231}
+  m_GameObject: {fileID: 5343134496542659862}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ac60642045268e54ca7a210b490d2745, type: 2}
