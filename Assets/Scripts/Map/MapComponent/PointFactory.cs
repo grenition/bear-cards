@@ -25,6 +25,8 @@ namespace Assets.Scripts.Map
             _viewPointsMap.Add("CraftMeadle", Resources.Load<ViewPoint>("Map/Prefabs/CraftPointMeadle"));
             _viewPointsMap.Add("HillEasy", Resources.Load<ViewPoint>("Map/Prefabs/HillPointEasy"));
             _viewPointsMap.Add("HillLegend", Resources.Load<ViewPoint>("Map/Prefabs/HillPointLegend"));
+            _viewPointsMap.Add("ReceptMeadle", Resources.Load<ViewPoint>("Map/Prefabs/ReceptMeadlePoint"));
+            _viewPointsMap.Add("ReceptEpic", Resources.Load<ViewPoint>("Map/Prefabs/ReceptEpicPoint"));
             _viewPointsMap.Add("Boss", Resources.Load<ViewPoint>("Map/Prefabs/BossPoint"));
         }
 
@@ -42,6 +44,8 @@ namespace Assets.Scripts.Map
                 "HillEasy" => new HillPoint(),
                 "HillLegend" => new HillLegendPoint(),
                 "CraftMeadle" => new CraftPoint(),
+                "ReceptMeadle" => new ReceptMeadlePoint(),
+                "ReceptEpic" => new ReceptEpicPoint(),
                 "Boss" => new BossPoint(),
                 _ => throw new NotImplementedException($"{key} not found"),
             };
