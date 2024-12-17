@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: LocationThreed
   m_EditorClassIdentifier: 
   <LocationKey>k__BackingField: 2
-  <LocationLevel>k__BackingField: 7
-  <MinimumFork>k__BackingField: 3
-  <MaximumFork>k__BackingField: 4
+  <LocationLevel>k__BackingField: 6
+  <MinimumFork>k__BackingField: 1
+  <MaximumFork>k__BackingField: 3
   <KeysEnemy>k__BackingField:
   - EnemyLegend
   <KeysPrice>k__BackingField:
-  - HillEasy
+  - CardEasy
+  - CardMeadle
   - CraftMeadle
+  - CardLegend
+  - HillEasy
+  - HillLegend
   <FirsEnemyPoint>k__BackingField: 0
   <BattleKeys>k__BackingField:
   - boss_battle

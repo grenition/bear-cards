@@ -18,10 +18,11 @@ MonoBehaviour:
   <MaximumFork>k__BackingField: 3
   <KeysEnemy>k__BackingField:
   - EnemyEasy
-  - EnemyMeadle
-  - CardEasy
   <KeysPrice>k__BackingField:
-  - ReceptEpic
+  - CardEasy
+  - CardMeadle
+  - CraftMeadle
+  - HillEasy
   <FirsEnemyPoint>k__BackingField: 1
   <BattleKeys>k__BackingField:
   - standart_battle
