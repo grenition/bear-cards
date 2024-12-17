@@ -117,7 +117,7 @@ namespace Project
                     cards.Add(CardVisual[i].Model.Key);
             }
 
-            MapStaticData.SaveDeck(cards);
+            MapStaticData.AddToDeckAndSave(cards);
             gameObject.CloseWithChildrensAnimation();
         }
 
