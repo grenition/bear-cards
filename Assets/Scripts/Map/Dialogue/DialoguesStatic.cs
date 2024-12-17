@@ -8,17 +8,20 @@ namespace Project
         private static Dialogues _dialogues;
         private static LocationVariableLoader _locationVariabelsoader;
 
-        private static string[] _recepts;
+        public static string[] Recepts { get; private set; }
+
+        public static void SetRecepts(string[] recepts)
+        {
+            if (Recepts == null)
+                Recepts = recepts;
+        }
 
         public static string[] GetNewRecepts()
         {
-            if (_recepts == null)
-                _recepts = Resources.LoadAll<ScriptableObject>("Gameplay/Crafts/").ToList().Select(obj => obj.ToString()).ToArray();
-
             var data = LoadData();
-            var newRecept = _recepts.Where(recept => !data.Recepts.Contains(recept));
+            var newRecept = Recepts.Where(recept => !data.Recepts.Contains(recept));
 
-            return _recepts;
+            return newRecept.ToArray();
         }
 
         public static void SaveRecept(string[] newRecepts)

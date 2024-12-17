@@ -8,14 +8,18 @@ namespace Project
     {
         public ReceptMeadlePoint()
         {
-            PointEntity.Key = "Start";
+            PointEntity.Key = "ReceptMeadle";
         }
 
         public override void OnBeginInteract()
         {
             var recepts = DialoguesStatic.GetNewRecepts();
             if (recepts.Length == 0)
-                return;//Give empty string
+            {
+                MapCompositionRoot.Instance.ReceptUI.SetRecepts(recepts);
+                MapCompositionRoot.Instance.ReceptUI.gameObject.SetActive(true);
+                return;
+            }
 
             var random = new Random();
             for (int i = recepts.Length - 1; i >= 1; i--)
@@ -26,7 +30,8 @@ namespace Project
                 recepts[i] = temp;
             }
 
-            string newRecept = recepts[0];//Give
+            MapCompositionRoot.Instance.ReceptUI.SetRecepts(new string[1] { recepts[0] });
+            MapCompositionRoot.Instance.ReceptUI.gameObject.SetActive(true);
         }
 
         public override void OnEndInteract()

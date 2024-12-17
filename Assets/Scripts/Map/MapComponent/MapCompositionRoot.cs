@@ -12,6 +12,7 @@ namespace Assets.Scripts.Map
         [field: SerializeField] public MapController MapController { get; private set; }
         [field: SerializeField] public MapCamera MapCamera { get; private set; }
         [field: SerializeField] public MapUI MapUI { get; private set; }
+        [field: SerializeField] public RecipeGettedUI ReceptUI { get; private set; }
         [field: SerializeField] public int HitPoint { get; private set; }
         public MapPlayer MapPlayer { get; private set; }
 
@@ -85,7 +86,6 @@ namespace Assets.Scripts.Map
                     break;
             }
         }
-
         public void ShowCraftGiver() => _craftGiverUI.SetActive(true);
 
         public int GetNextLocationKey()
