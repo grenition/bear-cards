@@ -100,11 +100,11 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         public CardSlotModel GetFirstFreeSlotInDeck() => Deck.FirstOrDefault(x => x.Card == null);
         public CardSlotModel GetFirstFreeSlotInSpells() => Spells.FirstOrDefault(x => x.Card == null);
         public bool IsAllCardInDeckHigherThanPlayerLevel() => Deck.Where(x => x.Card != null).All(x => x.Card.Level > Level);
-        public bool TransferCardFromDeckToHand()
+        public bool TransferCardFromDeckToHand(bool ignoreSpells = true)
         {
             var card = GetFirstCardInDeck();
             var targetSlot = GetFirstFreeSlotInHand();
-            if (card == null || card.Type == CardType.Spell || targetSlot == null) return false;
+            if (card == null || (card.Type == CardType.Spell && ignoreSpells) || targetSlot == null) return false;
 
             BattleModel.TryTransferCard(card.Position, targetSlot.Position);
             return true;
