@@ -8,6 +8,7 @@ using R3;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using GreonAssets.UI.Extensions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -117,7 +118,7 @@ namespace Project
             }
 
             MapStaticData.SaveDeck(cards);
-            gameObject.SetActive(false);
+            gameObject.CloseWithChildrensAnimation();
         }
 
         [Serializable]
