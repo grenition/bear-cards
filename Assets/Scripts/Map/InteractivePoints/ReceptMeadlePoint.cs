@@ -33,6 +33,7 @@ namespace Project
 
             MapCompositionRoot.Instance.ReceptUI.SetRecepts(new string[1] { recepts[0] });
             MapCompositionRoot.Instance.ReceptUI.gameObject.SetActive(true);
+            MapCompositionRoot.Instance.ReceptUI.Apper(ComplitedAction);
 
             var data = DialoguesStatic.LoadData();
             var receptsCollection = data.Recepts.ToList();
@@ -40,6 +41,7 @@ namespace Project
             data.Recepts = receptsCollection.ToArray();
             DialoguesStatic.SaveRecept(receptsCollection.ToArray());
         }
+        private void ComplitedAction() => MapCompositionRoot.Instance.MapController.ComplitePoint();
 
         public override void OnEndInteract()
         {

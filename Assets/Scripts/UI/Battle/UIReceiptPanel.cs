@@ -1,5 +1,6 @@
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Data;
+using System.Linq;
 using UnityEngine;
 
 namespace Project.UI.Battle
@@ -12,12 +13,14 @@ namespace Project.UI.Battle
         private void Start()
         {
             _receiptsRoot.DestroyAllChildrens();
+            var activeRecept = DialoguesStatic.LoadData().Recepts;
 
-            foreach (var craft in BattleStaticData.Crafts.Values)
+            activeRecept.ToList().ForEach(recept =>
             {
                 var receipt = Instantiate(_receiptPrefab, _receiptsRoot);
-                receipt.Init(craft);
-            }
+                receipt.Init(BattleStaticData.Crafts.Get(recept));
+            });
+
         }
     }
 }

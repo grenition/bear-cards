@@ -1,10 +1,7 @@
-using Assets.Scripts.Map;
 using GreonAssets.Extensions;
-using Project.Audio;
+using GreonAssets.UI.Extensions;
 using R3;
 using System;
-using GreonAssets.UI.Extensions;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
