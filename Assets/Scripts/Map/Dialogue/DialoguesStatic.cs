@@ -35,12 +35,18 @@ namespace Project
             _locationVariabelsoader.SaveVariables(data);
         }
 
-        public static void SaveData(LocationVariabelsData data)
+        public static void SaveDataAndExecuteDialogue(LocationVariabelsData data)
         {
             Initialize();
             _locationVariabelsoader.SaveVariables(data);
 
             _dialogues.DialoguesUpdate();
+        }
+
+        public static void SaveData(LocationVariabelsData data)
+        {
+            Initialize();
+            _locationVariabelsoader.SaveVariables(data);
         }
 
         public static LocationVariabelsData LoadData()
@@ -53,12 +59,6 @@ namespace Project
         {
             Initialize();
             _locationVariabelsoader.Deleted();
-        }
-
-        public static DialogueCondition CreateCondition(string comand)
-        {
-            Initialize();
-            return _dialogues.CreateCondition(comand);
         }
 
         public static void DialogueComplited()

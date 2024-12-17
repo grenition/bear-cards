@@ -14,7 +14,7 @@ namespace Assets.Scripts.Map
         {
             var data = DialoguesStatic.LoadData();
             data.CountEnemyComming++;
-            DialoguesStatic.SaveData(data);
+            DialoguesStatic.SaveDataAndExecuteDialogue(data);
 
             var fightPanel = (FightUI)MapCompositionRoot.Instance.MapUI.ActiveUIByKey("fight");
         }

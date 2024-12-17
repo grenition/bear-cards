@@ -51,7 +51,7 @@ namespace Assets.Scripts.Map
 
             var data = DialoguesStatic.LoadData();
             data.GameWinCount++;
-            DialoguesStatic.SaveData(data);
+            DialoguesStatic.SaveDataAndExecuteDialogue(data);
 
             await UniTask.WaitUntil(() => !DialoguesStatic.DialogueStatus());
 
@@ -67,7 +67,7 @@ namespace Assets.Scripts.Map
 
             var data = DialoguesStatic.LoadData();
             data.GameFail++;
-            DialoguesStatic.SaveData(data);
+            DialoguesStatic.SaveDataAndExecuteDialogue(data);
 
             await UniTask.WaitUntil(() => !DialoguesStatic.DialogueStatus());
 

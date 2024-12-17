@@ -58,7 +58,7 @@ namespace Project
 
             var data = DialoguesStatic.LoadData();
             data.CountCardGiveComming++;
-            DialoguesStatic.SaveData(data);
+            DialoguesStatic.SaveDataAndExecuteDialogue(data);
 
             for (int i = 0; i < _buttons.Length; i++)
             {

@@ -16,7 +16,7 @@ namespace Project
         {
             var data = DialoguesStatic.LoadData();
             data.CountHillComming++;
-            DialoguesStatic.SaveData(data);
+            DialoguesStatic.SaveDataAndExecuteDialogue(data);
 
             var hillPanel = (HillUI)MapCompositionRoot.Instance.MapUI.ActiveUIByKey("hill");
             hillPanel.Apper(() => MapCompositionRoot.Instance.MapController.ComplitePoint(),

@@ -59,7 +59,7 @@ namespace Assets.Scripts.Map
                         break;
                 }
             }
-            DialoguesStatic.SaveData(data);
+            DialoguesStatic.SaveDataAndExecuteDialogue(data);
         }
 
         private void Update()

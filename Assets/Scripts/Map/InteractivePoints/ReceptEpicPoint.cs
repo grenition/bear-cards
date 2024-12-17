@@ -49,6 +49,9 @@ namespace Project
             receptsCollection.AddRange(newRecept);
             data.Recepts = receptsCollection.ToArray();
             DialoguesStatic.SaveRecept(receptsCollection.ToArray());
+
+            data.CountReceptComming++;
+            DialoguesStatic.SaveDataAndExecuteDialogue(data);
         }
 
         private void ComplitedAction() => MapCompositionRoot.Instance.MapController.ComplitePoint();
