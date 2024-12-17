@@ -15,6 +15,14 @@ namespace GreonAssets.UI.Extensions
                 obj.CloseWithAnimation(disableAfterComplete);
         }
         
+        public static void SetActiveWithChildrensAnimation(this GameObject obj, bool activeState, bool disableAfterComplete = true)
+        {
+            if (activeState)
+                obj.SetActive(true);
+            else
+                obj.CloseWithChildrensAnimation(disableAfterComplete);
+        }
+        
         public static void CloseWithAnimation(this GameObject obj, bool disableAfterComplete = true)
         {
             if(obj == null) return;
