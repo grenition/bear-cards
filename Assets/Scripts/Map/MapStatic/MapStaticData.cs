@@ -1,7 +1,6 @@
 using Project;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
 namespace Assets.Scripts.Map
 {
@@ -13,6 +12,12 @@ namespace Assets.Scripts.Map
         private static PlayerStatsData _playerData;
 
         private static int _idBattlePoint;
+
+        public static void SetStartDeck(string[] startDeck)
+        {
+            Initialize();
+            _locationProgress.SetStartDeck(startDeck);
+        }
 
         public static LocationProgress.LocationData LoadData(IEnumerable<string> startDeck = null)
         {
