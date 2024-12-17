@@ -43,6 +43,16 @@ namespace Assets.Scripts.Map
 
             var data = DialoguesStatic.LoadData();
             data.FirstStart = true;
+
+            if(locationConfigurate.LocationLevel == 1 && activePoint.PointEntity.ID == 0)
+            {
+                data.CountLocationTwoUpdate++;
+            }
+            else if (locationConfigurate.LocationLevel == 2 && activePoint.PointEntity.ID == 0)
+            {
+                data.CountLocationThree++;
+            }
+
             DialoguesStatic.SaveData(data);
         }
 
@@ -137,9 +147,9 @@ namespace Assets.Scripts.Map
 
         public void LocationComplited()
         {
-            var data = DialoguesStatic.LoadData();
-            data.LocationUpdate++;
-            DialoguesStatic.SaveData(data);
+            //var data = DialoguesStatic.LoadData();
+            //data.LocationUpdate++;
+            //DialoguesStatic.SaveData(data);
 
             var keyLocation = MapCompositionRoot.Instance.GetNextLocationKey();
             MapStaticData.SaveData(_pointCollections.Select(point => point.PointEntity).ToArray(), 0, keyLocation);
