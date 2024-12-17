@@ -24,7 +24,7 @@ MonoBehaviour:
       \u043A\u0430\u0440\u0442\u044B \u044D\u043B\u0435\u043C\u0435\u043D\u0442\u043E\u0432!"
   - ActorPosition: 0
     ActorConfig: {fileID: 11400000, guid: 5ffe02817873ef84d91503f89e23a444, type: 2}
-    TextDialogue: "*\u041F\u044B\u0442\u0430\u0435\u0442\u0441\u044F \u0441\u044A\u0435\u0431\u0430\u0442\u044C\u0441\u044F*"
-  <Comand>k__BackingField: OnUpdateInteger(CountCardGiveComming)
+    TextDialogue: yyy
+  <Comand>k__BackingField: 
   <StartUnlimited>k__BackingField: 0
   IsComplited: 0
