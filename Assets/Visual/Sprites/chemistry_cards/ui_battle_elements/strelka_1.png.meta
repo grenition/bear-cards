@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      strelka_1_0: -1326917849035004631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

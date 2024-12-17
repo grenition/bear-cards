@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      plashka_electro_0: -3876330242844239321
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

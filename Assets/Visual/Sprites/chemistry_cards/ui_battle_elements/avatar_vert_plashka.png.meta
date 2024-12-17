@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      avatar_vert_plashka_0: 2254185156615565382
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

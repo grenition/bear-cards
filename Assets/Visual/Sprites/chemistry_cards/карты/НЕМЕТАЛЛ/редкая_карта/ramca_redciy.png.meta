@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ramca_redciy_0: -7560685326641640197
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

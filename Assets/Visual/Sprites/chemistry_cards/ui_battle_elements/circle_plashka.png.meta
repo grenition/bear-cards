@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      circle_plashka_0: 7143445495969228064
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      plashka_formul_0: 2436015883785876670
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

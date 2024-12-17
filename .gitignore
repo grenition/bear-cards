@@ -29,6 +29,8 @@
 # Rider cache directory
 .idea/
 
+.utmp/
+
 # MACos files
 *.DS_Store
 

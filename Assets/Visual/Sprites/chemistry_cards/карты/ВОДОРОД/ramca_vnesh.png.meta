@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ramca_vnesh_0: 3068558110378331199
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

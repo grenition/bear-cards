@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      electro_plashka_0: 1753905710120422122
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

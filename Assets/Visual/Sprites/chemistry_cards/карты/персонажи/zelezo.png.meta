@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zelezo_0: -4327111517975044932
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      iconka_menu_0: -4166303639508155854
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

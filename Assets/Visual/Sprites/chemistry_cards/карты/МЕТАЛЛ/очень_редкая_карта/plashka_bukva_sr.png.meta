@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      plashka_bukva_sr_0: 3433222684434181788
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

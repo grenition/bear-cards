@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      svitok_0: -5085920629774126298
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

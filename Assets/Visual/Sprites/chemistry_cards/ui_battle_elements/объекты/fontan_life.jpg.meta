@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fontan_life_0: -8360999512985116780
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

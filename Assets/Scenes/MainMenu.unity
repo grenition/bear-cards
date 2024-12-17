@@ -723,7 +723,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 52.00003}
+  m_AnchoredPosition: {x: 0, y: 52}
   m_SizeDelta: {x: -500, y: 1040}
   m_Pivot: {x: 0.5, y: 0.99999994}
 --- !u!222 &444025982
@@ -2365,6 +2365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608072351}
   - component: {fileID: 1608072350}
+  - component: {fileID: 1608072352}
   m_Layer: 0
   m_Name: Global Volume
   m_TagString: Untagged
@@ -2404,6 +2405,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1608072352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608072349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7fd9a5568a43ab8c8919030f3f8226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1639088776
 GameObject:
   m_ObjectHideFlags: 0
