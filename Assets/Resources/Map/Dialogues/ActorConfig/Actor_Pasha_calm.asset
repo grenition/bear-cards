@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Actor_Pasha_calm
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u041F\u0430\u0448\u0430"
-  <Icon>k__BackingField: {fileID: 5819020728267207904, guid: 39d3e4f899037fa4d936cac870898d2a, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 39d3e4f899037fa4d936cac870898d2a, type: 3}
