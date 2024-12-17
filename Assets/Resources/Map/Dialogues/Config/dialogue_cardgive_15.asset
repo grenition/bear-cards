@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5e0ab9da0c1e804ea4e907336885c97, type: 3}
-  m_Name: dialogue_cardgive_11
+  m_Name: dialogue_cardgive_15
   m_EditorClassIdentifier: 
   <LeftActorStart>k__BackingField: {fileID: 11400000, guid: 08a77187c52a53e4482f9e49589a492d, type: 2}
   <RightActorStart>k__BackingField: {fileID: 11400000, guid: ebf41a8600834974d85bad1dd9ec5098, type: 2}
@@ -100,6 +100,6 @@ MonoBehaviour:
       \u0432\u044B\u0431\u043E\u0440 \u2014 \u044D\u0442\u043E \u0442\u043E\u0442,
       \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0442\u044B \u0441\u0434\u0435\u043B\u0430\u043B
       \u0441\u0430\u043C."
-  <Comand>k__BackingField: Equals(CountCardGiveComming,11)
+  <Comand>k__BackingField: Equals(CountCardGiveComming,15)
   <StartUnlimited>k__BackingField: 0
   IsComplited: 0
