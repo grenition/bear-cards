@@ -162,6 +162,7 @@ MonoBehaviour:
   _cardGiverUIStrong: {fileID: 1890988129}
   _craftGiverUI: {fileID: 658063155}
   _backGround: {fileID: 1495430596}
+  _parallaxBackground: {fileID: 1495430598}
   _progressUI: {fileID: 1306685485}
 --- !u!4 &58954307
 Transform:
@@ -480,7 +481,7 @@ Camera:
   far clip plane: 1000
   field of view: 14.68
   orthographic: 1
-  orthographic size: 4.8
+  orthographic size: 4.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2290,6 +2291,7 @@ GameObject:
   - component: {fileID: 1495430595}
   - component: {fileID: 1495430597}
   - component: {fileID: 1495430596}
+  - component: {fileID: 1495430598}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -2311,10 +2313,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1773374652}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1280, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1495430596
 MonoBehaviour:
@@ -2354,6 +2356,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495430594}
   m_CullTransparentMesh: 1
+--- !u!114 &1495430598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495430594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a25735df43c42abaf1ebb7dbda38aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <TargetTransform>k__BackingField: {fileID: 0}
+  parallaxFactor: {x: -0.5, y: -0.5}
+  smoothing: 5
 --- !u!1001 &1641681700
 PrefabInstance:
   m_ObjectHideFlags: 0

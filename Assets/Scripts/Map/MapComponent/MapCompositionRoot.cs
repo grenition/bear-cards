@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using GreonAssets.UI.Components;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -28,6 +29,7 @@ namespace Assets.Scripts.Map
         [SerializeField] private GameObject _cardGiverUIStrong;
         [SerializeField] private GameObject _craftGiverUI;
         [SerializeField] private Image _backGround;
+        [SerializeField] private UIParallaxBackground _parallaxBackground;
         [SerializeField] private UIProgress _progressUI;
 
         private List<InteractivePoint> _locationPoints;
@@ -88,6 +90,7 @@ namespace Assets.Scripts.Map
 
             ProgressInit();
             _backGround.sprite = ActiveLocation.BackGround;
+            _parallaxBackground.TargetTransform = MapPlayer.transform;
         }
 
         public GameObject ShowCardGiver(string power)
