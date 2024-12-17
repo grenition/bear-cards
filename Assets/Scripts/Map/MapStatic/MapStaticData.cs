@@ -41,7 +41,7 @@ namespace Assets.Scripts.Map
             _locationProgress.SaveData(points, locationLevel, keyLocation);
         }
 
-        public static void SaveDeck(List<string> deck)
+        public static void AddToDeckAndSave(List<string> deck)
         {
             Initialize();
             _locationProgress.SaveDeck(deck);
@@ -63,15 +63,9 @@ namespace Assets.Scripts.Map
             SceneManager.LoadScene(0);
         }
 
-        public async static void GameFail()
+        public static void GameFail()
         {
             Initialize();
-
-            var data = DialoguesStatic.LoadData();
-            data.GameFail++;
-            DialoguesStatic.SaveDataAndExecuteDialogue(data);
-
-            await UniTask.WaitUntil(() => !DialoguesStatic.DialogueStatus());
 
             _locationProgress.DeleteData();
             _playerData.DeletedStat();
