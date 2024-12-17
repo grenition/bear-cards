@@ -60,6 +60,11 @@ namespace Project
             data.CountCardGiveComming++;
             DialoguesStatic.SaveData(data);
 
+            for (int i = 0; i < _buttons.Length; i++)
+            {
+                _buttons[i].interactable = true;
+            }
+
             Load();
             SetViewCard();
         }
