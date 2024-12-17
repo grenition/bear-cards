@@ -1,6 +1,7 @@
 using Assets.Scripts.Map;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Project
 {
@@ -32,6 +33,12 @@ namespace Project
 
             MapCompositionRoot.Instance.ReceptUI.SetRecepts(new string[1] { recepts[0] });
             MapCompositionRoot.Instance.ReceptUI.gameObject.SetActive(true);
+
+            var data = DialoguesStatic.LoadData();
+            var receptsCollection = data.Recepts.ToList();
+            receptsCollection.Add(recepts[0]);
+            data.Recepts = receptsCollection.ToArray();
+            DialoguesStatic.SaveRecept(receptsCollection.ToArray());
         }
 
         public override void OnEndInteract()

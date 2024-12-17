@@ -13,8 +13,9 @@ namespace Project
             CountHillComming = 0;
             GameWinCount = 0;
             GameFail = 0;
+            CountLocationOneUpdate = 0;
             CountLocationTwoUpdate = 0;
-            CountLocationThree = 0;
+            CountLocationThreeUpdate = 0;
 
             KeyDialogueWasComplited = new string[0];
             Recepts = new string[0];
@@ -27,8 +28,9 @@ namespace Project
         public int CountHillComming;
         public int GameWinCount;
         public int GameFail;
+        public int CountLocationOneUpdate;
         public int CountLocationTwoUpdate;
-        public int CountLocationThree;
+        public int CountLocationThreeUpdate;
 
         public string[] Recepts;
         public string[] KeyDialogueWasComplited;
