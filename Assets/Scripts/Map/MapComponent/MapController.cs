@@ -44,13 +44,17 @@ namespace Assets.Scripts.Map
             var data = DialoguesStatic.LoadData();
             data.FirstStart = true;
 
-            if(locationConfigurate.LocationLevel == 1 && activePoint.PointEntity.ID == 0)
+            switch (locationConfigurate.LocationLevel)
             {
-                data.CountLocationTwoUpdate++;
-            }
-            else if (locationConfigurate.LocationLevel == 2 && activePoint.PointEntity.ID == 0)
-            {
-                data.CountLocationThree++;
+                case 0:
+                    data.CountLocationOneUpdate++;
+                    break;
+                case 1:
+                    data.CountLocationTwoUpdate++;
+                    break;
+                case 2:
+                    data.CountLocationThreeUpdate++;
+                    break;
             }
 
             DialoguesStatic.SaveData(data);
