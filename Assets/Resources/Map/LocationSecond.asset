@@ -29,6 +29,6 @@ MonoBehaviour:
   - standart_battle
   <EnemyKeys>k__BackingField:
   - epic_enemy
-  <BackGround>k__BackingField: {fileID: -2443862266929849471, guid: 25fbe151793fa8e4d992c8cf761d47b6, type: 3}
+  <BackGround>k__BackingField: {fileID: 4089156835893060931, guid: 899cf4bcd08417f4faba9d4d733e3603, type: 3}
   <MainBossKey>k__BackingField: boss_two_enemy
   <AdditionalBossKey>k__BackingField: boss_two_enemy
