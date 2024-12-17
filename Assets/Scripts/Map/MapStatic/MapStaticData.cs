@@ -1,6 +1,8 @@
+using Cysharp.Threading.Tasks;
 using Project;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.Map
 {
@@ -43,9 +45,32 @@ namespace Assets.Scripts.Map
             _locationProgress.SaveDeck(deck);
         }
 
-        public static void GameFail()
+        public async static void GameWin()
         {
             Initialize();
+
+            var data = DialoguesStatic.LoadData();
+            data.GameWinCount++;
+            DialoguesStatic.SaveData(data);
+
+            await UniTask.WaitUntil(() => !DialoguesStatic.DialogueStatus());
+
+            _locationProgress.DeleteData();
+            _playerData.DeletedStat();
+
+            SceneManager.LoadScene(0);
+        }
+
+        public async static void GameFail()
+        {
+            Initialize();
+
+            var data = DialoguesStatic.LoadData();
+            data.GameFail++;
+            DialoguesStatic.SaveData(data);
+
+            await UniTask.WaitUntil(() => !DialoguesStatic.DialogueStatus());
+
             _locationProgress.DeleteData();
             _playerData.DeletedStat();
         }

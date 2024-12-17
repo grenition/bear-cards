@@ -8,6 +8,8 @@ namespace Project
 {
     public class Dialogues
     {
+        public bool DialogueActive {  get; private set; }
+
         private Dictionary<string, DialogueCondition> _conditionsMap = new();
         private DialogueConfig _currentConfig;
 
@@ -30,35 +32,41 @@ namespace Project
 
             var data = DialoguesStatic.LoadData();
             _keyComplitedDialogues = data.KeyDialogueWasComplited.ToList();
-            UpdateDialogues();
+            UpdateConditionData();
         }
 
         public void DialoguesUpdate()
         {
-            UpdateDialogues();
+            UpdateConditionData();
+            DialogueActive = true;
 
             foreach (var dialog in _conditionsMap)
             {
                 if (dialog.Value.GetResult())
                 {
                     var dialogConfig = _dialogueConfig.Find(value => value.name == dialog.Key);
-                    StartDialogue(dialogConfig);
+                    if( StartDialogue(dialogConfig))
+                        return;
                 }
             }
         }
 
-        private void StartDialogue(DialogueConfig config)
+        public void DialogueComplited() =>DialogueActive = false;
+
+        private bool StartDialogue(DialogueConfig config)
         {
             var data = DialoguesStatic.LoadData();
 
             if (data.KeyDialogueWasComplited.Contains(config.name) && !config.StartUnlimited)
-                return;
+                return false;
 
             var panelialogues = GameObject.Instantiate(_prefabsDialogues);
+            DialogueActive = true;
             panelialogues.Initialize(config);
+            return true;
         }
 
-        private void UpdateDialogues()
+        private void UpdateConditionData()
         {
             var data = DialoguesStatic.LoadData();
 

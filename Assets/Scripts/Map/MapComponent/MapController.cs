@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using Project;
 using System;
 using System.Collections.Generic;
@@ -157,8 +158,20 @@ namespace Assets.Scripts.Map
             //DialoguesStatic.SaveData(data);
 
             var keyLocation = MapCompositionRoot.Instance.GetNextLocationKey();
+
+            if(keyLocation == -1)
+            {
+                WinGame();
+                return;
+            }
+
             MapStaticData.SaveData(_pointCollections.Select(point => point.PointEntity).ToArray(), 0, keyLocation);
             MapCompositionRoot.Instance.ReloadMap();
+        }
+
+        private void WinGame()
+        {
+            MapStaticData.GameWin();
         }
 
         private InteractivePoint FindPointByID(int id)

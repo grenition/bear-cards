@@ -61,6 +61,18 @@ namespace Project
             return _dialogues.CreateCondition(comand);
         }
 
+        public static void DialogueComplited()
+        {
+            Initialize();
+            _dialogues.DialogueComplited();
+        }
+
+        public static bool DialogueStatus()
+        {
+            Initialize();
+            return _dialogues.DialogueActive;
+        }
+
         private static void Initialize()
         {
             if (_dialogues == null)

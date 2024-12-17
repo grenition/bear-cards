@@ -92,17 +92,14 @@ namespace Assets.Scripts.Map
 
         public int GetNextLocationKey()
         {
-            if (_curentLocationNumber++ >= _locationKey.Length)
+            if (_curentLocationNumber + 1 >= _locationKey.Length)
             {
-                var data = DialoguesStatic.LoadData();
-                data.GameWinCount++;
-                DialoguesStatic.SaveData(data);
-
-                _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber]}");
-                return _activeLocation.LocationKey;
+                //_activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber]}");
+                //return _activeLocation.LocationKey;
+                return -1;
             }
 
-            _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber++]}");
+            _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber+ 1]}");
             return _activeLocation.LocationKey;
         }
 

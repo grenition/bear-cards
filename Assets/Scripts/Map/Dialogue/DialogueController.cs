@@ -59,6 +59,7 @@ namespace Project
 
                 await gameObject.CloseWithChildrensAnimationAsync();
                 Destroy(gameObject);
+                DialoguesStatic.DialogueComplited();
                 return;
             }
 
