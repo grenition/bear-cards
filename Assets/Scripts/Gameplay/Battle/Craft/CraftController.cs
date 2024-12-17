@@ -1,5 +1,6 @@
 using Project.Gameplay.Battle.Behaviour;
 using Project.Gameplay.Battle.Model;
+using Project.Gameplay.Tutorials;
 using Project.Infrastructure;
 
 namespace Project.Gameplay.Battle.Craft
@@ -13,6 +14,8 @@ namespace Project.Gameplay.Battle.Craft
             _model = new BattleModel(Constants.CraftBattle);
             _behaviour = new CraftBattleBehaviour(_model);
             _initialized = true;
+
+            TutorialService.ShowTutorial("craft_tutorial");
         }
         protected override void Update()
         {

@@ -1,0 +1,22 @@
+{
+    "name": "Scripts.UI.Tutorial",
+    "rootNamespace": "Project",
+    "references": [
+        "GreonAssets",
+        "Unity.TextMeshPro",
+        "R3.Unity",
+        "UniTask",
+        "DOTween.Modules",
+        "Scripts.Audio",
+        "Scripts.Gameplay.Loader"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -66,6 +66,7 @@ namespace Project.UI.Menu
         {
             string[] jsonFiles = Directory.GetFiles(Application.persistentDataPath);
             jsonFiles.ForEach(x => File.Delete(x));
+            PlayerPrefs.DeleteAll();
         }
     }
 }
