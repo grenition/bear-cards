@@ -16,6 +16,7 @@ namespace Project.Gameplay.Battle.Model
     public class BattleModel : IDisposable
     {
         public event Action<CardModel, CardPosition, CardPosition> OnCardTransfered;
+        public event Action<CardModel, CardPosition, EffectTypes> OnAttackedWithEffect;
         public event Action<CardModel, CardModel> OnCardAttack;
         public event Action<CardOwner> OnBattleEnded;
 
@@ -252,23 +253,42 @@ namespace Project.Gameplay.Battle.Model
             var enemyPlayer = enemyType == CardOwner.player ? Player : Enemy;
 
             if (card == null || card.AttackDamage == 0) return;
+            
             if (card.HasEffect(EffectTypes.Explosion))
             {
+                if(forwardCard != null)
+                    OnAttackedWithEffect.SafeInvoke(forwardCard, forwardCard.Position, EffectTypes.Explosion);
                 AttackLeft(attackerPosition);
                 AttackRight(attackerPosition);
             }
             card.CallOnAttack(enemyPosition);
 
-            if (forwardCard == null || (card.HasEffect(EffectTypes.Flying) && !forwardCard.HasEffect(EffectTypes.BlockFlying)))
+            if (forwardCard == null)
             {
+                if (card.HasEffect(EffectTypes.Flying))
+                    OnAttackedWithEffect.SafeInvoke(card, card.Position, EffectTypes.Flying);
                 enemyPlayer.ModifyHealth(-card.AttackDamage);
                 return;
             }
             
-            if(!card.HasEffect(EffectTypes.Poison) || forwardCard.HasEffect(EffectTypes.PoisonResistance))
+            if (card.HasEffect(EffectTypes.Flying) && !forwardCard.HasEffect(EffectTypes.BlockFlying))
+            {
+                OnAttackedWithEffect.SafeInvoke(card, card.Position, EffectTypes.Flying);
+                enemyPlayer.ModifyHealth(-card.AttackDamage);
+                return;
+            }
+
+            if (!card.HasEffect(EffectTypes.Poison) || forwardCard.HasEffect(EffectTypes.PoisonResistance))
+            {
+                if (card.HasEffect(EffectTypes.Poison))
+                    OnAttackedWithEffect.SafeInvoke(forwardCard, forwardCard.Position, EffectTypes.Poison);
                 forwardCard.ModifyHealth(-card.AttackDamage);
+            }
             else
+            {
                 forwardCard.ModifyHealth(-forwardCard.Health);
+                OnAttackedWithEffect.SafeInvoke(forwardCard, forwardCard.Position, EffectTypes.Poison);
+            }
         }
         
         public void AttackLeft(CardPosition attackerPosition)
