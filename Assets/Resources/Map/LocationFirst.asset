@@ -22,6 +22,7 @@ MonoBehaviour:
   - EnemyLegend
   <KeysPrice>k__BackingField:
   - ReceptEpic
+  - CraftMeadle
   <FirsEnemyPoint>k__BackingField: 1
   <EnemyFight>k__BackingField:
   - demo_battle

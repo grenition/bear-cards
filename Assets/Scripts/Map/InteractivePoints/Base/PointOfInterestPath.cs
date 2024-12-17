@@ -13,7 +13,7 @@ namespace Assets.Scripts.Map
             if ((transform.position.x - point.transform.position.x) != 0)
             {
                 float meadlePointX = point.transform.position.x;
-                meadlePoint = new Vector3(meadlePointX, transform.position.y, meadlePoint.z);
+                meadlePoint = new Vector3(transform.position.x, point.transform.position.y, meadlePoint.z);
             }
 
             _lineRenderer.SetPosition(1, meadlePoint);
