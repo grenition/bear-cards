@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf37953c6c8481685257cdbc86851fc, type: 3}
+  m_Name: boss_first_additional_enemy
+  m_EditorClassIdentifier: 
+  <VisualName>k__BackingField: "\u0411\u043E\u0441\u0441 \u0437\u0430\u043F\u0430\u0441\u043D\u043E\u0439"
+  <VisualDescription>k__BackingField: 
+  <Icon>k__BackingField: {fileID: 221918857517935100, guid: 514e2fe6083ea4c31bdce0ac28692178, type: 3}
+  <Health>k__BackingField: 45
+  <HandSize>k__BackingField: 4
+  <DeckSize>k__BackingField: 20
+  <SpellsSize>k__BackingField: 5
+  <StartLevelElectrons>k__BackingField: 0
+  <Turns>k__BackingField:
+  - <PlaceToSlotChance>k__BackingField: 1
+    <Cards>k__BackingField:
+    - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+    - {fileID: 11400000, guid: ed876e42570e84427a41a216af1cc3ce, type: 2}
+    - {fileID: 11400000, guid: c9794b798402846e8b9d41f159a06587, type: 2}
+  - <PlaceToSlotChance>k__BackingField: 0.5
+    <Cards>k__BackingField:
+    - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
+    - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
+    - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
+    - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
+  - <PlaceToSlotChance>k__BackingField: 1
+    <Cards>k__BackingField: []
+  - <PlaceToSlotChance>k__BackingField: 0.5
+    <Cards>k__BackingField:
+    - {fileID: 11400000, guid: f0f9282175cdc54468746638acd175e9, type: 2}
+    - {fileID: 11400000, guid: 985dc0aeeccee534c93f3a11431df3c7, type: 2}
+    - {fileID: 11400000, guid: 985dc0aeeccee534c93f3a11431df3c7, type: 2}
+    - {fileID: 11400000, guid: f0f9282175cdc54468746638acd175e9, type: 2}
+  <Deck>k__BackingField:
+  - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}

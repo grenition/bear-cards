@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cacf3417634e57ad3a80765c7d0cdb, type: 3}
+  m_Name: boss_battle
+  m_EditorClassIdentifier: 
+  <Music>k__BackingField: {fileID: 8300000, guid: 5ada3b02dab674a62965b71c5536b4a3, type: 3}
+  <FieldSize>k__BackingField: 4
+  <AllowPlayerCardReposition>k__BackingField: 0
+  <FirstTurnOwner>k__BackingField: 0
+  <MaxHandElectrons>k__BackingField: 15
+  <ElectronsAtTurn>k__BackingField: 2
+  <LevelElectrons>k__BackingField: 00000000020000000a00000012000000240000003600000048000000
+  <CardsAtFirstTurn>k__BackingField: 4
+  <CardsAtAnotherTurns>k__BackingField: 1
+  <GiveCardsByActualLevel>k__BackingField: 1
+  <PreDeckCards>k__BackingField:
+  - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+  - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+  - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+  <PostDeckCards>k__BackingField:
+  - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}

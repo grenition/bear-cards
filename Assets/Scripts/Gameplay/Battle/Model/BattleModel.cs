@@ -30,11 +30,11 @@ namespace Project.Gameplay.Battle.Model
         public bool BattleEnded { get; protected set; }
         public CardOwner BattleWinner { get; protected set; }
 
-        public BattleModel(string battleKey)
+        public BattleModel(string battleKey, string enemyKey)
         {
             Key = battleKey != null? battleKey: "demo_battle";
             Player = new CardPlayerModel(battleKey == Constants.CraftBattle ? Constants.CraftPlayer : Constants.Player, CardOwner.player, this);
-            Enemy = new CardPlayerModel(Config.Enemy.name, CardOwner.enemy, this);
+            Enemy = new CardPlayerModel(enemyKey, CardOwner.enemy, this);
 
             var playerFieldPermission = Config.AllowPlayerCardReposition ? CardSlotPermissions.PlayerHand() : CardSlotPermissions.PlayerField();
             for (int i = 0; i < Config.FieldSize; i++)

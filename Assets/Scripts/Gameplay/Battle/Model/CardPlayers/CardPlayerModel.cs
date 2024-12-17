@@ -1,13 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Project.Gameplay.Common;
+using Assets.Scripts.Map;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Data;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Battle.Model.CardSlots;
-using Assets.Scripts.Map;
 using Project.Gameplay.Common.Datas;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Project.Gameplay.Battle.Model.CardPlayers
 {
@@ -36,8 +35,8 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             Key = key;
             BattleModel = battleModel;
             OwnershipType = ownerhipType;
-            // Health = Config.Health;
-            Health = MapStaticData.LoadPlayerData();
+            Health = ownerhipType == CardOwner.player ? MapStaticData.LoadPlayerData() : Config.Health;
+
             LevelElectrons = Config.StartLevelElectrons;
 
             for (int i = 0; i < Config.HandSize; i++)
@@ -81,7 +80,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             var startValue = LevelElectrons;
             LevelElectrons += modifyValue;
             LevelElectrons = Math.Max(0, LevelElectrons);
-            
+
             OnLevelElectronsChanged.SafeInvoke(LevelElectrons - startValue);
         }
         internal void ModifeHandElectrons(int modifyValue)
@@ -89,7 +88,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             var startValue = HandElectrons;
             HandElectrons += modifyValue;
             HandElectrons = Math.Max(0, HandElectrons);
-            
+
             OnHandElectronsChanged.SafeInvoke(HandElectrons - startValue);
         }
 
@@ -118,7 +117,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             BattleModel.TryTransferCard(spell.Position, targetSlot.Position);
             return true;
         }
-        
+
         public void AddEffects(Dictionary<CardEffect, int> effects)
         {
             foreach (var effect in effects)
@@ -126,7 +125,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
                 effect.Key.ApplyEffect(this, effect.Value);
             }
         }
-        
+
         public void AddTurnElectrons() => ModifeHandElectrons(BattleModel.Config.ElectronsAtTurn);
     }
 }

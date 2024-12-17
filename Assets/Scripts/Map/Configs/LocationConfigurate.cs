@@ -17,13 +17,17 @@ namespace Assets.Scripts.Map
         [field: SerializeField] public List<string> KeysPrice { get; private set; }
         [Tooltip("first point is enemy?")]
         [field: SerializeField] public bool FirsEnemyPoint { get; private set; }
-        [field: SerializeField] public string[] EnemyFight { get; private set; }
+        [field: SerializeField] public string[] BattleKeys { get; private set; }
+        [field: SerializeField] public string[] EnemyKeys { get; private set; }
         [field: SerializeField] public Sprite BackGround { get; private set; }
         [field: SerializeField] public string MainBossKey { get; private set; }
         [field: SerializeField] public string AdditionalBossKey { get; private set; }
 
-        public string GetFightKey()=>
-            EnemyFight[Random.Range(0, EnemyFight.Length)];
+        public string GetBattleKey()=>
+            BattleKeys[Random.Range(0, EnemyKeys.Length)];
+
+        public string GetEnemyKey() =>
+    EnemyKeys[Random.Range(0, EnemyKeys.Length)];
 
         public string BossFight()
         {

@@ -34,7 +34,7 @@ namespace Project.Gameplay.Battle
         {
             if(_initialized) return;
             
-            _model = new BattleModel(MapStaticData.KeyBattle);
+            _model = new BattleModel(MapStaticData.KeyBattle, MapStaticData.KeyEnemy);
             _behaviour = new StandartBattleBehaviour(_model);
             _initialized = true;
         }

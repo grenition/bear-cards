@@ -9,6 +9,8 @@ namespace Assets.Scripts.Map
     public static class MapStaticData
     {
         public static string KeyBattle { get; private set; }
+        public static string KeyEnemy { get; private set; }
+
 
         private static LocationProgress _locationProgress;
         private static PlayerStatsData _playerData;
@@ -90,10 +92,11 @@ namespace Assets.Scripts.Map
             _locationProgress.SaveData(locationData.Points, locationData.LocationLevel, locationData.KeyLocation);
         }
 
-        public static void BattlePointStart(int ID, string keyBattle)
+        public static void BattlePointStart(int ID, string keyBattle, string keyEnemy)
         {
             _idBattlePoint = ID;
             KeyBattle = keyBattle;
+            KeyEnemy = keyEnemy;
         }
 
 

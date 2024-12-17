@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03cacf3417634e57ad3a80765c7d0cdb, type: 3}
-  m_Name: demo_battle
+  m_Name: standart_battle
   m_EditorClassIdentifier: 
   <Music>k__BackingField: {fileID: 8300000, guid: 24f5d759db1a34a5fa2533e09f494f48, type: 3}
   <Enemy>k__BackingField: {fileID: 11400000, guid: 2c456a4ee4c064a6db1b6f0282752048, type: 2}

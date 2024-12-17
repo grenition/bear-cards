@@ -11,7 +11,7 @@ namespace Project.Gameplay.Battle.Craft
         {
             if(_initialized) return;
             
-            _model = new BattleModel(Constants.CraftBattle);
+            _model = new BattleModel(Constants.CraftBattle, Constants.CraftPlayer);
             _behaviour = new CraftBattleBehaviour(_model);
             _initialized = true;
 
