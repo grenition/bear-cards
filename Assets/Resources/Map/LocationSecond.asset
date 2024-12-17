@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: LocationSecond
   m_EditorClassIdentifier: 
   <LocationKey>k__BackingField: 1
-  <LocationLevel>k__BackingField: 6
-  <MinimumFork>k__BackingField: 3
-  <MaximumFork>k__BackingField: 5
+  <LocationLevel>k__BackingField: 10
+  <MinimumFork>k__BackingField: 2
+  <MaximumFork>k__BackingField: 6
   <KeysEnemy>k__BackingField:
   - EnemyMeadle
   <KeysPrice>k__BackingField:

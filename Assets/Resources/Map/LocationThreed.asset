@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: LocationThreed
   m_EditorClassIdentifier: 
   <LocationKey>k__BackingField: 2
-  <LocationLevel>k__BackingField: 6
-  <MinimumFork>k__BackingField: 1
-  <MaximumFork>k__BackingField: 3
+  <LocationLevel>k__BackingField: 12
+  <MinimumFork>k__BackingField: 4
+  <MaximumFork>k__BackingField: 6
   <KeysEnemy>k__BackingField:
   - EnemyLegend
   <KeysPrice>k__BackingField:
