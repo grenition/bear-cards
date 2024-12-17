@@ -48,8 +48,11 @@ namespace Assets.Scripts.Map
             _canvasGroup.blocksRaycasts = false;
         }
 
-        public void ClickOnPoint() =>
-            OnClickAction?.Invoke();
+        public void ClickOnPoint()
+        {
+            if(!MapCompositionRoot.Instance.MapPlayer.PlayerIsMove)
+                OnClickAction?.Invoke();
+        }
 
         public void PlayerInteract() =>
             OnPlayerInteract?.Invoke();
