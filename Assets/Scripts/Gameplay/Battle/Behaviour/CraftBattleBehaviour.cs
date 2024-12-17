@@ -33,7 +33,7 @@ namespace Project.Gameplay.Battle.Behaviour
             await UniTask.NextFrame();
 
             var playerConfig = BattleStaticData.CardPlayers.Get(Constants.Player);
-            var deck = MapStaticData.LoadData(playerConfig.Deck.Select(x => x.name));
+            var deck = MapStaticData.LoadData();
             
             deck.Deck.ForEach(card =>
             {
