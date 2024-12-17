@@ -16,7 +16,7 @@ namespace Project
 {
     public class GiveCardUI : MonoBehaviour
     {
-        [SerializeField] protected UICard[] CardVisual;
+        [SerializeField] protected UICardMap[] CardVisual;
         [SerializeField] private Button[] _buttons;
         [SerializeField] private Button _button;
 
