@@ -1,6 +1,5 @@
 using Assets.Scripts.Map;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
 namespace Project
 {
@@ -12,8 +11,8 @@ namespace Project
         }
         public override async void OnBeginInteract()
         {
-            MapCompositionRoot.Instance.ShowCardGiver("meadle");
-            await UniTask.WaitForSeconds(1);
+            var panel = MapCompositionRoot.Instance.ShowCardGiver("meadle");
+            await UniTask.WaitUntil(() => panel.activeSelf == false);
             MapCompositionRoot.Instance.MapController.ComplitePoint();
         }
 

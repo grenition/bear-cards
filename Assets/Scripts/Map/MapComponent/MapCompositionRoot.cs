@@ -1,4 +1,5 @@
 ﻿using Project;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -71,19 +72,20 @@ namespace Assets.Scripts.Map
             _backGround.sprite = _activeLocation.BackGround;
         }
 
-        public void ShowCardGiver(string power)
+        public GameObject ShowCardGiver(string power)
         {
             switch (power)
             {
                 case "easy":
                     _cardGiverUIEasy.SetActive(true);
-                    break;
+                    return _cardGiverUIEasy;
                 case "meadle":
                     _cardGiverUIMeadle.SetActive(true);
-                    break;
+                    return _cardGiverUIMeadle;
                 case "strong":
                     _cardGiverUIStrong.SetActive(true);
-                    break;
+                    return _cardGiverUIStrong;
+                default: throw new NotImplementedException();
             }
         }
         public void ShowCraftGiver() => _craftGiverUI.SetActive(true);

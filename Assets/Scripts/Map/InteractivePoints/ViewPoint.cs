@@ -24,18 +24,6 @@ namespace Assets.Scripts.Map
             path.CreatePath(viewPoint);
         }
 
-        private void OnMouseEnter()
-        {
-            if(_spriteRenderer.color == _colorActive)
-            {
-                _animator.SetTrigger("active");
-            }
-            else if(_spriteRenderer.color == _colorInactive)
-            {
-                _animator.SetTrigger("lock");
-            }
-        }
-
         public void Active() => _spriteRenderer.color = _colorActive;
         public void Lock() => _spriteRenderer.color = _colorInactive;
         public void Pass() => _spriteRenderer.color = _colorPass;

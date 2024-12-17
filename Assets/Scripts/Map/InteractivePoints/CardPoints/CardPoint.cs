@@ -8,10 +8,11 @@ namespace Assets.Scripts.Map
         {
             PointEntity.Key = "CardEasy";
         }
+
         public override async void OnBeginInteract()
         {
-            MapCompositionRoot.Instance.ShowCardGiver("easy");
-            await UniTask.WaitForSeconds(1);
+            var panel = MapCompositionRoot.Instance.ShowCardGiver("easy");
+            await UniTask.WaitUntil(() => panel.activeSelf == false);
             MapCompositionRoot.Instance.MapController.ComplitePoint();
         }
 

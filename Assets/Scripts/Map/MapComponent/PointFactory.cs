@@ -20,8 +20,8 @@ namespace Assets.Scripts.Map
             _viewPointsMap.Add("EnemyMeadle", Resources.Load<ViewPoint>("Map/Prefabs/EnemyEpicPoint"));
             _viewPointsMap.Add("EnemyLegend", Resources.Load<ViewPoint>("Map/Prefabs/EnemyLegendPoint"));
             _viewPointsMap.Add("CardEasy", Resources.Load<ViewPoint>("Map/Prefabs/CardPointEasy"));
-            _viewPointsMap.Add("CardMeadle", Resources.Load<ViewPoint>("Map/Prefabs/CraftPointMeadle"));
-            _viewPointsMap.Add("CardLegend", Resources.Load<ViewPoint>("Map/Prefabs/CraftPointLegend"));
+            _viewPointsMap.Add("CardMeadle", Resources.Load<ViewPoint>("Map/Prefabs/CardPointEpic"));
+            _viewPointsMap.Add("CardLegend", Resources.Load<ViewPoint>("Map/Prefabs/CardPointLegend"));
             _viewPointsMap.Add("CraftMeadle", Resources.Load<ViewPoint>("Map/Prefabs/CraftPointMeadle"));
             _viewPointsMap.Add("HillEasy", Resources.Load<ViewPoint>("Map/Prefabs/HillPointEasy"));
             _viewPointsMap.Add("HillLegend", Resources.Load<ViewPoint>("Map/Prefabs/HillPointLegend"));
