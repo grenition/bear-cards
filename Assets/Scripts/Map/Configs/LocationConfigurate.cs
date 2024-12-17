@@ -22,17 +22,18 @@ namespace Assets.Scripts.Map
         [field: SerializeField] public string MainBossKey { get; private set; }
         [field: SerializeField] public string AdditionalBossKey { get; private set; }
 
-        [field: SerializeField] public string ComandToBossFight { get; private set; }
-
         public string GetFightKey()=>
             EnemyFight[Random.Range(0, EnemyFight.Length)];
 
         public string BossFight()
         {
-            var condition = DialoguesStatic.CreateCondition(ComandToBossFight);
+            if(LocationKey == 0)
+            {
+                var data = DialoguesStatic.LoadData();
+                if(data.CountLocationOneUpdate == 1)
+                    return AdditionalBossKey;
+            }
 
-            if(condition.GetResult())
-                return AdditionalBossKey;
 
             return MainBossKey;
         }

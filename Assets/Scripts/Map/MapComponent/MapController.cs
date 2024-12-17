@@ -43,20 +43,21 @@ namespace Assets.Scripts.Map
 
             var data = DialoguesStatic.LoadData();
             data.FirstStart = true;
-
-            switch (locationConfigurate.LocationLevel)
+            if (locationConfigurate.LocationLevel == 0)
             {
-                case 0:
-                    data.CountLocationOneUpdate++;
-                    break;
-                case 1:
-                    data.CountLocationTwoUpdate++;
-                    break;
-                case 2:
-                    data.CountLocationThreeUpdate++;
-                    break;
+                switch (locationConfigurate.LocationKey)
+                {
+                    case 0:
+                        data.CountLocationOneUpdate++;
+                        break;
+                    case 1:
+                        data.CountLocationTwoUpdate++;
+                        break;
+                    case 2:
+                        data.CountLocationThreeUpdate++;
+                        break;
+                }
             }
-
             DialoguesStatic.SaveData(data);
         }
 

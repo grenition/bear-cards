@@ -28,5 +28,4 @@ MonoBehaviour:
   - demo_battle
   <BackGround>k__BackingField: {fileID: -9089483960609258987, guid: 867f6589ad610f64ebf4876ec43b9061, type: 3}
   <MainBossKey>k__BackingField: demo_battle
-  <AdditionalBossKey>k__BackingField: demo_battle_Boss
-  <ComandToBossFight>k__BackingField: Equals(CountLocationOneUpdate,1)
+  <AdditionalBossKey>k__BackingField: demo_battle
