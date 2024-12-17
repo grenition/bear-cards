@@ -55,6 +55,6 @@ MonoBehaviour:
       \u0447\u0442\u043E \u0442\u044B \u043F\u0440\u0438\u043C\u0435\u0448\u044C
       \u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u043E\u0435 \u0440\u0435\u0448\u0435\u043D\u0438\u0435,
       \u0440\u0430\u0437\u0443\u043C\u0435\u0435\u0442\u0441\u044F."
-  <Comand>k__BackingField: OnUpdateInteger(CountCardGiveComming,3)
+  <Comand>k__BackingField: Equals(CountCardGiveComming,3)
   <StartUnlimited>k__BackingField: 0
   IsComplited: 0

@@ -30,6 +30,6 @@ MonoBehaviour:
     ActorConfig: {fileID: 11400000, guid: b393358a7052cd840bb487817b7cf0fe, type: 2}
     TextDialogue: "\u0418\u043C\u0435\u043D\u043D\u043E \u044D\u0442\u043E \u043E\u0442\u043B\u0438\u0447\u0430\u0435\u0442
       \u0443\u0447\u0451\u043D\u043E\u0433\u043E \u043E\u0442 \u043D\u043E\u0432\u0438\u0447\u043A\u0430."
-  <Comand>k__BackingField: OnUpdateInteger(CountReceptComming,9)
+  <Comand>k__BackingField: Equals(CountReceptComming,9)
   <StartUnlimited>k__BackingField: 0
   IsComplited: 0

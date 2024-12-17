@@ -35,6 +35,6 @@ MonoBehaviour:
     TextDialogue: "\u0423\u0437\u043D\u0430\u0439 \u0438\u0445 \u043F\u043E\u0431\u043B\u0438\u0436\u0435,
       \u0438 \u0432\u044B\u0431\u043E\u0440 \u0441\u0442\u0430\u043D\u0435\u0442
       \u043E\u0447\u0435\u0432\u0438\u0434\u043D\u044B\u043C."
-  <Comand>k__BackingField: OnUpdateInteger(CountCardGiveComming,4)
+  <Comand>k__BackingField: Equals(CountCardGiveComming,4)
   <StartUnlimited>k__BackingField: 0
   IsComplited: 0
