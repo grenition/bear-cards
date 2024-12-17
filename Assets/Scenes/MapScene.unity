@@ -388,6 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MapController>k__BackingField: {fileID: 498369992}
+  <DialogueController>k__BackingField: {fileID: 2080406438}
   <MapCamera>k__BackingField: {fileID: 375445808}
   <MapUI>k__BackingField: {fileID: 1169609768}
   <ReceptUI>k__BackingField: {fileID: 1989421607}
@@ -14177,6 +14178,8 @@ PrefabInstance:
     - {fileID: 5029864908182442876, guid: 57ace283ec3d191498527def5a453f65, type: 3}
     - {fileID: 8009516097575187112, guid: 57ace283ec3d191498527def5a453f65, type: 3}
     - {fileID: 649307513549969979, guid: 57ace283ec3d191498527def5a453f65, type: 3}
+    - {fileID: 6821431816828537421, guid: 57ace283ec3d191498527def5a453f65, type: 3}
+    - {fileID: 7974308410953749757, guid: 57ace283ec3d191498527def5a453f65, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14186,6 +14189,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8447261794871583868, guid: 57ace283ec3d191498527def5a453f65, type: 3}
   m_PrefabInstance: {fileID: 2080406436}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2080406438 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4881322697157538636, guid: 57ace283ec3d191498527def5a453f65, type: 3}
+  m_PrefabInstance: {fileID: 2080406436}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c07d83fa83ad6944ba6af4fbf6621159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2106599388 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2208126399185823415, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}

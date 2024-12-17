@@ -13,6 +13,7 @@ namespace Assets.Scripts.Map
     {
         public static MapCompositionRoot Instance { get; private set; }
         [field: SerializeField] public MapController MapController { get; private set; }
+        [field: SerializeField] public DialogueController DialogueController { get; private set; }
         [field: SerializeField] public MapCamera MapCamera { get; private set; }
         [field: SerializeField] public MapUI MapUI { get; private set; }
         [field: SerializeField] public RecipeGettedUI ReceptUI { get; private set; }
