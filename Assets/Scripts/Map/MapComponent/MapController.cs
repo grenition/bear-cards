@@ -42,25 +42,6 @@ namespace Assets.Scripts.Map
             }
 
             UpdatePoints();
-
-            var data = DialoguesStatic.LoadData();
-            data.FirstStart = true;
-            if (activePoint.PointEntity.ID == 0)
-            {
-                switch (locationConfigurate.LocationKey)
-                {
-                    case 0:
-                        data.CountLocationOneUpdate++;
-                        break;
-                    case 1:
-                        data.CountLocationTwoUpdate++;
-                        break;
-                    case 2:
-                        data.CountLocationThreeUpdate++;
-                        break;
-                }
-            }
-            DialoguesStatic.SaveDataAndExecuteDialogue(data);
         }
 
         private void Update()

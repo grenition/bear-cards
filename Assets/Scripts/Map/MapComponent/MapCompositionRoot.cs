@@ -55,7 +55,24 @@ namespace Assets.Scripts.Map
             _enivrimentGenerator = new EnivrimentGenerator(ActiveLocation.LocationLevel);
 
             if (progres.LocationLevel == 0)
+            {
                 _locationPoints = _pointOfInterestGenerator.Generate();
+                var data = DialoguesStatic.LoadData();
+                data.FirstStart = true;
+                switch (ActiveLocation.LocationKey)
+                {
+                    case 0:
+                        data.CountLocationOneUpdate++;
+                        break;
+                    case 1:
+                        data.CountLocationTwoUpdate++;
+                        break;
+                    case 2:
+                        data.CountLocationThreeUpdate++;
+                        break;
+                }
+                DialoguesStatic.SaveDataAndExecuteDialogue(data);
+            }
             else
                 _locationPoints = _pointOfInterestGenerator.Generate(progres.Points.ToList());
 
