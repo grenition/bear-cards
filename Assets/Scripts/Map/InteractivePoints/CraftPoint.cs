@@ -1,7 +1,4 @@
-﻿using Cysharp.Threading.Tasks;
-using System;
-using System.Collections;
-using UnityEngine;
+﻿using Project;
 
 namespace Assets.Scripts.Map
 {
@@ -11,9 +8,13 @@ namespace Assets.Scripts.Map
         {
             PointEntity.Key = "CraftMeadle";
         }
-        public override  void OnBeginInteract()
+        public override void OnBeginInteract()
         {
             MapCompositionRoot.Instance.ShowCraftGiver();
+
+            var data = DialoguesStatic.LoadData();
+            data.CountCardCraftComming++;
+            DialoguesStatic.SaveDataAndExecuteDialogue(data);
         }
 
         public override void OnEndInteract()

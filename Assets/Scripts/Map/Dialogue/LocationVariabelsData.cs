@@ -9,6 +9,7 @@ namespace Project
             FirstStart = false;
             CountEnemyComming = 0;
             CountCardGiveComming = 0;
+            CountCardCraftComming = 0;
             CountReceptComming = 0;
             CountHillComming = 0;
             GameWinCount = 0;
@@ -30,6 +31,7 @@ namespace Project
         public int CountCardGiveComming;
         public int CountReceptComming;
         public int CountHillComming;
+        public int CountCardCraftComming;
         public int GameWinCount;
         public int GameFail;
         public int CountLocationOneUpdate;
