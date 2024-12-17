@@ -45,7 +45,7 @@ namespace Assets.Scripts.Map
 
             var data = DialoguesStatic.LoadData();
             data.FirstStart = true;
-            if (locationConfigurate.LocationLevel == 0)
+            if (activePoint.PointEntity.ID == 0)
             {
                 switch (locationConfigurate.LocationKey)
                 {

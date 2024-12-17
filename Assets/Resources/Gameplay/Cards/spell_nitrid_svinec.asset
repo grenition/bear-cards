@@ -18,7 +18,7 @@ MonoBehaviour:
     {dmg} \u0443\u0440\u043E\u043D\u0430 \u0432\u044B\u0431\u0440\u0430\u043D\u043D\u043E\u0439
     \u043A\u0430\u0440\u0442\u0435"
   <ElectroFormula>k__BackingField: 
-  <VisualIcon>k__BackingField: {fileID: 0}
+  <VisualIcon>k__BackingField: {fileID: -7760498949991788154, guid: 296bbe67dce2d4f43bf53db859ab374b, type: 3}
   <CardType>k__BackingField: 2
   <Rarity>k__BackingField: 0
   <Cost>k__BackingField: 5

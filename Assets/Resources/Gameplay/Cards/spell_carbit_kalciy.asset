@@ -18,7 +18,7 @@ MonoBehaviour:
     \u0431\u043B\u043E\u043A \u043B\u0435\u0442\u0443\u0447\u0435\u0441\u0442\u0438
     \u0438 +1/-1 \u0432\u044B\u0431\u0440\u0430\u043D\u043D\u043E\u0439 \u043A\u0430\u0440\u0442\u0435"
   <ElectroFormula>k__BackingField: 
-  <VisualIcon>k__BackingField: {fileID: 0}
+  <VisualIcon>k__BackingField: {fileID: 6346195076325529440, guid: 8089263f34da65d4e8ad696e3e569990, type: 3}
   <CardType>k__BackingField: 2
   <Rarity>k__BackingField: 0
   <Cost>k__BackingField: 5
