@@ -28,10 +28,16 @@ MonoBehaviour:
   - <PlaceToSlotChance>k__BackingField: 1
     <Cards>k__BackingField:
     - {fileID: 11400000, guid: 1974b7e91454a944cbc62ee624ffbdc1, type: 2}
+  - <PlaceToSlotChance>k__BackingField: 0
+    <Cards>k__BackingField:
+    - {fileID: 11400000, guid: 6558f620cf6a37f4499b33f05eac2a78, type: 2}
   - <PlaceToSlotChance>k__BackingField: 0.4
     <Cards>k__BackingField:
     - {fileID: 11400000, guid: bd01e8a9a809349b688ae8a1a516fd36, type: 2}
     - {fileID: 11400000, guid: 1974b7e91454a944cbc62ee624ffbdc1, type: 2}
+  - <PlaceToSlotChance>k__BackingField: 0
+    <Cards>k__BackingField:
+    - {fileID: 11400000, guid: 6558f620cf6a37f4499b33f05eac2a78, type: 2}
   - <PlaceToSlotChance>k__BackingField: 0.3
     <Cards>k__BackingField:
     - {fileID: 11400000, guid: bd01e8a9a809349b688ae8a1a516fd36, type: 2}
