@@ -23,7 +23,7 @@ namespace Project
 
 
             KeyDialogueWasComplited = new string[0];
-            Recepts = new string[0];
+            Recepts = new string[1] { "craft_vodorod_kislorod" };
         }
 
         public bool FirstStart;
