@@ -75,15 +75,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseAnimation: 1
-  openDuration: 0.4
-  closeDuration: 0.15
+  openDuration: 0.5
+  closeDuration: 0.25
   openDelay: 0
   closeDelay: 0
   openEase: 27
   closeEase: 26
   openScale: 1
   closeScale: 0.5
-  slideOffsetX: 500
+  slideOffsetX: 200
   slideOffsetY: 1080
 --- !u!114 &6821431816828537421
 MonoBehaviour:
@@ -183,15 +183,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseAnimation: 2
-  openDuration: 0.4
-  closeDuration: 0.15
+  openDuration: 0.5
+  closeDuration: 0.25
   openDelay: 0
   closeDelay: 0
   openEase: 27
   closeEase: 26
   openScale: 1
   closeScale: 0.5
-  slideOffsetX: 500
+  slideOffsetX: 200
   slideOffsetY: 1080
 --- !u!114 &7974308410953749757
 MonoBehaviour:
@@ -467,7 +467,7 @@ MonoBehaviour:
   openScale: 1
   closeScale: 0.5
   slideOffsetX: 1920
-  slideOffsetY: 1080
+  slideOffsetY: 500
 --- !u!1 &4330512928544482261
 GameObject:
   m_ObjectHideFlags: 0
