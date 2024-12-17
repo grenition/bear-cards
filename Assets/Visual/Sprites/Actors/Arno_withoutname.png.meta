@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 39d3e4f899037fa4d936cac870898d2a
+guid: 742ea270572f4a84e853e030eb9f23b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5819020728267207904
-    second: Pasha_calm_0
+      213: -6514212111482311267
+    second: Arno_withoutname_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pasha_calm_0
+      name: Arno_withoutname_0
       rect:
         serializedVersion: 2
-        x: 373
+        x: 82
         y: 39
-        width: 559
-        height: 1637
+        width: 1113
+        height: 1635
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e47009958051c050800000000000000
-      internalID: 5819020728267207904
+      spriteID: d9dac8f299ed895a0800000000000000
+      internalID: -6514212111482311267
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Pasha_calm_0: 5819020728267207904
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

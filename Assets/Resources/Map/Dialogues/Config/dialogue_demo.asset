@@ -24,6 +24,6 @@ MonoBehaviour:
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: 0b4ad33c9ea99ca4f8872fb111beb94f, type: 2}
     TextDialogue: "\u0443\u0443\u0443\u0443"
-  <Comand>k__BackingField: 
+  <Comand>k__BackingField: None()
   <StartUnlimited>k__BackingField: 0
   IsComplited: 0
