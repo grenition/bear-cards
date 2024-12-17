@@ -1,15 +1,14 @@
 using Project.Gameplay.Battle;
-using Project.Gameplay.Battle.Model;
 using Project.Gameplay.Battle.Model.Cards;
-using Project.Gameplay.Common.Datas;
+using Project.UI.Battle;
 using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Project.UI.Battle
+namespace Project
 {
-    public class UICard : MonoBehaviour
+    public class UICardMap : MonoBehaviour
     {
         public CardModel Model { get; protected set; }
 
@@ -25,44 +24,12 @@ namespace Project.UI.Battle
 
         public void Init(CardModel cardModel)
         {
-            if (cardModel == null) return;
+            if (cardModel == null)
+                return;
 
-            if (Model != null)
-            {
-                Model.OnHealthChange -= OnHealthChange;
-                Model.OnAttackDamageChange -= OnAttackDamageChange;
-                Model.OnEffectsChange -= OnEffectsChange;
-                BattleController.Model.OnAttackedWithEffect -= OnAttackedWithEffect;
-            }
             Model = cardModel;
-            Model.OnHealthChange += OnHealthChange;
-            Model.OnAttackDamageChange += OnAttackDamageChange;
-            Model.OnEffectsChange += OnEffectsChange;
-            BattleController.Model.OnAttackedWithEffect += OnAttackedWithEffect;
-
             Visualize();
         }
-
-        private void OnDestroy()
-        {
-            if (Model != null)
-            {
-                Model.OnHealthChange -= OnHealthChange;
-                Model.OnAttackDamageChange -= OnAttackDamageChange;
-                Model.OnEffectsChange -= OnEffectsChange;
-                BattleController.Model.OnAttackedWithEffect -= OnAttackedWithEffect;
-            }
-        }
-
-        private void OnHealthChange(int obj) => Visualize();
-        private void OnAttackDamageChange(int obj) => Visualize();
-        private void OnEffectsChange() => Visualize();
-
-        private void OnAttackedWithEffect(CardModel card, CardPosition cardPosition, EffectTypes effect)
-        {
-            if (Model == card && Model.Position == cardPosition) _effectsAnimation.PlayEffectAnimation(effect);
-        }
-
         private void Visualize()
         {
             if (_electroText) _electroText.text = Model.Config.ElectroFormula;

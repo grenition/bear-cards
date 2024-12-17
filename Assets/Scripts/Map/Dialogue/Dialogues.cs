@@ -1,3 +1,4 @@
+using Assets.Scripts.Map;
 using GreonAssets.Extensions;
 using System;
 using System.Collections.Generic;
@@ -60,8 +61,7 @@ namespace Project
             if (data.KeyDialogueWasComplited.Contains(config.name) && !config.StartUnlimited)
                 return false;
 
-            if (_dialogueController == null)
-                _dialogueController ??= GameObject.FindAnyObjectByType<DialogueController>(FindObjectsInactive.Include);
+            _dialogueController = MapCompositionRoot.Instance.DialogueController;
             DialogueActive = true;
             _dialogueController.Initialize(config);
             return true;

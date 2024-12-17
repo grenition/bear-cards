@@ -94,6 +94,12 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
 
         public CardModel GetFirstCardInHand() => Hand.FirstOrDefault(x => x.Card != null)?.Card;
         public CardModel GetFirstCardInDeck() => Deck.FirstOrDefault(x => x.Card != null)?.Card;
+        public CardModel GetFirstCardInDeckByPlayerLevel() => Deck
+            .Where(x => x.Card != null)
+            .Where(x => x.Card.Level <= Level)
+            .Select(x => x.Card)
+            .ToList()
+            .GetRandomElement();
         public CardModel GetFirstCardInSpells() => Spells.FirstOrDefault(x => x.Card != null)?.Card;
         public CardSlotModel GetFirstFreeSlotInHand() => Hand.FirstOrDefault(x => x.Card == null);
         public CardSlotModel GetFirstFreeSlotInDeck() => Deck.FirstOrDefault(x => x.Card == null);
@@ -102,6 +108,15 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         public bool TransferCardFromDeckToHand(bool ignoreSpells = true)
         {
             var card = GetFirstCardInDeck();
+            var targetSlot = GetFirstFreeSlotInHand();
+            if (card == null || (card.Type == CardType.Spell && ignoreSpells) || targetSlot == null) return false;
+
+            BattleModel.TryTransferCard(card.Position, targetSlot.Position);
+            return true;
+        }
+        public bool TransferCardFromDeckToHandByPlayerLevel(bool ignoreSpells = true)
+        {
+            var card = GetFirstCardInDeckByPlayerLevel();
             var targetSlot = GetFirstFreeSlotInHand();
             if (card == null || (card.Type == CardType.Spell && ignoreSpells) || targetSlot == null) return false;
 
@@ -126,6 +141,6 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             }
         }
 
-        public void AddTurnElectrons() => ModifeHandElectrons(BattleModel.Config.ElectronsAtTurn);
+        public void AddTurnElectrons() => ModifeHandElectrons(Level + 1);
     }
 }

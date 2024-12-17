@@ -51,17 +51,17 @@ namespace Assets.Scripts.Map
             UpdatePoints();
         }
 
-        private void Update()
-        {
-            if (Input.GetMouseButtonDown(0) && !_interact)
-            {
-                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-                if (hit.collider != null && hit.collider.gameObject.TryGetComponent(out ViewPoint viewpoint))
-                {
-                    viewpoint.ClickOnPoint();
-                }
-            }
-        }
+        //private void Update()
+        //{
+        //    if (Input.GetMouseButtonDown(0) && !MapCompositionRoot.Instance.MapPlayer.PlayerIsMove )
+        //    {
+        //        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        //        if (hit.collider != null && hit.collider.gameObject.TryGetComponent(out ViewPoint viewpoint))
+        //        {
+        //            viewpoint.ClickOnPoint();
+        //        }
+        //    }
+        //}
 
         public void UpdatePoints()
         {
@@ -106,7 +106,8 @@ namespace Assets.Scripts.Map
             _currentInteractPoint.OnBeginInteract();
 
             if (_currentInteractPoint.PointEntity.Level != _locationConfigurate.LocationLevel - 1)
-                MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetBattleKey(), _locationConfigurate.GetEnemyKey());
+                MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetBattleKey(),
+                    _locationConfigurate.GetEnemyKey(_currentInteractPoint.PointEntity.Key));
             else
                 MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetBattleKey(), _locationConfigurate.BossFight());
 

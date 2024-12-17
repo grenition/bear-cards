@@ -18,17 +18,26 @@ namespace Assets.Scripts.Map
         [Tooltip("first point is enemy?")]
         [field: SerializeField] public bool FirsEnemyPoint { get; private set; }
         [field: SerializeField] public string[] BattleKeys { get; private set; }
-        [field: SerializeField] public string[] EnemyKeys { get; private set; }
+        [field: SerializeField] public string[] EnemyEasyKeys { get; private set; }
+        [field: SerializeField] public string[] EnemyEpicKeys { get; private set; }
+        [field: SerializeField] public string[] EnemyLegendKeys { get; private set; }
         [field: SerializeField] public Sprite BackGround { get; private set; }
         [field: SerializeField] public string MainBossKey { get; private set; }
         [field: SerializeField] public string AdditionalBossKey { get; private set; }
 
-        public string GetBattleKey()=>
-            BattleKeys[Random.Range(0, EnemyKeys.Length)];
+        public string GetBattleKey() =>
+            BattleKeys[Random.Range(0, BattleKeys.Length)];
 
-        public string GetEnemyKey() =>
-    EnemyKeys[Random.Range(0, EnemyKeys.Length)];
-
+        public string GetEnemyKey(string keyEnemy)
+        {
+            return keyEnemy switch
+            {
+                "EnemyEasy" => EnemyEasyKeys[Random.Range(0, EnemyEasyKeys.Length)],
+                "EnemyMeadle" => EnemyEpicKeys[Random.Range(0, EnemyEpicKeys.Length)],
+                "EnemyLegend" => EnemyLegendKeys[Random.Range(0, EnemyLegendKeys.Length)],
+                _ => EnemyEasyKeys[Random.Range(0, EnemyEasyKeys.Length)],
+            };
+        }
         public string BossFight()
         {
             if(LocationKey == 0)

@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf37953c6c8481685257cdbc86851fc, type: 3}
   m_Name: player
   m_EditorClassIdentifier: 
-  <VisualName>k__BackingField: "\u0418\u0433\u0440\u043E\u043A"
+  <VisualName>k__BackingField: "\u041F\u0430\u0448\u0430"
   <VisualDescription>k__BackingField: 
-  <Icon>k__BackingField: {fileID: -8937025750965970537, guid: 50742801b4cda49eab9de8a718b60987, type: 3}
-  <Health>k__BackingField: 20
+  <Icon>k__BackingField: {fileID: 1007821588002581258, guid: a58e7f02b796f594d9e7f42c19b75bfe, type: 3}
+  <Health>k__BackingField: 30
   <HandSize>k__BackingField: 8
   <DeckSize>k__BackingField: 100
   <SpellsSize>k__BackingField: 4
-  <PlaceToSlotChance>k__BackingField: 0.5
+  <StartLevelElectrons>k__BackingField: 0
+  <Turns>k__BackingField: []
   <Deck>k__BackingField:
   - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
   - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}

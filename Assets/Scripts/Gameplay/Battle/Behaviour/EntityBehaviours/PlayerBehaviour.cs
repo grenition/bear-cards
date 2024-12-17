@@ -83,7 +83,7 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
 
             for (int i = 0; i < BattleBehaviour.Config.CardsAtAnotherTurns; i++)
             {
-                PlayerModel.TransferCardFromDeckToHand();
+                PlayerModel.TransferCardFromDeckToHandByPlayerLevel();
             }
 
             await UniTask.WaitForSeconds(0.1f);
