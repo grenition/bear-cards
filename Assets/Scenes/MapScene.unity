@@ -3595,7 +3595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 1.1
   _stopDistance: 0.24
-  _cameraDifference: {x: -2.5, y: 1, z: 0}
+  _cameraDifference: {x: -2.5, y: 1, z: -5}
 --- !u!114 &375445809
 MonoBehaviour:
   m_ObjectHideFlags: 0
