@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.Map
 {
@@ -26,7 +27,7 @@ namespace Assets.Scripts.Map
         [SerializeField] private GameObject _cardGiverUIMeadle;
         [SerializeField] private GameObject _cardGiverUIStrong;
         [SerializeField] private GameObject _craftGiverUI;
-        [SerializeField] private SpriteRenderer _backGround;
+        [SerializeField] private Image _backGround;
         [SerializeField] private UIProgress _progressUI;
 
         private List<InteractivePoint> _locationPoints;

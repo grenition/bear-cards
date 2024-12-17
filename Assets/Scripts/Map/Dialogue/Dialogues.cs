@@ -16,6 +16,7 @@ namespace Project
         private DialogueController _prefabsDialogues;
         private List<DialogueConfig> _dialogueConfig = new List<DialogueConfig>();
         private List<string> _keyComplitedDialogues;
+        private DialogueController _dialogueController;
 
         private LocationVariabelsData _locationVariabelsData;
         public void Init()
@@ -59,9 +60,10 @@ namespace Project
             if (data.KeyDialogueWasComplited.Contains(config.name) && !config.StartUnlimited)
                 return false;
 
-            var panelialogues = GameObject.Instantiate(_prefabsDialogues);
+            if (_dialogueController == null)
+                _dialogueController ??= GameObject.FindAnyObjectByType<DialogueController>(FindObjectsInactive.Include);
             DialogueActive = true;
-            panelialogues.Initialize(config);
+            _dialogueController.Initialize(config);
             return true;
         }
 

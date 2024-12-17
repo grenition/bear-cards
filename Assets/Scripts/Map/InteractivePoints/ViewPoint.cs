@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.Map
 {
@@ -9,9 +10,9 @@ namespace Assets.Scripts.Map
         public event Action OnClickAction;
         public event Action OnPlayerInteract;
 
-        [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private PointOfInterestPath _pathPrefabs;
-        [SerializeField] private Animator _animator;
+        [SerializeField] private Image _image;
+        [SerializeField] private CanvasGroup _canvasGroup;
 
 
         [Header("PointView")]
@@ -28,9 +29,24 @@ namespace Assets.Scripts.Map
             _paths.Add(path);
         }
 
-        public void Active() => _spriteRenderer.color = _colorActive;
-        public void Lock() => _spriteRenderer.color = _colorInactive;
-        public void Pass() => _spriteRenderer.color = _colorPass;
+        public void Active()
+        {
+            _image.color = _colorActive;
+            _canvasGroup.interactable = true;
+            _canvasGroup.blocksRaycasts = true;
+        }
+        public void Lock()
+        {
+            _image.color = _colorInactive;
+            _canvasGroup.interactable = false;
+            _canvasGroup.blocksRaycasts = false;
+        }
+        public void Pass()
+        {
+            _image.color = _colorPass;
+            _canvasGroup.interactable = false;
+            _canvasGroup.blocksRaycasts = false;
+        }
 
         public void ClickOnPoint() =>
             OnClickAction?.Invoke();

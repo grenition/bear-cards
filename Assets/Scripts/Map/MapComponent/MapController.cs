@@ -4,11 +4,13 @@ using Project;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Project.Audio;
 using UnityEngine;
 namespace Assets.Scripts.Map
 {
     public class MapController : MonoBehaviour
     {
+        [SerializeField] private AudioClip _music;
         public event Action OnPointBeginInteract;
         public event Action OnMapProgressUpdate;
 
@@ -18,6 +20,11 @@ namespace Assets.Scripts.Map
         private LocationConfigurate _locationConfigurate;
         private bool _interact;
 
+        private void Start()
+        {
+            GameAudio.MusicSource.clip = _music;
+            GameAudio.MusicSource.Play();
+        }
         public void Create(List<InteractivePoint> pointCollection, LocationConfigurate locationConfigurate)
         {
             _pointCollections = pointCollection;

@@ -40,6 +40,8 @@ namespace Project
 
             _config = dialogueConfig;
             _numberStep = 0;
+            gameObject.SetActive(true);
+            
             UpdateDialogue();
         }
 
@@ -58,7 +60,6 @@ namespace Project
                 }
 
                 await gameObject.CloseWithChildrensAnimationAsync();
-                Destroy(gameObject);
                 DialoguesStatic.DialogueComplited();
                 return;
             }
