@@ -21,7 +21,7 @@ namespace Project.Gameplay.Battle.Model.Cards
         
         public string Key { get; protected set; }
         public CardConfig Config => BattleStaticData.Cards.Get(Key);
-        public CardPosition Position => AttachedSlot.Position;
+        public CardPosition Position => AttachedSlot != null ? AttachedSlot.Position : CardPosition.Garbage();
         public bool IsAlive => Health > 0;
         public CardType Type => Config.CardType;
         public int Cost => Config.Cost;

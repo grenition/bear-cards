@@ -2649,7 +2649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 127894300095456238, guid: 7d86b0502c66d4bd69169a56198d22ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 127894300095456238, guid: 7d86b0502c66d4bd69169a56198d22ef, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3699,6 +3699,10 @@ PrefabInstance:
     - target: {fileID: 992368352329587652, guid: c40955121f6c0418695b0fadf1dc083e, type: 3}
       propertyPath: m_Name
       value: BookButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 992368352329587652, guid: c40955121f6c0418695b0fadf1dc083e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4893372465459279333, guid: c40955121f6c0418695b0fadf1dc083e, type: 3}
       propertyPath: m_Pivot.x
@@ -9695,7 +9699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 383.71997, y: 402.09}
+  m_AnchoredPosition: {x: 383.71997, y: 50}
   m_SizeDelta: {x: 614.27, y: 801.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1306685484
@@ -11609,7 +11613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <TargetTransform>k__BackingField: {fileID: 0}
-  parallaxFactor: {x: -0.5, y: -0.5}
+  parallaxFactor: {x: -0.05, y: -0.05}
   smoothing: 5
 --- !u!1 &1503848335
 GameObject:
