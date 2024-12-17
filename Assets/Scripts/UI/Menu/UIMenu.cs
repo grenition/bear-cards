@@ -13,6 +13,7 @@ namespace Project.UI.Menu
     {
         [SerializeField] private Button _settingsButton;
         [SerializeField] private Button _startGameButton;
+        [SerializeField] private Button _quitButton;
         [SerializeField] private string _sceneName = "MapScene";
         [SerializeField] private AudioClip _musicClip;
 
@@ -33,6 +34,11 @@ namespace Project.UI.Menu
             {
                 _settingsPanel.SetActiveWithChildrensAnimation(true);
                 _mainPanel.SetActiveWithChildrensAnimation(false);
+            }).AddTo(this);
+
+            _quitButton.Bind(() =>
+            {
+                Application.Quit();
             }).AddTo(this);
         }
         
