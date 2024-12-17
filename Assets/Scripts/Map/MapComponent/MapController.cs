@@ -106,7 +106,8 @@ namespace Assets.Scripts.Map
             _currentInteractPoint.OnBeginInteract();
 
             if (_currentInteractPoint.PointEntity.Level != _locationConfigurate.LocationLevel - 1)
-                MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetBattleKey(), _locationConfigurate.GetEnemyKey());
+                MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetBattleKey(),
+                    _locationConfigurate.GetEnemyKey(_currentInteractPoint.PointEntity.Key));
             else
                 MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetBattleKey(), _locationConfigurate.BossFight());
 

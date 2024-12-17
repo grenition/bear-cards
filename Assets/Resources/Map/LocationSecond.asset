@@ -27,8 +27,15 @@ MonoBehaviour:
   <BattleKeys>k__BackingField:
   - boss_battle
   - standart_battle
-  <EnemyKeys>k__BackingField:
-  - epic_enemy
+  <EnemyEasyKeys>k__BackingField:
+  - standart_enemy_1
+  - standart_enemy_2
+  <EnemyEpicKeys>k__BackingField:
+  - rare_enemy_1
+  - rare_enemy_2
+  <EnemyLegendKeys>k__BackingField:
+  - epic_enemy_2
+  - epic_enemy_1
   <BackGround>k__BackingField: {fileID: 4089156835893060931, guid: 899cf4bcd08417f4faba9d4d733e3603, type: 3}
   <MainBossKey>k__BackingField: boss_two_enemy
   <AdditionalBossKey>k__BackingField: boss_two_enemy
