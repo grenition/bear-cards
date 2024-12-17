@@ -158,8 +158,8 @@ MonoBehaviour:
   _endPoint: {fileID: 3010466979122879971, guid: b3e54c6be36d4fa4abb848a4b4092eb9, type: 3}
   _playerPrefab: {fileID: 614500089225420600, guid: 5722744fd40826e4fb151f9cac18ece5, type: 3}
   _cardGiverUIEasy: {fileID: 5766398006566704106}
-  _cardGiverUIMeadle: {fileID: 5493173307076919098, guid: e56bf0c2a742e45c6821d733b36003ad, type: 3}
-  _cardGiverUIStrong: {fileID: 5785824413446488149, guid: c5aeb3be94aed40b7b6f1cea9909090d, type: 3}
+  _cardGiverUIMeadle: {fileID: 510490153}
+  _cardGiverUIStrong: {fileID: 1890988129}
   _craftGiverUI: {fileID: 658063155}
   _backGround: {fileID: 1178448340}
   _progressUI: {fileID: 1306685485}
@@ -746,6 +746,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &510490153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5493173307076919098, guid: e56bf0c2a742e45c6821d733b36003ad, type: 3}
+  m_PrefabInstance: {fileID: 5260153692487109748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &611139747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2820,6 +2825,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2acf499277c4e248dd173926d999c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1890988129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5785824413446488149, guid: c5aeb3be94aed40b7b6f1cea9909090d, type: 3}
+  m_PrefabInstance: {fileID: 6227489030832064730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1989421603
 PrefabInstance:
   m_ObjectHideFlags: 0
