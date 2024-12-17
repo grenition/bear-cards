@@ -1,0 +1,2448 @@
+fileFormatVersion: 2
+guid: 16e33ab1e5d5e8e43bf22d6191e54d9b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4473543681085832159
+    second: Attack_fly_0
+  - first:
+      213: 6873947932833531271
+    second: Attack_fly_1
+  - first:
+      213: -946015506327466396
+    second: Attack_fly_2
+  - first:
+      213: 1422443002390378736
+    second: Attack_fly_3
+  - first:
+      213: 4081879351883939493
+    second: Attack_fly_4
+  - first:
+      213: -7156761128879183095
+    second: Attack_fly_5
+  - first:
+      213: 2760737796690556647
+    second: Attack_fly_6
+  - first:
+      213: 1229567032089364371
+    second: Attack_fly_7
+  - first:
+      213: 5951232786333142426
+    second: Attack_fly_8
+  - first:
+      213: -1118406321451679753
+    second: Attack_fly_9
+  - first:
+      213: -4289468234648620499
+    second: Attack_fly_10
+  - first:
+      213: 3725916126961702012
+    second: Attack_fly_11
+  - first:
+      213: 1997140747850312603
+    second: Attack_fly_12
+  - first:
+      213: -8047527752367350126
+    second: Attack_fly_13
+  - first:
+      213: 2697054259138635254
+    second: Attack_fly_14
+  - first:
+      213: 1404628182412500576
+    second: Attack_fly_15
+  - first:
+      213: 6548780526985488438
+    second: Attack_fly_16
+  - first:
+      213: 1016676613155907474
+    second: Attack_fly_17
+  - first:
+      213: -6551735400675734722
+    second: Attack_fly_18
+  - first:
+      213: -2968896883781088663
+    second: Attack_fly_19
+  - first:
+      213: 1078777096703651101
+    second: Attack_fly_20
+  - first:
+      213: 2929136799125422758
+    second: Attack_fly_21
+  - first:
+      213: 502746251674205160
+    second: Attack_fly_22
+  - first:
+      213: -245625760218326205
+    second: Attack_fly_23
+  - first:
+      213: -2427207575251058113
+    second: Attack_fly_24
+  - first:
+      213: 1499790050243817801
+    second: Attack_fly_25
+  - first:
+      213: -1891796950083832940
+    second: Attack_fly_26
+  - first:
+      213: -3227661883988391931
+    second: Attack_fly_27
+  - first:
+      213: -2211381989396351072
+    second: Attack_fly_28
+  - first:
+      213: 3008149942937755693
+    second: Attack_fly_29
+  - first:
+      213: 7861688043574577690
+    second: Attack_fly_30
+  - first:
+      213: -95120685891986234
+    second: Attack_fly_31
+  - first:
+      213: -8336295931370451145
+    second: Attack_fly_32
+  - first:
+      213: -4759115764621385621
+    second: Attack_fly_33
+  - first:
+      213: -4826242861204945972
+    second: Attack_fly_34
+  - first:
+      213: 1814634169301485555
+    second: Attack_fly_35
+  - first:
+      213: -2420276186491106103
+    second: Attack_fly_36
+  - first:
+      213: 6719480137445390099
+    second: Attack_fly_37
+  - first:
+      213: -3161127414020840397
+    second: Attack_fly_38
+  - first:
+      213: 8834077312034788895
+    second: Attack_fly_39
+  - first:
+      213: 7902267724360004790
+    second: Attack_fly_40
+  - first:
+      213: 4634300020838085131
+    second: Attack_fly_41
+  - first:
+      213: 4692637563198645361
+    second: Attack_fly_42
+  - first:
+      213: 1384121419901968185
+    second: Attack_fly_43
+  - first:
+      213: 3041051588626690738
+    second: Attack_fly_44
+  - first:
+      213: 2075019243981427653
+    second: Attack_fly_45
+  - first:
+      213: -2295207492731223757
+    second: Attack_fly_46
+  - first:
+      213: -1554197241116754274
+    second: Attack_fly_47
+  - first:
+      213: -6580358651834034908
+    second: Attack_fly_48
+  - first:
+      213: -8959418339990634853
+    second: Attack_fly_49
+  - first:
+      213: 6565422460734453572
+    second: Attack_fly_50
+  - first:
+      213: -7875282177299474202
+    second: Attack_fly_51
+  - first:
+      213: 1422363378429180414
+    second: Attack_fly_52
+  - first:
+      213: -1289504351843365108
+    second: Attack_fly_53
+  - first:
+      213: -999337204483678162
+    second: Attack_fly_54
+  - first:
+      213: -2671378223028246258
+    second: Attack_fly_55
+  - first:
+      213: -8225019312534407055
+    second: Attack_fly_56
+  - first:
+      213: 8122211444423927126
+    second: Attack_fly_57
+  - first:
+      213: 8138540697739406038
+    second: Attack_fly_58
+  - first:
+      213: -6868367741942776565
+    second: Attack_fly_59
+  - first:
+      213: -8360075014316989301
+    second: Attack_fly_60
+  - first:
+      213: -5060924899545331376
+    second: Attack_fly_61
+  - first:
+      213: 3418540208709507567
+    second: Attack_fly_62
+  - first:
+      213: -4137812832900473955
+    second: Attack_fly_63
+  - first:
+      213: 3733886362761889369
+    second: Attack_fly_64
+  - first:
+      213: -8507361355994281687
+    second: Attack_fly_65
+  - first:
+      213: -7827363043134066254
+    second: Attack_fly_66
+  - first:
+      213: -7656605942845147674
+    second: Attack_fly_67
+  - first:
+      213: -2757875614783739919
+    second: Attack_fly_68
+  - first:
+      213: 9191194362847263336
+    second: Attack_fly_69
+  - first:
+      213: 4765162875238633205
+    second: Attack_fly_70
+  - first:
+      213: 8932819067663152954
+    second: Attack_fly_71
+  - first:
+      213: -4364521657117415742
+    second: Attack_fly_72
+  - first:
+      213: 2293571255952150293
+    second: Attack_fly_73
+  - first:
+      213: -2516544512288960610
+    second: Attack_fly_74
+  - first:
+      213: -7014902734668758231
+    second: Attack_fly_75
+  - first:
+      213: 673182710685104122
+    second: Attack_fly_76
+  - first:
+      213: -693156726494071018
+    second: Attack_fly_77
+  - first:
+      213: 2987552462370404002
+    second: Attack_fly_78
+  - first:
+      213: -7139656519297018174
+    second: Attack_fly_79
+  - first:
+      213: 3856704963991972533
+    second: Attack_fly_80
+  - first:
+      213: 1318372330069423226
+    second: Attack_fly_81
+  - first:
+      213: 5439399120028065184
+    second: Attack_fly_82
+  - first:
+      213: 355449746880324589
+    second: Attack_fly_83
+  - first:
+      213: 2123820277902324107
+    second: Attack_fly_84
+  - first:
+      213: -3414855457686611126
+    second: Attack_fly_85
+  - first:
+      213: -8247069455070257723
+    second: Attack_fly_86
+  - first:
+      213: 8098029670257505533
+    second: Attack_fly_87
+  - first:
+      213: -2781627165162975029
+    second: Attack_fly_88
+  - first:
+      213: 6165890104931029332
+    second: Attack_fly_89
+  - first:
+      213: -3184563078530105279
+    second: Attack_fly_90
+  - first:
+      213: 376766986172371941
+    second: Attack_fly_91
+  - first:
+      213: 398203796550898804
+    second: Attack_fly_92
+  - first:
+      213: -4258296424404501280
+    second: Attack_fly_93
+  - first:
+      213: -4434245282738081284
+    second: Attack_fly_94
+  - first:
+      213: -61080676334102992
+    second: Attack_fly_95
+  - first:
+      213: -730315045394972822
+    second: Attack_fly_96
+  - first:
+      213: -4237606340711205050
+    second: Attack_fly_97
+  - first:
+      213: -6624771339968420441
+    second: Attack_fly_98
+  - first:
+      213: -3212248253075654676
+    second: Attack_fly_99
+  - first:
+      213: -7431179300862756449
+    second: Attack_fly_100
+  - first:
+      213: -4921730879625241639
+    second: Attack_fly_101
+  - first:
+      213: 5695462062325576125
+    second: Attack_fly_102
+  - first:
+      213: 8221725785583139103
+    second: Attack_fly_103
+  - first:
+      213: 5628152353579249676
+    second: Attack_fly_104
+  - first:
+      213: -4916812147404206908
+    second: Attack_fly_105
+  - first:
+      213: -995961402950430005
+    second: Attack_fly_106
+  - first:
+      213: -1541968891932573319
+    second: Attack_fly_107
+  - first:
+      213: 4854581019732776772
+    second: Attack_fly_108
+  - first:
+      213: 991598478752103609
+    second: Attack_fly_109
+  - first:
+      213: 8853582543296841924
+    second: Attack_fly_110
+  - first:
+      213: 1749485722114855623
+    second: Attack_fly_111
+  - first:
+      213: 6024910459005962368
+    second: Attack_fly_112
+  - first:
+      213: -8840114538699765811
+    second: Attack_fly_113
+  - first:
+      213: -1743870897076889817
+    second: Attack_fly_114
+  - first:
+      213: -9001072375523023749
+    second: Attack_fly_115
+  - first:
+      213: 996034668066875698
+    second: Attack_fly_116
+  - first:
+      213: 7461468430250619264
+    second: Attack_fly_117
+  - first:
+      213: -733668764835990938
+    second: Attack_fly_118
+  - first:
+      213: 1645699536190905275
+    second: Attack_fly_119
+  - first:
+      213: -390518515573805958
+    second: Attack_fly_120
+  - first:
+      213: 1620012309209271916
+    second: Attack_fly_121
+  - first:
+      213: -7762541380872430350
+    second: Attack_fly_122
+  - first:
+      213: 4333882515715512266
+    second: Attack_fly_123
+  - first:
+      213: 6304905004000283383
+    second: Attack_fly_124
+  - first:
+      213: 3545342486119305187
+    second: Attack_fly_125
+  - first:
+      213: 8376625225730886306
+    second: Attack_fly_126
+  - first:
+      213: 6039491312792094064
+    second: Attack_fly_127
+  - first:
+      213: -4176264610428246201
+    second: Attack_fly_128
+  - first:
+      213: -7262592110602752594
+    second: Attack_fly_129
+  - first:
+      213: 4413127176716590611
+    second: Attack_fly_130
+  - first:
+      213: -3284149003840369421
+    second: Attack_fly_131
+  - first:
+      213: -5285184616668376219
+    second: Attack_fly_132
+  - first:
+      213: -2613819714000194288
+    second: Attack_fly_133
+  - first:
+      213: -5576679280350746529
+    second: Attack_fly_134
+  - first:
+      213: -3795586107813935465
+    second: Attack_fly_135
+  - first:
+      213: 6956867333271122982
+    second: Attack_fly_136
+  - first:
+      213: 255832650438837274
+    second: Attack_fly_137
+  - first:
+      213: 7069655469520271183
+    second: Attack_fly_138
+  - first:
+      213: 4274151993318823104
+    second: Attack_fly_139
+  - first:
+      213: 2920481706497872950
+    second: Attack_fly_140
+  - first:
+      213: 5067865520248413361
+    second: Attack_fly_141
+  - first:
+      213: -9112468817676997188
+    second: Attack_fly_142
+  - first:
+      213: 7410365580014142041
+    second: Attack_fly_143
+  - first:
+      213: 3277908987104774601
+    second: Attack_fly_144
+  - first:
+      213: 3607735298602710355
+    second: Attack_fly_145
+  - first:
+      213: 2872928130665444285
+    second: Attack_fly_146
+  - first:
+      213: -4816369961984446881
+    second: Attack_fly_147
+  - first:
+      213: -7144848784044624238
+    second: Attack_fly_148
+  - first:
+      213: -3963916534417370904
+    second: Attack_fly_149
+  - first:
+      213: -6144840399697250609
+    second: Attack_fly_150
+  - first:
+      213: -8762359844788891911
+    second: Attack_fly_151
+  - first:
+      213: 2893537335142246640
+    second: Attack_fly_152
+  - first:
+      213: -2924422871124941887
+    second: Attack_fly_153
+  - first:
+      213: -2877879792150211260
+    second: Attack_fly_154
+  - first:
+      213: 2871180759281163788
+    second: Attack_fly_155
+  - first:
+      213: -7301041307474327723
+    second: Attack_fly_156
+  - first:
+      213: 321669422554112128
+    second: Attack_fly_157
+  - first:
+      213: 8871265764005195473
+    second: Attack_fly_158
+  - first:
+      213: 6718047377077942805
+    second: Attack_fly_159
+  - first:
+      213: 812474109843287472
+    second: Attack_fly_160
+  - first:
+      213: -1137813901344642611
+    second: Attack_fly_161
+  - first:
+      213: -498311797336053820
+    second: Attack_fly_162
+  - first:
+      213: 6712031764317332132
+    second: Attack_fly_163
+  - first:
+      213: 6610417605506072997
+    second: Attack_fly_164
+  - first:
+      213: 6139210861869801351
+    second: Attack_fly_165
+  - first:
+      213: -7365421948906981007
+    second: Attack_fly_166
+  - first:
+      213: 3789812205031271723
+    second: Attack_fly_167
+  - first:
+      213: 8311598457478916854
+    second: Attack_fly_168
+  - first:
+      213: 6420724949182294868
+    second: Attack_fly_169
+  - first:
+      213: 8516674002036594075
+    second: Attack_fly_170
+  - first:
+      213: -4681585687554123361
+    second: Attack_fly_171
+  - first:
+      213: -3102095393415094732
+    second: Attack_fly_172
+  - first:
+      213: 3321531776013367706
+    second: Attack_fly_173
+  - first:
+      213: 2103051094744081235
+    second: Attack_fly_174
+  - first:
+      213: 5819300845376285065
+    second: Attack_fly_175
+  - first:
+      213: 6557832198873741392
+    second: Attack_fly_176
+  - first:
+      213: 6225951460210277228
+    second: Attack_fly_177
+  - first:
+      213: 5088354745513245688
+    second: Attack_fly_178
+  - first:
+      213: 4440687699643232705
+    second: Attack_fly_179
+  - first:
+      213: -6533672847719694618
+    second: Attack_fly_180
+  - first:
+      213: -2156613519322568012
+    second: Attack_fly_181
+  - first:
+      213: 7413057998187795910
+    second: Attack_fly_182
+  - first:
+      213: 7489268249753169536
+    second: Attack_fly_183
+  - first:
+      213: 248561274250957112
+    second: Attack_fly_184
+  - first:
+      213: -781108642215221726
+    second: Attack_fly_185
+  - first:
+      213: 1515898159472334626
+    second: Attack_fly_186
+  - first:
+      213: -7774919951653152440
+    second: Attack_fly_187
+  - first:
+      213: -2079933417770833253
+    second: Attack_fly_188
+  - first:
+      213: 2084687240040687191
+    second: Attack_fly_189
+  - first:
+      213: -4175010281141358664
+    second: Attack_fly_190
+  - first:
+      213: -6921844841715639923
+    second: Attack_fly_191
+  - first:
+      213: 567075156844661957
+    second: Attack_fly_192
+  - first:
+      213: -66313161200966308
+    second: Attack_fly_193
+  - first:
+      213: 4138204181775664337
+    second: Attack_fly_194
+  - first:
+      213: -1024328513806801125
+    second: Attack_fly_195
+  - first:
+      213: 3111285691629149498
+    second: Attack_fly_196
+  - first:
+      213: 1841584118417649718
+    second: Attack_fly_197
+  - first:
+      213: 7037452508566054152
+    second: Attack_fly_198
+  - first:
+      213: -3011137998349291055
+    second: Attack_fly_199
+  - first:
+      213: 7622762277988867473
+    second: Attack_fly_200
+  - first:
+      213: -8500977964343725186
+    second: Attack_fly_201
+  - first:
+      213: 7279746112830904634
+    second: Attack_fly_202
+  - first:
+      213: 3138876334555696198
+    second: Attack_fly_203
+  - first:
+      213: -7807722714647365296
+    second: Attack_fly_204
+  - first:
+      213: 6400233814301045744
+    second: Attack_fly_205
+  - first:
+      213: -306740194784860777
+    second: Attack_fly_206
+  - first:
+      213: -2968865141811011640
+    second: Attack_fly_207
+  - first:
+      213: -931098518432684549
+    second: Attack_fly_208
+  - first:
+      213: -8681253504143180800
+    second: Attack_fly_209
+  - first:
+      213: -5540642614014838502
+    second: Attack_fly_210
+  - first:
+      213: -334669464284076868
+    second: Attack_fly_211
+  - first:
+      213: -8923249198430587838
+    second: Attack_fly_212
+  - first:
+      213: -2208402182244337353
+    second: Attack_fly_213
+  - first:
+      213: 382328627134656421
+    second: Attack_fly_214
+  - first:
+      213: 4965459679802938335
+    second: Attack_fly_215
+  - first:
+      213: 1482534024013400172
+    second: Attack_fly_216
+  - first:
+      213: -7586912704717578029
+    second: Attack_fly_217
+  - first:
+      213: -2648348327979896283
+    second: Attack_fly_218
+  - first:
+      213: -3347771567094794235
+    second: Attack_fly_219
+  - first:
+      213: 139741895110668013
+    second: Attack_fly_220
+  - first:
+      213: 3437459839171240703
+    second: Attack_fly_221
+  - first:
+      213: -2386002745317352664
+    second: Attack_fly_222
+  - first:
+      213: -4680940169052714121
+    second: Attack_fly_223
+  - first:
+      213: -1750181233272670802
+    second: Attack_fly_224
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Attack_fly_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1bdbe481dc1e944a8a34d7ecef63ad4
+      internalID: -66146442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2578b50192ee6674aab3bc2c495d4d3f
+      internalID: 563207869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb57c677c33dfd459e5d71460bf55a8
+      internalID: -1757774922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c062e2cce034b344786f68682d2038e9
+      internalID: -990109605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a336a1eae703e4096c8b63fa8914f6
+      internalID: -866776683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7165f0a01d2389d499058fb959567aea
+      internalID: -991274822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ee4dce292678b48b605526b211ceb3
+      internalID: 1916406529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c9b6454c380874fbf60a937227273b
+      internalID: 112751757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d69e3afe3d834f479a60822c5c9deb2
+      internalID: -1360291886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea07fd3c26f7ba44e85840ebb60b8a13
+      internalID: 1068194761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93d2eb48b1e30d4981e5b6cb2893835
+      internalID: 491959749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7c8c22715bc34418d86b2497a18aba
+      internalID: -573301787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b5b7f91fa3a984880eefe2a8c27295
+      internalID: 1360272013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890b06bcf0c51c54886d624ab901ddc7
+      internalID: -1261332612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e55b345cb18bd4e87ac0710cf0f6e7
+      internalID: 401798179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_15
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1acfcb5ab14ace4fa578ffc7f3b7eaf
+      internalID: 1300749189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feae8a0a907c6c0438e5b0b68eea17d8
+      internalID: -588710459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af752f887d04bf46aa24d9dc5db7696
+      internalID: -1486063334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6514af301868819408d07ed42b9b085f
+      internalID: 50063621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50006f5bb47e21b4ca8692bbc98c5c1e
+      internalID: 562699082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f04cb61199ab1441ab7a80a970771f5
+      internalID: -1796868123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_21
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edd46a90dff0dc46926a9cbfac56b1b
+      internalID: 443483274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_22
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f186f9f3fc6f12a46ad9023714cf3b9f
+      internalID: 984287299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_23
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24263bc57c3019b4dbd6f03240cc8c2c
+      internalID: 1869551344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25593efaf0d0a57468816cdcc514d01d
+      internalID: 53168487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f46794f2fea3c46b9eb417e1f578e0
+      internalID: -477802975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5503d5e5ba54e134c95169305d90c25f
+      internalID: 572467715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f736fa0c56d1ed3439c66cde086adeef
+      internalID: -1161981783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e6dc34372b9c5479d147e4d0a1a130
+      internalID: -1105597913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_29
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad01edcb9a7f25946a0028930b928e99
+      internalID: -998998603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_30
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1611d18cae1f0774a99e9ea4fe143836
+      internalID: 755500194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8096a37fe1a5cd443aae5942ec61dc04
+      internalID: 942405111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935235170799a5443a718c32be49a60a
+      internalID: -834261919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_33
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce28183bb25ff241af813f4e3e88238
+      internalID: 1987870446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_34
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84e24cc372a5b84e9c307094ad49e89
+      internalID: -2049700168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_35
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c228ce1e8fe39994691cc03336c23ca7
+      internalID: 1097769369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_36
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc893250d12c87842b438e85806f6b8d
+      internalID: 1696908336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_37
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96fa1bcb256d08e4491094da9502f926
+      internalID: -1955064230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_38
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4d1f1b66f557547879b614d629ee05
+      internalID: 876762761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_39
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34907e41528b22f43962c4bd483ffb3e
+      internalID: -2032014159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c073003035b2a4dae69557180ae458
+      internalID: -323156769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_41
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87425f716398b824aa1782e8165601bc
+      internalID: 1486575789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_42
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772d69901dea4b14593052a150f8dc06
+      internalID: 1190859230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_43
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea6acff27a45464bbb4cc7f9fcbe24a
+      internalID: 1706339259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_44
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a71d286f96c7b64cbf4ae7ecf0ea012
+      internalID: -1621406913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_45
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168a75c383a792049886291b85013cc4
+      internalID: 911665952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_46
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ceb44ae279e4d40a1ca54f4c5b3ff0
+      internalID: -1496429366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_47
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4acb7e1f66ac2e7499266de6ac9470af
+      internalID: 420710845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280c8ced9214bda469468a585f226318
+      internalID: 1720198264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_49
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b3ea6ecaa52d842bea98e271de04ad
+      internalID: 1414803275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_50
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c994b82c08bf9dd4685fecc8468501df
+      internalID: -1226453802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_51
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7daa8b5982aa641a182b9478688560
+      internalID: 1276553875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_52
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d1d316ccf956141b98a8e9dfa80641
+      internalID: -593487130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_53
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4ddfdfa06f41c4f89745b34b128be4
+      internalID: -602817062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_54
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ac06db574c343448795c84da726b48
+      internalID: -1251216767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_55
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7db2335d8b6ec499b2a37f063c5dcd
+      internalID: 1856834941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca7ba704b28b8941876114b13fcb4f9
+      internalID: -933093232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_57
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c8b90aae1d90e43b4e8b92faedd419
+      internalID: -1755640085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_58
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b70674116100440b31f196d51ec247
+      internalID: 693933572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_59
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67776c6527ced23469807514116d423e
+      internalID: -2101531117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_60
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc60c563851c4b458f32c4bbc793fee
+      internalID: 482591719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_61
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4dac741c42866445aec3563af682b18
+      internalID: -528983541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_62
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02b716a6c9b9b74c8a009308a1faa9f
+      internalID: 1023432240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_63
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc237efe5ff796545b67b8b99ba4dc69
+      internalID: -751432900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcdb2924c32ae28418cd480855d6de4a
+      internalID: 1635672517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_65
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436d475ba8d4cab418b871676d72bcfd
+      internalID: 337471933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_66
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ba8ad00617f7d47a9e8376a425c904
+      internalID: 1488413036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_67
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bcc3189884628547b74a840b8006768
+      internalID: 516512644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_68
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692c27810efc8fd4691dc796b864c83a
+      internalID: -24949829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_69
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82810aee972fe3d4697361cfa9f88bd8
+      internalID: 216908469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_70
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b90f8e9d47dbcb4898c98a59ecfbd9c
+      internalID: 2005445921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_fly_71
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2bc942e479d2e5419973b8698f4a47f
+      internalID: -2097449178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7e4b6a9e6559b8e45b7845587618bb8b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Attack_fly_0: -66146442
+      Attack_fly_1: 563207869
+      Attack_fly_10: 491959749
+      Attack_fly_11: -573301787
+      Attack_fly_12: 1360272013
+      Attack_fly_13: -1261332612
+      Attack_fly_14: 401798179
+      Attack_fly_15: 1300749189
+      Attack_fly_16: -588710459
+      Attack_fly_17: -1486063334
+      Attack_fly_18: 50063621
+      Attack_fly_19: 562699082
+      Attack_fly_2: -1757774922
+      Attack_fly_20: -1796868123
+      Attack_fly_21: 443483274
+      Attack_fly_22: 984287299
+      Attack_fly_23: 1869551344
+      Attack_fly_24: 53168487
+      Attack_fly_25: -477802975
+      Attack_fly_26: 572467715
+      Attack_fly_27: -1161981783
+      Attack_fly_28: -1105597913
+      Attack_fly_29: -998998603
+      Attack_fly_3: -990109605
+      Attack_fly_30: 755500194
+      Attack_fly_31: 942405111
+      Attack_fly_32: -834261919
+      Attack_fly_33: 1987870446
+      Attack_fly_34: -2049700168
+      Attack_fly_35: 1097769369
+      Attack_fly_36: 1696908336
+      Attack_fly_37: -1955064230
+      Attack_fly_38: 876762761
+      Attack_fly_39: -2032014159
+      Attack_fly_4: -866776683
+      Attack_fly_40: -323156769
+      Attack_fly_41: 1486575789
+      Attack_fly_42: 1190859230
+      Attack_fly_43: 1706339259
+      Attack_fly_44: -1621406913
+      Attack_fly_45: 911665952
+      Attack_fly_46: -1496429366
+      Attack_fly_47: 420710845
+      Attack_fly_48: 1720198264
+      Attack_fly_49: 1414803275
+      Attack_fly_5: -991274822
+      Attack_fly_50: -1226453802
+      Attack_fly_51: 1276553875
+      Attack_fly_52: -593487130
+      Attack_fly_53: -602817062
+      Attack_fly_54: -1251216767
+      Attack_fly_55: 1856834941
+      Attack_fly_56: -933093232
+      Attack_fly_57: -1755640085
+      Attack_fly_58: 693933572
+      Attack_fly_59: -2101531117
+      Attack_fly_6: 1916406529
+      Attack_fly_60: 482591719
+      Attack_fly_61: -528983541
+      Attack_fly_62: 1023432240
+      Attack_fly_63: -751432900
+      Attack_fly_64: 1635672517
+      Attack_fly_65: 337471933
+      Attack_fly_66: 1488413036
+      Attack_fly_67: 516512644
+      Attack_fly_68: -24949829
+      Attack_fly_69: 216908469
+      Attack_fly_7: 112751757
+      Attack_fly_70: 2005445921
+      Attack_fly_71: -2097449178
+      Attack_fly_8: -1360291886
+      Attack_fly_9: 1068194761
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

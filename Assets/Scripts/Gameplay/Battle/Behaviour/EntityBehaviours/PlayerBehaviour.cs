@@ -1,14 +1,12 @@
-using System.Collections.Generic;
-using System.Linq;
 using Assets.Scripts.Map;
 using Cysharp.Threading.Tasks;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Data;
-using Project.Gameplay.Battle.Model;
 using Project.Gameplay.Battle.Model.CardPlayers;
 using Project.Gameplay.Battle.Model.Cards;
-using Project.Gameplay.Common;
 using Project.Gameplay.Common.Datas;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
 {
@@ -26,7 +24,7 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
                 BattleBehaviour.Model.AddCardToDeck(CardOwner.player, preCard.name);
             }
 
-            var deck = MapStaticData.LoadData(BattleBehaviour.Model.Player.Config.Deck.Select(x => x.name));
+            var deck = MapStaticData.LoadData();
 
             _shouldGivedCards = new();
             deck.Deck.ForEach(card =>
@@ -36,45 +34,45 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
 
             foreach (var deckCard in _shouldGivedCards.ToList())
             {
-                if(deckCard == null) continue;
+                if (deckCard == null) continue;
                 if (!BattleBehaviour.Config.GiveCardsByActualLevel || deckCard.Level <= PlayerModel.Level)
                 {
                     BattleBehaviour.Model.AddCardToDeck(CardOwner.player, deckCard.name);
                     _shouldGivedCards.TryRemove(deckCard);
                 }
             }
-            
+
             for (int i = 0; i < BattleBehaviour.Config.CardsAtFirstTurn; i++)
             {
-                if(PlayerModel.TransferCardFromDeckToHand());
-                    await UniTask.WaitForSeconds(0.1f);
+                if (PlayerModel.TransferCardFromDeckToHand()) ;
+                await UniTask.WaitForSeconds(0.1f);
             }
 
             await UniTask.WaitForSeconds(0.1f);
-            
+
             for (int i = 0; i < PlayerModel.Config.SpellsSize; i++)
             {
-                if(PlayerModel.TransferCardFromDeckToSpells());
-                    await UniTask.WaitForSeconds(0.1f);
+                if (PlayerModel.TransferCardFromDeckToSpells()) ;
+                await UniTask.WaitForSeconds(0.1f);
             }
         }
         protected override async void OnTurnStart()
         {
             PlayerModel.AddTurnElectrons();
-            
-            if(TurnIndex == 0) return;
+
+            if (TurnIndex == 0) return;
 
             foreach (var deckCard in _shouldGivedCards.ToList())
             {
-                if(deckCard == null) continue;
-                
+                if (deckCard == null) continue;
+
                 if (!BattleBehaviour.Config.GiveCardsByActualLevel || deckCard.Level <= PlayerModel.Level)
                 {
                     BattleBehaviour.Model.AddCardToDeck(CardOwner.player, deckCard.name);
                     _shouldGivedCards.TryRemove(deckCard);
                 }
             }
-            
+
             if (PlayerModel.GetFirstCardInDeck() == null || PlayerModel.IsAllCardInDeckHigherThanPlayerLevel())
             {
                 foreach (var postCard in BattleBehaviour.Config.PostDeckCards)
@@ -82,7 +80,7 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
                     BattleBehaviour.Model.AddCardToDeck(CardOwner.player, postCard.name);
                 }
             }
-            
+
             for (int i = 0; i < BattleBehaviour.Config.CardsAtAnotherTurns; i++)
             {
                 PlayerModel.TransferCardFromDeckToHand();
@@ -91,11 +89,11 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
             await UniTask.WaitForSeconds(0.1f);
             for (int i = 0; i < PlayerModel.Config.SpellsSize; i++)
             {
-                if(PlayerModel.TransferCardFromDeckToSpells());
+                if (PlayerModel.TransferCardFromDeckToSpells()) ;
                 await UniTask.WaitForSeconds(0.1f);
             }
         }
-        
+
         public PlayerBehaviour(BattleBehaviour battleModel) : base(battleModel) { }
     }
 }

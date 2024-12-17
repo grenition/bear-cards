@@ -1,0 +1,3350 @@
+fileFormatVersion: 2
+guid: 601cff6d71e199141af4e40a70f790ec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5271243196382975363
+    second: Effect_Explosion_toxic_0
+  - first:
+      213: -1039588281140573229
+    second: Effect_Explosion_toxic_1
+  - first:
+      213: 192173585726211012
+    second: Effect_Explosion_toxic_2
+  - first:
+      213: -9188825197430136857
+    second: Effect_Explosion_toxic_3
+  - first:
+      213: 5168630307708686883
+    second: Effect_Explosion_toxic_4
+  - first:
+      213: 4610911192361387645
+    second: Effect_Explosion_toxic_5
+  - first:
+      213: 1791494248877149602
+    second: Effect_Explosion_toxic_6
+  - first:
+      213: -2261066403406847778
+    second: Effect_Explosion_toxic_7
+  - first:
+      213: 1477391418860718739
+    second: Effect_Explosion_toxic_8
+  - first:
+      213: -5632098117637173786
+    second: Effect_Explosion_toxic_9
+  - first:
+      213: 7142851163897017951
+    second: Effect_Explosion_toxic_10
+  - first:
+      213: -6818441438908271791
+    second: Effect_Explosion_toxic_11
+  - first:
+      213: -4795548767203534044
+    second: Effect_Explosion_toxic_12
+  - first:
+      213: -8410793527394610945
+    second: Effect_Explosion_toxic_13
+  - first:
+      213: -6618952109531424594
+    second: Effect_Explosion_toxic_14
+  - first:
+      213: -54670117389135513
+    second: Effect_Explosion_toxic_15
+  - first:
+      213: -6113104557501991755
+    second: Effect_Explosion_toxic_16
+  - first:
+      213: 354447700698268381
+    second: Effect_Explosion_toxic_17
+  - first:
+      213: -5003706515296230034
+    second: Effect_Explosion_toxic_18
+  - first:
+      213: -7074141034122011035
+    second: Effect_Explosion_toxic_19
+  - first:
+      213: -4343925891813311700
+    second: Effect_Explosion_toxic_20
+  - first:
+      213: -2758439159236931159
+    second: Effect_Explosion_toxic_21
+  - first:
+      213: -7211863110114344522
+    second: Effect_Explosion_toxic_22
+  - first:
+      213: 6042728041530684042
+    second: Effect_Explosion_toxic_23
+  - first:
+      213: 6539822711892171657
+    second: Effect_Explosion_toxic_24
+  - first:
+      213: 4660961630042207934
+    second: Effect_Explosion_toxic_25
+  - first:
+      213: 9000135461070670486
+    second: Effect_Explosion_toxic_26
+  - first:
+      213: 548114269449438668
+    second: Effect_Explosion_toxic_27
+  - first:
+      213: -2468410925238395782
+    second: Effect_Explosion_toxic_28
+  - first:
+      213: 882638690896533871
+    second: Effect_Explosion_toxic_29
+  - first:
+      213: 7338652524175542671
+    second: Effect_Explosion_toxic_30
+  - first:
+      213: 799926372485708840
+    second: Effect_Explosion_toxic_31
+  - first:
+      213: 1613573417842363759
+    second: Effect_Explosion_toxic_32
+  - first:
+      213: -6250023845579774579
+    second: Effect_Explosion_toxic_33
+  - first:
+      213: 3760088580824398199
+    second: Effect_Explosion_toxic_34
+  - first:
+      213: 2660255281853769412
+    second: Effect_Explosion_toxic_35
+  - first:
+      213: -8872233829931516094
+    second: Effect_Explosion_toxic_36
+  - first:
+      213: 3429191280784787736
+    second: Effect_Explosion_toxic_37
+  - first:
+      213: -6387860781688287113
+    second: Effect_Explosion_toxic_38
+  - first:
+      213: 3714485974160857344
+    second: Effect_Explosion_toxic_39
+  - first:
+      213: 8938866412807162349
+    second: Effect_Explosion_toxic_40
+  - first:
+      213: -7585928055041128437
+    second: Effect_Explosion_toxic_41
+  - first:
+      213: -1770438816786262590
+    second: Effect_Explosion_toxic_42
+  - first:
+      213: -8224503419920964260
+    second: Effect_Explosion_toxic_43
+  - first:
+      213: 6764369103514621869
+    second: Effect_Explosion_toxic_44
+  - first:
+      213: 2407642238408539434
+    second: Effect_Explosion_toxic_45
+  - first:
+      213: 3054524502835172015
+    second: Effect_Explosion_toxic_46
+  - first:
+      213: -4857079824434042112
+    second: Effect_Explosion_toxic_47
+  - first:
+      213: -5714217711844211334
+    second: Effect_Explosion_toxic_48
+  - first:
+      213: 6100308581226616405
+    second: Effect_Explosion_toxic_49
+  - first:
+      213: 7226762706839523039
+    second: Effect_Explosion_toxic_50
+  - first:
+      213: -2931178326602863642
+    second: Effect_Explosion_toxic_51
+  - first:
+      213: -7068791630236764442
+    second: Effect_Explosion_toxic_52
+  - first:
+      213: 4926685857026786188
+    second: Effect_Explosion_toxic_53
+  - first:
+      213: 7668897570390169927
+    second: Effect_Explosion_toxic_54
+  - first:
+      213: 3142686750231213896
+    second: Effect_Explosion_toxic_55
+  - first:
+      213: 2838273296218401324
+    second: Effect_Explosion_toxic_56
+  - first:
+      213: -8071873925248460919
+    second: Effect_Explosion_toxic_57
+  - first:
+      213: -2920121965788000850
+    second: Effect_Explosion_toxic_58
+  - first:
+      213: 4325011692066029674
+    second: Effect_Explosion_toxic_59
+  - first:
+      213: -1638089079608900500
+    second: Effect_Explosion_toxic_60
+  - first:
+      213: 2426567322731531391
+    second: Effect_Explosion_toxic_61
+  - first:
+      213: 5734276745130733144
+    second: Effect_Explosion_toxic_62
+  - first:
+      213: -2460815377236573750
+    second: Effect_Explosion_toxic_63
+  - first:
+      213: -2595691705383072468
+    second: Effect_Explosion_toxic_64
+  - first:
+      213: -4403107106069488620
+    second: Effect_Explosion_toxic_65
+  - first:
+      213: -3125250304747915782
+    second: Effect_Explosion_toxic_66
+  - first:
+      213: -120557219348747760
+    second: Effect_Explosion_toxic_67
+  - first:
+      213: 3298282237892582260
+    second: Effect_Explosion_toxic_68
+  - first:
+      213: -1608771052034611025
+    second: Effect_Explosion_toxic_69
+  - first:
+      213: -1937706916053840938
+    second: Effect_Explosion_toxic_70
+  - first:
+      213: -5772129679306581167
+    second: Effect_Explosion_toxic_71
+  - first:
+      213: -997378709767727859
+    second: Effect_Explosion_toxic_72
+  - first:
+      213: 8293728102850688210
+    second: Effect_Explosion_toxic_73
+  - first:
+      213: 2381008059945035583
+    second: Effect_Explosion_toxic_74
+  - first:
+      213: 4469034797103022042
+    second: Effect_Explosion_toxic_75
+  - first:
+      213: -4627813818613182366
+    second: Effect_Explosion_toxic_76
+  - first:
+      213: -1204057176599390680
+    second: Effect_Explosion_toxic_77
+  - first:
+      213: -8904871629614774357
+    second: Effect_Explosion_toxic_78
+  - first:
+      213: 4447069266730041429
+    second: Effect_Explosion_toxic_79
+  - first:
+      213: 6290455288541960380
+    second: Effect_Explosion_toxic_80
+  - first:
+      213: -5644352625825548279
+    second: Effect_Explosion_toxic_81
+  - first:
+      213: 546492718104840189
+    second: Effect_Explosion_toxic_82
+  - first:
+      213: 4854696221370928560
+    second: Effect_Explosion_toxic_83
+  - first:
+      213: -24943049594690647
+    second: Effect_Explosion_toxic_84
+  - first:
+      213: 3222926221974437441
+    second: Effect_Explosion_toxic_85
+  - first:
+      213: -312912208655598101
+    second: Effect_Explosion_toxic_86
+  - first:
+      213: -3346934961581604146
+    second: Effect_Explosion_toxic_87
+  - first:
+      213: -9178433132114042625
+    second: Effect_Explosion_toxic_88
+  - first:
+      213: -4576488984549939392
+    second: Effect_Explosion_toxic_89
+  - first:
+      213: 3896024815259904115
+    second: Effect_Explosion_toxic_90
+  - first:
+      213: 8859190832854843794
+    second: Effect_Explosion_toxic_91
+  - first:
+      213: -4514147366991697754
+    second: Effect_Explosion_toxic_92
+  - first:
+      213: -9161830339778438821
+    second: Effect_Explosion_toxic_93
+  - first:
+      213: 3329666085048855332
+    second: Effect_Explosion_toxic_94
+  - first:
+      213: -3840931507025038964
+    second: Effect_Explosion_toxic_95
+  - first:
+      213: 2265184092305344816
+    second: Effect_Explosion_toxic_96
+  - first:
+      213: -1225057270144078787
+    second: Effect_Explosion_toxic_97
+  - first:
+      213: 4908395661866334170
+    second: Effect_Explosion_toxic_98
+  - first:
+      213: -1284534173013234444
+    second: Effect_Explosion_toxic_99
+  - first:
+      213: 7268146478644416669
+    second: Effect_Explosion_toxic_100
+  - first:
+      213: 4207044949149323235
+    second: Effect_Explosion_toxic_101
+  - first:
+      213: 7994539251089950676
+    second: Effect_Explosion_toxic_102
+  - first:
+      213: 1523461776872350342
+    second: Effect_Explosion_toxic_103
+  - first:
+      213: 5201033565023381322
+    second: Effect_Explosion_toxic_104
+  - first:
+      213: 8261264753216596488
+    second: Effect_Explosion_toxic_105
+  - first:
+      213: -3383236861372852684
+    second: Effect_Explosion_toxic_106
+  - first:
+      213: -2414398050913115343
+    second: Effect_Explosion_toxic_107
+  - first:
+      213: -7157838182425242372
+    second: Effect_Explosion_toxic_108
+  - first:
+      213: -1321631267492959773
+    second: Effect_Explosion_toxic_109
+  - first:
+      213: -4106873092697478088
+    second: Effect_Explosion_toxic_110
+  - first:
+      213: -4341517834396804184
+    second: Effect_Explosion_toxic_111
+  - first:
+      213: 6204077160818071550
+    second: Effect_Explosion_toxic_112
+  - first:
+      213: -3940019806244449196
+    second: Effect_Explosion_toxic_113
+  - first:
+      213: 6223443339608300926
+    second: Effect_Explosion_toxic_114
+  - first:
+      213: -6858043883877644963
+    second: Effect_Explosion_toxic_115
+  - first:
+      213: -874888962929370003
+    second: Effect_Explosion_toxic_116
+  - first:
+      213: 8944230927692819759
+    second: Effect_Explosion_toxic_117
+  - first:
+      213: 6715911897629873438
+    second: Effect_Explosion_toxic_118
+  - first:
+      213: -101338051754722885
+    second: Effect_Explosion_toxic_119
+  - first:
+      213: -5003330624427737318
+    second: Effect_Explosion_toxic_120
+  - first:
+      213: -8656510352305754544
+    second: Effect_Explosion_toxic_121
+  - first:
+      213: -6165370813954620442
+    second: Effect_Explosion_toxic_122
+  - first:
+      213: -9149657301206009396
+    second: Effect_Explosion_toxic_123
+  - first:
+      213: 8572166030584088665
+    second: Effect_Explosion_toxic_124
+  - first:
+      213: -1584235833804731879
+    second: Effect_Explosion_toxic_125
+  - first:
+      213: -1973187631839805665
+    second: Effect_Explosion_toxic_126
+  - first:
+      213: 3259647015794362719
+    second: Effect_Explosion_toxic_127
+  - first:
+      213: -740500503131895175
+    second: Effect_Explosion_toxic_128
+  - first:
+      213: 2580187321636900115
+    second: Effect_Explosion_toxic_129
+  - first:
+      213: 6308700989577662139
+    second: Effect_Explosion_toxic_130
+  - first:
+      213: -1184776452589377194
+    second: Effect_Explosion_toxic_131
+  - first:
+      213: 1954193184000216919
+    second: Effect_Explosion_toxic_132
+  - first:
+      213: 6851438769333962487
+    second: Effect_Explosion_toxic_133
+  - first:
+      213: 8539550753757093789
+    second: Effect_Explosion_toxic_134
+  - first:
+      213: 120803122952022016
+    second: Effect_Explosion_toxic_135
+  - first:
+      213: 5738705595143737961
+    second: Effect_Explosion_toxic_136
+  - first:
+      213: 8777081546113262928
+    second: Effect_Explosion_toxic_137
+  - first:
+      213: -8153942878655676819
+    second: Effect_Explosion_toxic_138
+  - first:
+      213: -5915425280921891891
+    second: Effect_Explosion_toxic_139
+  - first:
+      213: 4508600565085528016
+    second: Effect_Explosion_toxic_140
+  - first:
+      213: -5524308996361517412
+    second: Effect_Explosion_toxic_141
+  - first:
+      213: 2610045981648111579
+    second: Effect_Explosion_toxic_142
+  - first:
+      213: -8021977072142295033
+    second: Effect_Explosion_toxic_143
+  - first:
+      213: 8797426215780265681
+    second: Effect_Explosion_toxic_144
+  - first:
+      213: 1679155877186309839
+    second: Effect_Explosion_toxic_145
+  - first:
+      213: -7565836412793849491
+    second: Effect_Explosion_toxic_146
+  - first:
+      213: 1595671651395090618
+    second: Effect_Explosion_toxic_147
+  - first:
+      213: -7744415604981681067
+    second: Effect_Explosion_toxic_148
+  - first:
+      213: -2384012694440407580
+    second: Effect_Explosion_toxic_149
+  - first:
+      213: -8007486422438132979
+    second: Effect_Explosion_toxic_150
+  - first:
+      213: -1568530612725823002
+    second: Effect_Explosion_toxic_151
+  - first:
+      213: -5416018346589192753
+    second: Effect_Explosion_toxic_152
+  - first:
+      213: -2236052193500671291
+    second: Effect_Explosion_toxic_153
+  - first:
+      213: -1306917038723207462
+    second: Effect_Explosion_toxic_154
+  - first:
+      213: -4562367918513547306
+    second: Effect_Explosion_toxic_155
+  - first:
+      213: -3309390589424435274
+    second: Effect_Explosion_toxic_156
+  - first:
+      213: 9018362045602332830
+    second: Effect_Explosion_toxic_157
+  - first:
+      213: -1709356737918978675
+    second: Effect_Explosion_toxic_158
+  - first:
+      213: 4929093104998511750
+    second: Effect_Explosion_toxic_159
+  - first:
+      213: -7589379581826418751
+    second: Effect_Explosion_toxic_160
+  - first:
+      213: 4300394128765231806
+    second: Effect_Explosion_toxic_161
+  - first:
+      213: -851798015764504244
+    second: Effect_Explosion_toxic_162
+  - first:
+      213: 6772154551086398316
+    second: Effect_Explosion_toxic_163
+  - first:
+      213: 6486563593633603321
+    second: Effect_Explosion_toxic_164
+  - first:
+      213: -3107019414360932320
+    second: Effect_Explosion_toxic_165
+  - first:
+      213: -4293602975311107267
+    second: Effect_Explosion_toxic_166
+  - first:
+      213: -3442043430124249028
+    second: Effect_Explosion_toxic_167
+  - first:
+      213: 8611392173256207161
+    second: Effect_Explosion_toxic_168
+  - first:
+      213: 1077569510806485998
+    second: Effect_Explosion_toxic_169
+  - first:
+      213: -4282326057915038131
+    second: Effect_Explosion_toxic_170
+  - first:
+      213: 4872919990602767473
+    second: Effect_Explosion_toxic_171
+  - first:
+      213: 6321396998890889563
+    second: Effect_Explosion_toxic_172
+  - first:
+      213: 4077861445781889608
+    second: Effect_Explosion_toxic_173
+  - first:
+      213: 1831956327606119936
+    second: Effect_Explosion_toxic_174
+  - first:
+      213: 7604495506219352178
+    second: Effect_Explosion_toxic_175
+  - first:
+      213: 2699950823647855255
+    second: Effect_Explosion_toxic_176
+  - first:
+      213: 6803344118287615588
+    second: Effect_Explosion_toxic_177
+  - first:
+      213: 8416566934718985845
+    second: Effect_Explosion_toxic_178
+  - first:
+      213: 7523379720609927672
+    second: Effect_Explosion_toxic_179
+  - first:
+      213: -7869065082946504983
+    second: Effect_Explosion_toxic_180
+  - first:
+      213: -406336904235681136
+    second: Effect_Explosion_toxic_181
+  - first:
+      213: 3622933021219776567
+    second: Effect_Explosion_toxic_182
+  - first:
+      213: -572796193214411789
+    second: Effect_Explosion_toxic_183
+  - first:
+      213: 7626494880235800762
+    second: Effect_Explosion_toxic_184
+  - first:
+      213: 8679253526678279514
+    second: Effect_Explosion_toxic_185
+  - first:
+      213: -1919843427117902846
+    second: Effect_Explosion_toxic_186
+  - first:
+      213: -5676448741677887405
+    second: Effect_Explosion_toxic_187
+  - first:
+      213: -3170910406309976248
+    second: Effect_Explosion_toxic_188
+  - first:
+      213: 2366802052978123833
+    second: Effect_Explosion_toxic_189
+  - first:
+      213: 7072880156300562625
+    second: Effect_Explosion_toxic_190
+  - first:
+      213: 2412449221636868940
+    second: Effect_Explosion_toxic_191
+  - first:
+      213: 7171306863718507898
+    second: Effect_Explosion_toxic_192
+  - first:
+      213: -4666922998146728180
+    second: Effect_Explosion_toxic_193
+  - first:
+      213: -7079235047113031798
+    second: Effect_Explosion_toxic_194
+  - first:
+      213: -2267987734257246577
+    second: Effect_Explosion_toxic_195
+  - first:
+      213: 434631549307786226
+    second: Effect_Explosion_toxic_196
+  - first:
+      213: -7750353380848869317
+    second: Effect_Explosion_toxic_197
+  - first:
+      213: -1691292272006027371
+    second: Effect_Explosion_toxic_198
+  - first:
+      213: 6484882192139852270
+    second: Effect_Explosion_toxic_199
+  - first:
+      213: 3427984911690764002
+    second: Effect_Explosion_toxic_200
+  - first:
+      213: -7703028297382610400
+    second: Effect_Explosion_toxic_201
+  - first:
+      213: 8682971989690627328
+    second: Effect_Explosion_toxic_202
+  - first:
+      213: 5076178301044546935
+    second: Effect_Explosion_toxic_203
+  - first:
+      213: -7592880997530909998
+    second: Effect_Explosion_toxic_204
+  - first:
+      213: -7245780479771015199
+    second: Effect_Explosion_toxic_205
+  - first:
+      213: -4265692083047705345
+    second: Effect_Explosion_toxic_206
+  - first:
+      213: -4187145921822535353
+    second: Effect_Explosion_toxic_207
+  - first:
+      213: -7259982559534373681
+    second: Effect_Explosion_toxic_208
+  - first:
+      213: 6588954207544249245
+    second: Effect_Explosion_toxic_209
+  - first:
+      213: 5864654595402393158
+    second: Effect_Explosion_toxic_210
+  - first:
+      213: -1458020817491672960
+    second: Effect_Explosion_toxic_211
+  - first:
+      213: -5365084202220060437
+    second: Effect_Explosion_toxic_212
+  - first:
+      213: -3873114250436107300
+    second: Effect_Explosion_toxic_213
+  - first:
+      213: 2199763788792222571
+    second: Effect_Explosion_toxic_214
+  - first:
+      213: 3264093096541225653
+    second: Effect_Explosion_toxic_215
+  - first:
+      213: -9073689739782935249
+    second: Effect_Explosion_toxic_216
+  - first:
+      213: -4737100734414403386
+    second: Effect_Explosion_toxic_217
+  - first:
+      213: -2689616208447886176
+    second: Effect_Explosion_toxic_218
+  - first:
+      213: -7849581491373458183
+    second: Effect_Explosion_toxic_219
+  - first:
+      213: 6604890761871031694
+    second: Effect_Explosion_toxic_220
+  - first:
+      213: 6431672440620139559
+    second: Effect_Explosion_toxic_221
+  - first:
+      213: 6076781623681613308
+    second: Effect_Explosion_toxic_222
+  - first:
+      213: 1764488182490549632
+    second: Effect_Explosion_toxic_223
+  - first:
+      213: -5827936854073540283
+    second: Effect_Explosion_toxic_224
+  - first:
+      213: -4916327353727032120
+    second: Effect_Explosion_toxic_225
+  - first:
+      213: 679686055003057515
+    second: Effect_Explosion_toxic_226
+  - first:
+      213: 7047266110861943679
+    second: Effect_Explosion_toxic_227
+  - first:
+      213: -5706786321787600038
+    second: Effect_Explosion_toxic_228
+  - first:
+      213: -6776643697402383660
+    second: Effect_Explosion_toxic_229
+  - first:
+      213: -7859137949004643255
+    second: Effect_Explosion_toxic_230
+  - first:
+      213: 7862918345171993696
+    second: Effect_Explosion_toxic_231
+  - first:
+      213: 2348019763240663841
+    second: Effect_Explosion_toxic_232
+  - first:
+      213: 8730260807679244841
+    second: Effect_Explosion_toxic_233
+  - first:
+      213: 3479644540891693783
+    second: Effect_Explosion_toxic_234
+  - first:
+      213: 4204671414927074934
+    second: Effect_Explosion_toxic_235
+  - first:
+      213: -4916239534408162350
+    second: Effect_Explosion_toxic_236
+  - first:
+      213: 1648629070693271448
+    second: Effect_Explosion_toxic_237
+  - first:
+      213: -8835569985476918983
+    second: Effect_Explosion_toxic_238
+  - first:
+      213: 3829867433986128196
+    second: Effect_Explosion_toxic_239
+  - first:
+      213: 191125625165971214
+    second: Effect_Explosion_toxic_240
+  - first:
+      213: -876046395774154688
+    second: Effect_Explosion_toxic_241
+  - first:
+      213: 796839167531193560
+    second: Effect_Explosion_toxic_242
+  - first:
+      213: -4660965906447294850
+    second: Effect_Explosion_toxic_243
+  - first:
+      213: 6312620756691236400
+    second: Effect_Explosion_toxic_244
+  - first:
+      213: -926361343159349783
+    second: Effect_Explosion_toxic_245
+  - first:
+      213: -6407417756220332228
+    second: Effect_Explosion_toxic_246
+  - first:
+      213: 7709486368592620425
+    second: Effect_Explosion_toxic_247
+  - first:
+      213: -6474982112131082886
+    second: Effect_Explosion_toxic_248
+  - first:
+      213: -4855919937498693440
+    second: Effect_Explosion_toxic_249
+  - first:
+      213: -7766829205997450927
+    second: Effect_Explosion_toxic_250
+  - first:
+      213: 5436001178410606864
+    second: Effect_Explosion_toxic_251
+  - first:
+      213: 1094908063769570859
+    second: Effect_Explosion_toxic_252
+  - first:
+      213: 9008878312903201388
+    second: Effect_Explosion_toxic_253
+  - first:
+      213: -1343679943512150876
+    second: Effect_Explosion_toxic_254
+  - first:
+      213: -5254257203432227298
+    second: Effect_Explosion_toxic_255
+  - first:
+      213: -6257286981112558079
+    second: Effect_Explosion_toxic_256
+  - first:
+      213: -7336498419043444484
+    second: Effect_Explosion_toxic_257
+  - first:
+      213: -1763308600863118287
+    second: Effect_Explosion_toxic_258
+  - first:
+      213: 2612931697076902810
+    second: Effect_Explosion_toxic_259
+  - first:
+      213: -405754938352031809
+    second: Effect_Explosion_toxic_260
+  - first:
+      213: 795372066156521366
+    second: Effect_Explosion_toxic_261
+  - first:
+      213: 9020137752068276639
+    second: Effect_Explosion_toxic_262
+  - first:
+      213: -4485894070556875031
+    second: Effect_Explosion_toxic_263
+  - first:
+      213: 3182663633776259687
+    second: Effect_Explosion_toxic_264
+  - first:
+      213: 3326427102629848464
+    second: Effect_Explosion_toxic_265
+  - first:
+      213: -1249947779248441261
+    second: Effect_Explosion_toxic_266
+  - first:
+      213: -396286830121363474
+    second: Effect_Explosion_toxic_267
+  - first:
+      213: 3895540532153334487
+    second: Effect_Explosion_toxic_268
+  - first:
+      213: -2417623925294758001
+    second: Effect_Explosion_toxic_269
+  - first:
+      213: 5202677061958599545
+    second: Effect_Explosion_toxic_270
+  - first:
+      213: 8839341603688407220
+    second: Effect_Explosion_toxic_271
+  - first:
+      213: -2017162769595990932
+    second: Effect_Explosion_toxic_272
+  - first:
+      213: -4326899048164540261
+    second: Effect_Explosion_toxic_273
+  - first:
+      213: 7255011880147159989
+    second: Effect_Explosion_toxic_274
+  - first:
+      213: -2251489083156332505
+    second: Effect_Explosion_toxic_275
+  - first:
+      213: -6134071645580123680
+    second: Effect_Explosion_toxic_276
+  - first:
+      213: 3331701127851540744
+    second: Effect_Explosion_toxic_277
+  - first:
+      213: 7976488840982828720
+    second: Effect_Explosion_toxic_278
+  - first:
+      213: 353768102407008221
+    second: Effect_Explosion_toxic_279
+  - first:
+      213: -3817125645404548545
+    second: Effect_Explosion_toxic_280
+  - first:
+      213: 2804716204734274734
+    second: Effect_Explosion_toxic_281
+  - first:
+      213: 9009768310982288813
+    second: Effect_Explosion_toxic_282
+  - first:
+      213: -3135732276222755173
+    second: Effect_Explosion_toxic_283
+  - first:
+      213: -7226711031295205687
+    second: Effect_Explosion_toxic_284
+  - first:
+      213: 781109642823054800
+    second: Effect_Explosion_toxic_285
+  - first:
+      213: 6045508447249863900
+    second: Effect_Explosion_toxic_286
+  - first:
+      213: 5286158175323854543
+    second: Effect_Explosion_toxic_287
+  - first:
+      213: 4448483470934093930
+    second: Effect_Explosion_toxic_288
+  - first:
+      213: -4805891199084466210
+    second: Effect_Explosion_toxic_289
+  - first:
+      213: -1358223739257941340
+    second: Effect_Explosion_toxic_290
+  - first:
+      213: -2762429991138147287
+    second: Effect_Explosion_toxic_291
+  - first:
+      213: -2214138288256063151
+    second: Effect_Explosion_toxic_292
+  - first:
+      213: 1415594554568095154
+    second: Effect_Explosion_toxic_293
+  - first:
+      213: -8620889086391166862
+    second: Effect_Explosion_toxic_294
+  - first:
+      213: 7152695999254544459
+    second: Effect_Explosion_toxic_295
+  - first:
+      213: 7130994300938618612
+    second: Effect_Explosion_toxic_296
+  - first:
+      213: 915763127525990958
+    second: Effect_Explosion_toxic_297
+  - first:
+      213: -4789941565322116080
+    second: Effect_Explosion_toxic_298
+  - first:
+      213: 2532331695189318404
+    second: Effect_Explosion_toxic_299
+  - first:
+      213: -8261807774979226139
+    second: Effect_Explosion_toxic_300
+  - first:
+      213: -8471542800877852879
+    second: Effect_Explosion_toxic_301
+  - first:
+      213: 7084777873848071097
+    second: Effect_Explosion_toxic_302
+  - first:
+      213: 4376115796407957760
+    second: Effect_Explosion_toxic_303
+  - first:
+      213: -7199639744944733773
+    second: Effect_Explosion_toxic_304
+  - first:
+      213: -1752291197160857813
+    second: Effect_Explosion_toxic_305
+  - first:
+      213: -2008215773381620544
+    second: Effect_Explosion_toxic_306
+  - first:
+      213: 994016182810820534
+    second: Effect_Explosion_toxic_307
+  - first:
+      213: -7325172550622970248
+    second: Effect_Explosion_toxic_308
+  - first:
+      213: -1864654861646070935
+    second: Effect_Explosion_toxic_309
+  - first:
+      213: -6225928679808032500
+    second: Effect_Explosion_toxic_310
+  - first:
+      213: 2775963317444715085
+    second: Effect_Explosion_toxic_311
+  - first:
+      213: -215109757694226338
+    second: Effect_Explosion_toxic_312
+  - first:
+      213: 1528725760043800946
+    second: Effect_Explosion_toxic_313
+  - first:
+      213: -7409457219170444896
+    second: Effect_Explosion_toxic_314
+  - first:
+      213: 6346750719039600046
+    second: Effect_Explosion_toxic_315
+  - first:
+      213: -5079946622341465172
+    second: Effect_Explosion_toxic_316
+  - first:
+      213: 3304925852534332936
+    second: Effect_Explosion_toxic_317
+  - first:
+      213: -537515418852540574
+    second: Effect_Explosion_toxic_318
+  - first:
+      213: -1616007017368313785
+    second: Effect_Explosion_toxic_319
+  - first:
+      213: 4619842424910411562
+    second: Effect_Explosion_toxic_320
+  - first:
+      213: -1324567277020338008
+    second: Effect_Explosion_toxic_321
+  - first:
+      213: 7032675793825042770
+    second: Effect_Explosion_toxic_322
+  - first:
+      213: -2034728882902520256
+    second: Effect_Explosion_toxic_323
+  - first:
+      213: 5580636521487503051
+    second: Effect_Explosion_toxic_324
+  - first:
+      213: -2336619024764785647
+    second: Effect_Explosion_toxic_325
+  - first:
+      213: -4623194788475840531
+    second: Effect_Explosion_toxic_326
+  - first:
+      213: 7013077053057033802
+    second: Effect_Explosion_toxic_327
+  - first:
+      213: 5644018505229868020
+    second: Effect_Explosion_toxic_328
+  - first:
+      213: 4119242875384981006
+    second: Effect_Explosion_toxic_329
+  - first:
+      213: 7982207795493657580
+    second: Effect_Explosion_toxic_330
+  - first:
+      213: -4771534478891971636
+    second: Effect_Explosion_toxic_331
+  - first:
+      213: -281069929916551602
+    second: Effect_Explosion_toxic_332
+  - first:
+      213: 4993254928029657457
+    second: Effect_Explosion_toxic_333
+  - first:
+      213: 1515103615138985546
+    second: Effect_Explosion_toxic_334
+  - first:
+      213: 7614023371389262088
+    second: Effect_Explosion_toxic_335
+  - first:
+      213: 2627989349593608050
+    second: Effect_Explosion_toxic_336
+  - first:
+      213: -3527284205719117724
+    second: Effect_Explosion_toxic_337
+  - first:
+      213: 4353790942804432007
+    second: Effect_Explosion_toxic_338
+  - first:
+      213: -5432785247343034953
+    second: Effect_Explosion_toxic_339
+  - first:
+      213: -1060526289640594849
+    second: Effect_Explosion_toxic_340
+  - first:
+      213: 8649434792601293615
+    second: Effect_Explosion_toxic_341
+  - first:
+      213: -3788747152157945581
+    second: Effect_Explosion_toxic_342
+  - first:
+      213: -7649145205105172722
+    second: Effect_Explosion_toxic_343
+  - first:
+      213: 200568331262813573
+    second: Effect_Explosion_toxic_344
+  - first:
+      213: 8015273878090989920
+    second: Effect_Explosion_toxic_345
+  - first:
+      213: 8815941527798005205
+    second: Effect_Explosion_toxic_346
+  - first:
+      213: 7928820391203657441
+    second: Effect_Explosion_toxic_347
+  - first:
+      213: 9069443816216656026
+    second: Effect_Explosion_toxic_348
+  - first:
+      213: 1335822728634490290
+    second: Effect_Explosion_toxic_349
+  - first:
+      213: -1529753088483623859
+    second: Effect_Explosion_toxic_350
+  - first:
+      213: 8708378141279386425
+    second: Effect_Explosion_toxic_351
+  - first:
+      213: -3081710262258850065
+    second: Effect_Explosion_toxic_352
+  - first:
+      213: -936742700778708237
+    second: Effect_Explosion_toxic_353
+  - first:
+      213: 3143277468977992451
+    second: Effect_Explosion_toxic_354
+  - first:
+      213: -7917743821435068105
+    second: Effect_Explosion_toxic_355
+  - first:
+      213: -57267414178077600
+    second: Effect_Explosion_toxic_356
+  - first:
+      213: -4780693255153088632
+    second: Effect_Explosion_toxic_357
+  - first:
+      213: 4888663357427007893
+    second: Effect_Explosion_toxic_358
+  - first:
+      213: 5773083228077493579
+    second: Effect_Explosion_toxic_359
+  - first:
+      213: 2987834921655102748
+    second: Effect_Explosion_toxic_360
+  - first:
+      213: 6953235991889053388
+    second: Effect_Explosion_toxic_361
+  - first:
+      213: -437154626216409494
+    second: Effect_Explosion_toxic_362
+  - first:
+      213: -584878916532209474
+    second: Effect_Explosion_toxic_363
+  - first:
+      213: 1521340961620799576
+    second: Effect_Explosion_toxic_364
+  - first:
+      213: -3252706831930887558
+    second: Effect_Explosion_toxic_365
+  - first:
+      213: 6023396084880833026
+    second: Effect_Explosion_toxic_366
+  - first:
+      213: 8990590986697056876
+    second: Effect_Explosion_toxic_367
+  - first:
+      213: -2176698410874400748
+    second: Effect_Explosion_toxic_368
+  - first:
+      213: 5294729935184117939
+    second: Effect_Explosion_toxic_369
+  - first:
+      213: -4609439866830904252
+    second: Effect_Explosion_toxic_370
+  - first:
+      213: 4501591027858949443
+    second: Effect_Explosion_toxic_371
+  - first:
+      213: 698769739120196600
+    second: Effect_Explosion_toxic_372
+  - first:
+      213: -5875867450009545759
+    second: Effect_Explosion_toxic_373
+  - first:
+      213: -1403303624377252006
+    second: Effect_Explosion_toxic_374
+  - first:
+      213: -7941884632483809358
+    second: Effect_Explosion_toxic_375
+  - first:
+      213: 1635472405266208422
+    second: Effect_Explosion_toxic_376
+  - first:
+      213: 6401468556534907111
+    second: Effect_Explosion_toxic_377
+  - first:
+      213: 8237842271661818268
+    second: Effect_Explosion_toxic_378
+  - first:
+      213: -2111698312693586871
+    second: Effect_Explosion_toxic_379
+  - first:
+      213: 6380806812246402315
+    second: Effect_Explosion_toxic_380
+  - first:
+      213: 8829947778390331712
+    second: Effect_Explosion_toxic_381
+  - first:
+      213: -1205881681893890623
+    second: Effect_Explosion_toxic_382
+  - first:
+      213: -4882104544499649
+    second: Effect_Explosion_toxic_383
+  - first:
+      213: 1034048824451228273
+    second: Effect_Explosion_toxic_384
+  - first:
+      213: -5815649435462318733
+    second: Effect_Explosion_toxic_385
+  - first:
+      213: 5880650443606859117
+    second: Effect_Explosion_toxic_386
+  - first:
+      213: -4555298625396737805
+    second: Effect_Explosion_toxic_387
+  - first:
+      213: -4934993062501320521
+    second: Effect_Explosion_toxic_388
+  - first:
+      213: -6162018420360520007
+    second: Effect_Explosion_toxic_389
+  - first:
+      213: 3496109780758808476
+    second: Effect_Explosion_toxic_390
+  - first:
+      213: 1754621941985688892
+    second: Effect_Explosion_toxic_391
+  - first:
+      213: -2440658200628122500
+    second: Effect_Explosion_toxic_392
+  - first:
+      213: 7748020808587965637
+    second: Effect_Explosion_toxic_393
+  - first:
+      213: -4885404181007606268
+    second: Effect_Explosion_toxic_394
+  - first:
+      213: -5500071970990509728
+    second: Effect_Explosion_toxic_395
+  - first:
+      213: -2994436556000187515
+    second: Effect_Explosion_toxic_396
+  - first:
+      213: 6110391637893124567
+    second: Effect_Explosion_toxic_397
+  - first:
+      213: -3314193525849456072
+    second: Effect_Explosion_toxic_398
+  - first:
+      213: 4077129286338657078
+    second: Effect_Explosion_toxic_399
+  - first:
+      213: -6649304692691090793
+    second: Effect_Explosion_toxic_400
+  - first:
+      213: -250288610417913573
+    second: Effect_Explosion_toxic_401
+  - first:
+      213: -642762018596128312
+    second: Effect_Explosion_toxic_402
+  - first:
+      213: 8391433025573424076
+    second: Effect_Explosion_toxic_403
+  - first:
+      213: 2381806366917175208
+    second: Effect_Explosion_toxic_404
+  - first:
+      213: -8663576613106549364
+    second: Effect_Explosion_toxic_405
+  - first:
+      213: -8184364275228914759
+    second: Effect_Explosion_toxic_406
+  - first:
+      213: 8512697690257593896
+    second: Effect_Explosion_toxic_407
+  - first:
+      213: -4705336216875394827
+    second: Effect_Explosion_toxic_408
+  - first:
+      213: -4828249746010002470
+    second: Effect_Explosion_toxic_409
+  - first:
+      213: 1670496812734327034
+    second: Effect_Explosion_toxic_410
+  - first:
+      213: 8614057910501207189
+    second: Effect_Explosion_toxic_411
+  - first:
+      213: 379560073454244064
+    second: Effect_Explosion_toxic_412
+  - first:
+      213: 2408760513560000589
+    second: Effect_Explosion_toxic_413
+  - first:
+      213: 8855347165030573053
+    second: Effect_Explosion_toxic_414
+  - first:
+      213: -7914184272886777216
+    second: Effect_Explosion_toxic_415
+  - first:
+      213: 1468678789944997761
+    second: Effect_Explosion_toxic_416
+  - first:
+      213: -3205488303522725447
+    second: Effect_Explosion_toxic_417
+  - first:
+      213: 1959066451195243342
+    second: Effect_Explosion_toxic_418
+  - first:
+      213: 2154789644893886103
+    second: Effect_Explosion_toxic_419
+  - first:
+      213: 3491125123945099512
+    second: Effect_Explosion_toxic_420
+  - first:
+      213: -493374086276015599
+    second: Effect_Explosion_toxic_421
+  - first:
+      213: 729736493876158437
+    second: Effect_Explosion_toxic_422
+  - first:
+      213: 5004895766216415664
+    second: Effect_Explosion_toxic_423
+  - first:
+      213: -8911309736645322463
+    second: Effect_Explosion_toxic_424
+  - first:
+      213: -9090570658447367161
+    second: Effect_Explosion_toxic_425
+  - first:
+      213: -7227157246976308851
+    second: Effect_Explosion_toxic_426
+  - first:
+      213: -5233911278653439519
+    second: Effect_Explosion_toxic_427
+  - first:
+      213: -5886106751766573154
+    second: Effect_Explosion_toxic_428
+  - first:
+      213: -6579897559030327634
+    second: Effect_Explosion_toxic_429
+  - first:
+      213: 361023101996677315
+    second: Effect_Explosion_toxic_430
+  - first:
+      213: -6072336935855752497
+    second: Effect_Explosion_toxic_431
+  - first:
+      213: -6687083156416053389
+    second: Effect_Explosion_toxic_432
+  - first:
+      213: -6723996174591331414
+    second: Effect_Explosion_toxic_433
+  - first:
+      213: -7292026915375612529
+    second: Effect_Explosion_toxic_434
+  - first:
+      213: -2500831919496784642
+    second: Effect_Explosion_toxic_435
+  - first:
+      213: 2593150211385437857
+    second: Effect_Explosion_toxic_436
+  - first:
+      213: 3696581635550290967
+    second: Effect_Explosion_toxic_437
+  - first:
+      213: 7977713525732252004
+    second: Effect_Explosion_toxic_438
+  - first:
+      213: -7163860473064372798
+    second: Effect_Explosion_toxic_439
+  - first:
+      213: 1372937929585924192
+    second: Effect_Explosion_toxic_440
+  - first:
+      213: -9020243607984564228
+    second: Effect_Explosion_toxic_441
+  - first:
+      213: 9046398690331918962
+    second: Effect_Explosion_toxic_442
+  - first:
+      213: 5342416438075786471
+    second: Effect_Explosion_toxic_443
+  - first:
+      213: 5212576497187775812
+    second: Effect_Explosion_toxic_444
+  - first:
+      213: -2927231737296725749
+    second: Effect_Explosion_toxic_445
+  - first:
+      213: 6539736766981102301
+    second: Effect_Explosion_toxic_446
+  - first:
+      213: 4514684215136555272
+    second: Effect_Explosion_toxic_447
+  - first:
+      213: -1467338551619206454
+    second: Effect_Explosion_toxic_448
+  - first:
+      213: -5421915553958584461
+    second: Effect_Explosion_toxic_449
+  - first:
+      213: -5889246933714992289
+    second: Effect_Explosion_toxic_450
+  - first:
+      213: 71728556413308597
+    second: Effect_Explosion_toxic_451
+  - first:
+      213: 1751733742869271049
+    second: Effect_Explosion_toxic_452
+  - first:
+      213: 7157831119454453331
+    second: Effect_Explosion_toxic_453
+  - first:
+      213: -3696870808924910856
+    second: Effect_Explosion_toxic_454
+  - first:
+      213: 5590351883360630855
+    second: Effect_Explosion_toxic_455
+  - first:
+      213: -514136846169310084
+    second: Effect_Explosion_toxic_456
+  - first:
+      213: 307929251103346069
+    second: Effect_Explosion_toxic_457
+  - first:
+      213: -8609554297425166285
+    second: Effect_Explosion_toxic_458
+  - first:
+      213: 3087387662797471924
+    second: Effect_Explosion_toxic_459
+  - first:
+      213: 8866765515150125507
+    second: Effect_Explosion_toxic_460
+  - first:
+      213: -3913180807941596246
+    second: Effect_Explosion_toxic_461
+  - first:
+      213: 6214270587033423034
+    second: Effect_Explosion_toxic_462
+  - first:
+      213: 6278088886014749204
+    second: Effect_Explosion_toxic_463
+  - first:
+      213: -1310238498315142888
+    second: Effect_Explosion_toxic_464
+  - first:
+      213: -7902802604419812526
+    second: Effect_Explosion_toxic_465
+  - first:
+      213: -8276876631494546318
+    second: Effect_Explosion_toxic_466
+  - first:
+      213: 8796768779593816805
+    second: Effect_Explosion_toxic_467
+  - first:
+      213: 5462110206211100965
+    second: Effect_Explosion_toxic_468
+  - first:
+      213: -475345549621442954
+    second: Effect_Explosion_toxic_469
+  - first:
+      213: 5984376838686869756
+    second: Effect_Explosion_toxic_470
+  - first:
+      213: 8118514790963563068
+    second: Effect_Explosion_toxic_471
+  - first:
+      213: -4844642713941683747
+    second: Effect_Explosion_toxic_472
+  - first:
+      213: 8799312463541484959
+    second: Effect_Explosion_toxic_473
+  - first:
+      213: -3488822278531712275
+    second: Effect_Explosion_toxic_474
+  - first:
+      213: 7051954082334748711
+    second: Effect_Explosion_toxic_475
+  - first:
+      213: -5082844246445133850
+    second: Effect_Explosion_toxic_476
+  - first:
+      213: -5686101505619969441
+    second: Effect_Explosion_toxic_477
+  - first:
+      213: 7257248638117138439
+    second: Effect_Explosion_toxic_478
+  - first:
+      213: -5368726278362096507
+    second: Effect_Explosion_toxic_479
+  - first:
+      213: 4887848444408126521
+    second: Effect_Explosion_toxic_480
+  - first:
+      213: 1360728027136435405
+    second: Effect_Explosion_toxic_481
+  - first:
+      213: 6945878497497353991
+    second: Effect_Explosion_toxic_482
+  - first:
+      213: -8813446171079877555
+    second: Effect_Explosion_toxic_483
+  - first:
+      213: -1178622776233927554
+    second: Effect_Explosion_toxic_484
+  - first:
+      213: -8435727567052148110
+    second: Effect_Explosion_toxic_485
+  - first:
+      213: -6415468999730528470
+    second: Effect_Explosion_toxic_486
+  - first:
+      213: 481875614230662291
+    second: Effect_Explosion_toxic_487
+  - first:
+      213: 5990333830379838049
+    second: Effect_Explosion_toxic_488
+  - first:
+      213: -2497079185007757560
+    second: Effect_Explosion_toxic_489
+  - first:
+      213: -3671271904010716120
+    second: Effect_Explosion_toxic_490
+  - first:
+      213: 2504718857169718916
+    second: Effect_Explosion_toxic_491
+  - first:
+      213: 3834012287725178156
+    second: Effect_Explosion_toxic_492
+  - first:
+      213: -1455753420561957519
+    second: Effect_Explosion_toxic_493
+  - first:
+      213: -8539453369689888621
+    second: Effect_Explosion_toxic_494
+  - first:
+      213: 8098921865168554997
+    second: Effect_Explosion_toxic_495
+  - first:
+      213: -1101376037014176440
+    second: Effect_Explosion_toxic_496
+  - first:
+      213: 3313620769079044183
+    second: Effect_Explosion_toxic_497
+  - first:
+      213: 3111863643097249425
+    second: Effect_Explosion_toxic_498
+  - first:
+      213: 5569544467794292598
+    second: Effect_Explosion_toxic_499
+  - first:
+      213: 6390248889402250445
+    second: Effect_Explosion_toxic_500
+  - first:
+      213: -7459909050603900343
+    second: Effect_Explosion_toxic_501
+  - first:
+      213: 6166960430223563607
+    second: Effect_Explosion_toxic_502
+  - first:
+      213: 5497116115164216717
+    second: Effect_Explosion_toxic_503
+  - first:
+      213: 8827107250169063527
+    second: Effect_Explosion_toxic_504
+  - first:
+      213: -1379992006214170852
+    second: Effect_Explosion_toxic_505
+  - first:
+      213: 3924934712002271708
+    second: Effect_Explosion_toxic_506
+  - first:
+      213: -4311130789861695221
+    second: Effect_Explosion_toxic_507
+  - first:
+      213: -1162329173078857584
+    second: Effect_Explosion_toxic_508
+  - first:
+      213: 1232316370074238694
+    second: Effect_Explosion_toxic_509
+  - first:
+      213: -8052542370396150535
+    second: Effect_Explosion_toxic_510
+  - first:
+      213: -1165658377217066965
+    second: Effect_Explosion_toxic_511
+  - first:
+      213: 5487315104534555983
+    second: Effect_Explosion_toxic_512
+  - first:
+      213: -6956851925822337911
+    second: Effect_Explosion_toxic_513
+  - first:
+      213: 5915548870771101516
+    second: Effect_Explosion_toxic_514
+  - first:
+      213: 4004112509118672654
+    second: Effect_Explosion_toxic_515
+  - first:
+      213: 1384960281233147840
+    second: Effect_Explosion_toxic_516
+  - first:
+      213: -963110746875462162
+    second: Effect_Explosion_toxic_517
+  - first:
+      213: -2771984985369330654
+    second: Effect_Explosion_toxic_518
+  - first:
+      213: 6341122610708065026
+    second: Effect_Explosion_toxic_519
+  - first:
+      213: 8591876831971317724
+    second: Effect_Explosion_toxic_520
+  - first:
+      213: 1632995122736845722
+    second: Effect_Explosion_toxic_521
+  - first:
+      213: 4227554686213295351
+    second: Effect_Explosion_toxic_522
+  - first:
+      213: -6078443326110727995
+    second: Effect_Explosion_toxic_523
+  - first:
+      213: 2746716585476164351
+    second: Effect_Explosion_toxic_524
+  - first:
+      213: 5593952516467066929
+    second: Effect_Explosion_toxic_525
+  - first:
+      213: 1785002257411571662
+    second: Effect_Explosion_toxic_526
+  - first:
+      213: 4501183638582332066
+    second: Effect_Explosion_toxic_527
+  - first:
+      213: 4055810736136858659
+    second: Effect_Explosion_toxic_528
+  - first:
+      213: 3382069143754548114
+    second: Effect_Explosion_toxic_529
+  - first:
+      213: 4042485364527251841
+    second: Effect_Explosion_toxic_530
+  - first:
+      213: -4112870758049890874
+    second: Effect_Explosion_toxic_531
+  - first:
+      213: 6739415011231717029
+    second: Effect_Explosion_toxic_532
+  - first:
+      213: -2928262655685916005
+    second: Effect_Explosion_toxic_533
+  - first:
+      213: 5567605739308126699
+    second: Effect_Explosion_toxic_534
+  - first:
+      213: 3008270991106725798
+    second: Effect_Explosion_toxic_535
+  - first:
+      213: -2710347989157894973
+    second: Effect_Explosion_toxic_536
+  - first:
+      213: -5327646060839995501
+    second: Effect_Explosion_toxic_537
+  - first:
+      213: 5709553525553098809
+    second: Effect_Explosion_toxic_538
+  - first:
+      213: -46773360485537606
+    second: Effect_Explosion_toxic_539
+  - first:
+      213: -8476348139635286748
+    second: Effect_Explosion_toxic_540
+  - first:
+      213: -9035280084786725372
+    second: Effect_Explosion_toxic_541
+  - first:
+      213: -4119823334593748488
+    second: Effect_Explosion_toxic_542
+  - first:
+      213: 9016723733278954446
+    second: Effect_Explosion_toxic_543
+  - first:
+      213: 1438431749418132640
+    second: Effect_Explosion_toxic_544
+  - first:
+      213: -8641146574704196452
+    second: Effect_Explosion_toxic_545
+  - first:
+      213: 4952933580203893610
+    second: Effect_Explosion_toxic_546
+  - first:
+      213: -7977895127297151562
+    second: Effect_Explosion_toxic_547
+  - first:
+      213: -8250346963270489636
+    second: Effect_Explosion_toxic_548
+  - first:
+      213: 195712213351768
+    second: Effect_Explosion_toxic_549
+  - first:
+      213: 3113556872522223288
+    second: Effect_Explosion_toxic_550
+  - first:
+      213: 6858734264225768077
+    second: Effect_Explosion_toxic_551
+  - first:
+      213: 2715108384728637834
+    second: Effect_Explosion_toxic_552
+  - first:
+      213: 5043646763172489794
+    second: Effect_Explosion_toxic_553
+  - first:
+      213: -8822181544937741827
+    second: Effect_Explosion_toxic_554
+  - first:
+      213: -4868075271761872504
+    second: Effect_Explosion_toxic_555
+  - first:
+      213: -8479576317109352029
+    second: Effect_Explosion_toxic_556
+  - first:
+      213: 7008316144113957654
+    second: Effect_Explosion_toxic_557
+  - first:
+      213: 1520524821485602088
+    second: Effect_Explosion_toxic_558
+  - first:
+      213: 2117406373028139320
+    second: Effect_Explosion_toxic_559
+  - first:
+      213: -3260250462559167957
+    second: Effect_Explosion_toxic_560
+  - first:
+      213: -3436608206217126396
+    second: Effect_Explosion_toxic_561
+  - first:
+      213: -1449465171792767275
+    second: Effect_Explosion_toxic_562
+  - first:
+      213: 1989312566285516911
+    second: Effect_Explosion_toxic_563
+  - first:
+      213: -6337873995601648409
+    second: Effect_Explosion_toxic_564
+  - first:
+      213: -3884775550469493988
+    second: Effect_Explosion_toxic_565
+  - first:
+      213: 6983816313728654392
+    second: Effect_Explosion_toxic_566
+  - first:
+      213: 6495890148271034457
+    second: Effect_Explosion_toxic_567
+  - first:
+      213: 6289262909421169861
+    second: Effect_Explosion_toxic_568
+  - first:
+      213: 84447878304835154
+    second: Effect_Explosion_toxic_569
+  - first:
+      213: 531400534904342041
+    second: Effect_Explosion_toxic_570
+  - first:
+      213: -8309834917163822983
+    second: Effect_Explosion_toxic_571
+  - first:
+      213: 3701638227045421783
+    second: Effect_Explosion_toxic_572
+  - first:
+      213: 192169368196009473
+    second: Effect_Explosion_toxic_573
+  - first:
+      213: 5748081880305013855
+    second: Effect_Explosion_toxic_574
+  - first:
+      213: 8298171962810390056
+    second: Effect_Explosion_toxic_575
+  - first:
+      213: 8841419993033610386
+    second: Effect_Explosion_toxic_576
+  - first:
+      213: -1111750532492532161
+    second: Effect_Explosion_toxic_577
+  - first:
+      213: -4001559453905246316
+    second: Effect_Explosion_toxic_578
+  - first:
+      213: 5163419488894808459
+    second: Effect_Explosion_toxic_579
+  - first:
+      213: 1086027295132124851
+    second: Effect_Explosion_toxic_580
+  - first:
+      213: 2899192530583563277
+    second: Effect_Explosion_toxic_581
+  - first:
+      213: 4962897814741774626
+    second: Effect_Explosion_toxic_582
+  - first:
+      213: 2491838917350302446
+    second: Effect_Explosion_toxic_583
+  - first:
+      213: 4116967300480490374
+    second: Effect_Explosion_toxic_584
+  - first:
+      213: 1154402585127705345
+    second: Effect_Explosion_toxic_585
+  - first:
+      213: 8801342450853919581
+    second: Effect_Explosion_toxic_586
+  - first:
+      213: 3795289789157015631
+    second: Effect_Explosion_toxic_587
+  - first:
+      213: 1472314978814795516
+    second: Effect_Explosion_toxic_588
+  - first:
+      213: 7901652563203563647
+    second: Effect_Explosion_toxic_589
+  - first:
+      213: -3390458430459440259
+    second: Effect_Explosion_toxic_590
+  - first:
+      213: 6169364616798303447
+    second: Effect_Explosion_toxic_591
+  - first:
+      213: -602797425618866116
+    second: Effect_Explosion_toxic_592
+  - first:
+      213: -1935847766491915530
+    second: Effect_Explosion_toxic_593
+  - first:
+      213: -4349150404488695302
+    second: Effect_Explosion_toxic_594
+  - first:
+      213: 288364324419031895
+    second: Effect_Explosion_toxic_595
+  - first:
+      213: -5343540374232550140
+    second: Effect_Explosion_toxic_596
+  - first:
+      213: 1932449612831699450
+    second: Effect_Explosion_toxic_597
+  - first:
+      213: -4806719356160122262
+    second: Effect_Explosion_toxic_598
+  - first:
+      213: -6539842692341323171
+    second: Effect_Explosion_toxic_599
+  - first:
+      213: -4801174100879393703
+    second: Effect_Explosion_toxic_600
+  - first:
+      213: 4219360762775890812
+    second: Effect_Explosion_toxic_601
+  - first:
+      213: 5717279568657551778
+    second: Effect_Explosion_toxic_602
+  - first:
+      213: 725912192073174056
+    second: Effect_Explosion_toxic_603
+  - first:
+      213: 7749499233611324383
+    second: Effect_Explosion_toxic_604
+  - first:
+      213: 7371281805970918803
+    second: Effect_Explosion_toxic_605
+  - first:
+      213: -8659268754645829262
+    second: Effect_Explosion_toxic_606
+  - first:
+      213: 5744374474406399849
+    second: Effect_Explosion_toxic_607
+  - first:
+      213: 767950855612183486
+    second: Effect_Explosion_toxic_608
+  - first:
+      213: -2997682568186430849
+    second: Effect_Explosion_toxic_609
+  - first:
+      213: -2499036314658712875
+    second: Effect_Explosion_toxic_610
+  - first:
+      213: 4157544434441727453
+    second: Effect_Explosion_toxic_611
+  - first:
+      213: -8622427180934739578
+    second: Effect_Explosion_toxic_612
+  - first:
+      213: 5545487051693748111
+    second: Effect_Explosion_toxic_613
+  - first:
+      213: -3425601303972796532
+    second: Effect_Explosion_toxic_614
+  - first:
+      213: -2341556675068277436
+    second: Effect_Explosion_toxic_615
+  - first:
+      213: -45552518955169703
+    second: Effect_Explosion_toxic_616
+  - first:
+      213: 8967003900544099471
+    second: Effect_Explosion_toxic_617
+  - first:
+      213: -7682672260409760836
+    second: Effect_Explosion_toxic_618
+  - first:
+      213: -103600758931367462
+    second: Effect_Explosion_toxic_619
+  - first:
+      213: 9163811635993883706
+    second: Effect_Explosion_toxic_620
+  - first:
+      213: 8801223484856901327
+    second: Effect_Explosion_toxic_621
+  - first:
+      213: 9202359995016015237
+    second: Effect_Explosion_toxic_622
+  - first:
+      213: 4308851202997964680
+    second: Effect_Explosion_toxic_623
+  - first:
+      213: -8295570748122435756
+    second: Effect_Explosion_toxic_624
+  - first:
+      213: -4975056735917309227
+    second: Effect_Explosion_toxic_625
+  - first:
+      213: -4975462515198948031
+    second: Effect_Explosion_toxic_626
+  - first:
+      213: 1451570659978104125
+    second: Effect_Explosion_toxic_627
+  - first:
+      213: -4681184892075043857
+    second: Effect_Explosion_toxic_628
+  - first:
+      213: 6436031542663322205
+    second: Effect_Explosion_toxic_629
+  - first:
+      213: -975586501896399504
+    second: Effect_Explosion_toxic_630
+  - first:
+      213: -6396552452775214738
+    second: Effect_Explosion_toxic_631
+  - first:
+      213: 6705623657082259451
+    second: Effect_Explosion_toxic_632
+  - first:
+      213: -3697391128446065930
+    second: Effect_Explosion_toxic_633
+  - first:
+      213: 8670100265905734926
+    second: Effect_Explosion_toxic_634
+  - first:
+      213: 2731231849893241457
+    second: Effect_Explosion_toxic_635
+  - first:
+      213: 8624932768395935308
+    second: Effect_Explosion_toxic_636
+  - first:
+      213: 3611098807483700524
+    second: Effect_Explosion_toxic_637
+  - first:
+      213: -4586763343861220091
+    second: Effect_Explosion_toxic_638
+  - first:
+      213: 4082821645596343044
+    second: Effect_Explosion_toxic_639
+  - first:
+      213: -447366969794862856
+    second: Effect_Explosion_toxic_640
+  - first:
+      213: 1727767562338461365
+    second: Effect_Explosion_toxic_641
+  - first:
+      213: -3152404979559220141
+    second: Effect_Explosion_toxic_642
+  - first:
+      213: -1800209140244076569
+    second: Effect_Explosion_toxic_643
+  - first:
+      213: 7383340495136570876
+    second: Effect_Explosion_toxic_644
+  - first:
+      213: -7996022617978366992
+    second: Effect_Explosion_toxic_645
+  - first:
+      213: 119328461593952986
+    second: Effect_Explosion_toxic_646
+  - first:
+      213: -4769170861055773094
+    second: Effect_Explosion_toxic_647
+  - first:
+      213: 8329164257748835234
+    second: Effect_Explosion_toxic_648
+  - first:
+      213: 5739174837640836905
+    second: Effect_Explosion_toxic_649
+  - first:
+      213: 9155582820375974361
+    second: Effect_Explosion_toxic_650
+  - first:
+      213: 3614727471940735087
+    second: Effect_Explosion_toxic_651
+  - first:
+      213: -6806977639630700699
+    second: Effect_Explosion_toxic_652
+  - first:
+      213: -8076631457566863016
+    second: Effect_Explosion_toxic_653
+  - first:
+      213: 4089433262957967686
+    second: Effect_Explosion_toxic_654
+  - first:
+      213: 3102463051856801629
+    second: Effect_Explosion_toxic_655
+  - first:
+      213: -8135761738454177764
+    second: Effect_Explosion_toxic_656
+  - first:
+      213: -652316086468635582
+    second: Effect_Explosion_toxic_657
+  - first:
+      213: -5867920844713025000
+    second: Effect_Explosion_toxic_658
+  - first:
+      213: -7298180219520314056
+    second: Effect_Explosion_toxic_659
+  - first:
+      213: 3328293536277044734
+    second: Effect_Explosion_toxic_660
+  - first:
+      213: 1352780272506486530
+    second: Effect_Explosion_toxic_661
+  - first:
+      213: -2359994906022788080
+    second: Effect_Explosion_toxic_662
+  - first:
+      213: 3630319499435282591
+    second: Effect_Explosion_toxic_663
+  - first:
+      213: -1206121217463974064
+    second: Effect_Explosion_toxic_664
+  - first:
+      213: -3232195458667477134
+    second: Effect_Explosion_toxic_665
+  - first:
+      213: -7043560916500617124
+    second: Effect_Explosion_toxic_666
+  - first:
+      213: 938196098160037272
+    second: Effect_Explosion_toxic_667
+  - first:
+      213: 7203875039926525945
+    second: Effect_Explosion_toxic_668
+  - first:
+      213: 6985632652791002250
+    second: Effect_Explosion_toxic_669
+  - first:
+      213: 3819562074504303741
+    second: Effect_Explosion_toxic_670
+  - first:
+      213: 5062075860530844873
+    second: Effect_Explosion_toxic_671
+  - first:
+      213: -2406683207381526700
+    second: Effect_Explosion_toxic_672
+  - first:
+      213: -4264958307773327538
+    second: Effect_Explosion_toxic_673
+  - first:
+      213: -8203871660860332344
+    second: Effect_Explosion_toxic_674
+  - first:
+      213: -893712996410602155
+    second: Effect_Explosion_toxic_675
+  - first:
+      213: 1462483308575194455
+    second: Effect_Explosion_toxic_676
+  - first:
+      213: -8142783782868255468
+    second: Effect_Explosion_toxic_677
+  - first:
+      213: -4466045609878767124
+    second: Effect_Explosion_toxic_678
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_0
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2190
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ae5eabd38c8d6b0800000000000000
+      internalID: -5271243196382975363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_1
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 2190
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db05fd57f3a291f0800000000000000
+      internalID: -1039588281140573229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_2
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 2190
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c38c68abdcbaa200800000000000000
+      internalID: 192173585726211012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_3
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 2190
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef940cda2cba7080800000000000000
+      internalID: -9188825197430136857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_4
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 2190
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3225b4a51e9aab740800000000000000
+      internalID: 5168630307708686883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_5
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 2190
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76c29fbc4f3dff30800000000000000
+      internalID: 4610911192361387645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_6
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 2190
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad4a71178aacd810800000000000000
+      internalID: 1791494248877149602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_7
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 2190
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed06d53f5141f90e0800000000000000
+      internalID: -2261066403406847778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1825
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39a476bfaafb08410800000000000000
+      internalID: 1477391418860718739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_9
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1825
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ed07162a94c6d1b0800000000000000
+      internalID: -5632098117637173786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_10
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1825
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5631930a41802360800000000000000
+      internalID: 7142851163897017951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_11
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 1825
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 153b11013a70061a0800000000000000
+      internalID: -6818441438908271791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_12
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1825
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b55cbddc9c27db0800000000000000
+      internalID: -4795548767203534044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_13
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 1825
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff05d7069dbd64b80800000000000000
+      internalID: -8410793527394610945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_14
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 1825
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea89e060022c424a0800000000000000
+      internalID: -6618952109531424594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_15
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 1825
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761113161d5cd3ff0800000000000000
+      internalID: -54670117389135513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_16
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 1825
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b4b5472bc3e92ba0800000000000000
+      internalID: -6113104557501991755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1460
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd2039b4e404be400800000000000000
+      internalID: 354447700698268381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_18
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1460
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e65e5736f634f8ab0800000000000000
+      internalID: -5003706515296230034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_19
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1460
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e942ab53a93dd90800000000000000
+      internalID: -7074141034122011035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_20
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 1460
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b78df9a6647b3c0800000000000000
+      internalID: -4343925891813311700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_21
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1460
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a1d723133e08b9d0800000000000000
+      internalID: -2758439159236931159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_22
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 1460
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b104e026b05aeb90800000000000000
+      internalID: -7211863110114344522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_23
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 1460
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a827ab553251cd350800000000000000
+      internalID: 6042728041530684042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_24
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 1460
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b5d546b1e12ca50800000000000000
+      internalID: 6539822711892171657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_25
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 1460
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6346e58ef0fa040800000000000000
+      internalID: 4660961630042207934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1095
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69a838f5487e6ec70800000000000000
+      internalID: 9000135461070670486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_27
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1095
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc54bd6260b4b9700800000000000000
+      internalID: 548114269449438668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_28
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1095
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7cd87977517ebdd0800000000000000
+      internalID: -2468410925238395782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_29
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 1095
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6957e38633cf3c00800000000000000
+      internalID: 882638690896533871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_30
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1095
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89c181c69128d560800000000000000
+      internalID: 7338652524175542671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_31
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 1095
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c3a7e2cc8e91b00800000000000000
+      internalID: 799926372485708840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_32
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 1095
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6dc1857970946610800000000000000
+      internalID: 1613573417842363759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_33
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 1095
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d852f7e2d647349a0800000000000000
+      internalID: -6250023845579774579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_34
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 1095
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7797a0874a48e2430800000000000000
+      internalID: 3760088580824398199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 730
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c620ce85102be420800000000000000
+      internalID: 2660255281853769412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_36
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 730
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f7abab65e7fd480800000000000000
+      internalID: -8872233829931516094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_37
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 730
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8194b0e1d4fe69f20800000000000000
+      internalID: 3429191280784787736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_38
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 730
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77012d0a672c957a0800000000000000
+      internalID: -6387860781688287113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_39
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 730
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 009570530518c8330800000000000000
+      internalID: 3714485974160857344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_40
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 730
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de98a0e64ab3d0c70800000000000000
+      internalID: 8938866412807162349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_41
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 730
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b088a9b30ae59b690800000000000000
+      internalID: -7585928055041128437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_42
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 730
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c554ecb6432e67e0800000000000000
+      internalID: -1770438816786262590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_43
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 730
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5520a107b1bcdd80800000000000000
+      internalID: -8224503419920964260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 365
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7dd984cdddfdd50800000000000000
+      internalID: 6764369103514621869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_45
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 365
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2d319e0cd9a96120800000000000000
+      internalID: 2407642238408539434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_46
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 365
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa2973d0ad9d36a20800000000000000
+      internalID: 3054524502835172015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_47
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 365
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b64e232af289cb0800000000000000
+      internalID: -4857079824434042112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_48
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 365
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a75c74c244503b0b0800000000000000
+      internalID: -5714217711844211334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_49
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 365
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55697447556a8a450800000000000000
+      internalID: 6100308581226616405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_50
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 365
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdec531946e9a4460800000000000000
+      internalID: 7226762706839523039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Effect_Explosion_toxic_51
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 365
+        width: 355
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb238d87dc5257d0800000000000000
+      internalID: -2931178326602863642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 21a34c386a642684486fe94f35c99fb0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Effect_Explosion_toxic_0: -5271243196382975363
+      Effect_Explosion_toxic_1: -1039588281140573229
+      Effect_Explosion_toxic_10: 7142851163897017951
+      Effect_Explosion_toxic_11: -6818441438908271791
+      Effect_Explosion_toxic_12: -4795548767203534044
+      Effect_Explosion_toxic_13: -8410793527394610945
+      Effect_Explosion_toxic_14: -6618952109531424594
+      Effect_Explosion_toxic_15: -54670117389135513
+      Effect_Explosion_toxic_16: -6113104557501991755
+      Effect_Explosion_toxic_17: 354447700698268381
+      Effect_Explosion_toxic_18: -5003706515296230034
+      Effect_Explosion_toxic_19: -7074141034122011035
+      Effect_Explosion_toxic_2: 192173585726211012
+      Effect_Explosion_toxic_20: -4343925891813311700
+      Effect_Explosion_toxic_21: -2758439159236931159
+      Effect_Explosion_toxic_22: -7211863110114344522
+      Effect_Explosion_toxic_23: 6042728041530684042
+      Effect_Explosion_toxic_24: 6539822711892171657
+      Effect_Explosion_toxic_25: 4660961630042207934
+      Effect_Explosion_toxic_26: 9000135461070670486
+      Effect_Explosion_toxic_27: 548114269449438668
+      Effect_Explosion_toxic_28: -2468410925238395782
+      Effect_Explosion_toxic_29: 882638690896533871
+      Effect_Explosion_toxic_3: -9188825197430136857
+      Effect_Explosion_toxic_30: 7338652524175542671
+      Effect_Explosion_toxic_31: 799926372485708840
+      Effect_Explosion_toxic_32: 1613573417842363759
+      Effect_Explosion_toxic_33: -6250023845579774579
+      Effect_Explosion_toxic_34: 3760088580824398199
+      Effect_Explosion_toxic_35: 2660255281853769412
+      Effect_Explosion_toxic_36: -8872233829931516094
+      Effect_Explosion_toxic_37: 3429191280784787736
+      Effect_Explosion_toxic_38: -6387860781688287113
+      Effect_Explosion_toxic_39: 3714485974160857344
+      Effect_Explosion_toxic_4: 5168630307708686883
+      Effect_Explosion_toxic_40: 8938866412807162349
+      Effect_Explosion_toxic_41: -7585928055041128437
+      Effect_Explosion_toxic_42: -1770438816786262590
+      Effect_Explosion_toxic_43: -8224503419920964260
+      Effect_Explosion_toxic_44: 6764369103514621869
+      Effect_Explosion_toxic_45: 2407642238408539434
+      Effect_Explosion_toxic_46: 3054524502835172015
+      Effect_Explosion_toxic_47: -4857079824434042112
+      Effect_Explosion_toxic_48: -5714217711844211334
+      Effect_Explosion_toxic_49: 6100308581226616405
+      Effect_Explosion_toxic_5: 4610911192361387645
+      Effect_Explosion_toxic_50: 7226762706839523039
+      Effect_Explosion_toxic_51: -2931178326602863642
+      Effect_Explosion_toxic_6: 1791494248877149602
+      Effect_Explosion_toxic_7: -2261066403406847778
+      Effect_Explosion_toxic_8: 1477391418860718739
+      Effect_Explosion_toxic_9: -5632098117637173786
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
