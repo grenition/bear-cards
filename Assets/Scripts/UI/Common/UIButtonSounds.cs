@@ -11,11 +11,11 @@ namespace Project.UI.Common
      
         public void OnPointerEnter(PointerEventData eventData)
         {
-            GameAudio.MusicSource.PlayOneShot(_hoverClip);
+            GameAudio.SFXSource.PlayOneShot(_hoverClip);
         }
         public void OnPointerClick(PointerEventData eventData)
         {
-            GameAudio.MusicSource.PlayOneShot(_clickClip);
+            GameAudio.SFXSource.PlayOneShot(_clickClip);
         }
     }
 }

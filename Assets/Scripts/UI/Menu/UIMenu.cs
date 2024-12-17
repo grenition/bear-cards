@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using System.Linq;
 using Assets.Scripts.Map;
 using GreonAssets.Extensions;
+using GreonAssets.UI.Extensions;
 using Project.Audio;
 using R3;
 using UnityEngine;
@@ -16,21 +16,13 @@ namespace Project.UI.Menu
         [SerializeField] private string _sceneName = "MapScene";
         [SerializeField] private AudioClip _musicClip;
 
-        [SerializeField] private UIField _mainField;
-        [SerializeField] private UIField _settingsField;
+        [SerializeField] private GameObject _settingsPanel;
+        [SerializeField] private GameObject _mainPanel;
 
         private List<UIField> _fields;
         
         private void Awake()
         {
-            _fields = new List<UIField>
-            {
-                _mainField,
-                _settingsField
-            };
-            
-            ShowField(_mainField);
-
             _startGameButton.Bind(() =>
             {
                 ScneneLoaderStatic.LoadSceneAsync(_sceneName);
@@ -39,17 +31,15 @@ namespace Project.UI.Menu
 
             _settingsButton.Bind(() =>
             {
-                ShowField(_settingsField);
-                
+                _settingsPanel.SetActiveWithChildrensAnimation(true);
+                _mainPanel.SetActiveWithChildrensAnimation(false);
             }).AddTo(this);
         }
         
-        public void BackToMain() => ShowField(_mainField);
-        
-        private void ShowField(UIField field)
+        public void BackToMain()
         {
-            _fields.Except(new []{field}).ForEach(x => x.Hide());
-            field.Show();
+            _settingsPanel.SetActiveWithChildrensAnimation(false);
+            _mainPanel.SetActiveWithChildrensAnimation(true);
         }
 
         private void Start()

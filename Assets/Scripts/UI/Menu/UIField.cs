@@ -31,7 +31,7 @@ namespace Project.UI.Menu
             var diff = parentHeight - y;
             var duration = diff / parentHeight * _duration;
             
-            _rectTransform.DOAnchorPosY(parentHeight, duration).SetEase(Ease.InCubic);
+            _rectTransform.DOAnchorPosY(-parentHeight, duration).SetEase(Ease.InCubic);
             _canvasGroup.blocksRaycasts = false;
         }
     }
