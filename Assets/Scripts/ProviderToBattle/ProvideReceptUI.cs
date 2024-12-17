@@ -3,6 +3,7 @@ using Project.Gameplay.Battle.Craft;
 using Project.UI.Battle;
 using System.Collections.Generic;
 using System.Linq;
+using Project.Gameplay.Battle.Data;
 using UnityEngine;
 
 namespace Project
@@ -12,11 +13,11 @@ namespace Project
         [SerializeField] private RecipeGettedUI _recipeGettedUI;
         [SerializeField] private UIReceipt[] _uiReceipts;
 
-        private List <CardCraftConfig> _cardCraftConfigs;
+        private List<CardCraftConfig> _cardCraftConfigs;
 
         void Start ()
         {
-            _cardCraftConfigs = Resources.LoadAll<CardCraftConfig>("Gameplay/Crafts/").ToList();
+            _cardCraftConfigs = BattleStaticData.Crafts.Values.ToList();
             _recipeGettedUI.OnReceptUpdate += UpdateUIRecepts;
         }
 
