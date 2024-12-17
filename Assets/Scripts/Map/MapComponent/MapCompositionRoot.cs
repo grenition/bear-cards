@@ -30,7 +30,7 @@ namespace Assets.Scripts.Map
         [SerializeField] private UIProgress _progressUI;
 
         private List<InteractivePoint> _locationPoints;
-        private LocationConfigurate _activeLocation;
+        public LocationConfigurate ActiveLocation { get; private set; }
         private string[] _locationKey = { "LocationFirst", "LocationSecond", "LocationThreed" };
         private PointOfInterestGenerator _pointOfInterestGenerator;
         private EnivrimentGenerator _enivrimentGenerator;
@@ -50,26 +50,26 @@ namespace Assets.Scripts.Map
 
             _deck = progres.Deck.ToList();
             _curentLocationNumber = progres.KeyLocation;
-            _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber]}");
-            _pointOfInterestGenerator = new PointOfInterestGenerator(_startPoint, _endPoint, _activeLocation);
-            _enivrimentGenerator = new EnivrimentGenerator(_activeLocation.LocationLevel);
+            ActiveLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber]}");
+            _pointOfInterestGenerator = new PointOfInterestGenerator(_startPoint, _endPoint, ActiveLocation);
+            _enivrimentGenerator = new EnivrimentGenerator(ActiveLocation.LocationLevel);
 
             if (progres.LocationLevel == 0)
                 _locationPoints = _pointOfInterestGenerator.Generate();
             else
                 _locationPoints = _pointOfInterestGenerator.Generate(progres.Points.ToList());
 
-            MapStaticData.SaveData(_locationPoints.Select(point => point.PointEntity).ToArray(), _activeLocation.LocationLevel, _activeLocation.LocationKey, _deck);
+            MapStaticData.SaveData(_locationPoints.Select(point => point.PointEntity).ToArray(), ActiveLocation.LocationLevel, ActiveLocation.LocationKey, _deck);
             _enivrimentGenerator.Generate(_locationPoints);
             MapPlayer = Instantiate(_playerPrefab, _locationPoints[0].ViewPoint.transform.position, Quaternion.identity);
-            MapController.Create(_locationPoints, _activeLocation);
+            MapController.Create(_locationPoints, ActiveLocation);
 
             MapController.OnPointBeginInteract += HideProgress;
             MapController.OnMapProgressUpdate += ProgressInit;
             MapCamera.MoveCameraToPlayer();
 
             ProgressInit();
-            _backGround.sprite = _activeLocation.BackGround;
+            _backGround.sprite = ActiveLocation.BackGround;
         }
 
         public GameObject ShowCardGiver(string power)
@@ -95,8 +95,8 @@ namespace Assets.Scripts.Map
             if (_curentLocationNumber + 1 >= _locationKey.Length)
                 return -1;
 
-            _activeLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber+ 1]}");
-            return _activeLocation.LocationKey;
+            ActiveLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber+ 1]}");
+            return ActiveLocation.LocationKey;
         }
 
         public void ReloadMap()

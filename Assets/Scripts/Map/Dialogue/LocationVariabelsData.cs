@@ -16,6 +16,10 @@ namespace Project
             CountLocationOneUpdate = 0;
             CountLocationTwoUpdate = 0;
             CountLocationThreeUpdate = 0;
+            CountBossOneUpdate = 0;
+            CountBossTwoUpdate = 0;
+            CountBossThreeUpdate = 0;
+
 
             KeyDialogueWasComplited = new string[0];
             Recepts = new string[0];
@@ -31,6 +35,9 @@ namespace Project
         public int CountLocationOneUpdate;
         public int CountLocationTwoUpdate;
         public int CountLocationThreeUpdate;
+        public int CountBossOneUpdate;
+        public int CountBossTwoUpdate;
+        public int CountBossThreeUpdate;
 
         public string[] Recepts;
         public string[] KeyDialogueWasComplited;
