@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Map
@@ -18,10 +19,13 @@ namespace Assets.Scripts.Map
         [SerializeField] private Color _colorInactive;
         [SerializeField] private Color _colorPass;
 
-        public void CreatePathTo(ViewPoint viewPoint )
+
+        private List<PointOfInterestPath> _paths = new();
+        public void CreatePathTo(ViewPoint viewPoint)
         {
             var path = Instantiate(_pathPrefabs, transform.localPosition, Quaternion.identity);
             path.CreatePath(viewPoint);
+            _paths.Add(path);
         }
 
         public void Active() => _spriteRenderer.color = _colorActive;
@@ -33,5 +37,10 @@ namespace Assets.Scripts.Map
 
         public void PlayerInteract() =>
             OnPlayerInteract?.Invoke();
+
+        private void OnApper()
+        {
+            _paths.ForEach(path => path.gameObject.SetActive(true));
+        }
     }
 }

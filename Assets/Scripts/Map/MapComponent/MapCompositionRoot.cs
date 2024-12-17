@@ -105,6 +105,7 @@ namespace Assets.Scripts.Map
                 default: throw new NotImplementedException();
             }
         }
+
         public void ShowCraftGiver() => _craftGiverUI.SetActive(true);
 
         public int GetNextLocationKey()
