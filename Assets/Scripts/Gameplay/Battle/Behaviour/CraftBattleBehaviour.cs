@@ -83,6 +83,8 @@ namespace Project.Gameplay.Battle.Behaviour
                     Model.Enemy.TransferCardFromDeckToHand(false);
                     Model.AddCardToDeck(CardOwner.player, craft.Output.name);
 
+                    MapStaticData.AddToDeckAndSave(new System.Collections.Generic.List<string> { craft.Output.name});
+
                     await UniTask.WaitForSeconds(0.5f);
 
                     CraftSuccessed = true;
