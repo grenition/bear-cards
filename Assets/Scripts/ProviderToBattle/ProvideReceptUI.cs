@@ -29,7 +29,6 @@ namespace Project
 
             for (int i = 0; i < receptKey.Length; i++)
             {
-                Debug.LogError(_cardCraftConfigs[0].name + " " + receptKey[i]);
                 var config = _cardCraftConfigs.Find(config => config.name == receptKey[i]);
                 if(config != null)
                 {
