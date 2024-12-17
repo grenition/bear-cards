@@ -1,3 +1,4 @@
+using Project;
 using System.Collections.Generic;
 using UnityEngine;
 namespace Assets.Scripts.Map
@@ -16,13 +17,24 @@ namespace Assets.Scripts.Map
         [field: SerializeField] public List<string> KeysPrice { get; private set; }
         [Tooltip("first point is enemy?")]
         [field: SerializeField] public bool FirsEnemyPoint { get; private set; }
-
         [field: SerializeField] public string[] EnemyFight { get; private set; }
-
-        [field: SerializeField] public string BossFight { get; private set; }
         [field: SerializeField] public Sprite BackGround { get; private set; }
+        [field: SerializeField] public string MainBossKey { get; private set; }
+        [field: SerializeField] public string AdditionalBossKey { get; private set; }
+
+        [field: SerializeField] public string ComandToBossFight { get; private set; }
 
         public string GetFightKey()=>
             EnemyFight[Random.Range(0, EnemyFight.Length)];
+
+        public string BossFight()
+        {
+            var condition = DialoguesStatic.CreateCondition(ComandToBossFight);
+
+            if(condition.GetResult())
+                return AdditionalBossKey;
+
+            return MainBossKey;
+        }
     }
 }

@@ -112,7 +112,7 @@ namespace Assets.Scripts.Map
             if (_currentInteractPoint.PointEntity.Level != _locationConfigurate.LocationLevel - 1)
                 MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetFightKey());
             else
-                MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.BossFight);
+                MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.BossFight());
 
             MapCompositionRoot.Instance.MapCamera.MoveCameraToPlayer();
             OnPointBeginInteract?.Invoke();

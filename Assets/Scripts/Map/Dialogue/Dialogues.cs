@@ -71,6 +71,10 @@ namespace Project
         private string GetComand(DialogueConfig config)
         {
             var comand = config.Comand;
+
+            if(comand == "")
+                return comand;
+
             var finalComand = comand.Substring(0, comand.IndexOf('('));
 
             return finalComand;
@@ -99,14 +103,15 @@ namespace Project
             return Int32.Parse(comand.Substring(startIndex, endIndex - startIndex));
         }
 
-        private DialogueCondition CreateCondition(string comand)
+        public DialogueCondition CreateCondition(string comand)
         {
             DialogueCondition condition = comand switch
             {
                 "Equals" => new ConditionEquales(FindField(), FindInteger()),
                 "OnUpdateInteger" => new IntegerUpdateCondition(FindField(), _locationVariabelsData),
                 "OnUpdateBoolean" => new BooleanUpdateCondition(FindField()),
-                _ => throw new KeyNotFoundException("Command not present in map"),
+                "None" => new ConditionNull(),
+                _ => new ConditionNull(),
             };
 
             return condition;

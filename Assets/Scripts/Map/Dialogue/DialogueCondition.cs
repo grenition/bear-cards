@@ -1,5 +1,3 @@
-using System;
-
 namespace Project
 {
     public abstract class DialogueCondition

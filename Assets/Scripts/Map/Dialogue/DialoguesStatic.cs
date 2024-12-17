@@ -55,6 +55,12 @@ namespace Project
             _locationVariabelsoader.Deleted();
         }
 
+        public static DialogueCondition CreateCondition(string comand)
+        {
+            Initialize();
+            return _dialogues.CreateCondition(comand);
+        }
+
         private static void Initialize()
         {
             if (_dialogues == null)
