@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
+using Project.Gameplay.Battle;
+using Project.Gameplay.Battle.Model;
 using Project.Gameplay.Battle.Model.Cards;
+using Project.Gameplay.Common.Datas;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +22,7 @@ namespace Project.UI.Battle
         [SerializeField] private TMP_Text _healthText;
         [SerializeField] private TMP_Text _descriptionText;
         [SerializeField] private UIEffectsImages _effects;
+        [SerializeField] private UIEffectsAnimationController _effectsAnimation;
         
         public void Init(CardModel cardModel)
         {
@@ -29,11 +33,13 @@ namespace Project.UI.Battle
                 Model.OnHealthChange -= OnHealthChange;
                 Model.OnAttackDamageChange -= OnAttackDamageChange;
                 Model.OnEffectsChange -= OnEffectsChange;
+                BattleController.Model.OnAttackedWithEffect -= OnAttackedWithEffect;
             }
             Model = cardModel;
             Model.OnHealthChange += OnHealthChange;
             Model.OnAttackDamageChange += OnAttackDamageChange;
             Model.OnEffectsChange += OnEffectsChange;
+            BattleController.Model.OnAttackedWithEffect += OnAttackedWithEffect;
 
             Visualize();
         }
@@ -45,12 +51,19 @@ namespace Project.UI.Battle
                 Model.OnHealthChange -= OnHealthChange;
                 Model.OnAttackDamageChange -= OnAttackDamageChange;
                 Model.OnEffectsChange -= OnEffectsChange;
+                BattleController.Model.OnAttackedWithEffect -= OnAttackedWithEffect;
             }
         }
 
         private void OnHealthChange(int obj) => Visualize();
         private void OnAttackDamageChange(int obj) => Visualize();
         private void OnEffectsChange() => Visualize();
+
+        private void OnAttackedWithEffect(CardModel card, CardPosition cardPosition, EffectTypes effect)
+        {
+            if(Model == card && Model.Position == cardPosition) _effectsAnimation.PlayEffectAnimation(effect);
+        }
+
         private void Visualize()
         {
             if(_electroText) _electroText.text = Model.Config.ElectroFormula;
