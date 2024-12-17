@@ -8,7 +8,7 @@ namespace Project
 {
     public class Dialogues
     {
-        public bool DialogueActive {  get; private set; }
+        public bool DialogueActive { get; private set; }
 
         private Dictionary<string, DialogueCondition> _conditionsMap = new();
         private DialogueConfig _currentConfig;
@@ -21,8 +21,8 @@ namespace Project
         public void Init()
         {
             _prefabsDialogues = Resources.Load<DialogueController>("Map/Dialogues/Prefabs/Dialogues");
-
             _dialogueConfig = Resources.LoadAll<DialogueConfig>("Map/Dialogues/Config").ToList();
+
             _locationVariabelsData = DialoguesStatic.LoadData();
             _dialogueConfig.ForEach(config =>
             {
@@ -38,20 +38,19 @@ namespace Project
         public void DialoguesUpdate()
         {
             UpdateConditionData();
-            DialogueActive = true;
 
             foreach (var dialog in _conditionsMap)
             {
                 if (dialog.Value.GetResult())
                 {
                     var dialogConfig = _dialogueConfig.Find(value => value.name == dialog.Key);
-                    if( StartDialogue(dialogConfig))
+                    if (StartDialogue(dialogConfig))
                         return;
                 }
             }
         }
 
-        public void DialogueComplited() =>DialogueActive = false;
+        public void DialogueComplited() => DialogueActive = false;
 
         private bool StartDialogue(DialogueConfig config)
         {
@@ -80,7 +79,7 @@ namespace Project
         {
             var comand = config.Comand;
 
-            if(comand == "")
+            if (comand == "")
                 return comand;
 
             var finalComand = comand.Substring(0, comand.IndexOf('('));
@@ -95,7 +94,7 @@ namespace Project
             int endIndexByEndCommand = comand.IndexOf(")", startIndex);
             int endIndexByEndField = comand.IndexOf(",", startIndex);
 
-            int endIndex = endIndexByEndField != -1? endIndexByEndField: endIndexByEndCommand;
+            int endIndex = endIndexByEndField != -1 ? endIndexByEndField : endIndexByEndCommand;
 
             return comand.Substring(startIndex, endIndex - startIndex);
         }

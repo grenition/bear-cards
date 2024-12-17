@@ -43,6 +43,7 @@ namespace Assets.Scripts.Map
                 {
                     lastLevelPoints.Add(point);
                 });
+
                 var newPoints = CreatePoints(lastLevelPoints, i);
                 newPoints.ForEach(addedPoint =>
                 {

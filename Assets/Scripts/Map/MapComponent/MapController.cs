@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using GreonAssets.Extensions;
 using Project;
 using System;
 using System.Collections.Generic;
@@ -81,13 +82,18 @@ namespace Assets.Scripts.Map
             if (complitedPoint == null)
                 throw new System.Exception("Last Level Complited is not detected!");
 
-            _pointCollections.ForEach(point =>
+            _pointCollections.ForEach(point => point.Lock());
+            complitedPoint.Pass();
+            var id = complitedPoint.PointEntity.ID;
+
+            for (int i = complitedPoint.PointEntity.Level-1; i >= 0 ; i--)
             {
-                if (point.PointEntity.ID <= complitedPoint.PointEntity.ID)
-                    point.Pass();
-                else
-                    point.Lock();
-            });
+                var level = _pointCollections.Where(point => point.PointEntity.Level == i).ToList();
+                var idNeighbor = level.Find(point => point.PointEntity.NeighborsID.Contains(id)).PointEntity.ID;
+                var pointNeigbor = _pointCollections.Find(point => point.PointEntity.ID ==  idNeighbor);
+                pointNeigbor.Pass();
+                id = pointNeigbor.PointEntity.ID;
+            }
 
             for (int i = 0; i < complitedPoint.PointEntity.NeighborsID.Count(); i++)
             {
@@ -153,10 +159,6 @@ namespace Assets.Scripts.Map
 
         public void LocationComplited()
         {
-            //var data = DialoguesStatic.LoadData();
-            //data.LocationUpdate++;
-            //DialoguesStatic.SaveData(data);
-
             var keyLocation = MapCompositionRoot.Instance.GetNextLocationKey();
 
             if(keyLocation == -1)

@@ -26,5 +26,6 @@ MonoBehaviour:
   <FirsEnemyPoint>k__BackingField: 0
   <EnemyFight>k__BackingField:
   - demo_battle
-  <BossFight>k__BackingField: demo_battle
   <BackGround>k__BackingField: {fileID: -2443862266929849471, guid: 25fbe151793fa8e4d992c8cf761d47b6, type: 3}
+  <MainBossKey>k__BackingField: demo_battle
+  <AdditionalBossKey>k__BackingField: demo_battle

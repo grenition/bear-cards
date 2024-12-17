@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: LocationThreed
   m_EditorClassIdentifier: 
   <LocationKey>k__BackingField: 2
-  <LocationLevel>k__BackingField: 9
-  <MinimumFork>k__BackingField: 4
-  <MaximumFork>k__BackingField: 6
+  <LocationLevel>k__BackingField: 7
+  <MinimumFork>k__BackingField: 3
+  <MaximumFork>k__BackingField: 4
   <KeysEnemy>k__BackingField:
   - EnemyLegend
   <KeysPrice>k__BackingField:
@@ -24,5 +24,6 @@ MonoBehaviour:
   <FirsEnemyPoint>k__BackingField: 0
   <EnemyFight>k__BackingField:
   - demo_battle
-  <BossFight>k__BackingField: demo_battle
   <BackGround>k__BackingField: {fileID: 5449304497779965725, guid: 74ca24292b3a1014281ce2d94c030ce8, type: 3}
+  <MainBossKey>k__BackingField: demo_battle
+  <AdditionalBossKey>k__BackingField: demo_battle

@@ -34,33 +34,21 @@ namespace Assets.Scripts.Map
         {
             ViewPoint = viewPoint;
 
-            ViewPoint.OnClickAction += () =>
-            {
-                if (PointEntity.PointActive)
-                    MapCompositionRoot.Instance.MapController.MoveTo(ViewPoint);
-            };
-
-            ViewPoint.OnPlayerInteract += () =>
-            {
-                Complited();
-                MapCompositionRoot.Instance.MapController.PlayerInteractWithPoint(this);
-            };
+            ViewPoint.OnClickAction += OnClick;
+            ViewPoint.OnPlayerInteract += OnInteract;
         }
 
         public void Complited()
         {
             PointEntity.PointActive = false;
             PointEntity.PointComplited = true;
-            Debug.Log($"{PointEntity.Key}:I complited");
         }
 
         public void Pass()
         {
             PointEntity.PointActive = false;
             PointEntity.PointPass = true;
-            //PointEntity.PointComplited = false;
             ViewPoint.Pass();
-            Debug.Log($"{PointEntity.Key}:I pass");
         }
 
         public void Active()
@@ -68,7 +56,6 @@ namespace Assets.Scripts.Map
             PointEntity.PointActive = true;
             PointEntity.PointLock = false;
             ViewPoint.Active();
-            Debug.Log($"{PointEntity.Key}:I active");
         }
 
         public void Lock()
@@ -76,21 +63,24 @@ namespace Assets.Scripts.Map
             PointEntity.PointLock = true;
             PointEntity.PointActive = false;
             ViewPoint.Lock();
-            Debug.Log($"{PointEntity.Key}:I lock");
+        }
+
+        private void OnClick()
+        {
+            if (PointEntity.PointActive)
+                MapCompositionRoot.Instance.MapController.MoveTo(ViewPoint);
+        }
+
+        private void OnInteract()
+        {
+            Complited();
+            MapCompositionRoot.Instance.MapController.PlayerInteractWithPoint(this);
         }
 
         public void Dispose()
         {
-            ViewPoint.OnClickAction -= () =>
-            {
-                if (PointEntity.PointActive)
-                    MapCompositionRoot.Instance.MapController.MoveTo(ViewPoint);
-            };
-            ViewPoint.OnPlayerInteract -= () =>
-            {
-                Complited();
-                MapCompositionRoot.Instance.MapController.PlayerInteractWithPoint(this);
-            };
+            ViewPoint.OnClickAction -= OnClick;
+            ViewPoint.OnPlayerInteract -= OnInteract;
         }
     }
 }

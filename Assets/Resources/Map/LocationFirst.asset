@@ -22,7 +22,6 @@ MonoBehaviour:
   - CardEasy
   <KeysPrice>k__BackingField:
   - ReceptEpic
-  - CardLegend
   <FirsEnemyPoint>k__BackingField: 1
   <EnemyFight>k__BackingField:
   - demo_battle
