@@ -38,6 +38,6 @@ MonoBehaviour:
   <EnemyLegendKeys>k__BackingField:
   - epic_enemy_2
   - epic_enemy_1
-  <BackGround>k__BackingField: {fileID: 1779558905360190207, guid: 4e0de34c605e1c54baa43d7f8cb62a34, type: 3}
+  <BackGround>k__BackingField: {fileID: 21300000, guid: 4e0de34c605e1c54baa43d7f8cb62a34, type: 3}
   <MainBossKey>k__BackingField: boss_three_enemy
   <AdditionalBossKey>k__BackingField: boss_three_enemy
