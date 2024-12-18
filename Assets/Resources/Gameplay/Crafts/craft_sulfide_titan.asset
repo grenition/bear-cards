@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: craft_sulfide_titan
   m_EditorClassIdentifier: 
   <Metals>k__BackingField:
-  - {fileID: 11400000, guid: 6558f620cf6a37f4499b33f05eac2a78, type: 2}
+  - {fileID: 11400000, guid: e4d998704b1ddff4ba2b8bd1cb8637e7, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

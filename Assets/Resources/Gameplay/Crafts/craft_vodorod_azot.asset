@@ -19,10 +19,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   <NonMetals>k__BackingField:
-  - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
+  - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  <Output>k__BackingField: {fileID: 11400000, guid: 8ea0b8da684d31b47b49aaabf34a6151, type: 2}
+  <Output>k__BackingField: {fileID: 11400000, guid: 1270232657f79204a928353520343485, type: 2}
   <Formula>k__BackingField: NH<sub>3</sub>

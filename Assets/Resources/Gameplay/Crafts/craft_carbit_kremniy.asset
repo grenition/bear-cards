@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: craft_carbit_kremniy
   m_EditorClassIdentifier: 
   <Metals>k__BackingField:
-  - {fileID: 11400000, guid: 6558f620cf6a37f4499b33f05eac2a78, type: 2}
+  - {fileID: 11400000, guid: f0f9282175cdc54468746638acd175e9, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

@@ -19,7 +19,7 @@ MonoBehaviour:
     ActorConfig: {fileID: 11400000, guid: 08a77187c52a53e4482f9e49589a492d, type: 2}
     TextDialogue: "\u0410 \u0435\u0441\u043B\u0438 \u044F \u0441\u043C\u0435\u0448\u0430\u044E
       \u0447\u0442\u043E-\u0442\u043E \u043D\u0435 \u0442\u043E?"
-  - ActorPosition: 0
+  - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: b393358a7052cd840bb487817b7cf0fe, type: 2}
     TextDialogue: "\u0412 \u0445\u0438\u043C\u0438\u0438 \u043E\u0448\u0438\u0431\u043A\u0438
       \u2014 \u044D\u0442\u043E \u0447\u0430\u0441\u0442\u044C \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u0430."
