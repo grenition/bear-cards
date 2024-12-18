@@ -21,7 +21,7 @@ MonoBehaviour:
   <VisualIcon>k__BackingField: {fileID: -7760498949991788154, guid: 296bbe67dce2d4f43bf53db859ab374b, type: 3}
   <CardType>k__BackingField: 2
   <Rarity>k__BackingField: 0
-  <Cost>k__BackingField: 5
+  <Cost>k__BackingField: 0
   <Level>k__BackingField: 0
   <BaseHealth>k__BackingField: 2
   <BaseDamage>k__BackingField: 1
