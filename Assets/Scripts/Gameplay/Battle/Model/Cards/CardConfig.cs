@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Project.Gameplay.Common;
 using Project.Gameplay.Common.Datas;
 using UnityEngine;
@@ -36,26 +37,18 @@ namespace Project.Gameplay.Battle.Model.Cards
         
         [field: Header("Special")]
         [field: SerializeField] public List<EffectTypes> Effects { get; protected set; }
-        
-        [field: SerializeField]
-        private List<CardEffectEntry> cardEffects;
 
-        public Dictionary<CardEffect, int> SpellEffects { get; private set; } = new Dictionary<CardEffect, int>();
-        
-        private void SyncDictionaryWithList()
-        {
-            SpellEffects.Clear();
-            foreach (var entry in cardEffects)
-            {
-                if (entry.Effect != null)
+
+        [SerializeField] private List<CardEffectEntry> cardEffects;
+        private Dictionary<CardEffect, int> _spellDictionary;
+        public IReadOnlyDictionary<CardEffect, int> SpellEffects {
+            get {
+                if (_spellDictionary == null)
                 {
-                    SpellEffects[entry.Effect] = entry.Value;
+                    _spellDictionary = cardEffects.ToDictionary(x => x.Effect, x => x.Value);
                 }
+                return _spellDictionary;
             }
-        }
-        private void OnValidate()
-        {
-            SyncDictionaryWithList();
         }
     }
 }
