@@ -23,7 +23,7 @@ MonoBehaviour:
     \u0438 \u0447\u0430\u0441\u0442\u044C \u043D\u0435\u043C\u0435\u0442\u0430\u043B\u043B\u043E\u0432,
     \u043E\u0447\u0435\u043D\u044C \u043B\u0435\u0433\u043A\u043E\u0432\u043E\u0441\u043F\u043B\u0430\u043C\u0435\u043D\u044F\u0435\u043C."
   <ElectroFormula>k__BackingField: 2s2 2p4
-  <VisualIcon>k__BackingField: {fileID: -7950956905253194622, guid: 2e0be949f4c2e4a52bd31c5a86ecf219, type: 3}
+  <VisualIcon>k__BackingField: {fileID: 21300000, guid: 2e0be949f4c2e4a52bd31c5a86ecf219, type: 3}
   <CardType>k__BackingField: 1
   <Rarity>k__BackingField: 0
   <Cost>k__BackingField: 6

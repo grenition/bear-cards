@@ -23,7 +23,7 @@ MonoBehaviour:
     \u043F\u043E\u0447\u0442\u0438 \u0432\u0435\u0441\u044C \u0441\u043F\u0435\u043A\u0442\u0440
     \u0446\u0432\u0435\u0442\u043E\u0432."
   <ElectroFormula>k__BackingField: 3d5 4s2
-  <VisualIcon>k__BackingField: {fileID: 3532805247986975248, guid: 0c9f26591f7384a9b9f905bed578a1d4, type: 3}
+  <VisualIcon>k__BackingField: {fileID: 21300000, guid: 0c9f26591f7384a9b9f905bed578a1d4, type: 3}
   <CardType>k__BackingField: 0
   <Rarity>k__BackingField: 1
   <Cost>k__BackingField: 7
@@ -32,3 +32,5 @@ MonoBehaviour:
   <BaseDamage>k__BackingField: 5
   <SpellPlacing>k__BackingField: 0
   <SpellPlayersPlacing>k__BackingField: 0
+  <Effects>k__BackingField: 
+  cardEffects: []
