@@ -19,6 +19,7 @@ MonoBehaviour:
   <HandSize>k__BackingField: 20
   <DeckSize>k__BackingField: 100
   <SpellsSize>k__BackingField: 4
-  <StartLevelElectrons>k__BackingField: 1000
-  <PlaceToSlotChance>k__BackingField: 0.5
+  <StartLevelElectrons>k__BackingField: 10000
+  <StartHandElectrons>k__BackingField: 10000
+  <Turns>k__BackingField: []
   <Deck>k__BackingField: []
