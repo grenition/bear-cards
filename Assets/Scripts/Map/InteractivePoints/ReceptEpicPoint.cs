@@ -10,7 +10,7 @@ namespace Project
 
         public ReceptEpicPoint()
         {
-            PointEntity.Key = "ReceptEpic";
+            //PointEntity.Key = "ReceptEpic";
         }
 
         public override void OnBeginInteract()

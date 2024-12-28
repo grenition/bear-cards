@@ -7,7 +7,7 @@ namespace Assets.Scripts.Map
     {
         public EnemyEasyPoint()
         {
-            PointEntity.Key = "EnemyEasy";
+           //PointEntity.Key = "EnemyEasy";
         }
 
         public override void OnBeginInteract()

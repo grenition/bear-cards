@@ -79,7 +79,6 @@ namespace Assets.Scripts.Map
             locationData.Points.ToList().ForEach(point =>
             {
                 point.PointLock = true;
-                point.PointComplited = false;
             });
 
             locationData.Points.ToList().Find(point => point.ID == _idBattlePoint).PointComplited = true;

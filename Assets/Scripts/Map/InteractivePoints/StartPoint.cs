@@ -4,7 +4,7 @@ namespace Assets.Scripts.Map
     {
         public StartPoint()
         {
-            PointEntity.Key = "Start";
+            //PointEntity.Key = "Start";
         }
         public override void OnBeginInteract()
         {

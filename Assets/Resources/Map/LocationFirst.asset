@@ -13,29 +13,112 @@ MonoBehaviour:
   m_Name: LocationFirst
   m_EditorClassIdentifier: 
   <LocationKey>k__BackingField: 0
-  <LocationLevel>k__BackingField: 6
-  <MinimumFork>k__BackingField: 1
-  <MaximumFork>k__BackingField: 3
-  <KeysEnemy>k__BackingField:
-  - EnemyEasy
-  <KeysPrice>k__BackingField:
-  - CardEasy
-  - CardMeadle
-  - CraftMeadle
-  - HillEasy
-  <FirsEnemyPoint>k__BackingField: 1
+  <Levels>k__BackingField:
+  - Name: Start Level
+    Number: 0
+    Points:
+    - ID: 0
+      NeighborsID: 01000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - Start
+  - Name: Level 1
+    Number: 1
+    Points:
+    - ID: 1
+      NeighborsID: 02000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - CardEasy
+  - Name: Level 2(Fight)
+    Number: 2
+    Points:
+    - ID: 2
+      NeighborsID: 0300000004000000
+      IsEnemyPoint: 1
+      EnemyKeys:
+      - standart_enemy_1
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - EnemyEasy
+  - Name: Level 3
+    Number: 3
+    Points:
+    - ID: 3
+      NeighborsID: 05000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    - ID: 4
+      NeighborsID: 05000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - HillEasy
+    - ReceptMeadle
+  - Name: Level 4
+    Number: 4
+    Points:
+    - ID: 5
+      NeighborsID: 06000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - CraftMeadle
+  - Name: Level 5
+    Number: 5
+    Points:
+    - ID: 6
+      NeighborsID: 
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - Boss
   <BattleKeys>k__BackingField:
-  - standart_battle
   - boss_battle
-  <EnemyEasyKeys>k__BackingField:
-  - standart_enemy_1
-  - standart_enemy_2
-  <EnemyEpicKeys>k__BackingField:
-  - rare_enemy_1
-  - rare_enemy_2
-  <EnemyLegendKeys>k__BackingField:
-  - epic_enemy_2
-  - epic_enemy_1
+  - standart_battle
   <BackGround>k__BackingField: {fileID: -5738867087462220013, guid: 0eadca9d3819ca14e87f86b1b8fad138, type: 3}
   <MainBossKey>k__BackingField: boss_first_enemy
   <AdditionalBossKey>k__BackingField: boss_first_additional_enemy

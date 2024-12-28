@@ -23,8 +23,10 @@ namespace Project
         }
 
         private void Complited()
-        {
+        { 
+            MapCompositionRoot.Instance.MapController.ComplitePoint();
             ScneneLoaderStatic.LoadSceneAsync("CraftScene");
+
             gameObject.SetActive(false);
         }
     }

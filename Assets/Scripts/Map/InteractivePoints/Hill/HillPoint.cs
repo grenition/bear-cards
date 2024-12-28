@@ -8,7 +8,7 @@ namespace Assets.Scripts.Map
         private HillDescriptionConfig _config;
         public HillPoint()
         {
-            PointEntity.Key = "HillEasy";
+            //PointEntity.Key = "HillEasy";
             _config = Resources.Load<HillDescriptionConfig>("Map/DescConfig/HillDescriptionConfig");
         }
 

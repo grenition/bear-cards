@@ -8,7 +8,7 @@ namespace Project
         private HillDescriptionConfig _config;
         public HillLegendPoint()
         {
-            PointEntity.Key = "HillLegend";
+            //PointEntity.Key = "HillLegend";
             _config = Resources.Load<HillDescriptionConfig>("Map/DescConfig/HillLegendConfig");
         }
 

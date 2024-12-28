@@ -20,7 +20,7 @@ namespace Assets.Scripts.Map
         [field: SerializeField] public int HitPoint { get; private set; }
         public MapPlayer MapPlayer { get; private set; }
 
-        private List<string> _deck = new List<string>() { "card_phosphorus" };
+        private List<string> _deck = new() { "card_phosphorus" };
 
         [SerializeField] private ViewPoint _startPoint;
         [SerializeField] private ViewPoint _endPoint;
@@ -55,30 +55,21 @@ namespace Assets.Scripts.Map
             _deck = progres.Deck.ToList();
             _curentLocationNumber = progres.KeyLocation;
             ActiveLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber]}");
-            _pointOfInterestGenerator = new PointOfInterestGenerator(_startPoint, _endPoint, ActiveLocation);
+            //ActiveLocation = Resources.Load<LocationConfigurate>("Map/LocationThreed");
+            _pointOfInterestGenerator = new PointOfInterestGenerator(ActiveLocation);
             _enivrimentGenerator = new EnivrimentGenerator(ActiveLocation.LocationLevel);
 
-            if (progres.LocationLevel == 0)
-            {
+            if (progres.Points.Length == 0)
                 _locationPoints = _pointOfInterestGenerator.Generate();
-                var data = DialoguesStatic.LoadData();
-                data.FirstStart = true;
-                switch (ActiveLocation.LocationKey)
-                {
-                    case 0:
-                        data.CountLocationOneUpdate++;
-                        break;
-                    case 1:
-                        data.CountLocationTwoUpdate++;
-                        break;
-                    case 2:
-                        data.CountLocationThreeUpdate++;
-                        break;
-                }
-                DialoguesStatic.SaveDataAndExecuteDialogue(data);
-            }
             else
-                _locationPoints = _pointOfInterestGenerator.Generate(progres.Points.ToList());
+            {
+                _locationPoints = _pointOfInterestGenerator.Generate(progres);
+            }
+
+            var data = DialoguesStatic.LoadData();
+            data.FirstStart = true;
+
+
 
             MapStaticData.SaveData(_locationPoints.Select(point => point.PointEntity).ToArray(), ActiveLocation.LocationLevel, ActiveLocation.LocationKey, _deck);
             _enivrimentGenerator.Generate(_locationPoints);
@@ -92,6 +83,23 @@ namespace Assets.Scripts.Map
             ProgressInit();
             _backGround.sprite = ActiveLocation.BackGround;
             _parallaxBackground.TargetTransform = MapPlayer.transform;
+
+            if (progres.LocationLevel != 0)
+                return;
+            
+            switch (ActiveLocation.LocationKey)
+            {
+                case 0:
+                    data.CountLocationOneUpdate++;
+                    break;
+                case 1:
+                    data.CountLocationTwoUpdate++;
+                    break;
+                case 2:
+                    data.CountLocationThreeUpdate++;
+                    break;
+            }
+            DialoguesStatic.SaveDataAndExecuteDialogue(data);
         }
 
         public GameObject ShowCardGiver(string power)

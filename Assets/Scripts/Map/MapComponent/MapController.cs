@@ -41,7 +41,7 @@ namespace Assets.Scripts.Map
             _mapPlayer.transform.position = activePoint.ViewPoint.transform.position;
             _currentInteractPoint = activePoint;
 
-            if (activePoint.PointEntity.Level == _locationConfigurate.LocationLevel - 1)
+            if (activePoint.PointEntity.NumberLevel == _locationConfigurate.LocationLevel - 1)
             {
                 _pointCollections.Last().Complited();
                 LocationComplited();
@@ -51,17 +51,13 @@ namespace Assets.Scripts.Map
             UpdatePoints();
         }
 
-        //private void Update()
-        //{
-        //    if (Input.GetMouseButtonDown(0) && !MapCompositionRoot.Instance.MapPlayer.PlayerIsMove )
-        //    {
-        //        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-        //        if (hit.collider != null && hit.collider.gameObject.TryGetComponent(out ViewPoint viewpoint))
-        //        {
-        //            viewpoint.ClickOnPoint();
-        //        }
-        //    }
-        //}
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                LocationComplited();
+            }
+        }
 
         public void UpdatePoints()
         {
@@ -74,11 +70,11 @@ namespace Assets.Scripts.Map
             complitedPoint.Pass();
             var id = complitedPoint.PointEntity.ID;
 
-            for (int i = complitedPoint.PointEntity.Level-1; i >= 0 ; i--)
+            for (int i = complitedPoint.PointEntity.NumberLevel - 1; i >= 0; i--)
             {
-                var level = _pointCollections.Where(point => point.PointEntity.Level == i).ToList();
+                var level = _pointCollections.Where(point => point.PointEntity.NumberLevel == i).ToList();
                 var idNeighbor = level.Find(point => point.PointEntity.NeighborsID.Contains(id)).PointEntity.ID;
-                var pointNeigbor = _pointCollections.Find(point => point.PointEntity.ID ==  idNeighbor);
+                var pointNeigbor = _pointCollections.Find(point => point.PointEntity.ID == idNeighbor);
                 pointNeigbor.Pass();
                 id = pointNeigbor.PointEntity.ID;
             }
@@ -89,7 +85,7 @@ namespace Assets.Scripts.Map
                 neighbor.Active();
             }
 
-            if (complitedPoint.PointEntity.Level == _locationConfigurate.LocationLevel - 2)
+            if (complitedPoint.PointEntity.NumberLevel == _locationConfigurate.LocationLevel - 2)
                 _pointCollections.Last().Active();
         }
 
@@ -105,9 +101,10 @@ namespace Assets.Scripts.Map
             _currentInteractPoint = interactivePoint;
             _currentInteractPoint.OnBeginInteract();
 
-            if (_currentInteractPoint.PointEntity.Level != _locationConfigurate.LocationLevel - 1)
-                MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetBattleKey(),
-                    _locationConfigurate.GetEnemyKey(_currentInteractPoint.PointEntity.Key));
+            if (_currentInteractPoint.PointEntity.NumberLevel != _locationConfigurate.LocationLevel - 1)
+                MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID,
+                    _locationConfigurate.GetBattleKey(),
+                    _currentInteractPoint.PointEntity.EnemyKeys[UnityEngine.Random.Range( 0, _currentInteractPoint.PointEntity.EnemyKeys.Length)]);
             else
                 MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetBattleKey(), _locationConfigurate.BossFight());
 
@@ -120,7 +117,7 @@ namespace Assets.Scripts.Map
             if (_currentInteractPoint == null)
                 return;
 
-            if (_currentInteractPoint.PointEntity.Level == _locationConfigurate.LocationLevel - 1)
+            if (_currentInteractPoint.PointEntity.NumberLevel == _locationConfigurate.LocationLevel - 1)
             {
                 _pointCollections.Last().Complited();
                 LocationComplited();
@@ -156,7 +153,7 @@ namespace Assets.Scripts.Map
                 return;
             }
 
-            MapStaticData.SaveData(_pointCollections.Select(point => point.PointEntity).ToArray(), 0, keyLocation);
+            MapStaticData.SaveData(new PointEntity[0], 0, keyLocation);
             MapCompositionRoot.Instance.ReloadMap();
         }
 
@@ -178,7 +175,16 @@ namespace Assets.Scripts.Map
         private InteractivePoint GetLasPointComplited()
         {
             List<InteractivePoint> activePointCollection = _pointCollections.Where(point => point.PointEntity.PointComplited).ToList();
-            return activePointCollection.Last();
+
+            var idLastPoint = 0;
+
+            foreach( InteractivePoint point in activePointCollection)
+            {
+                if(point.PointEntity.ID > idLastPoint)
+                    idLastPoint = point.PointEntity.ID;
+            }
+
+            return FindPointByID(idLastPoint);
         }
     }
 }

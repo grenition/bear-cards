@@ -13,31 +13,303 @@ MonoBehaviour:
   m_Name: LocationSecond
   m_EditorClassIdentifier: 
   <LocationKey>k__BackingField: 1
-  <LocationLevel>k__BackingField: 10
-  <MinimumFork>k__BackingField: 2
-  <MaximumFork>k__BackingField: 6
-  <KeysEnemy>k__BackingField:
-  - EnemyMeadle
-  <KeysPrice>k__BackingField:
-  - CardEasy
-  - CardMeadle
-  - CraftMeadle
-  - CardLegend
-  - HillEasy
-  - HillLegend
-  <FirsEnemyPoint>k__BackingField: 0
+  <Levels>k__BackingField:
+  - Name: Level 0(Start)
+    Number: 0
+    Points:
+    - ID: 0
+      NeighborsID: 01000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - Start
+  - Name: Level 1(GardEasy)
+    Number: 1
+    Points:
+    - ID: 1
+      NeighborsID: 0200000003000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - CardEasy
+  - Name: Level 2(Fight)
+    Number: 2
+    Points:
+    - ID: 2
+      NeighborsID: 0400000005000000
+      IsEnemyPoint: 1
+      EnemyKeys:
+      - rare_enemy_1
+      - rare_enemy_2
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    - ID: 3
+      NeighborsID: 0600000007000000
+      IsEnemyPoint: 1
+      EnemyKeys:
+      - rare_enemy_1
+      - rare_enemy_2
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - EnemyMeadle
+    - EnemyMeadle
+  - Name: Level 3(Four point)
+    Number: 3
+    Points:
+    - ID: 4
+      NeighborsID: 08000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    - ID: 5
+      NeighborsID: 08000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    - ID: 6
+      NeighborsID: 08000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    - ID: 7
+      NeighborsID: 08000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - CraftMeadle
+    - ReceptEpic
+    - HillEasy
+    - CardEasy
+  - Name: Level 4(Fight)
+    Number: 4
+    Points:
+    - ID: 8
+      NeighborsID: 090000000a000000
+      IsEnemyPoint: 1
+      EnemyKeys:
+      - rare_enemy_1
+      - rare_enemy_2
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - EnemyMeadle
+  - Name: Level 5(two point)
+    Number: 5
+    Points:
+    - ID: 9
+      NeighborsID: 0b0000000c000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    - ID: 10
+      NeighborsID: 0d0000000e000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - CraftMeadle
+    - CardEasy
+  - Name: Level 6(four point)
+    Number: 6
+    Points:
+    - ID: 11
+      NeighborsID: 0f000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    - ID: 12
+      NeighborsID: 0f000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    - ID: 13
+      NeighborsID: 0f000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    - ID: 14
+      NeighborsID: 0f000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - CraftMeadle
+    - ReceptEpic
+    - HillLegend
+    - CardMeadle
+  - Name: Level 7(recept)
+    Number: 7
+    Points:
+    - ID: 15
+      NeighborsID: 10000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - ReceptMeadle
+  - Name: Level 8(fight)
+    Number: 8
+    Points:
+    - ID: 16
+      NeighborsID: 11000000120000001300000014000000
+      IsEnemyPoint: 1
+      EnemyKeys:
+      - rare_enemy_1
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - EnemyMeadle
+  - Name: Level 9(four point)
+    Number: 9
+    Points:
+    - ID: 17
+      NeighborsID: 15000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    - ID: 18
+      NeighborsID: 15000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    - ID: 19
+      NeighborsID: 15000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    - ID: 20
+      NeighborsID: 15000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - CraftMeadle
+    - ReceptEpic
+    - HillLegend
+    - CardLegend
+  - Name: Level 10(boss)
+    Number: 10
+    Points:
+    - ID: 21
+      NeighborsID: 15000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
+    PointKeys:
+    - Boss
   <BattleKeys>k__BackingField:
   - boss_battle
   - standart_battle
-  <EnemyEasyKeys>k__BackingField:
-  - standart_enemy_1
-  - standart_enemy_2
-  <EnemyEpicKeys>k__BackingField:
-  - rare_enemy_1
-  - rare_enemy_2
-  <EnemyLegendKeys>k__BackingField:
-  - epic_enemy_2
-  - epic_enemy_1
   <BackGround>k__BackingField: {fileID: 4089156835893060931, guid: 899cf4bcd08417f4faba9d4d733e3603, type: 3}
   <MainBossKey>k__BackingField: boss_two_enemy
   <AdditionalBossKey>k__BackingField: boss_two_enemy

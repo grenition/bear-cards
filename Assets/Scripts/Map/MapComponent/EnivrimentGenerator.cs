@@ -1,4 +1,3 @@
-using GreonAssets.Extensions;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -23,9 +22,10 @@ namespace Assets.Scripts.Map
 
         private void InteractivePointGenerated(List<InteractivePoint> points)
         {
+
             for (int numberLevel = 0; numberLevel < _levelLocation; numberLevel++)
             {
-                List<InteractivePoint> pointsInLevel = points.Where(point => point.PointEntity.Level == numberLevel).ToList();
+                List<InteractivePoint> pointsInLevel = points.Where(point => point.PointEntity.NumberLevel == numberLevel).ToList();
 
                 float halfDistance = (pointsInLevel.Count() - 1) * _config.DistanceBeetwenPointByX / 2.0f;
 
@@ -46,21 +46,24 @@ namespace Assets.Scripts.Map
 
         private void PathGenerated(List<InteractivePoint> points)
         {
-            points.Where(point => point.PointEntity.NeighborsID != null &&
+            var pointCollection = points.Where(point => point.PointEntity.NeighborsID != null &&
             point.PointEntity.NeighborsID.Count != 0 &&
-            point.PointEntity.Key != "Boss").ForEach(point =>
+            point.PointEntity.Key != "Boss");
+
+            foreach (var point in pointCollection)
+            {
+                point.PointEntity.NeighborsID.ForEach(idNeighbor =>
                 {
-                    point.PointEntity.NeighborsID.ForEach(idNeighbor =>
-                    {
-                        point.ViewPoint.CreatePathTo(FindPointByID(points, idNeighbor).ViewPoint);
-                    });
+                    point.ViewPoint.CreatePathTo(FindPointByID(points, idNeighbor).ViewPoint);
                 });
+            };
 
             var bossPoint = points.Find(point => point.PointEntity.Key == "Boss");
-            points.Where(point => point.PointEntity.Level == _levelLocation - 2).ForEach(point =>
+            pointCollection = points.Where(point => point.PointEntity.NumberLevel == _levelLocation - 2);
+            foreach (var point in pointCollection)
             {
                 point.ViewPoint.CreatePathTo(bossPoint.ViewPoint);
-            });
+            };
         }
 
 

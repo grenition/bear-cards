@@ -7,7 +7,7 @@ namespace Project
     {
         public CardMeadlePoint()
         {
-            PointEntity.Key = "CardMeadle";
+            //PointEntity.Key = "CardMeadle";
         }
         public override async void OnBeginInteract()
         {

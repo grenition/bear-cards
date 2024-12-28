@@ -6,7 +6,7 @@ namespace Project
     {
         public EnemyEpicPoint()
         {
-            PointEntity.Key = "EnemyMeadle";
+            //PointEntity.Key = "EnemyMeadle";
         }
 
         public override void OnBeginInteract()

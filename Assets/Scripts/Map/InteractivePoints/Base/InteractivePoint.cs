@@ -9,13 +9,18 @@ namespace Assets.Scripts.Map
     {
         public int ID;
         public List<int> NeighborsID;
-        public int Level;
-        public string Key;
+        public bool IsEnemyPoint;
+    
+        public string[] EnemyKeys;
+        //public int Level;
+        //public string Key;
 
-        public bool PointActive;
-        public bool PointComplited;
-        public bool PointPass;
-        public bool PointLock;
+        [HideInInspector] public int NumberLevel;
+        [HideInInspector] public string Key;
+        [HideInInspector] public bool PointActive;
+        [HideInInspector] public bool PointComplited;
+        [HideInInspector] public bool PointPass;
+        [HideInInspector] public bool PointLock;
     }
 
     public abstract class InteractivePoint : IDisposable

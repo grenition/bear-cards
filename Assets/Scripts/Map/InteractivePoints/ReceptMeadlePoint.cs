@@ -9,7 +9,7 @@ namespace Project
     {
         public ReceptMeadlePoint()
         {
-            PointEntity.Key = "ReceptMeadle";
+            //PointEntity.Key = "ReceptMeadle";
         }
 
         public override void OnBeginInteract()

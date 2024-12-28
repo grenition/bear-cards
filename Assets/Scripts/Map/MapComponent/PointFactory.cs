@@ -51,6 +51,9 @@ namespace Assets.Scripts.Map
             };
 
             newPoint.PointEntity.ID = _uniqId;
+            if (key == "Start")
+                newPoint.Complited();
+
             _uniqId++;
             return newPoint;
         }

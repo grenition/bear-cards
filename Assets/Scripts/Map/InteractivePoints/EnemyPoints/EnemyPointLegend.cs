@@ -6,7 +6,7 @@ namespace Project
     {
         public EnemyPointLegend()
         {
-            PointEntity.Key = "EnemyLegend";
+            //PointEntity.Key = "EnemyLegend";
         }
 
         public override void OnBeginInteract()
