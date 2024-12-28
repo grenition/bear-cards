@@ -3,6 +3,8 @@ using Project.Gameplay.Battle.Model;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Common.Datas;
 using System;
+using System.Linq;
+using GreonAssets.Extensions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +15,7 @@ namespace Project.UI.Battle
     {
         public CardModel Model { get; protected set; }
 
+        [Header("Components")]
         [SerializeField] private TMP_Text _electroText;
         [SerializeField] private Image _iconImage;
         [SerializeField] private TMP_Text _shortName;
@@ -23,6 +26,20 @@ namespace Project.UI.Battle
         [SerializeField] private UIEffectsImages _effects;
         [SerializeField] private UIEffectsAnimationController _effectsAnimation;
 
+        [Header("Border colors")]
+        [SerializeField] private Color _metalColor;
+        [SerializeField] private Color _nonMetalColor;
+        [SerializeField] private Color _hydrogenColor;
+        [SerializeField] private Color _spellColor;
+        [SerializeField] private Image[] _borderImages;
+
+        [Header("Rarity colors")]
+        [SerializeField] private Color _baseRarityColor;
+        [SerializeField] private Color _rareRarityColor;
+        [SerializeField] private Color _veryRareRarityColor;
+        [SerializeField] private Color _legendaryRarityColor;
+        [SerializeField] private Image[] _rarityImages;
+        
         public void Init(CardModel cardModel)
         {
             if (cardModel == null) return;
@@ -73,6 +90,24 @@ namespace Project.UI.Battle
             if (_healthText) _healthText.text = Model.Health.ToString();
             if (_descriptionText) _descriptionText.text = Model.Config.VisualDescription.Replace("{dmg}", Math.Abs(Model.AttackDamage).ToString());
             if (_effects) _effects.Effects = Model.Effects;
+
+            var borderColor = Model.Config.CardType switch
+            {
+                CardType.Metal => _metalColor,
+                CardType.NonMetal => _nonMetalColor,
+                CardType.Spell => _spellColor,
+                _ => _metalColor
+            };
+            if (Model.Key == "card_hydrogen") borderColor = _hydrogenColor;
+            var rarityColor = Model.Config.Rarity switch
+            {
+                CardRarity.Standart => _baseRarityColor,
+                CardRarity.Rare => _rareRarityColor,
+                CardRarity.VeryRare => _veryRareRarityColor,
+                CardRarity.Legendary => _legendaryRarityColor
+            };
+            _borderImages.Where(x => x != null).ForEach(x => x.color = borderColor);
+            _rarityImages.Where(x => x != null).ForEach(x => x.color = rarityColor);
         }
     }
 }

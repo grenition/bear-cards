@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Project.Gameplay.Common;
 using GreonAssets.Extensions;
 using Project.Audio;
 using Project.Gameplay.Battle;
@@ -20,19 +19,12 @@ namespace Project.UI.Battle
         [Header("Audio")]
         [SerializeField] private AudioClip _cardTransferedClip;
 
-        [Header("Bsse movement prefab")]
+        [Header("Base movement prefab")]
         [SerializeField] private UICardMovement _cardMovementPrefab;
-        [Header("Card visuals")]
-        [SerializeField] private UICardVisual _hydrogenCardPrefab;
+        
+        [Header("Visual prefabs")]
+        [SerializeField] private UICardVisual _cardPrefab;
         [SerializeField] private UICardVisual _spellCardPrefab;
-        [SerializeField] private UICardVisual _metalStandartCardPrefab;
-        [SerializeField] private UICardVisual _metalRareCardPrefab;
-        [SerializeField] private UICardVisual _metalVeryRareCardPrefab;
-        [SerializeField] private UICardVisual _metalLegendaryCardPrefab;        
-        [SerializeField] private UICardVisual _nonMetalStandartCardPrefab;
-        [SerializeField] private UICardVisual _nonMetalRareCardPrefab;
-        [SerializeField] private UICardVisual _nonMetalVeryRareCardPrefab;
-        [SerializeField] private UICardVisual _nonMetalLegendaryCardPrefab;
 
         private Dictionary<CardSlotModel, UICardSlot> _slots = new();
         private Dictionary<CardModel, UICardMovement> _cards = new();
@@ -62,43 +54,13 @@ namespace Project.UI.Battle
             {
                 var deck = fromPosition.owner == CardOwner.player ? _playerDeck : _enemyDeck;
                 card = Instantiate(_cardMovementPrefab, UICardsHandler.instance.transform);
-                card.Init(cardModel, GetCardPrefab(cardModel));
+                card.Init(cardModel, cardModel.Type == CardType.Spell ? _spellCardPrefab : _cardPrefab);
                 card.transform.position = deck.transform.position;
             }
 
             GameAudio.MusicSource.PlayOneShot(_cardTransferedClip, 0.3f);
         }
 
-        private UICardVisual GetCardPrefab(CardModel model)
-        {
-            if (model.Key == "card_hydrogen")
-                return _hydrogenCardPrefab;
-
-            switch (model.Type)
-            {
-                case CardType.Spell: return _spellCardPrefab;
-                case CardType.Metal:
-                    switch (model.Config.Rarity)
-                    {
-                        case CardRarity.Standart: return _metalStandartCardPrefab;
-                        case CardRarity.Rare: return _metalRareCardPrefab;
-                        case CardRarity.VeryRare: return _metalVeryRareCardPrefab;
-                        case CardRarity.Legendary: return _metalLegendaryCardPrefab;
-                    }
-                    break;
-                case CardType.NonMetal:
-                    switch (model.Config.Rarity)
-                    {
-                        case CardRarity.Standart: return _nonMetalStandartCardPrefab;
-                        case CardRarity.Rare: return _nonMetalRareCardPrefab;
-                        case CardRarity.VeryRare: return _nonMetalVeryRareCardPrefab;
-                        case CardRarity.Legendary: return _nonMetalLegendaryCardPrefab;
-                    }
-                    break;
-            }
-            
-            return _hydrogenCardPrefab;
-        }
 
         #region Registry
         public void RegisterCard(UICardMovement card) => _cards.Set(card.Model, card);

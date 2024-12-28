@@ -6704,16 +6704,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cardTransferedClip: {fileID: 8300000, guid: a77c2d60e23ab44b9984f90b6d849d3f, type: 3}
   _cardMovementPrefab: {fileID: 6976790333091024455, guid: 281ca3e85cb1f4681ab2fce6ecb908be, type: 3}
-  _hydrogenCardPrefab: {fileID: 7603029171800799017, guid: 9a04e28c60b9a4bb8adfe8771aa898a5, type: 3}
-  _spellCardPrefab: {fileID: 5730669577238047641, guid: 3c0a9309cee384ac7bb2b4e9da1ec247, type: 3}
-  _metalStandartCardPrefab: {fileID: 1338925142310858621, guid: c00ab1aee07bb44d48b499d228828ace, type: 3}
-  _metalRareCardPrefab: {fileID: 6228157182888358988, guid: 8abbb624537844dd996e350fc434e0ba, type: 3}
-  _metalVeryRareCardPrefab: {fileID: 3421210136172496139, guid: 30e0ba85957d74a4f83c39631465c83d, type: 3}
-  _metalLegendaryCardPrefab: {fileID: 2723201671402759314, guid: 6f3e358c2070e4700a0c36708b7e6ade, type: 3}
-  _nonMetalStandartCardPrefab: {fileID: 8132977472718666800, guid: f2fd8ac058b694357ac694475f16fd60, type: 3}
-  _nonMetalRareCardPrefab: {fileID: 3237490900936397291, guid: f3666f9d180a647bc84a9968b51f2e3a, type: 3}
-  _nonMetalVeryRareCardPrefab: {fileID: 2985385248731349360, guid: e3a77f9db2c474311995858870b2ae85, type: 3}
-  _nonMetalLegendaryCardPrefab: {fileID: 4936889414700165745, guid: 08ed4684c6dc840f9a10293eeafff72f, type: 3}
+  _cardPrefab: {fileID: 4448410597759026312, guid: 86e43702194b54ccaa33b7e737f03cd2, type: 3}
+  _spellCardPrefab: {fileID: 5730669577238047641, guid: 6ea2f429151934ab6b5df70fdee4a19b, type: 3}
 --- !u!1 &2090860699
 GameObject:
   m_ObjectHideFlags: 0
