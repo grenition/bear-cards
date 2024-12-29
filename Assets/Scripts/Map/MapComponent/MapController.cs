@@ -70,14 +70,8 @@ namespace Assets.Scripts.Map
             complitedPoint.Pass();
             var id = complitedPoint.PointEntity.ID;
 
-            for (int i = complitedPoint.PointEntity.NumberLevel - 1; i >= 0; i--)
-            {
-                var level = _pointCollections.Where(point => point.PointEntity.NumberLevel == i).ToList();
-                var idNeighbor = level.Find(point => point.PointEntity.NeighborsID.Contains(id)).PointEntity.ID;
-                var pointNeigbor = _pointCollections.Find(point => point.PointEntity.ID == idNeighbor);
-                pointNeigbor.Pass();
-                id = pointNeigbor.PointEntity.ID;
-            }
+            _pointCollections.Where(point => point.PointEntity.PointComplited).ForEach(complitedPoint => complitedPoint.Pass());
+
 
             for (int i = 0; i < complitedPoint.PointEntity.NeighborsID.Count(); i++)
             {
