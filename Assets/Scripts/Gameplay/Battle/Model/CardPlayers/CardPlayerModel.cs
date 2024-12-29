@@ -30,6 +30,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         public int HandElectrons { get; protected set; }
         public int LevelElectrons { get; protected set; }
 
+
         public CardPlayerModel(string key, CardOwner ownerhipType, BattleModel battleModel)
         {
             Key = key;
@@ -37,7 +38,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             OwnershipType = ownerhipType;
             Health = ownerhipType == CardOwner.player ? MapStaticData.LoadPlayerData() : Config.Health;
 
-            LevelElectrons = Config.StartLevelElectrons;
+            LevelElectrons = MapStaticData.LoadData().KeyLocation + 1;
             HandElectrons = Config.StartHandElectrons;
 
             for (int i = 0; i < Config.HandSize; i++)

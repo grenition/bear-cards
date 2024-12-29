@@ -31,11 +31,14 @@ namespace Project.Gameplay.Battle.Model
         public bool BattleEnded { get; protected set; }
         public CardOwner BattleWinner { get; protected set; }
 
+        private int _minimalElectronLevel;
+
         public BattleModel(string battleKey, string enemyKey)
         {
             Key = battleKey != null? battleKey: "demo_battle";
             Player = new CardPlayerModel(battleKey == Constants.CraftBattle ? Constants.CraftPlayer : Constants.Player, CardOwner.player, this);
             Enemy = new CardPlayerModel(enemyKey, CardOwner.enemy, this);
+            _minimalElectronLevel = MapStaticData.LoadData().KeyLocation + 1;
 
             var playerFieldPermission = Config.AllowPlayerCardReposition ? CardSlotPermissions.PlayerHand() : CardSlotPermissions.PlayerField();
             for (int i = 0; i < Config.FieldSize; i++)
@@ -154,7 +157,7 @@ namespace Project.Gameplay.Battle.Model
                 if (electrons < Config.LevelElectrons[i])
                     return i;
             }
-            return Config.LevelElectrons.Length;
+            return Math.Clamp( Config.LevelElectrons.Length, _minimalElectronLevel,100);
         }
 
         #endregion
