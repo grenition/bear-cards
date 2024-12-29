@@ -79,6 +79,10 @@ MonoBehaviour:
       EnemyKeys:
       - epic_enemy_1
       - epic_enemy_2
+      - epic_enemy_3
+      - epic_enemy_4
+      - epic_enemy_5
+      - epic_enemy_6
       NumberLevel: 0
       Key: 
       PointActive: 0
@@ -91,6 +95,10 @@ MonoBehaviour:
       EnemyKeys:
       - epic_enemy_1
       - epic_enemy_2
+      - epic_enemy_3
+      - epic_enemy_4
+      - epic_enemy_5
+      - epic_enemy_6
       NumberLevel: 0
       Key: 
       PointActive: 0
@@ -155,7 +163,12 @@ MonoBehaviour:
       NeighborsID: 0b000000
       IsEnemyPoint: 1
       EnemyKeys:
-      - legend_enemy
+      - epic_enemy_1
+      - epic_enemy_2
+      - epic_enemy_3
+      - epic_enemy_4
+      - epic_enemy_5
+      - epic_enemy_6
       NumberLevel: 0
       Key: 
       PointActive: 0
@@ -238,7 +251,12 @@ MonoBehaviour:
       NeighborsID: 11000000120000001300000014000000
       IsEnemyPoint: 1
       EnemyKeys:
-      - legend_enemy
+      - epic_enemy_1
+      - epic_enemy_2
+      - epic_enemy_3
+      - epic_enemy_4
+      - epic_enemy_5
+      - epic_enemy_6
       NumberLevel: 0
       Key: 
       PointActive: 0
@@ -356,7 +374,12 @@ MonoBehaviour:
       NeighborsID: 1a0000001b000000
       IsEnemyPoint: 1
       EnemyKeys:
-      - legend_enemy
+      - epic_enemy_1
+      - epic_enemy_2
+      - epic_enemy_3
+      - epic_enemy_4
+      - epic_enemy_5
+      - epic_enemy_6
       NumberLevel: 0
       Key: 
       PointActive: 0
@@ -398,7 +421,12 @@ MonoBehaviour:
       NeighborsID: 1d000000
       IsEnemyPoint: 1
       EnemyKeys:
-      - legend_enemy
+      - epic_enemy_1
+      - epic_enemy_2
+      - epic_enemy_3
+      - epic_enemy_4
+      - epic_enemy_5
+      - epic_enemy_6
       NumberLevel: 0
       Key: 
       PointActive: 0

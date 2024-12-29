@@ -52,6 +52,7 @@ MonoBehaviour:
       IsEnemyPoint: 1
       EnemyKeys:
       - standart_enemy_1
+      - standart_enemy_2
       NumberLevel: 0
       Key: 
       PointActive: 0
