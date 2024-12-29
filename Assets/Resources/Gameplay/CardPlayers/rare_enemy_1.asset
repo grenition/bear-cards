@@ -12,60 +12,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf37953c6c8481685257cdbc86851fc, type: 3}
   m_Name: rare_enemy_1
   m_EditorClassIdentifier: 
-  <VisualName>k__BackingField: "\u0428\u0430\u0442\u0443\u043D \u0443\u0447\u0451\u043D\u044B\u0439"
+  <VisualName>k__BackingField: "\u0428\u0430\u0442\u0443\u043D \u0432\u043E\u0438\u043D"
   <VisualDescription>k__BackingField: 
-  <Icon>k__BackingField: {fileID: 6586984706540110732, guid: 4731131b9cd31324089ae13200b5c6c6, type: 3}
-  <Health>k__BackingField: 15
+  <Icon>k__BackingField: {fileID: 4435292350625996025, guid: d11fa41edfa007b47876870c4c63541d, type: 3}
+  <Health>k__BackingField: 20
   <HandSize>k__BackingField: 4
   <DeckSize>k__BackingField: 20
   <SpellsSize>k__BackingField: 5
   <StartLevelElectrons>k__BackingField: 0
+  <StartHandElectrons>k__BackingField: 0
   <Turns>k__BackingField:
-  - <PlaceToSlotChance>k__BackingField: 0.5
+  - <PlaceToSlotChance>k__BackingField: 1
     <Cards>k__BackingField:
-    - {fileID: 11400000, guid: ed876e42570e84427a41a216af1cc3ce, type: 2}
-    - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
-    - {fileID: 11400000, guid: ed876e42570e84427a41a216af1cc3ce, type: 2}
-  - <PlaceToSlotChance>k__BackingField: 0
-    <Cards>k__BackingField:
-    - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
-  - <PlaceToSlotChance>k__BackingField: 0.4
-    <Cards>k__BackingField:
-    - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
-    - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
-    - {fileID: 11400000, guid: ed876e42570e84427a41a216af1cc3ce, type: 2}
-    - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
-    - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
+    - {fileID: 11400000, guid: 0a288e552d13279458565bdc391a2564, type: 2}
+    - {fileID: 11400000, guid: 0a288e552d13279458565bdc391a2564, type: 2}
   - <PlaceToSlotChance>k__BackingField: 0
     <Cards>k__BackingField:
     - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
   - <PlaceToSlotChance>k__BackingField: 0.7
     <Cards>k__BackingField:
     - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
-    - {fileID: 11400000, guid: ed876e42570e84427a41a216af1cc3ce, type: 2}
-    - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
-    - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
-    - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
+    - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+    - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+  - <PlaceToSlotChance>k__BackingField: 1
+    <Cards>k__BackingField:
+    - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+  - <PlaceToSlotChance>k__BackingField: 0.6
+    <Cards>k__BackingField:
+    - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+    - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+    - {fileID: 11400000, guid: 0a288e552d13279458565bdc391a2564, type: 2}
+  - <PlaceToSlotChance>k__BackingField: 1
+    <Cards>k__BackingField:
+    - {fileID: 11400000, guid: 2a3d09b63f46eaf49b632c71f73cd1e4, type: 2}
+  - <PlaceToSlotChance>k__BackingField: 0.5
+    <Cards>k__BackingField:
+    - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+    - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
+    - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
   - <PlaceToSlotChance>k__BackingField: 0.3
     <Cards>k__BackingField:
     - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
-    - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
-    - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
-    - {fileID: 11400000, guid: f0f9282175cdc54468746638acd175e9, type: 2}
-    - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
-  - <PlaceToSlotChance>k__BackingField: 0.1
-    <Cards>k__BackingField:
-    - {fileID: 11400000, guid: f0f9282175cdc54468746638acd175e9, type: 2}
-    - {fileID: 11400000, guid: f0f9282175cdc54468746638acd175e9, type: 2}
-    - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
-    - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
-    - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
-    - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
-  - <PlaceToSlotChance>k__BackingField: 0.2
-    <Cards>k__BackingField:
-    - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
-    - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
-    - {fileID: 11400000, guid: 6313998ae02254560bf1f27f5d76dbf4, type: 2}
-    - {fileID: 11400000, guid: f0f9282175cdc54468746638acd175e9, type: 2}
+    - {fileID: 11400000, guid: 0a288e552d13279458565bdc391a2564, type: 2}
   <Deck>k__BackingField:
   - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}

@@ -20,15 +20,16 @@ MonoBehaviour:
   <DeckSize>k__BackingField: 20
   <SpellsSize>k__BackingField: 5
   <StartLevelElectrons>k__BackingField: 0
+  <StartHandElectrons>k__BackingField: 0
   <Turns>k__BackingField:
   - <PlaceToSlotChance>k__BackingField: 1
     <Cards>k__BackingField:
     - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
-  - <PlaceToSlotChance>k__BackingField: 0.5
+  - <PlaceToSlotChance>k__BackingField: 1
     <Cards>k__BackingField:
     - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
-    - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
-  - <PlaceToSlotChance>k__BackingField: 0.5
+    - {fileID: 11400000, guid: c9794b798402846e8b9d41f159a06587, type: 2}
+  - <PlaceToSlotChance>k__BackingField: 1
     <Cards>k__BackingField:
     - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
     - {fileID: 11400000, guid: b4e93dde24f8c4e63bf66075dff9bb66, type: 2}
