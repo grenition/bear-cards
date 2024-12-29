@@ -134,6 +134,7 @@ namespace Assets.Scripts.Map
             UpdatePoints();
             MapStaticData.SaveData(_pointCollections.Select(point => point.PointEntity).ToArray(), _locationConfigurate.LocationLevel, _locationConfigurate.LocationKey);
 
+            MapCompositionRoot.Instance.MapCamera.MoveCameraToPlayer();
             OnMapProgressUpdate?.Invoke();
         }
 
