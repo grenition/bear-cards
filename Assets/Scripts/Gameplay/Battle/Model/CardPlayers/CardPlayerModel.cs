@@ -95,10 +95,11 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             OnHandElectronsChanged.SafeInvoke(HandElectrons - startValue);
         }
 
-        public CardModel GetFirstCardInHand() => Hand.FirstOrDefault(x => x.Card != null)?.Card;
-        public CardModel GetFirstCardInDeck() => Deck.FirstOrDefault(x => x.Card != null)?.Card;
-        public CardModel GetFirstCardInDeckByPlayerLevel() => Deck
+        public CardModel GetFirstCardInHand(bool ignoreSpells = false) => Hand.FirstOrDefault(x => x.Card != null && (x.Card.Type != CardType.Spell || !ignoreSpells))?.Card;
+        public CardModel GetFirstCardInDeck(bool ignoreSpells = false) => Deck.FirstOrDefault(x => x.Card != null && (x.Card.Type != CardType.Spell || !ignoreSpells))?.Card;
+        public CardModel GetFirstCardInDeckByPlayerLevel(bool ignoreSpells = false) => Deck
             .Where(x => x.Card != null)
+            .Where(x => x.Card.Type != CardType.Spell || !ignoreSpells)
             .Where(x => x.Card.Level <= Level)
             .Select(x => x.Card)
             .ToList()
@@ -110,7 +111,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         public bool IsAllCardInDeckHigherThanPlayerLevel() => Deck.Where(x => x.Card != null).All(x => x.Card.Level > Level);
         public bool TransferCardFromDeckToHand(bool ignoreSpells = true)
         {
-            var card = GetFirstCardInDeck();
+            var card = GetFirstCardInDeck(ignoreSpells);
             var targetSlot = GetFirstFreeSlotInHand();
             if (card == null || (card.Type == CardType.Spell && ignoreSpells) || targetSlot == null) return false;
 
@@ -119,7 +120,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         }
         public bool TransferCardFromDeckToHandByPlayerLevel(bool ignoreSpells = true)
         {
-            var card = GetFirstCardInDeckByPlayerLevel();
+            var card = GetFirstCardInDeckByPlayerLevel(ignoreSpells);
             var targetSlot = GetFirstFreeSlotInHand();
             if (card == null || (card.Type == CardType.Spell && ignoreSpells) || targetSlot == null) return false;
 
