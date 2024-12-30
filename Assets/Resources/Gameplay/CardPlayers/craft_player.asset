@@ -16,7 +16,7 @@ MonoBehaviour:
   <VisualDescription>k__BackingField: 
   <Icon>k__BackingField: {fileID: -8937025750965970537, guid: 50742801b4cda49eab9de8a718b60987, type: 3}
   <Health>k__BackingField: 20
-  <HandSize>k__BackingField: 20
+  <HandSize>k__BackingField: 100
   <DeckSize>k__BackingField: 100
   <SpellsSize>k__BackingField: 4
   <StartLevelElectrons>k__BackingField: 10000
