@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b651d2606ff1b4c7cbcb4678ae15ef04
+guid: b76ac5cf525d32d4abf4314dfec226a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7418147893381429771
-    second: tut_card_1_0
+      213: -4092315004850665100
+    second: tut_card_1 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,56 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tut_card_1_0
+      name: tut_card_1 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 446
-        height: 650
+        width: 227
+        height: 325
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b0aff4cb43e82f660800000000000000
-      internalID: 7418147893381429771
+      spriteID: 47900e26f2d2537c0800000000000000
+      internalID: -4092315004850665100
       vertices: []
       indices: 
       edges: []
@@ -174,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tut_card_1_0: 7418147893381429771
+      tut_card_1 1_0: -4092315004850665100
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

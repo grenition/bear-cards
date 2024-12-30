@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e07c977a3ad434d2bb165e70158a614e
+guid: 7cf319a55bd590644995c784ea5d7a7f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8366367931602170767
-    second: tut_card_el_level_2_0
+      213: -5793788357057628103
+    second: tut_card_el_level_2 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,55 +96,16 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tut_card_el_level_2_0
+      name: tut_card_el_level_2 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 223
+        width: 227
         height: 325
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -154,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17c02a071b0b4eb80800000000000000
-      internalID: -8366367931602170767
+      spriteID: 93839c1af24589fa0800000000000000
+      internalID: -5793788357057628103
       vertices: []
       indices: 
       edges: []
@@ -174,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tut_card_el_level_2_0: -8366367931602170767
+      tut_card_el_level_2 1_0: -5793788357057628103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

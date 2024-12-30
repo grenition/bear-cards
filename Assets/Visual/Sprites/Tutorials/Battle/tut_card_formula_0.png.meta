@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b8bcd06b22aa54d5abc0bf74a04115f4
+guid: 4072b177f045fef4989239a12815c680
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8697138303581895288
-    second: tut_card_formula_0_0
+      213: 5021890797374430736
+    second: tut_card_formula_0 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,50 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tut_card_formula_0_0
+      name: tut_card_formula_0 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -154,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87a317b253172b870800000000000000
-      internalID: 8697138303581895288
+      spriteID: 01e5e46b21751b540800000000000000
+      internalID: 5021890797374430736
       vertices: []
       indices: 
       edges: []
@@ -174,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tut_card_formula_0_0: 8697138303581895288
+      tut_card_formula_0 1_0: 5021890797374430736
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
