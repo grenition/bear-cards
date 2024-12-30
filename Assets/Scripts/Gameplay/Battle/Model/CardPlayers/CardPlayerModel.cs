@@ -18,7 +18,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         public event Action<int> OnHandElectronsChanged;
 
         public bool IsAlive => Health > 0;
-        public int Level => BattleModel.GetElectronLevel(LevelElectrons);
+        public int Level => Math.Clamp(BattleModel.GetElectronLevel(LevelElectrons) , _minimumLevel,1000);
         public string Key { get; protected set; }
         public CardPlayerConfig Config => BattleStaticData.CardPlayers.Get(Key);
         public BattleModel BattleModel { get; protected set; }
@@ -30,6 +30,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         public int HandElectrons { get; protected set; }
         public int LevelElectrons { get; protected set; }
 
+        private int _minimumLevel;
 
         public CardPlayerModel(string key, CardOwner ownerhipType, BattleModel battleModel)
         {
@@ -37,7 +38,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             BattleModel = battleModel;
             OwnershipType = ownerhipType;
             Health = ownerhipType == CardOwner.player ? MapStaticData.LoadPlayerData() : Config.Health;
-
+            _minimumLevel = MapStaticData.LoadData().KeyLocation + 1;
             LevelElectrons = Config.StartLevelElectrons;
             HandElectrons = Config.StartHandElectrons;
 
