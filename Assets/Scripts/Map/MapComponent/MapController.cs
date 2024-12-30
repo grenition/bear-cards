@@ -51,13 +51,13 @@ namespace Assets.Scripts.Map
             UpdatePoints();
         }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                LocationComplited();
-            }
-        }
+        //private void Update()
+        //{
+        //    if (Input.GetKeyDown(KeyCode.Space))
+        //    {
+        //        LocationComplited();
+        //    }
+        //}
 
         public void UpdatePoints()
         {

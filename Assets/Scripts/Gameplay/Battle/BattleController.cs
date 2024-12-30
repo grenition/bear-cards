@@ -48,10 +48,10 @@ namespace Project.Gameplay.Battle
             if (Input.GetKeyDown(KeyCode.Space) && Behaviour.GetCurrentState() == BattleState.playerTurn)
                 Behaviour.NextTurn();
 
-            if (Input.GetKeyDown(KeyCode.P))
-                Model.EndBattle(CardOwner.player);
-            if (Input.GetKeyDown(KeyCode.L))
-                Model.EndBattle(CardOwner.enemy);
+            //if (Input.GetKeyDown(KeyCode.P))
+            //    Model.EndBattle(CardOwner.player);
+            //if (Input.GetKeyDown(KeyCode.L))
+            //    Model.EndBattle(CardOwner.enemy);
         }
         protected virtual void Start()
         {
