@@ -95,7 +95,7 @@ namespace Project.Gameplay.Battle.Model.Cards
         internal void ModifyAttackDamage(int modifyValue)
         {
             if(modifyValue == 0) return;
-            
+            if(AttackDamage == 0 && modifyValue <= 0) return;
             AttackDamage += modifyValue;
             AttackDamage = Math.Max(1, AttackDamage);
 
