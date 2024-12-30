@@ -82,7 +82,11 @@ namespace Assets.Scripts.Map
             File.WriteAllText(Application.persistentDataPath + "/locationProgress.json", json);
         }
 
-        public void SaveDeck(List<string> deck)
+        /// <summary>
+        /// Saving deck to locationProgress.json in Application.persistentDataPath directory
+        /// </summary>
+        /// <param name="append"> If true deck will be added to end of existing deck, if false deck will replace existing deck</param>
+        public void SaveDeck(List<string> deck, bool append = true)
         {
             string path = Path.Combine(Application.persistentDataPath, "locationProgress.json");
 
@@ -92,7 +96,11 @@ namespace Assets.Scripts.Map
                 var data = JsonUtility.FromJson<LocationData>(loadjson);
 
                 var newDeck = data.Deck.ToList();
-                newDeck.AddRange(deck);
+
+                if (append)
+                    newDeck.AddRange(deck);
+                else
+                    newDeck = deck.ToList();
 
                 LocationData locationData = new()
                 {

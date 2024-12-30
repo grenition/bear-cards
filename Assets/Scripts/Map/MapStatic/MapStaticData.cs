@@ -41,10 +41,15 @@ namespace Assets.Scripts.Map
             _locationProgress.SaveData(points, locationLevel, keyLocation);
         }
 
+        public static void SetDeckAndSave(List<string> deck)
+        {
+            Initialize();
+            _locationProgress.SaveDeck(deck, false);
+        }
         public static void AddToDeckAndSave(List<string> deck)
         {
             Initialize();
-            _locationProgress.SaveDeck(deck);
+            _locationProgress.SaveDeck(deck, true);
         }
 
         public async static void GameWin()
