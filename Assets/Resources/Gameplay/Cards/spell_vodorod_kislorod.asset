@@ -29,4 +29,4 @@ MonoBehaviour:
   <Effects>k__BackingField: 
   cardEffects:
   - Effect: {fileID: 11400000, guid: bcd37394747a4a744991effd63615ac0, type: 2}
-    Value: 3
+    Value: 8
