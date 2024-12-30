@@ -73,21 +73,22 @@ namespace Project.Gameplay.Battle.Behaviour
                 mismatch = targetMetalCards.Count != 0 || targetNonMetalCards.Count != 0;
                 if (!mismatch)
                 {
+                    var locationData = MapStaticData.LoadData();
+                    var playerCards = locationData.Deck.ToList();
+                    
                     foreach (var cardSlot in Model.PlayerField)
                     {
                         if(cardSlot.Card == null) continue;
+                        playerCards.TryRemove(cardSlot.Card.Key);
                         cardSlot.Card.ModifyHealth(-cardSlot.Card.Health);
                     }
 
                     Model.AddCardToDeck(CardOwner.enemy, craft.Output.name);
                     Model.Enemy.TransferCardFromDeckToHand(false);
 
-                    var playerCards = Model.Player.Hand
-                        .Where(x => x.Card != null)
-                        .Select(x => x.Card.Key)
-                        .Append(craft.Output.name);
+                    playerCards.Add(craft.Output.name);
                     
-                    MapStaticData.SetDeckAndSave(playerCards.ToList());
+                    MapStaticData.SetDeckAndSave(playerCards);
 
                     await UniTask.WaitForSeconds(0.5f);
 
