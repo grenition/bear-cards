@@ -986,7 +986,7 @@ MonoBehaviour:
     ImageActor: {fileID: 8409461922418738541}
   _dialogues: {fileID: 1176257546682741702}
   _nextStep: {fileID: 7844934033002365405}
-  _typewriterEffectDuration: 0.5
+  _typewriterEffectDuration: 0.1
 --- !u!1 &9150492471794736987
 GameObject:
   m_ObjectHideFlags: 0
