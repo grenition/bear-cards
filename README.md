@@ -7,3 +7,7 @@
 
 **Победитель Всероссийского конкурса разработчиков игр в сеттинге «Берлога» «Выйти из спячки с VK Play».**
 Команда разработчиков: Mors squad, Санкт-Петербург
+
+---
+
+Игра доступна на [RuStore](https://www.rustore.ru/catalog/app/com.Mors.Berloga_elementArno) и на [сайте конкурса](https://wakeupforplay.kruzhok.org/) 
