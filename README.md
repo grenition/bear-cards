@@ -11,3 +11,9 @@
 ---
 
 Игра доступна на [RuStore](https://www.rustore.ru/catalog/app/com.Mors.Berloga_elementArno) и на [сайте конкурса](https://wakeupforplay.kruzhok.org/) 
+
+## Stack
+```
+C# (Mono)
+Unity
+```
