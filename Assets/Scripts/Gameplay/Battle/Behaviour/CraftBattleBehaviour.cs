@@ -6,6 +6,7 @@ using Project.Gameplay.Battle.Data;
 using Project.Gameplay.Battle.Model;
 using Project.Gameplay.Common.Datas;
 using Project.Infrastructure;
+using UnityEngine;
 
 namespace Project.Gameplay.Battle.Behaviour
 {
@@ -42,7 +43,7 @@ namespace Project.Gameplay.Battle.Behaviour
 
             for (int i = 0; i < Model.Player.Config.HandSize; i++)
             {
-                Model.Player.TransferCardFromDeckToHand();
+                Model.Player.TransferCardFromDeckToHand(); 
                 await UniTask.WaitForSeconds(0.1f);
             }
         }

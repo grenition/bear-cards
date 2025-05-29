@@ -114,7 +114,10 @@ namespace Project.UI.Battle
 
         public void Initialize(UICardMovement target, int index = 0)
         {
+            print("222");
             transform.position = target.transform.position;
+
+            transform.SetSiblingIndex(0);
 
             //Declarations
             parentCard = target;
@@ -185,7 +188,8 @@ namespace Project.UI.Battle
 
         public void UpdateIndex(int length)
         {
-            transform.SetSiblingIndex(parentCard.transform.parent.GetSiblingIndex());
+            print("228");
+            transform.SetSiblingIndex(0);
         }
 
         void Update()

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Epic3_0: 7326899756885215998
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

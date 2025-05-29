@@ -13,7 +13,9 @@ namespace Project.Gameplay.Battle.Behaviour
         protected PlayerBehaviour _playerBehaviour;
         protected EnemyBehaviour _enemyBehaviour;
         protected bool _nextTurnLocked = false;
-        
+
+        public PlayerBehaviour _PlayerBehaviour => _playerBehaviour;
+
         public StandartBattleBehaviour(BattleModel model)
         {
             Model = model;

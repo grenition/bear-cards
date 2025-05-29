@@ -145,6 +145,6 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             }
         }
 
-        public void AddTurnElectrons() => ModifeHandElectrons(Level + 1);
+        public void AddTurnElectrons() => ModifeHandElectrons(UnityEngine.Mathf.Max(1, Level) * 2);
     }
 }

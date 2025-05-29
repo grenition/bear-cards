@@ -79,6 +79,8 @@ namespace Project.UI.Battle
 
             UIBattle.Instance.RegisterCard(this);
             Model.OnDeath += OnDeath;
+
+            transform.SetSiblingIndex(0);
         }
         private void OnDestroy()
         {
@@ -227,7 +229,10 @@ namespace Project.UI.Battle
                     if (handSlot == null || !BattleController.Model.TryTransferCard(Model.Position, handSlot.Position))
                         transform.DOMove(CardSlot ? CardSlot.transform.position : startPosition, moveTime).SetEase(Ease.OutBack);
                     else
-                        uiCardVisual.transform.SetAsLastSibling();
+                    {
+                        transform.SetAsFirstSibling();
+                        uiCardVisual.transform.SetAsFirstSibling();
+                    }
                 }
                 else
                     transform.DOMove(CardSlot ? CardSlot.transform.position : startPosition, moveTime).SetEase(Ease.OutBack);

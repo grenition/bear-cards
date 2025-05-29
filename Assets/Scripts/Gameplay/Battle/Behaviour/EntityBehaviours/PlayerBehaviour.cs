@@ -7,6 +7,7 @@ using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Common.Datas;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
 {
@@ -38,7 +39,7 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
                 if (!BattleBehaviour.Config.GiveCardsByActualLevel || deckCard.Level <= PlayerModel.Level)
                 {
                     BattleBehaviour.Model.AddCardToDeck(CardOwner.player, deckCard.name);
-                    _shouldGivedCards.TryRemove(deckCard);
+                        _shouldGivedCards.TryRemove(deckCard);
                 }
             }
 
@@ -69,7 +70,7 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
                 if (!BattleBehaviour.Config.GiveCardsByActualLevel || deckCard.Level <= PlayerModel.Level)
                 {
                     BattleBehaviour.Model.AddCardToDeck(CardOwner.player, deckCard.name);
-                    _shouldGivedCards.TryRemove(deckCard);
+                        _shouldGivedCards.TryRemove(deckCard);
                 }
             }
 
@@ -81,9 +82,19 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
                 }
             }
 
-            for (int i = 0; i < BattleBehaviour.Config.CardsAtAnotherTurns; i++)
+            if (BattleBehaviour.Config.GiveCardsByActualLevel)
             {
-                PlayerModel.TransferCardFromDeckToHandByPlayerLevel();
+                for (int i = 0; i < BattleBehaviour.Config.CardsAtAnotherTurns; i++)
+                {
+                    PlayerModel.TransferCardFromDeckToHandByPlayerLevel();
+                }
+            }
+            else
+            {
+                for (int i = 0; i < BattleBehaviour.Config.CardsAtAnotherTurns; i++)
+                {
+                    PlayerModel.TransferCardFromDeckToHand();
+                }
             }
 
             await UniTask.WaitForSeconds(0.1f);
