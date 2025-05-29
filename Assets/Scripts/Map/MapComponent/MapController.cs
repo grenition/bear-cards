@@ -96,11 +96,21 @@ namespace Assets.Scripts.Map
             _currentInteractPoint.OnBeginInteract();
 
             if (_currentInteractPoint.PointEntity.NumberLevel != _locationConfigurate.LocationLevel - 1)
-                MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID,
-                    _locationConfigurate.GetBattleKey(),
-                    _currentInteractPoint.PointEntity.EnemyKeys[UnityEngine.Random.Range( 0, _currentInteractPoint.PointEntity.EnemyKeys.Length)]);
+            {
+                if(_currentInteractPoint.PointEntity.EnemyKeys.Length > 0)
+                {
+                    MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetBattleKey(), _currentInteractPoint.PointEntity.EnemyKeys[UnityEngine.Random.Range(0, _currentInteractPoint.PointEntity.EnemyKeys.Length)]);
+                }
+                else
+                {
+                    MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, "", "");
+                }
+
+            }
             else
+            {
                 MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetBattleKey(), _locationConfigurate.BossFight());
+            }
 
             MapCompositionRoot.Instance.MapCamera.MoveCameraToPlayer();
             OnPointBeginInteract?.Invoke();

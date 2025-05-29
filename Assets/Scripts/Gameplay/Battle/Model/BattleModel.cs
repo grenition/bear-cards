@@ -307,7 +307,7 @@ namespace Project.Gameplay.Battle.Model
             
             if (attackerPosition.index - 1 < 0) //!!!
             {
-                enemyPlayer.ModifyHealth(-card.AttackDamage);
+               // enemyPlayer.ModifyHealth(-card.AttackDamage);
                 return;
             }
 
@@ -339,7 +339,7 @@ namespace Project.Gameplay.Battle.Model
             
             if (attackerPosition.index + 1 >= Config.FieldSize) 
             {
-                enemyPlayer.ModifyHealth(-card.AttackDamage);
+               // enemyPlayer.ModifyHealth(-card.AttackDamage);
                 return;
             }
 

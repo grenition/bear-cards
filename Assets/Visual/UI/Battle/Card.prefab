@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3772056221235357887}
   - component: {fileID: 676162505405229489}
   - component: {fileID: 769876236994545031}
+  - component: {fileID: 8646407254479166848}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -52,9 +53,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d103f73c46c407db068681e2811968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instantiateVisual: 1
   moveSpeedLimit: 50
+  moveTime: 0.15
   returnToHoverStartPosition: 1
+  instantiateVisual: 1
   cardVisualPrefab: {fileID: 2133302518604290077, guid: 86e43702194b54ccaa33b7e737f03cd2, type: 3}
   uiCardVisual: {fileID: 0}
   isHovering: 0
@@ -78,6 +80,13 @@ MonoBehaviour:
   EndDragEvent:
     m_PersistentCalls:
       m_Calls: []
+  SlotEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  SlotExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  slotUnderCursor: {fileID: 0}
 --- !u!222 &5423595988425091912
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -169,3 +178,19 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &8646407254479166848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203834711356107495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 675139a5212076248a6539860a7fdbd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Info: 
+  CardMovement: {fileID: 6976790333091024455}
+  Graphics:
+  - {fileID: 3772056221235357887}

@@ -5,6 +5,7 @@ using Project.Gameplay.Battle.Data;
 using Project.Gameplay.Battle.Model.CardPlayers;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Common.Datas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -33,13 +34,25 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
                 _shouldGivedCards.Add(BattleStaticData.Cards.Get(card));
             });
 
-            foreach (var deckCard in _shouldGivedCards.ToList())
+            for(int lvl = 1; lvl < 7; lvl++)
             {
-                if (deckCard == null) continue;
-                if (!BattleBehaviour.Config.GiveCardsByActualLevel || deckCard.Level <= PlayerModel.Level)
+                CardConfig[] cards = new CardConfig[0];
+                foreach(CardConfig card in _shouldGivedCards.ToList())
                 {
-                    BattleBehaviour.Model.AddCardToDeck(CardOwner.player, deckCard.name);
+                    if(card.Level == lvl)
+                    {
+                        cards = ExpandMassive(cards, card, UnityEngine.Random.Range(0, cards.Length));
+                    }
+                }
+
+                foreach (var deckCard in cards)
+                {
+                    if (deckCard == null) continue;
+                    if (!BattleBehaviour.Config.GiveCardsByActualLevel || deckCard.Level <= PlayerModel.Level)
+                    {
+                        BattleBehaviour.Model.AddCardToDeck(CardOwner.player, deckCard.name);
                         _shouldGivedCards.TryRemove(deckCard);
+                    }
                 }
             }
 
@@ -106,5 +119,38 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
         }
 
         public PlayerBehaviour(BattleBehaviour battleModel) : base(battleModel) { }
+
+        private T[] ExpandMassive<T>(T[] origin, T value, int index)
+        {
+            if (index > origin.Length)
+            {
+                index = origin.Length;
+            }
+            else if (index < 0)
+            {
+                index = 0;
+            }
+
+            T[] newMassive = new T[origin.Length + 1];
+
+            int lastIndex = 0;
+            for (int i = 0; i < newMassive.Length; i++)
+            {
+                if (i == index)
+                {
+                    newMassive[i] = value;
+                }
+                else
+                {
+                    newMassive[i] = origin[lastIndex];
+
+                    lastIndex++;
+                }
+            }
+
+            return newMassive;
+        }
     }
-}
+
+     
+    }

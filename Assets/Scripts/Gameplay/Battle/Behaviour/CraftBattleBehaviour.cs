@@ -88,7 +88,13 @@ namespace Project.Gameplay.Battle.Behaviour
                     Model.Enemy.TransferCardFromDeckToHand(false);
 
                     playerCards.Add(craft.Output.name);
-                    
+
+                    var data = DialoguesStatic.LoadData();
+                    if (!data.Recepts.Contains(craft.name))
+                    {
+                        DialoguesStatic.SaveRecept(new string[] { craft.name });
+                    }
+
                     MapStaticData.SetDeckAndSave(playerCards);
 
                     await UniTask.WaitForSeconds(0.5f);

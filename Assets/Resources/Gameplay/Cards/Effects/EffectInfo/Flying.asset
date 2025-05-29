@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def87a0ce70583c43b82af2fc4b04d84, type: 3}
+  m_Name: Flying
+  m_EditorClassIdentifier: 
+  EffectType: 1
+  Icon: {fileID: 4859214791527422132, guid: b4b09222d731343d794f85ed01529340, type: 3}
+  Name: "\u041B\u0435\u0442\u0443\u0447\u0435\u0441\u0442\u044C"
+  Describtion: 228
