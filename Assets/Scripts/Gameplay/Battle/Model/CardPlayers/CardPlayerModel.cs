@@ -7,6 +7,7 @@ using Project.Gameplay.Common.Datas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 namespace Project.Gameplay.Battle.Model.CardPlayers
 {
@@ -111,12 +112,16 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         public bool IsAllCardInDeckHigherThanPlayerLevel() => Deck.Where(x => x.Card != null).All(x => x.Card.Level > Level);
         public bool TransferCardFromDeckToHand(bool ignoreSpells = true)
         {
+            Debug.Log(Hand.Count);
+            foreach(var gg in Hand)
+            {
+                Debug.Log(gg.Card?.Config.VisualName);
+            }
             var card = GetFirstCardInDeck(ignoreSpells);
             var targetSlot = GetFirstFreeSlotInHand();
             if (card == null || (card.Type == CardType.Spell && ignoreSpells) || targetSlot == null) return false;
 
-            BattleModel.TryTransferCard(card.Position, targetSlot.Position);
-            return true;
+            return BattleModel.TryTransferCard(card.Position, targetSlot.Position);
         }
         public bool TransferCardFromDeckToHandByPlayerLevel(bool ignoreSpells = true)
         {
@@ -124,8 +129,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
             var targetSlot = GetFirstFreeSlotInHand();
             if (card == null || (card.Type == CardType.Spell && ignoreSpells) || targetSlot == null) return false;
 
-            BattleModel.TryTransferCard(card.Position, targetSlot.Position);
-            return true;
+            return BattleModel.TryTransferCard(card.Position, targetSlot.Position);
         }
         public bool TransferCardFromDeckToSpells()
         {

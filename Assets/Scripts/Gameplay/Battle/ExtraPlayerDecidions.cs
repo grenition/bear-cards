@@ -13,8 +13,10 @@ namespace Project
         {
             if (BattleController.Behaviour.Model.Player.HandElectrons >= PullCost)
             {
-                BattleController.Behaviour.Model.Player.TransferCardFromDeckToHand();
-                BattleController.Behaviour.Model.Player.ModifeHandElectrons(-PullCost);
+                if(BattleController.Behaviour.Model.Player.TransferCardFromDeckToHand())
+                {
+                    BattleController.Behaviour.Model.Player.ModifeHandElectrons(-PullCost);
+                }
             }
         }
 
