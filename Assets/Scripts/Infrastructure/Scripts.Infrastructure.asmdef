@@ -2,7 +2,8 @@
     "name": "Scripts.Infrastructure",
     "rootNamespace": "Project",
     "references": [
-        "GreonAssets"
+        "GreonAssets",
+        "Unity.Localization"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

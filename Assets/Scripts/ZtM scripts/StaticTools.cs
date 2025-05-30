@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Localization.Settings;
 
 public delegate void SimpleVoid();
 
@@ -10,6 +11,8 @@ public class StaticTools
     public static Vector3 Coordinate(Vector3Int position) => new Vector3(31.5f - position.x, position.y * -4, position.z - 15.5f);
 
     static public float ScreenHeight => 1080f * Screen.height / Screen.width / 0.5625f;
+
+    static public string Localize(string key) => LocalizationSettings.StringDatabase.GetLocalizedString(key);
 
     static public int[] Range(int lenght)
     {

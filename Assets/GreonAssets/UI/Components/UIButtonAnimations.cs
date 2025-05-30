@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 namespace GreonAssets.UI.ComponentAnimations
 {
-    [RequireComponent(typeof(Button))]
     public class UIButtonAnimations : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
     {
         [Header("Animation Preferences")]
