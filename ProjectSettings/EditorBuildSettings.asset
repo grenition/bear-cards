@@ -18,8 +18,5 @@ EditorBuildSettings:
     path: Assets/Scenes/CraftScene.unity
     guid: 22a130477f05571448a9fa1bc340c833
   m_configObjects:
-    com.unity.addressableassets: {fileID: 11400000, guid: 79af41b8bc6064f4da1b808e8d040559, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-    com.unity.localization.addressable-group-rules: {fileID: 11400000, guid: 82cde4e8ef470734f8dba3b30d4b1788, type: 2}
-    com.unity.localization.settings: {fileID: 11400000, guid: 333431ce793e25242a23df627746f3f7, type: 2}
   m_UseUCBPForAssetBundles: 0

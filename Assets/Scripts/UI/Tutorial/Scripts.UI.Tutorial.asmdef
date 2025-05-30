@@ -8,8 +8,7 @@
         "UniTask",
         "DOTween.Modules",
         "Scripts.Audio",
-        "Scripts.Gameplay.Loader",
-        "Unity.Localization"
+        "Scripts.Gameplay.Loader"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

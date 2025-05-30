@@ -14,8 +14,7 @@
         "Scripts.UI.Common",
         "Scripts.Audio",
         "Scripts.Gameplay.Loader",
-        "Scripts.Gameplay.Map",
-        "Unity.Localization"
+        "Scripts.Gameplay.Map"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -5,9 +5,6 @@ using R3;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Localization.Settings;
-using UnityEngine.Localization;
-using System;
 
 namespace Project
 {
@@ -16,10 +13,10 @@ namespace Project
         [SerializeField] private TMP_Text _progress;
         [SerializeField] private Button _bockButton;
 
-        [SerializeField] private LocalizedString _locationName;
-        [SerializeField] private LocalizedString _hitPointName;
-        [SerializeField] private LocalizedString _cardElementName;
-        [SerializeField] private LocalizedString _cardMajestyName;
+        [SerializeField] private string _locationName;
+        [SerializeField] private string _hitPointName;
+        [SerializeField] private string _cardElementName;
+        [SerializeField] private string _cardMajestyName;
         
         private int _locationNumber;
         private int _hitPoint;
@@ -28,7 +25,6 @@ namespace Project
 
         private void Start()
         {
-            LocalizationSettings.SelectedLocaleChanged += LocalizationChanged;
             _bockButton.onClick.Bind(() =>
             {
                 Debug.Log("Card collection is apper");
@@ -63,15 +59,10 @@ namespace Project
 
         private void UpdateInfo()
         {
-            _progress.text = $"{_locationName.GetLocalizedString()} " + $"{_locationNumber + 1}" + "\n"
-                + $"{_hitPointName.GetLocalizedString()} " + $"{_hitPoint}" + "\n"
-                + $"{_cardElementName.GetLocalizedString()} " + $"{_cardElementCount}" + "\n"
-                + $"{_cardMajestyName.GetLocalizedString()} " + $"{_cardMajestyCount}" + "\n";
-        }
-
-        private void LocalizationChanged(Locale locale)
-        {
-            UpdateInfo();
+            _progress.text = $"{_locationName} " + $"{_locationNumber + 1}" + "\n"
+                + $"{_hitPointName} " + $"{_hitPoint}" + "\n"
+                + $"{_cardElementName} " + $"{_cardElementCount}" + "\n"
+                + $"{_cardMajestyName} " + $"{_cardMajestyCount}" + "\n";
         }
     }
 }

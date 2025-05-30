@@ -9,8 +9,7 @@
         "R3.Unity",
         "UniTask",
         "DOTween.Modules",
-        "Scripts.Audio",
-        "Unity.Localization"
+        "Scripts.Audio"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
