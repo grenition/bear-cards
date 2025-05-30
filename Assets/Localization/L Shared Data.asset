@@ -99,6 +99,10 @@ MonoBehaviour:
     m_Key: apply
     m_Metadata:
       m_Items: []
+  - m_Id: 79178347798528
+    m_Key: panel_save_recepts
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
