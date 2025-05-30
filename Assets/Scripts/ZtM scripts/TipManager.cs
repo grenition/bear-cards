@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using Project.Gameplay.Battle;
+using UnityEngine.Localization.Settings;
 
 public class TipManager : MonoBehaviour
 {

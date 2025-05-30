@@ -3,6 +3,7 @@ using System.Linq;
 using Project.Gameplay.Common;
 using Project.Gameplay.Common.Datas;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace Project.Gameplay.Battle.Model.Cards
 {
@@ -18,6 +19,8 @@ namespace Project.Gameplay.Battle.Model.Cards
     {
         [field: Header("Visual")]
         [field: SerializeField] public string VisualShortName { get; private set; }
+        [field: SerializeField] public LocalizedString LocalizedName { get; private set; }
+        [field: SerializeField] public LocalizedString LocalizedDescribtion { get; private set; }
         [field: SerializeField] public string VisualName { get; private set; }
         [field: SerializeField, TextArea] public string VisualDescription { get; private set; }
         [field: SerializeField] public string ElectroFormula { get; private set; }

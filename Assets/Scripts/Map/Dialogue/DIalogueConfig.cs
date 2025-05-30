@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace Project
 {
@@ -27,6 +28,7 @@ namespace Project
         {
             public Actor ActorPosition;
             public ActorConfig ActorConfig;
+            public LocalizedString LocalizedTextDialogue;
             public string TextDialogue;
         }
     }

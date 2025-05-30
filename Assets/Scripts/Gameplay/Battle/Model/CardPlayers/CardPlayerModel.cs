@@ -112,11 +112,6 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         public bool IsAllCardInDeckHigherThanPlayerLevel() => Deck.Where(x => x.Card != null).All(x => x.Card.Level > Level);
         public bool TransferCardFromDeckToHand(bool ignoreSpells = true)
         {
-            Debug.Log(Hand.Count);
-            foreach(var gg in Hand)
-            {
-                Debug.Log(gg.Card?.Config.VisualName);
-            }
             var card = GetFirstCardInDeck(ignoreSpells);
             var targetSlot = GetFirstFreeSlotInHand();
             if (card == null || (card.Type == CardType.Spell && ignoreSpells) || targetSlot == null) return false;
