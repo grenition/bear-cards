@@ -1,14 +1,13 @@
 using Assets.Scripts.Map;
 using Cysharp.Threading.Tasks;
 using GreonAssets.Extensions;
+using GreonAssets.UI.Extensions;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Common.Datas;
-using Project.UI.Battle;
 using R3;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using GreonAssets.UI.Extensions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +16,6 @@ namespace Project
     public class GiveCardUI : MonoBehaviour
     {
         [SerializeField] protected UICardMap[] CardVisual;
-        [SerializeField] private Button[] _buttons;
         [SerializeField] private Button _button;
 
         [Tooltip("Card was be added to panel last generation")]
@@ -29,21 +27,27 @@ namespace Project
         private CardConfig[] _cardInGiver;
         private CardModel[] _cardModels;
 
+        private const int _countCartToLockPanel = 4;
         private int _countCardAdded;
 
         private void Start()
         {
-            _buttons.ToList().ForEach(butt =>
+            foreach (var item in CardVisual)
             {
-                butt.Bind(() =>
+                item.Button.Bind(() =>
                 {
-                    if (CheckGiverComplited() == 4)
+                    item.Value = !item.Value;
+                    if (!CheckActiveItem())
+                    {
+                        item.Value = !item.Value;
                         return;
+                    }
 
-                    butt.interactable = !butt.interactable;
-                    CheckGiverComplited();
+                    _button.interactable = !CheckActiveItem(_countCartToLockPanel -1) ? true : false;
+                    item.PlayAnimationView();
+                    UpdateViewState();
                 }).AddTo(this);
-            });
+            }
 
             _button.Bind(() =>
             {
@@ -61,25 +65,13 @@ namespace Project
             data.CountCardGiveComming++;
             DialoguesStatic.SaveDataAndExecuteDialogue(data);
 
-            for (int i = 0; i < _buttons.Length; i++)
+            foreach (var item in CardVisual)
             {
-                _buttons[i].interactable = true;
+                item.ResetToggle();
             }
 
             Load();
             SetViewCard();
-        }
-
-        private int CheckGiverComplited()
-        {
-            var interactiveCount = _buttons.ToList().Where(button => !button.interactable).Count();
-
-            if (interactiveCount == 4)
-                _button.interactable = true;
-            else 
-                _button.interactable = false;
-
-            return interactiveCount;
         }
 
         protected virtual void Load()
@@ -111,14 +103,27 @@ namespace Project
         private void Complited()
         {
             List<string> cards = new List<string>();
-            for (int i = 0; i < _buttons.Length; i++)
+            foreach (var item in CardVisual)
             {
-                if (_buttons[i].interactable == false)
-                    cards.Add(CardVisual[i].Model.Key);
+                if (!item.Value)
+                    cards.Add(item.Model.Key);
             }
 
             MapStaticData.AddToDeckAndSave(cards);
             gameObject.CloseWithChildrensAnimation();
+        }
+
+        private void UpdateViewState()
+        {
+            foreach (var item in CardVisual)
+            {
+                item.UpdateToggleState();
+            }
+        }
+
+        private bool CheckActiveItem(int targetCount = _countCartToLockPanel)
+        {
+            return CardVisual.Where(x => x.Value == true).Count() <= targetCount;
         }
 
         [Serializable]

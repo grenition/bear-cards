@@ -1,6 +1,9 @@
-using Project.Gameplay.Battle;
+using Cysharp.Threading.Tasks;
+using DG.Tweening;
+using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.UI.Battle;
+using R3;
 using System;
 using TMPro;
 using UnityEngine;
@@ -8,7 +11,7 @@ using UnityEngine.UI;
 
 namespace Project
 {
-    public class UICardMap : MonoBehaviour
+    public class UICardMap : UIToggleButton
     {
         public CardModel Model { get; protected set; }
 
@@ -29,7 +32,11 @@ namespace Project
 
             Model = cardModel;
             Visualize();
+
+            Value = false;
+            ResetToggle();
         }
+
         private void Visualize()
         {
             if (_electroText) _electroText.text = Model.Config.ElectroFormula;
@@ -40,6 +47,37 @@ namespace Project
             if (_healthText) _healthText.text = Model.Health.ToString();
             if (_descriptionText) _descriptionText.text = Model.Config.VisualDescription.Replace("{dmg}", Math.Abs(Model.AttackDamage).ToString());
             if (_effects) _effects.Effects = Model.Effects;
+        }
+    }
+
+    public class UIToggleButton : MonoBehaviour
+    {
+        [SerializeField] private Button _button;
+        [SerializeField] private RectTransform _activeState;
+        [SerializeField] private RectTransform _nonActiveState;
+
+        public bool Value { get; set; }
+        public Button Button => _button;
+
+        public void ResetToggle()
+        {
+            Value = false;
+            UpdateToggleState();
+        }
+
+        public void UpdateToggleState()
+        {
+            _activeState.gameObject.SetActive(Value);
+            _nonActiveState.gameObject.SetActive(!Value);
+        }
+
+        public void PlayAnimationView()
+        {
+            float baseScale = transform.localScale.x;
+            transform.DOScale(baseScale * .75f, 0.1f).SetEase(Ease.OutQuad).OnComplete(() =>
+            {
+                transform.DOScale(baseScale, 0.1f).SetEase(Ease.OutBounce);
+            });
         }
     }
 }
