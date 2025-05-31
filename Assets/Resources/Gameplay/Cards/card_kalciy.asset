@@ -13,6 +13,24 @@ MonoBehaviour:
   m_Name: card_kalciy
   m_EditorClassIdentifier: 
   <VisualShortName>k__BackingField: Ca
+  <LocalizedName>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 357202337456128
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  <LocalizedDescribtion>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 362036872601600
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   <VisualName>k__BackingField: "\u041A\u0430\u043B\u044C\u0446\u0438\u0439"
   <VisualDescription>k__BackingField: "\u041E\u0434\u0438\u043D \u0438\u0437 \u0441\u0430\u043C\u044B\u0445
     \u0440\u0430\u0441\u043F\u0440\u043E\u0441\u0442\u0440\u0430\u043D\u0435\u043D\u043D\u044B\u0445
@@ -33,3 +51,6 @@ MonoBehaviour:
   <SpellPlayersPlacing>k__BackingField: 0
   <Effects>k__BackingField: 
   cardEffects: []
+  references:
+    version: 2
+    RefIds: []

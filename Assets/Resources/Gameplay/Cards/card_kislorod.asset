@@ -13,6 +13,24 @@ MonoBehaviour:
   m_Name: card_kislorod
   m_EditorClassIdentifier: 
   <VisualShortName>k__BackingField: O
+  <LocalizedName>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 357264916471808
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  <LocalizedDescribtion>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 362175381102592
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   <VisualName>k__BackingField: "\u041A\u0438\u0441\u043B\u043E\u0440\u043E\u0434"
   <VisualDescription>k__BackingField: "\u0413\u0430\u0437 \u0431\u0435\u0437 \u043A\u043E\u0442\u043E\u0440\u043E\u0433\u043E
     \u0432\u0441\u0451 \u0436\u0438\u0432\u043E\u0435 \u043D\u0435 \u043C\u043E\u0436\u0435\u0442
@@ -34,3 +52,6 @@ MonoBehaviour:
   <SpellPlayersPlacing>k__BackingField: 0
   <Effects>k__BackingField: 01000000
   cardEffects: []
+  references:
+    version: 2
+    RefIds: []

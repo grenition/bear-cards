@@ -13,6 +13,24 @@ MonoBehaviour:
   m_Name: card_svinec
   m_EditorClassIdentifier: 
   <VisualShortName>k__BackingField: Pb
+  <LocalizedName>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 357630995324928
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  <LocalizedDescribtion>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 363208484315136
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   <VisualName>k__BackingField: "\u0421\u0432\u0438\u043D\u0435\u0446"
   <VisualDescription>k__BackingField: "\u0422\u044F\u0436\u0435\u043B\u044B\u0439
     \u043C\u0435\u0442\u0430\u043B\u043B, \u043A\u043E\u0442\u043E\u0440\u044B\u0439
@@ -35,3 +53,6 @@ MonoBehaviour:
   <SpellPlayersPlacing>k__BackingField: 0
   <Effects>k__BackingField: 0000000004000000
   cardEffects: []
+  references:
+    version: 2
+    RefIds: []

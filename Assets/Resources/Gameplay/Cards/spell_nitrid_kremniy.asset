@@ -13,6 +13,24 @@ MonoBehaviour:
   m_Name: spell_nitrid_kremniy
   m_EditorClassIdentifier: 
   <VisualShortName>k__BackingField: Si3N4
+  <LocalizedName>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 359264903225344
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  <LocalizedDescribtion>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   <VisualName>k__BackingField: "\u041D\u0438\u0442\u0440\u0438\u0434 \u043A\u0440\u0435\u043C\u043D\u0438\u044F"
   <VisualDescription>k__BackingField: "\u0414\u043E\u0431\u0430\u0432\u043B\u044F\u0435\u0442
     {dmg} \u0443\u0440\u043E\u043D\u0430 \u0432\u044B\u0431\u0440\u0430\u043D\u043D\u043E\u0439
@@ -31,3 +49,6 @@ MonoBehaviour:
   cardEffects:
   - Effect: {fileID: 11400000, guid: afc587a2b28a12042a03d6a7b39ced68, type: 2}
     Value: 7
+  references:
+    version: 2
+    RefIds: []
