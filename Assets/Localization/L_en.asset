@@ -108,6 +108,943 @@ MonoBehaviour:
     m_Localized: Save receipts
     m_Metadata:
       m_Items: []
+  - m_Id: 356007338303488
+    m_Localized: Nitrogen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 356139152695296
+    m_Localized: "A simple substance \u2013 an almost inert gas, part of biologically
+      active compounds."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 356865073471488
+    m_Localized: Phosphorus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 356937911754752
+    m_Localized: Helium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357031566368768
+    m_Localized: Gold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357058795790336
+    m_Localized: Chlorine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357098037698560
+    m_Localized: Chromium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357139313844224
+    m_Localized: Hydrogen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357180589989888
+    m_Localized: Iron
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357202337456128
+    m_Localized: Calcium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357237267619840
+    m_Localized: Potassium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357264916471808
+    m_Localized: Oxygen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357289960660992
+    m_Localized: Silicon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357318297378816
+    m_Localized: Manganese
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357346411798528
+    m_Localized: Copper
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357368167653376
+    m_Localized: Sodium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357413277392896
+    m_Localized: Mercury
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357554596077568
+    m_Localized: Sulfur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357609717620736
+    m_Localized: Silver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357630995324928
+    m_Localized: Lead
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357656475721728
+    m_Localized: Titanium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357676084092928
+    m_Localized: Carbon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357702181052416
+    m_Localized: Vanadium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357747248848896
+    m_Localized: Carbon phosphide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357847354302464
+    m_Localized: Chromium carbide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357873556119552
+    m_Localized: Cementite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357900265447424
+    m_Localized: Calcium carbide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357926588899328
+    m_Localized: Potassium carbide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357963612020736
+    m_Localized: Silicon carbide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 357991701274624
+    m_Localized: Manganese carbide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358012890898432
+    m_Localized: Copper carbide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358037943476224
+    m_Localized: Sodium carbide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358072705867776
+    m_Localized: Mercury carbide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358094268784640
+    m_Localized: Silver carbide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358118075654144
+    m_Localized: Lead carbide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358147259621376
+    m_Localized: Titanium carbide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358164171055104
+    m_Localized: Vanadium carbide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358186543472640
+    m_Localized: Phosphorus fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358300880199680
+    m_Localized: Gold fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358320278855680
+    m_Localized: Chromium fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358338196922368
+    m_Localized: Iron fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358363073339392
+    m_Localized: Calcium fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358417301495808
+    m_Localized: Potassium fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358440282087424
+    m_Localized: Silicon fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358466148360192
+    m_Localized: Manganese fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358493436502016
+    m_Localized: Copper fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358515385294848
+    m_Localized: Sodium fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358558683095040
+    m_Localized: Silver fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358577389690880
+    m_Localized: Lead fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358594116575232
+    m_Localized: Titanium fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358610780545024
+    m_Localized: Vanadium fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358637720559616
+    m_Localized: Phosphorus chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358687397896192
+    m_Localized: Gold chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358702551916544
+    m_Localized: Chromium chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358731622637568
+    m_Localized: Iron chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358750316650496
+    m_Localized: Calcium chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358789369815040
+    m_Localized: Potassium chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358816301441024
+    m_Localized: Silicon chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358837260378112
+    m_Localized: Manganese chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358860723314688
+    m_Localized: Copper chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358895762530304
+    m_Localized: Sodium chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358929065304064
+    m_Localized: Mercury chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 358958245076992
+    m_Localized: Silver chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359001094086656
+    m_Localized: Lead chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359020933144576
+    m_Localized: Titanium chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359037890715648
+    m_Localized: Vanadium chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359065971580928
+    m_Localized: Phosphorus nitride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359118949834752
+    m_Localized: Chromium nitride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359144866439168
+    m_Localized: Iron nitride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359179775631360
+    m_Localized: Calcium nitride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359208854740992
+    m_Localized: Potassium nitride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359264903225344
+    m_Localized: Silicon nitride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359304426151936
+    m_Localized: Manganese nitride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359336860704768
+    m_Localized: Copper nitride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359352266383360
+    m_Localized: Sodium nitride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359376979222528
+    m_Localized: Mercury nitride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359402426064896
+    m_Localized: Silver nitride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359425335353344
+    m_Localized: Lead nitride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359458558435328
+    m_Localized: Titanium nitride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359476694605824
+    m_Localized: Vanadium nitride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359538501869568
+    m_Localized: Silicon oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359648803676160
+    m_Localized: Phosphorus oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359682576211968
+    m_Localized: Gold oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359703312850944
+    m_Localized: Chromium oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359727530762240
+    m_Localized: Iron oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359747004915712
+    m_Localized: Calcium oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359770048421888
+    m_Localized: Potassium oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359791363874816
+    m_Localized: Manganese oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359824259801088
+    m_Localized: Copper oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359844245659648
+    m_Localized: Sodium oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359867494686720
+    m_Localized: Mercury oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359895789461504
+    m_Localized: Silver oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359915993423872
+    m_Localized: Lead oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359939263422464
+    m_Localized: Titanium oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359970477432832
+    m_Localized: Vanadium oxide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359993378332672
+    m_Localized: Phosphorus sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360046947983360
+    m_Localized: Chromium sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360073015582720
+    m_Localized: Iron sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360092338741248
+    m_Localized: Calcium sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360110550409216
+    m_Localized: Potassium sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360208479019008
+    m_Localized: Silicon sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360251101536256
+    m_Localized: Manganese sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360272509263872
+    m_Localized: Copper sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360288686694400
+    m_Localized: Sodium sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360314825596928
+    m_Localized: Mercury sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360332622028800
+    m_Localized: Silver sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360351009857536
+    m_Localized: Lead sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360380328042496
+    m_Localized: Titanium sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360397965090816
+    m_Localized: Vanadium sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360427602042880
+    m_Localized: Ammonia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360496149553152
+    m_Localized: Hydrogen fluoride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360516143800320
+    m_Localized: Hydrogen chloride
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360546921603072
+    m_Localized: Water
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360564739006464
+    m_Localized: Hydrogen sulfide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360584615813120
+    m_Localized: Methane
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361031741202432
+    m_Localized: Although a non-metal, it is classified as a metal in the game for
+      compound consistency.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361257952600064
+    m_Localized: Fluorine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361333680758784
+    m_Localized: The most reactive non-metal.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361481701941248
+    m_Localized: An inert gas lighter than air. It does not react with any substances.
+      Inhaling it makes the voice significantly higher.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361588694441984
+    m_Localized: A precious metal. Resistant to acids and alkalis. Yellow in color
+      with a shiny appearance.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361694676115456
+    m_Localized: A yellow poisonous gas. Used in gas attacks during wartime.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361782836191232
+    m_Localized: The electron configuration of this atom is notable for its electron
+      jump.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361861903015936
+    m_Localized: Explodes with a loud bang from the slightest spark.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 361957772222464
+    m_Localized: One of the most common metals. Used in nearly all areas of human
+      activity.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362036872601600
+    m_Localized: One of the most widespread metals on Earth. Found in gypsum, chalk,
+      and the human body.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362108603588608
+    m_Localized: Oxidizes rapidly in air and is stored under kerosene.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362175381102592
+    m_Localized: A gas essential for life but dangerous in high concentrations. Oxidizes
+      many metals and some non-metals. Highly flammable.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362244989771776
+    m_Localized: One of the most abundant elements in the Earth's crust. Present
+      in biologically active molecules. Some of its compounds are extremely strong
+      and durable, like diamond.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362316141944832
+    m_Localized: Exhibits oxidation states from +2 to +7. Can be part of both cations
+      and anions. Its compounds display nearly the full color spectrum.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362378012123136
+    m_Localized: The least expensive of the precious metals. Its compounds exhibit
+      a wide range of colors, partly due to electron jumps.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362494668300288
+    m_Localized: Oxidizes extremely quickly in air, stored under kerosene, reacts
+      actively with water.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362856917753856
+    m_Localized: Its vapor and many of its compounds are highly toxic. The only metal
+      with a melting point below zero.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362953369968640
+    m_Localized: Has many allotropic forms. Found in nature in native form and in
+      mineral compounds with metals.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 363074082037760
+    m_Localized: A precious metal. Insoluble in acids, alkalis, and even acid mixtures.
+      Has antibacterial properties.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 363208484315136
+    m_Localized: A heavy metal that accumulates in the body and causes poisoning.
+      Formerly used in paints, now widely used in industry.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 363318437994496
+    m_Localized: One of the strongest metals, resistant to oxidation, corrosion,
+      and damage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 363425942200320
+    m_Localized: Forms the basis of most organic and bioactive compounds, with numerous
+      allotropic forms.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 363507152314368
+    m_Localized: Due to its electron configuration, exhibits various oxidation states.
+      Found in both cations and anions. Its compounds appear in a wide range of colors.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 442291939434496
+    m_Localized: Grants a flying block and {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 442431114829824
+    m_Localized: Grants a flying block and {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443505322221568
+    m_Localized: Grants a flying block and {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443609995272192
+    m_Localized: Grants a flying block and +1/-1 to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443704664907776
+    m_Localized: Grants flying blocks and {dmg} health to multiple cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443825569914880
+    m_Localized: Grants a flying block and {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443938493161472
+    m_Localized: Grants a flying block and {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444001768431616
+    m_Localized: Grants a flying block and {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444095955722240
+    m_Localized: Grants flying blocks and {dmg} health to multiple cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444391058563072
+    m_Localized: Grants a flying block and {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444498952839168
+    m_Localized: Grants a flying block and deals {dmg} damage to ALL cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444797037830144
+    m_Localized: Grants a flying block and {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444871985848320
+    m_Localized: Grants a flying block and {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444998091792384
+    m_Localized: Grants a flying block and {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445164593078272
+    m_Localized: "Reduces the selected card\u2019s damage by {dmg}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445254586064896
+    m_Localized: "Reduces the selected card\u2019s damage by {dmg}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445543737188352
+    m_Localized: "Reduces the selected card\u2019s damage by {dmg}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445608123949056
+    m_Localized: Reduces the selected card's damage by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445671810260992
+    m_Localized: Reduces cards' damage by {dmg} and applies poison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445801032572928
+    m_Localized: Reduces the selected card's damage by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445889276534784
+    m_Localized: Reduces the selected card's damage by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445968079118336
+    m_Localized: Reduces the selected card's damage by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446303329837056
+    m_Localized: Reduces cards' damage by {dmg} and applies poison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446391426998272
+    m_Localized: Reduces the selected card's damage by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446461102776320
+    m_Localized: Reduces the selected card's damage by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446543118196736
+    m_Localized: Reduces the selected card's damage by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446662441951232
+    m_Localized: Reduces the selected card's damage by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446856843747328
+    m_Localized: Reduces the selected card's maximum health by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446954050936832
+    m_Localized: Reduces the selected card's maximum health by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447019993784320
+    m_Localized: Reduces the selected card's maximum health by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447112247500800
+    m_Localized: Reduces the selected card's maximum health by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447200063643648
+    m_Localized: Reduces the selected card's maximum health by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447273199722496
+    m_Localized: Grants {dmg} health to multiple cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447555358941184
+    m_Localized: Reduces the selected card's maximum health by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448090359193600
+    m_Localized: Reduces the selected card's maximum health by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448147628220416
+    m_Localized: Reduces the selected card's maximum health by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448206038097920
+    m_Localized: Grants {dmg} health to multiple cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448300099559424
+    m_Localized: Reduces the selected card's maximum health by {dmg} and applies
+      poison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448444538806272
+    m_Localized: Reduces the selected card's maximum health by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448508996870144
+    m_Localized: Reduces the selected card's maximum health by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448566387531776
+    m_Localized: Reduces the selected card's maximum health by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448674046926848
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448839545774080
+    m_Localized: Reduces the selected card's maximum health by {dmg}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449135613304832
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449220132724736
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449835982381056
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449901434494976
+    m_Localized: Deals {dmg} damage to all cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450001309261824
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450081688903680
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450141474512896
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450226295922688
+    m_Localized: Deals {dmg} damage to all cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450281081921536
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450345825198080
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450409230491648
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450469720743936
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450564017086464
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450701573480448
+    m_Localized: Grants {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450791012818944
+    m_Localized: Grants {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450863054184448
+    m_Localized: Grants {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450968457043968
+    m_Localized: Grants {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451032000749568
+    m_Localized: Grants {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451093149507584
+    m_Localized: Grants {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451168290463744
+    m_Localized: Grants {dmg} health to multiple cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451238045933568
+    m_Localized: Grants {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451297839931392
+    m_Localized: Grants {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451354341400576
+    m_Localized: Grants {dmg} health to multiple cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451424159784960
+    m_Localized: Grants {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451476320149504
+    m_Localized: Grants {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451531949203456
+    m_Localized: Grants {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451589780267008
+    m_Localized: Grants {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451640984330240
+    m_Localized: Grants {dmg} health to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451976935497728
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452042203062272
+    m_Localized: Deals {dmg} damage to the enemy character
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452106619183104
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452160033644544
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452212839931904
+    m_Localized: Deals {dmg} damage to multiple cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452528318701568
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452590503452672
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452639702638592
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452689778434048
+    m_Localized: Deals {dmg} damage to multiple cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452744023367680
+    m_Localized: Deals {dmg} damage to ALL cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452791070875648
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452850957148160
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452903247536128
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452958385856512
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453022424489984
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453074379333632
+    m_Localized: Deals {dmg} damage to the selected card and grants flying
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453127378558976
+    m_Localized: Reduces the selected card's damage by {dmg} and grants flying
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453179643781120
+    m_Localized: Restores {dmg} health to the card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453236262690816
+    m_Localized: Deals {dmg} damage to enemy cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453290016890880
+    m_Localized: Deals {dmg} damage to the selected card
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

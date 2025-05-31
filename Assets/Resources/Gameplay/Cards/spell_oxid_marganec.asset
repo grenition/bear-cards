@@ -24,9 +24,9 @@ MonoBehaviour:
     m_LocalVariables: []
   <LocalizedDescribtion>k__BackingField:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 451238045933568
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

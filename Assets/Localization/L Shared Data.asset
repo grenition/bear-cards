@@ -156,7 +156,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 357318297378816
-    m_Key: "\u041C\u0430\u0440\u0433\u0430\u043D\u0435\u0446"
+    m_Key: card_marganec
     m_Metadata:
       m_Items: []
   - m_Id: 357346411798528
@@ -653,6 +653,374 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 363507152314368
     m_Key: card_vanadiy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 442291939434496
+    m_Key: spell_carbit_fosfor_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 442431114829824
+    m_Key: spell_carbit_hrom_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443505322221568
+    m_Key: spell_carbit_iron_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443609995272192
+    m_Key: spell_carbit_kalciy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443704664907776
+    m_Key: spell_carbit_kaliy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443825569914880
+    m_Key: spell_carbit_kremniy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443938493161472
+    m_Key: spell_carbit_marganec_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444001768431616
+    m_Key: spell_carbit_med_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444095955722240
+    m_Key: spell_carbit_natriy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444391058563072
+    m_Key: spell_carbit_serebro_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444498952839168
+    m_Key: spell_carbit_rtut_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444797037830144
+    m_Key: spell_carbit_svinec_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444871985848320
+    m_Key: spell_carbit_titan_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444998091792384
+    m_Key: spell_carbit_vanadiy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445164593078272
+    m_Key: spell_ftorid_fosfor_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445254586064896
+    m_Key: spell_ftorid_gold_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445543737188352
+    m_Key: spell_ftorid_iron_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445608123949056
+    m_Key: spell_ftorid_kalciy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445671810260992
+    m_Key: spell_ftorid_kaliy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445801032572928
+    m_Key: spell_ftorid_kremniy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445889276534784
+    m_Key: spell_ftorid_marganec_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 445968079118336
+    m_Key: spell_ftorid_med_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446303329837056
+    m_Key: spell_ftorid_natriy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446391426998272
+    m_Key: spell_ftorid_serebro_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446461102776320
+    m_Key: spell_ftorid_svinec_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446543118196736
+    m_Key: spell_ftorid_titan_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446662441951232
+    m_Key: spell_ftorid_vanadiy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446856843747328
+    m_Key: spell_hlorid_fosfor_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446954050936832
+    m_Key: spell_hlorid_gold_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447019993784320
+    m_Key: spell_hlorid_hrom_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447112247500800
+    m_Key: spell_hlorid_iron_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447200063643648
+    m_Key: spell_hlorid_kalciy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447273199722496
+    m_Key: spell_hlorid_kaliy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447555358941184
+    m_Key: spell_hlorid_kremniy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448090359193600
+    m_Key: spell_hlorid_marganec_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448147628220416
+    m_Key: spell_hlorid_med_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448206038097920
+    m_Key: spell_hlorid_natriy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448300099559424
+    m_Key: spell_hlorid_rtut_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448444538806272
+    m_Key: spell_hlorid_serebro_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448508996870144
+    m_Key: spell_hlorid_svinec_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448566387531776
+    m_Key: spell_hlorid_titan_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448674046926848
+    m_Key: spell_nitrid_fosfor_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448839545774080
+    m_Key: spell_hlorid_vanadiy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449135613304832
+    m_Key: spell_nitrid_hrom_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449220132724736
+    m_Key: spell_nitrid_iron_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449835982381056
+    m_Key: spell_nitrid_kalciy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449901434494976
+    m_Key: spell_nitrid_kaliy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450001309261824
+    m_Key: spell_nitrid_kremniy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450081688903680
+    m_Key: spell_nitrid_marganec_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450141474512896
+    m_Key: spell_nitrid_med_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450226295922688
+    m_Key: spell_nitrid_natriy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450281081921536
+    m_Key: spell_nitrid_rtut_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450345825198080
+    m_Key: spell_nitrid_serebro_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450409230491648
+    m_Key: spell_nitrid_svinec_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450469720743936
+    m_Key: spell_nitrid_titan_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450564017086464
+    m_Key: spell_nitrid_vanadiy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450701573480448
+    m_Key: spell_oxid_cremniy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450791012818944
+    m_Key: spell_oxid_fosfor_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450863054184448
+    m_Key: spell_oxid_gold_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450968457043968
+    m_Key: spell_oxid_hrom_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451032000749568
+    m_Key: spell_oxid_iron_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451093149507584
+    m_Key: spell_oxid_kalciy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451168290463744
+    m_Key: spell_oxid_kaliy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451238045933568
+    m_Key: spell_oxid_marganec_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451297839931392
+    m_Key: spell_oxid_med_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451354341400576
+    m_Key: spell_oxid_natriy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451424159784960
+    m_Key: spell_oxid_rtut_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451476320149504
+    m_Key: spell_oxid_serebro_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451531949203456
+    m_Key: spell_oxid_svinec_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451589780267008
+    m_Key: spell_oxid_titan_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451640984330240
+    m_Key: spell_oxid_vanadiy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 451976935497728
+    m_Key: spell_sulfide_fosfor_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452042203062272
+    m_Key: spell_sulfide_hrom_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452106619183104
+    m_Key: spell_sulfide_iron_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452160033644544
+    m_Key: spell_sulfide_kalciy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452212839931904
+    m_Key: spell_sulfide_kaliy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452528318701568
+    m_Key: spell_sulfide_kremniy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452590503452672
+    m_Key: spell_sulfide_marganec_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452639702638592
+    m_Key: spell_sulfide_med_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452689778434048
+    m_Key: spell_sulfide_natriy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452744023367680
+    m_Key: spell_sulfide_rtut_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452791070875648
+    m_Key: spell_sulfide_serebro_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452850957148160
+    m_Key: spell_sulfide_svinec_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452903247536128
+    m_Key: spell_sulfide_titan_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452949493932032
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452958385856512
+    m_Key: spell_sulfide_vanadiy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453022424489984
+    m_Key: spell_vodorod_azot_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453074379333632
+    m_Key: spell_vodorod_ftor_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453127378558976
+    m_Key: spell_vodorod_hlor_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453179643781120
+    m_Key: spell_vodorod_kislorod_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453236262690816
+    m_Key: spell_vodorod_sera_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453290016890880
+    m_Key: spell_vodorod_uglerod_desc
     m_Metadata:
       m_Items: []
   m_Metadata:
