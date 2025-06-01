@@ -17,9 +17,21 @@ MonoBehaviour:
   <Dialogues>k__BackingField:
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: b393358a7052cd840bb487817b7cf0fe, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 477619521839104
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u041D\u0430\u0441\u0442\u0430\u043B\u043E \u0432\u0440\u0435\u043C\u044F
       \u043F\u0440\u043E\u0432\u0435\u0440\u0438\u0442\u044C \u0442\u0432\u043E\u0438
       \u0443\u043C\u0435\u043D\u0438\u044F, \u041F\u0430\u0432\u0435\u043B!"
   <Comand>k__BackingField: Equals(CountBossOneUpdate,2)
   <StartUnlimited>k__BackingField: 0
   IsComplited: 0
+  references:
+    version: 2
+    RefIds: []

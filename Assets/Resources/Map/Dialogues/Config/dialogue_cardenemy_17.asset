@@ -17,17 +17,44 @@ MonoBehaviour:
   <Dialogues>k__BackingField:
   - ActorPosition: 0
     ActorConfig: {fileID: 11400000, guid: 08a77187c52a53e4482f9e49589a492d, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 464014231461888
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u0415\u0449\u0451 \u043E\u0434\u0438\u043D \u0431\u043E\u0439...
       \u042D\u0442\u043E\u0442 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A
       \u0432\u044B\u0433\u043B\u044F\u0434\u0438\u0442 \u0437\u043D\u0430\u043A\u043E\u043C\u043E."
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: ebf41a8600834974d85bad1dd9ec5098, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 464100764147712
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u041A\u043E\u043D\u0435\u0447\u043D\u043E \u0437\u043D\u0430\u043A\u043E\u043C\u043E.
       \u0422\u044B \u0434\u0443\u043C\u0430\u0435\u0448\u044C, \u0432\u0440\u0430\u0433\u0438
       \u0431\u0443\u0434\u0443\u0442 \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u043E
       \u043D\u043E\u0432\u044B\u043C\u0438?"
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: ebf41a8600834974d85bad1dd9ec5098, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 464136113741824
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u041D\u0435\u0442, \u041F\u0430\u0448\u0430. \u041D\u0430\u0441\u0442\u043E\u044F\u0449\u0438\u0439
       \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441 \u2014 \u044D\u0442\u043E
       \u0443\u043C\u0435\u043D\u0438\u0435 \u043F\u0440\u0435\u043E\u0434\u043E\u043B\u0435\u0432\u0430\u0442\u044C
@@ -36,3 +63,6 @@ MonoBehaviour:
   <Comand>k__BackingField: Equals(CountEnemyComming,17)
   <StartUnlimited>k__BackingField: 0
   IsComplited: 0
+  references:
+    version: 2
+    RefIds: []

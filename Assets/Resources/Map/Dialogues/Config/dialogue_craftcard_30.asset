@@ -17,10 +17,28 @@ MonoBehaviour:
   <Dialogues>k__BackingField:
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: ebf41a8600834974d85bad1dd9ec5098, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 474872634400768
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u041D\u0443 \u0447\u0442\u043E, \u041F\u0430\u0448\u0430, \u0442\u044B
       \u0441\u0442\u043E\u0438\u0448\u044C \u043F\u0435\u0440\u0435\u0434 \u0432\u044B\u0431\u043E\u0440\u043E\u043C."
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: 19a29330252a9434dbf4a5e4cdc93042, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 474935221805056
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u041D\u043E \u043F\u043E\u043C\u043D\u0438, \u0447\u0442\u043E
       \u0438\u0433\u0440\u0430 \u2014 \u044D\u0442\u043E \u043D\u0435 \u043F\u0440\u043E\u0441\u0442\u043E
       \u043A\u043E\u043C\u0431\u0438\u043D\u0430\u0446\u0438\u044F \u044D\u043B\u0435\u043C\u0435\u043D\u0442\u043E\u0432,
@@ -29,13 +47,15 @@ MonoBehaviour:
       \u043F\u0443\u0442\u044C."
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: ebf41a8600834974d85bad1dd9ec5098, type: 2}
-    TextDialogue: "\u041F\u043E\u0447\u0435\u043C\u0443 \u0442\u044B \u0434\u043E\u043B\u0436\u0435\u043D
-      \u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u044C \u0447\u0443\u0436\u0438\u043C
-      \u043F\u0440\u0430\u0432\u0438\u043B\u0430\u043C, \u043A\u043E\u0433\u0434\u0430
-      \u0442\u044B \u043C\u043E\u0436\u0435\u0448\u044C \u0441\u043E\u0437\u0434\u0430\u0442\u044C
-      \u0441\u0432\u043E\u0438 \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435?"
-  - ActorPosition: 1
-    ActorConfig: {fileID: 11400000, guid: ebf41a8600834974d85bad1dd9ec5098, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 474988355248128
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u041F\u043E\u0447\u0435\u043C\u0443 \u0442\u044B \u0434\u043E\u043B\u0436\u0435\u043D
       \u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u044C \u0447\u0443\u0436\u0438\u043C
       \u043F\u0440\u0430\u0432\u0438\u043B\u0430\u043C, \u043A\u043E\u0433\u0434\u0430
@@ -43,32 +63,71 @@ MonoBehaviour:
       \u0441\u0432\u043E\u0438 \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435?"
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: b393358a7052cd840bb487817b7cf0fe, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 475394443567104
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u0412\u043E\u0442 \u043E\u043F\u044F\u0442\u044C, \u044D\u0442\u0438
       \u0435\u0433\u043E \u0438\u0433\u0440\u044B..."
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: b393358a7052cd840bb487817b7cf0fe, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 475489809457152
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u0422\u044B \u0447\u0442\u043E, \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E
       \u0441\u0447\u0438\u0442\u0430\u0435\u0448\u044C, \u0447\u0442\u043E \u0432\u0441\u0451
       \u043C\u043E\u0436\u043D\u043E \u0432\u044B\u0443\u0447\u0438\u0442\u044C \u0447\u0435\u0440\u0435\u0437
       \u043F\u043E\u0434\u043E\u0431\u043D\u044B\u0435 \u0440\u0430\u0437\u0432\u043B\u0435\u0447\u0435\u043D\u0438\u044F?"
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: b393358a7052cd840bb487817b7cf0fe, type: 2}
-    TextDialogue: "\u0422\u044B \u0447\u0442\u043E, \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E
-      \u0441\u0447\u0438\u0442\u0430\u0435\u0448\u044C, \u0447\u0442\u043E \u0432\u0441\u0451
-      \u043C\u043E\u0436\u043D\u043E \u0432\u044B\u0443\u0447\u0438\u0442\u044C \u0447\u0435\u0440\u0435\u0437
-      \u043F\u043E\u0434\u043E\u0431\u043D\u044B\u0435 \u0440\u0430\u0437\u0432\u043B\u0435\u0447\u0435\u043D\u0438\u044F?"
-  - ActorPosition: 1
-    ActorConfig: {fileID: 11400000, guid: b393358a7052cd840bb487817b7cf0fe, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 475804730384384
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u041C\u044B \u0441 \u0410\u0440\u043D\u043E \u0432\u043E\u043E\u0431\u0449\u0435
       \u043E \u0440\u0430\u0437\u043D\u043E\u043C \u0433\u043E\u0432\u043E\u0440\u0438\u043C!"
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: b393358a7052cd840bb487817b7cf0fe, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 475988046635008
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u0412 \u0410\u043A\u0430\u0434\u0435\u043C\u0438\u0438 \u043C\u0435\u0434\u0432\u0435\u0434\u0435\u0439
       \u0432\u0441\u0451 \u0438\u043D\u0430\u0447\u0435 \u2014 \u043C\u044B \u043F\u043E\u043B\u0443\u0447\u0430\u0435\u043C
       \u0444\u0443\u043D\u0434\u0430\u043C\u0435\u043D\u0442\u0430\u043B\u044C\u043D\u044B\u0435
       \u0437\u043D\u0430\u043D\u0438\u044F."
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: b393358a7052cd840bb487817b7cf0fe, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 476048926957568
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u041E\u043D\u0438 \u0434\u0430\u044E\u0442 \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C
       \u0434\u0443\u043C\u0430\u0442\u044C \u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0438,
       \u0430 \u043D\u0435 \u0442\u043E\u043B\u044C\u043A\u043E \u0434\u0435\u043B\u0430\u0442\u044C
@@ -76,6 +135,15 @@ MonoBehaviour:
       \u044D\u043C\u043E\u0446\u0438\u0439 \u0438 \u0432\u0435\u0437\u0435\u043D\u0438\u044F!"
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: b393358a7052cd840bb487817b7cf0fe, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 476095248850944
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u041E\u043D\u0438 \u0434\u0430\u044E\u0442 \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C
       \u0434\u0443\u043C\u0430\u0442\u044C \u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0438,
       \u0430 \u043D\u0435 \u0442\u043E\u043B\u044C\u043A\u043E \u0434\u0435\u043B\u0430\u0442\u044C
@@ -83,6 +151,15 @@ MonoBehaviour:
       \u044D\u043C\u043E\u0446\u0438\u0439 \u0438 \u0432\u0435\u0437\u0435\u043D\u0438\u044F!"
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: 19a29330252a9434dbf4a5e4cdc93042, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 476188446285824
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u0410\u0433\u0430, \u043A\u043E\u043D\u0435\u0447\u043D\u043E,
       \u0414\u043C\u0438\u0442\u0440\u0438\u0439. \u0412\u0441\u0435 \u044D\u0442\u0438
       \u0430\u043A\u0430\u0434\u0435\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0435
@@ -90,6 +167,15 @@ MonoBehaviour:
       \u043B\u0435\u043A\u0446\u0438\u0438..."
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: ebf41a8600834974d85bad1dd9ec5098, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 476232473894912
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u041D\u043E \u0432\u043E\u0442 \u0432\u043E\u043F\u0440\u043E\u0441:
       \u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043C\u0435\u0434\u0432\u0435\u0434\u0435\u0439
       \u0432\u043E\u043E\u0431\u0449\u0435 \u043A\u043E\u0433\u0434\u0430-\u043B\u0438\u0431\u043E
@@ -97,12 +183,30 @@ MonoBehaviour:
       \u0437\u043D\u0430\u043D\u0438\u044F \u043F\u043E-\u043D\u0430\u0441\u0442\u043E\u044F\u0449\u0435\u043C\u0443?"
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: ebf41a8600834974d85bad1dd9ec5098, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 476301784768512
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u0410 \u0432\u043E\u0442 \u0438\u0433\u0440\u044B \u0438 \u0441\u0438\u043C\u0443\u043B\u044F\u0446\u0438\u0438
       \u043C\u043E\u0433\u0443\u0442 \u043E\u0431\u0443\u0447\u0438\u0442\u044C \u0438\u0445
       \u0432 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0438, \u0432 \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0439
       \u0441\u0438\u0442\u0443\u0430\u0446\u0438\u0438."
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: ebf41a8600834974d85bad1dd9ec5098, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 476343069302784
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u0422\u0432\u043E\u044F \u0441\u0442\u0430\u0440\u0430\u044F
       \u0430\u043A\u0430\u0434\u0435\u043C\u0438\u044F \u0432\u043E\u0441\u043F\u0438\u0442\u044B\u0432\u0430\u0435\u0442
       \u043C\u0435\u0434\u0432\u0435\u0434\u0435\u0439, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
@@ -110,12 +214,30 @@ MonoBehaviour:
       \u0437\u0430 \u0441\u0445\u0435\u043C\u0430\u043C\u0438."
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: b393358a7052cd840bb487817b7cf0fe, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 476383250735104
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u0418 \u0447\u0442\u043E \u0442\u044B \u0445\u043E\u0447\u0435\u0448\u044C
       \u044D\u0442\u0438\u043C \u0441\u043A\u0430\u0437\u0430\u0442\u044C? \u0427\u0442\u043E
       \u0442\u044B \u0443\u0447\u0451\u043D\u044B\u0439 \u0438\u0437 \u0442\u0435\u0431\u044F
       \u043B\u0443\u0447\u0448\u0435?"
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: b393358a7052cd840bb487817b7cf0fe, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 476466113404928
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u0422\u044B \u0434\u0430\u0436\u0435 \u043D\u0435 \u043F\u043E\u043D\u0438\u043C\u0430\u0435\u0448\u044C,
       \u043D\u0430\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0433\u043B\u0443\u0431\u043E\u043A\u0430
       \u043D\u0430\u0441\u0442\u043E\u044F\u0449\u0430\u044F \u043D\u0430\u0443\u043A\u0430!
@@ -123,6 +245,15 @@ MonoBehaviour:
       \u043D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u0432\u044B\u0439\u0434\u0435\u0442!"
   - ActorPosition: 1
     ActorConfig: {fileID: 11400000, guid: b393358a7052cd840bb487817b7cf0fe, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 476507242749952
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u0422\u044B \u0438 \u041F\u0430\u0448\u0430 \u0442\u0430\u043A
       \u0438 \u043D\u0435 \u043F\u043E\u0439\u043C\u0451\u0442\u0435 \u044D\u0442\u043E\u0433\u043E,
       \u043F\u043E\u043A\u0430 \u043D\u0435 \u043F\u0440\u043E\u0439\u0434\u0451\u0442\u0435
@@ -130,3 +261,6 @@ MonoBehaviour:
   <Comand>k__BackingField: Equals(CountCardCraftComming,30)
   <StartUnlimited>k__BackingField: 0
   IsComplited: 0
+  references:
+    version: 2
+    RefIds: []

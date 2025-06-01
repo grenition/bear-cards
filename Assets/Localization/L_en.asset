@@ -1045,6 +1045,1502 @@ MonoBehaviour:
     m_Localized: Deals {dmg} damage to the selected card
     m_Metadata:
       m_Items: []
+  - m_Id: 462015448473600
+    m_Localized: Whoa, is this a battle? Just like in my favorite card games!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 462219476197376
+    m_Localized: A battle? This is just an experiment. Your task is to understand
+      the properties of the elements and use them against your opponent.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 462308525465600
+    m_Localized: An experiment?! His eyes are glowing like a raid boss!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 462461382680576
+    m_Localized: "Focus. This is your first fight \u2014 let\u2019s see how well
+      you follow my guidance."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 462565384642560
+    m_Localized: "Alright then, let\u2019s see what I\u2019ve got!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 462830229774336
+    m_Localized: This one looks tough... Do I stand a chance?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 463085729996800
+    m_Localized: "There\u2019s always a chance."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 463125781405696
+    m_Localized: "Chemistry teaches us \u2014 even weak elements can become powerful
+      in the right combination."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 463217259175936
+    m_Localized: "Why are the enemies so aggressive? Don\u2019t they have anything
+      better to do?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 463290571415552
+    m_Localized: "It\u2019s part of the simulation, Pasha. Like a catalyst in a reaction
+      \u2014 they\u2019re here to push you to grow stronger."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 463602468249600
+    m_Localized: "Whew\u2026 I think I\u2019m getting used to these battles."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 463674371203072
+    m_Localized: Getting used to it is good. But stay focused. In chemistry, one
+      overlooked element can ruin the entire reaction.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 464014231461888
+    m_Localized: "Another battle\u2026 This opponent looks familiar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 464100764147712
+    m_Localized: Of course they do. You think enemies will always be new?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 464136113741824
+    m_Localized: No, Pasha. Real progress means overcoming old challenges in new
+      ways.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 464225460805632
+    m_Localized: This enemy feels... strange.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 464279152091136
+    m_Localized: Strange enemies remind me of rare isotopes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 464318171701248
+    m_Localized: "They\u2019re rare, but dangerously unpredictable."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 464389357428736
+    m_Localized: The farther we go, the stronger the enemies get.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 464447108800512
+    m_Localized: "That\u2019s the law of progress. In chemistry, overcoming a strong
+      bond requires greater energy."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 464499386605568
+    m_Localized: Dmitry Ivanovich, do you want to beat them too?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 464601677291520
+    m_Localized: "I\u2019m a chemist, not a warrior. But if victory brings us closer
+      to the exit, I\u2019ll do my part."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 464660821172224
+    m_Localized: Here we go again!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 464891902156800
+    m_Localized: "I\u2019ve seen this one before\u2026 Time to try something new."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 464947837394944
+    m_Localized: Oh Pasha, you know this is all part of the game. And a true game
+      never hands you the answers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 464996403240960
+    m_Localized: "You have to find your own way \u2014 even if it means breaking
+      old habits!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 465044423827456
+    m_Localized: "How many times must I say it? You can\u2019t go through life without
+      understanding the basics!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 465104649838592
+    m_Localized: "Without foundational knowledge \u2014 without theory \u2014 you\u2019ll
+      never defeat real enemies."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 465167828639744
+    m_Localized: "Oh right, the classic theory... But Pasha, you don\u2019t want
+      to end up like Dmitry, stuck in the past, do you?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 465219355664384
+    m_Localized: "It\u2019s better to experiment, find your own path, and break free
+      from outdated methods."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 465290344259584
+    m_Localized: "I don\u2019t reject the old or the new. I think the answer is in
+      combining both."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 465388641968128
+    m_Localized: These battles are becoming part of everyday life.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 465453553016832
+    m_Localized: "That\u2019s how progress works. You move forward, even when you
+      don\u2019t notice it."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 465573505916928
+    m_Localized: "I think I\u2019m starting to get it. So chemistry\u2026 is like
+      a story about bears?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 465646465835008
+    m_Localized: Only with elements?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 465701440577536
+    m_Localized: Each of us is unique, but we all exist in one world and interact
+      with one another?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 465779534323712
+    m_Localized: One billion points to you, Pasha!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 465819468292096
+    m_Localized: "Every element is unique in its own way. And yes \u2014 they interact
+      and influence each other."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 465857728733184
+    m_Localized: "Think of reactions between metals and non-metals \u2014 how molecules
+      come together to form something greater."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 466211035930624
+    m_Localized: "We\u2019re all different, but sooner or later, we need to find
+      common ground."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 466470927589376
+    m_Localized: "Just like in any developed society \u2014 like, say, people."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 466711324123136
+    m_Localized: "It\u2019s complicated\u2026 but fascinating."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 466782161723392
+    m_Localized: "So how do you know which elements will work together \u2014 and
+      which will end in disaster?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 466839523024896
+    m_Localized: "That\u2019s exactly the point."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 466914596872192
+    m_Localized: You have to study. You have to understand their nature. Knowledge
+      is the key.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 466968057470976
+    m_Localized: "But remember, it\u2019s not just about knowing how elements work
+      \u2014 it\u2019s about sensing how they might react in the most unexpected
+      moment."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 467035078254592
+    m_Localized: "I get it. Just like in life \u2014 seek harmony, but be ready when
+      things go off script."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 467077495250944
+    m_Localized: Excellent, Pasha. You're ready.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 467162861920256
+    m_Localized: But before you decide how to interact with this world, there are
+      still a few trials ahead.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 468022786514944
+    m_Localized: "Whoa! That\u2019s a whole set of cards!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 468141418209280
+    m_Localized: How do I pick the right one?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 468223328772096
+    m_Localized: "Remember, Pasha \u2014 it\u2019s not just about power, it\u2019s
+      about synergy."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 469108092035072
+    m_Localized: Sometimes the quietest choice turns out to be the game-changer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 469194326925312
+    m_Localized: Whoa! Why are there so many?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 469255224025088
+    m_Localized: I kinda want to grab them all!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 469295233490944
+    m_Localized: Greed is a poor advisor, young bear.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 469389634691072
+    m_Localized: Think about how these elements will help you later. Sometimes the
+      win is in quality, not quantity.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 469444735262720
+    m_Localized: "Dmitry Ivanovich, be honest \u2014 what would you pick?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 469501651968000
+    m_Localized: "Me? Naturally, I\u2019d choose what serves science \u2014 for only
+      science truly matters."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 469561294970880
+    m_Localized: "It\u2019s obvious, Pasha. You wouldn\u2019t waste your time on
+      something trivial, would you?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 469674683785216
+    m_Localized: "But in the end, it\u2019s your game \u2014 your choice."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 469721987145728
+    m_Localized: "I\u2019ll help, of course, but surely you understand that the right
+      path follows scientific principles \u2014 not mere entertainment."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 469809413218304
+    m_Localized: "Still, I\u2019m certain you\u2019ll make the correct decision.
+      Naturally."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470079455092736
+    m_Localized: Why do these elements look so different?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470177983488000
+    m_Localized: Every element has its own personality.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470216864686080
+    m_Localized: "Take Sodium \u2014 wildly reactive. And Helium? Calm and carefree."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470251698380800
+    m_Localized: Get to know them, and the choice will become clear.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470315867037696
+    m_Localized: More cards, Pasha? Good choice.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470361647865856
+    m_Localized: "But remember \u2014 even the smallest element can surprise you!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470401816715264
+    m_Localized: "I wonder what combos we\u2019ll see this time."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470498671583232
+    m_Localized: "Haha \u2014 it all depends on how you use them."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470572742991872
+    m_Localized: Be ready for surprises.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470657082056704
+    m_Localized: Why does gold look so awesome?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470721317822464
+    m_Localized: "Oh, Pasha \u2014 because it\u2019s gold!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470759687315456
+    m_Localized: "In games, it always sparkles, lures you in, and screams: \u201CPick
+      me, I\u2019m the most valuable!\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470797926785024
+    m_Localized: "In reality, gold is just another metal \u2014 shiny, sure, but
+      not always useful."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470835784572928
+    m_Localized: Sometimes the dullest elements hide the greatest power.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470894844567552
+    m_Localized: The longer I stare, the harder it is to choose...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470941678166016
+    m_Localized: Struggle is part of growth.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470976105013248
+    m_Localized: You're not as impulsive as you were in the beginning.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471010376671232
+    m_Localized: "I\u2019d say you\u2019re starting to think like a chemist."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471193395126272
+    m_Localized: Time to pick cards again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471258738188288
+    m_Localized: "Honestly, sometimes I don\u2019t even see how this ties into real
+      chemistry."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471299368411136
+    m_Localized: "That\u2019s the whole point, Pasha."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471344041943040
+    m_Localized: "Chemistry isn\u2019t just formulas and tables."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471379035021312
+    m_Localized: "It\u2019s about solving problems \u2014 and the courage to experiment."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471443493085184
+    m_Localized: "You\u2019re here to try things, not memorize them!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471485536788480
+    m_Localized: "Experimenting is good, but card games don\u2019t replace a proper
+      education!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471526762602496
+    m_Localized: "True knowledge takes discipline \u2014 not just random choices."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471576897118208
+    m_Localized: "Still, Dmitry, the world\u2019s changing."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471628164096000
+    m_Localized: Games help us see science from a new angle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471681679220736
+    m_Localized: "You know it yourself: sometimes to truly understand something,
+      you need to step into the unknown \u2014 not just sit with textbooks."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471782413819904
+    m_Localized: Hey, no fighting! I still need to pick the cards that'll help me!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471827909435392
+    m_Localized: "Since it\u2019s an experiment\u2026 maybe I should just trust my
+      gut?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471868883591168
+    m_Localized: "You\u2019re a billion percent right, Pasha!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 471919999574016
+    m_Localized: Sometimes the best choice is the one you made yourself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472147997745152
+    m_Localized: Choosing feels easier now than before.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472210580955136
+    m_Localized: "That shows how much you\u2019ve grown."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472265316622336
+    m_Localized: "As a chemist, you\u2019re learning a simple truth: not all that
+      glitters is gold."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472321591599104
+    m_Localized: "You know, Dmitry Ivanovich, I think I\u2019m ready to teach a chemistry
+      class!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472380651593728
+    m_Localized: Ha! Then start with the formula for water.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472422917595136
+    m_Localized: "Jokes aside \u2014 if you truly learn to think like a scientist,
+      I\u2019ll be proud."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472484775190528
+    m_Localized: Oooh, ready to pick your new allies, Pasha?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472552295096320
+    m_Localized: "You\u2019ve noticed, right? Each one feels like a wild, unique
+      personality!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472589519544320
+    m_Localized: "Yeah! Elements aren\u2019t just elements \u2014 they\u2019re like
+      heroes, ready to fight for you!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472633513598976
+    m_Localized: Hmm, yeah, but why anime characters? Why not just... bears?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472668934496256
+    m_Localized: "Because anime isn\u2019t just drawings \u2014 it\u2019s spirit!
+      It\u2019s power, energy, it\u2019s EVERYTHING!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472717466787840
+    m_Localized: "And chemical elements\u2026 they also have traits, their own essence!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472771585892352
+    m_Localized: If you see them as anime characters, you start to understand them
+      like real PEOPLE!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472810987184128
+    m_Localized: "They burn, they explode, they fall in love, they stir your soul!
+      And they\u2019ll be your allies, Pasha!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 472848542982144
+    m_Localized: Okay then. In that case, I choose...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 473221974450176
+    m_Localized: This place looks unusual. What am I supposed to do here?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 473494432243712
+    m_Localized: Here, you can combine elements into compounds.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 473529819586560
+    m_Localized: Think about what could lead to a useful result.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 473873421164544
+    m_Localized: "I think I\u2019m starting to get how this works."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 473921261395968
+    m_Localized: "The key is to not fear experimentation. Many discoveries were accidents
+      \u2014 with persistence."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 473958188048384
+    m_Localized: "And don\u2019t forget the recipes I gave you."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474034151088128
+    m_Localized: What if I mix the wrong things?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474085501952000
+    m_Localized: In chemistry, mistakes are part of the process.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474131572187136
+    m_Localized: Sometimes failures lead to the greatest breakthroughs.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474194247671808
+    m_Localized: I like creating something new.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474253236363264
+    m_Localized: "It\u2019s... inspiring."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474364137955328
+    m_Localized: The world of chemistry is opening up to you. Welcome!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474519570472960
+    m_Localized: I wonder... is there a limit to how many compounds I can make?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474562050383872
+    m_Localized: Only your imagination can limit you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474604786147328
+    m_Localized: Chemistry is an endless field of possibilities.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474665280593920
+    m_Localized: Now I get how order comes from chaos.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474730321666048
+    m_Localized: "You\u2019ve grasped the essence of chemistry."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474771962716160
+    m_Localized: Keep experimenting, and even more secrets will be revealed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474872634400768
+    m_Localized: "So, Pasha \u2014 a choice lies before you."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474935221805056
+    m_Localized: "But remember \u2014 the game isn\u2019t just about combining elements,
+      it\u2019s your chance to find your own path."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 474988355248128
+    m_Localized: "Why follow someone else\u2019s rules when you can make your own?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475394443567104
+    m_Localized: Here we go again with his little games...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475489809457152
+    m_Localized: Do you seriously think you can learn everything through this kind
+      of entertainment?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475804730384384
+    m_Localized: "Arno and I aren\u2019t even talking about the same thing!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 475988046635008
+    m_Localized: "At the Bear Academy, it\u2019s different \u2014 we get real foundational
+      knowledge."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476048926957568
+    m_Localized: "They teach logical thinking \u2014 not just decision-making based
+      on emotion and luck!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476095248850944
+    m_Localized: "They teach logical thinking \u2014 not just decision-making based
+      on emotion and luck!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476188446285824
+    m_Localized: Yeah, sure, Dmitry. All those academic methods and boring lectures...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476232473894912
+    m_Localized: "But here\u2019s the question: how many bears ever actually used
+      that knowledge for real?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476301784768512
+    m_Localized: "But games and simulations can teach them in action \u2014 in real
+      situations."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476343069302784
+    m_Localized: Your old academy just raises bears who follow blueprints.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476383250735104
+    m_Localized: So what are you saying? That makes you a better scientist?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476466113404928
+    m_Localized: "You don\u2019t even understand how deep real science goes! Without
+      strict methods, nothing will work!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476641875714048
+    m_Localized: I discovered this mechanic in the game myself, but I still think
+      it's unscientific.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476687081922560
+    m_Localized: We can't just combine elements like in some kind of simulator.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476729326952448
+    m_Localized: "In real chemistry, things are much more complicated\u2014and you
+      know that, Arno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476765595099136
+    m_Localized: That's exactly the point, Dmitry!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476802404311040
+    m_Localized: The goal isn't just to combine them, but to understand how the elements
+      interact.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476839024779264
+    m_Localized: "It's like your lab experience\u2014only here, you're the one in
+      control."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476915101065216
+    m_Localized: Maybe there's something to that.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 476954561077248
+    m_Localized: Still, I wish there was more theory than gameplay practice.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477054100299776
+    m_Localized: Maybe I really am too stuck in the old ways...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477108638834688
+    m_Localized: After all, Pasha, it's all about seeing the results with your own
+      eyes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477143384449024
+    m_Localized: Exactly, Dmitry!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477180239798272
+    m_Localized: "Science and games aren't opposites\u2014they're two ways of understanding
+      the world and its patterns."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477216621191168
+    m_Localized: Combining those two approaches can be far more effective.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477255250731008
+    m_Localized: That's true. When I see how the cards interact, I realize it's more
+      than just a game.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477287693672448
+    m_Localized: "It's brain training\u2014finding solutions, just like in real life."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477328474890240
+    m_Localized: A billion points to you, young bear!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477385605505024
+    m_Localized: Dmitry Ivanovich, this is incredible.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477435052154880
+    m_Localized: Every combination is unique, but I feel like I've mastered it 100%!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477473635557376
+    m_Localized: You've taken a huge step forward.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477506158190592
+    m_Localized: "But remember: science is endless\u2014there's always something
+      new to learn."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477619521839104
+    m_Localized: Time to put your skills to the test, Pavel!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477746202402816
+    m_Localized: What the...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477791622520832
+    m_Localized: "Hey, I just wanted to try this old console! Now what\u2014I'm inside
+      the game?!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477835570438144
+    m_Localized: Hmm... And who might you be, young bear?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477879551909888
+    m_Localized: I'm Pasha! And who are you? And where even are we?!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477923390775296
+    m_Localized: Dmitry Ivanovich. Scientist, bioengineer, chemist.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 477962653655040
+    m_Localized: And where we are... Well, long story. You're in a simulation, and
+      unless you want to stay stuck here forever, you'll have to give it your all.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478000737935360
+    m_Localized: A simulation? I'm in a video game?! Wait a sec... And how did *you*
+      get here?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478038318899200
+    m_Localized: "Wish I knew myself. One thing's clear though \u2014 the only way
+      out is with your help."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478088675713024
+    m_Localized: With my help? Don't tell me you can't play games yourself?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478177645289472
+    m_Localized: Young bear, I studied at the Academy, not on game consoles.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478220959866880
+    m_Localized: But I do know a thing or two. This game is built around chemical
+      elements.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478256233963520
+    m_Localized: My job is to explain their properties. Yours is to use them wisely.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478294947389440
+    m_Localized: Alright, sounds like a plan!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478332582879232
+    m_Localized: Though it still feels kind of insane to me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478372856586240
+    m_Localized: Get used to it, Pavel. This is just the beginning.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478488518713344
+    m_Localized: The water looks so clear.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478574065737728
+    m_Localized: This perfect blue hue reminds me of the planet Tethys, where I recently
+      traveled.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478610031894528
+    m_Localized: Dmitry Ivanovich, you took part in an expedition to Tethys?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478654546042880
+    m_Localized: Yes, an amazing planet with endless oceans. I'd love to go back
+      one day.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478757247770624
+    m_Localized: Young bear, have you ever wondered why the fountain restores health
+      points?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478810905501696
+    m_Localized: Quite often in games, especially fantasy ones, fountains or springs
+      restore health!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478849828642816
+    m_Localized: Hmm, interesting. A smart choice by the developers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478885346009088
+    m_Localized: Water is the basis of life, Pasha.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478918636199936
+    m_Localized: Its role in chemistry is hard to overstate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478954224869376
+    m_Localized: And here, it seems its properties are just expressed in a different
+      context.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 479620095795200
+    m_Localized: Every time after the fountain, I feel better.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 479656422662144
+    m_Localized: It's a reminder of how important breaks are, Pasha.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 479693785522176
+    m_Localized: Even in science, you need time to recover.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 479775255683072
+    m_Localized: Otherwise, there'll be no discoveries, no progress.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 479845699018752
+    m_Localized: "I see you\u2019re not giving up. That\u2019s commendable."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 479884617965568
+    m_Localized: But don't you think you're too fixated on small victories?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 479917803298816
+    m_Localized: Small victories matter too.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 479981632217088
+    m_Localized: Ha, maybe. But real chemistry is always about reaching for more.
+      Experience. Risk. Boundaries.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 480015585107968
+    m_Localized: Don't listen to him, Pasha. Science is about order, not chaos!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 480055129006080
+    m_Localized: "What if chaos is just a form of order we haven\u2019t understood
+      yet?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 480182510018560
+    m_Localized: "So, Pasha, have you realized yet that chemistry isn\u2019t just
+      a game, but a true battle of minds?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 480249866346496
+    m_Localized: What the... Who are you?!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 480283198480384
+    m_Localized: "Allow me to introduce myself. I\u2019m Arno. A genius, the creator
+      of this game, and\u2014like it or not\u2014your new rival."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 480711738908672
+    m_Localized: Ha-ha. You lost on your own, entirely. I merely showed you what
+      lies ahead.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 480778109575168
+    m_Localized: Creator of the game? Did you rig it so I'd lose?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 480997912076288
+    m_Localized: But now I see you need... shall we say, a mentor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481044271718400
+    m_Localized: "Arno, don\u2019t overestimate your importance. We managed just
+      fine without you."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481086260895744
+    m_Localized: Ah, old friend. Still here, are you? You know I respect science
+      too. I just see things differently.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481125980954624
+    m_Localized: "So what now? You\u2019re going to teach me how to play?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481188178288640
+    m_Localized: "Not exactly. I\u2019ll observe, nudge, offer a few ideas. But learning\u2014that\u2019s
+      up to you."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481235443900416
+    m_Localized: Careful, Pasha. This guy loves to twist things around.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481283061833728
+    m_Localized: "Oh, come on, Dmitry. Let\u2019s just call it a 'fun little experiment.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481318235267072
+    m_Localized: "Alright, since you\u2019re the creator, I\u2019ve got one question
+      for you."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481358387339264
+    m_Localized: Why did you even create all this?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481394525462528
+    m_Localized: "Ah, Pasha, you don\u2019t get it! It\u2019s not weird\u2014it\u2019s
+      fascinating!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481439798779904
+    m_Localized: It was all created to challenge players, to make them think and
+      seek answers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481521961000960
+    m_Localized: What did the famous bioengineer Anatoly Myodchurin once say?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481698868355072
+    m_Localized: "'A radish won\u2019t grow if you keep yanking it from the ground\u2014it\u2019ll
+      just wither.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481780791500800
+    m_Localized: Seems like I need to give myself time too and stop charging ahead
+      recklessly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 481816275312640
+    m_Localized: "'A radish won\u2019t grow if you keep yanking it from the ground\u2014it\u2019ll
+      just wither.'"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482030218371072
+    m_Localized: "I\u2019ll get there\u2014as long as I keep trying new strategies,
+      even if they\u2019re not what I expected."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482119632543744
+    m_Localized: I thought you were a scientist here, not a stuntman.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482166801686528
+    m_Localized: "Jumping into the same pit over and over\u2014that's brave, sure,
+      but not exactly smart, right?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482214822273024
+    m_Localized: Maybe instead of relying on luck, you should start analyzing?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482269629243392
+    m_Localized: Another defeat?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482318241226752
+    m_Localized: Chemistry demands reason, not mindless play.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482411677736960
+    m_Localized: Back to the start again. Maybe this time it'll work.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482450076590080
+    m_Localized: "Though with my luck, that\u2019s questionable... Alright, time
+      to focus."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482701189570560
+    m_Localized: Game overs are a way of learning too, right?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482755950403584
+    m_Localized: "At least you\u2019ll remember what *not* to do."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482804482695168
+    m_Localized: Now just figure out the right way.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482873743237120
+    m_Localized: "Pasha, you can\u2019t build a house without a foundation\u2014just
+      like you can\u2019t succeed in this game without knowledge."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482922405552128
+    m_Localized: Learn! Only science will lead you to victory.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 482960082984960
+    m_Localized: Maybe I should just try everything differently...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483005134004224
+    m_Localized: I think I figured out where I messed up. Or... did I?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483064852504576
+    m_Localized: If only I could collect all those compound recipes!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483146989559808
+    m_Localized: "Pasha, you\u2019re actually starting to amuse me."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483194079010816
+    m_Localized: How many times can you lose in the exact same spot?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483230049361920
+    m_Localized: Maybe I should give you a hint?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483262924316672
+    m_Localized: "Then again... no, that\u2019d be too easy."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483313612480512
+    m_Localized: "Losing is a lesson\u2014if you're willing to learn it."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483353965879296
+    m_Localized: "Come on, focus\u2014lean into the chemical compounds."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483393094541312
+    m_Localized: "They\u2019ll give you a big advantage!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483449264660480
+    m_Localized: Here we are again. What is this, attempt number... what now?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483488150052864
+    m_Localized: "The key is not giving up\u2014even the greatest chemists didn\u2019t
+      discover new laws on the first try!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483537059831808
+    m_Localized: Your resilience, though? Still questionable.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483610581786624
+    m_Localized: You know, titanium is a tough metal.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483683743031296
+    m_Localized: "Come on, surprise me\u2014or we\u2019ll just keep going in circles."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483750738649088
+    m_Localized: Draw conclusions, Pasha.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483814617899008
+    m_Localized: When a chemist makes a mistake, they analyze it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483847937449984
+    m_Localized: "When a player loses... well, you know where I\u2019m going with
+      this."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483895152730112
+    m_Localized: Science requires patience and calculation, not random poking around.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483944020566016
+    m_Localized: Try understanding the elements, not just shuffling them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 484006389866496
+    m_Localized: Alright, Pasha, quit whining. Pull yourself together!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 484068301987840
+    m_Localized: If I hear Arno say it's just a game one more time, I swear I'll
+      say something back!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 484701763526656
+    m_Localized: Dmitry Ivanovich, what is this?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 484782445158400
+    m_Localized: "I\u2019m not exactly sure what to do with it."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 484812136636416
+    m_Localized: "It\u2019s part of what you call a \u201Cgame.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 484840754372608
+    m_Localized: "I don\u2019t care much for this nonsense either, but still\u2014elements
+      don\u2019t just combine randomly, even in this simulation, Pasha."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 484904298078208
+    m_Localized: "I\u2019ve realized these so-called \u201Ccompounds\u201D might
+      be your ace in the hole\u2014no matter how absurd this all seems."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 484952209612800
+    m_Localized: Read the recipes and create the compounds accordingly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 484991547990016
+    m_Localized: So... it works like magic?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485025882562560
+    m_Localized: "I still don\u2019t get how these compounds could actually be useful."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485084250497024
+    m_Localized: "Magic? No, Pasha. This isn\u2019t magic."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485151871066112
+    m_Localized: "It\u2019s science. You\u2019ll need to grasp it to understand how
+      these elements interact."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485212612976640
+    m_Localized: "You\u2019ll see for yourself once you start experimenting."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485265679310848
+    m_Localized: But for now, it may not make much sense.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485302379470848
+    m_Localized: When you're ready, the recipe will come in handy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485378602557440
+    m_Localized: "A recipe for a compound\u2014it's like a magical tome!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485421636116480
+    m_Localized: No, Pasha, not magic. It's science.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485458827010048
+    m_Localized: Each formula is a key to how elements interact.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485521909342208
+    m_Localized: "But what if I don\u2019t have the elements needed for the recipe?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485575353163776
+    m_Localized: Then you search. In chemistry, it all starts with the right materials.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485610249773056
+    m_Localized: Even rare elements can be found if you're persistent.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485718525730816
+    m_Localized: These recipes make me feel like an alchemist.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485761274077184
+    m_Localized: "Alchemy was the forerunner of chemistry. You\u2019re on the right
+      path."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485829922250752
+    m_Localized: Dmitry Ivanovich, are real-life chemistry recipes this simple?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485870187569152
+    m_Localized: "Pasha, in real chemistry, these \u201Crecipes\u201D are much more
+      complicated."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485902622121984
+    m_Localized: "But the core idea is the same\u2014you need to know the basics."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485932372320256
+    m_Localized: And if you learn it here, maybe you'll be ready for real experiments.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 485971584868352
+    m_Localized: "But don\u2019t forget\u2014this is a game, not a laboratory."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486051880624128
+    m_Localized: The more I study the recipes, the less they scare me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486101457297408
+    m_Localized: "You\u2019re starting to see patterns, not chaos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486141848444928
+    m_Localized: "That\u2019s exactly what separates a scientist from a beginner."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486207891955712
+    m_Localized: I already have so many different recipes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486260173955072
+    m_Localized: I feel like I already know everything I need.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486309301837824
+    m_Localized: "A good scientist never says, \u201CI know everything.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486342541697024
+    m_Localized: "Instead, they say, \u201CI\u2019m ready to keep learning.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486438192799744
+    m_Localized: d_sec_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486504886427648
+    m_Localized: Just like in chemistry, each stage is harder than the last. Be ready
+      for new challenges.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486553510993920
+    m_Localized: You?! You're the final boss?!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486658301485056
+    m_Localized: Congratulations, Pasha. You've made it to the very end.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486725611675648
+    m_Localized: "Who else? Didn\u2019t you suspect I was preparing you for this
+      very moment all along?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486767328223232
+    m_Localized: Arno, have you been testing him like a lab rat?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486841525460992
+    m_Localized: Not exactly, old friend.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486876531122176
+    m_Localized: I gave him challenges, dropped hints, let him learn from mistakes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486909565460480
+    m_Localized: "And look at what he\u2019s become! Aren\u2019t you proud?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486941970653184
+    m_Localized: "I\u2019m ready to defeat you and prove I wasn\u2019t just a toy
+      in your hands all along!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 486986543521792
+    m_Localized: "A billion points to you! That\u2019s what I was waiting for."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 487026536210432
+    m_Localized: "But don\u2019t forget, Pasha, I\u2019m not just the final boss."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 487080474959872
+    m_Localized: "I\u2019m the embodiment of your knowledge, your mistakes, and your
+      victories."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 487120417316864
+    m_Localized: Pasha, remember everything you've learned.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 487158417711104
+    m_Localized: "Arno\u2019s strong, but you\u2019ve got a few tricks up your sleeve
+      too."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 487210775207936
+    m_Localized: "Haha, we\u2019ll see. May the best one win!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 487320494006272
+    m_Localized: "Looks like we\u2019ve come a long way."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 487384712994816
+    m_Localized: Ha, and this is just the beginning, Pasha!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 487423061516288
+    m_Localized: "Remember: the point isn\u2019t just to reach the finish line, but
+      to understand how you got there."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 487458931204096
+    m_Localized: "A samurai has no goal\u2014only the path!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 487494888972288
+    m_Localized: "Haha! I see human culture isn\u2019t lost on you!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 487573574115328
+    m_Localized: "Well, Arno, looks like I\u2019ve won."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 487650225020928
+    m_Localized: Why did you even create this game, this world of chemistry and elements?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 487687554326528
+    m_Localized: I always wanted something more.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 487719095492608
+    m_Localized: "Not just to teach bears chemistry\u2014but to show it\u2019s not
+      as boring as people think."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488013569187840
+    m_Localized: Games can teach us how not-so-obvious things can interact.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488045781442560
+    m_Localized: "Chemistry isn\u2019t just a set of reactions, it\u2019s an art."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488094129184768
+    m_Localized: And art is always full of surprises.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488127192883200
+    m_Localized: Art, you say?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488168557109248
+    m_Localized: "I thought chemistry was an exact science, but here\u2026 strange
+      elements and unexpected reactions."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488212727324672
+    m_Localized: "Well, you\u2019ve already realized that sometimes a precise answer
+      isn\u2019t what matters most."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488249238740992
+    m_Localized: "Sometimes it\u2019s about sensing how things work."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488281677488128
+    m_Localized: You need to understand not just theory, but how it all connects
+      in real life.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488319002599424
+    m_Localized: I get it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488352095657984
+    m_Localized: "Sometimes things really aren\u2019t as obvious as they seem."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488385293574144
+    m_Localized: "Exactly. And you\u2019ve learned that."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488420341178368
+    m_Localized: "I\u2019m proud to have helped you see chemistry from another perspective."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488498225209344
+    m_Localized: "But remember, Pasha \u2014 everything you\u2019ve learned is just
+      the beginning."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488549576073216
+    m_Localized: The world of chemistry is much bigger.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488598129336320
+    m_Localized: I do understand that games can be fun.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488663195574272
+    m_Localized: "But still, chemistry isn\u2019t just a game."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488723828432896
+    m_Localized: It demands a serious mindset and discipline.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488769600872448
+    m_Localized: "However, as you rightly said, Pasha, sometimes it\u2019s important
+      to look at things from a different angle."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488823908720640
+    m_Localized: "Maybe that\u2019s where part of the truth lies."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488870427746304
+    m_Localized: Yes, I think I understand now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488915021586432
+    m_Localized: Not everything always has to be complex and precise.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 488964866695168
+    m_Localized: "Sometimes it\u2019s just important to understand why things work."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 489012321050624
+    m_Localized: You sure have a funny way of putting things, Pasha!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 489059137871872
+    m_Localized: "There\u2019s a wise spark rattling around in that skull of yours."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 489103119343616
+    m_Localized: "It\u2019s important to see the big picture."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 489153262247936
+    m_Localized: "Maybe you\u2019re right, Arno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 489198925635584
+    m_Localized: "But Pasha, I hope you haven\u2019t forgotten that discipline and
+      patience are what truly matter in any science."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 489246749089792
+    m_Localized: "Let this be more than just a game to you \u2014 let it be a lesson."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 489318270361600
+    m_Localized: Thank you both.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 489358405656576
+    m_Localized: "There\u2019s still a lot I don\u2019t know, but I\u2019ll keep
+      learning."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 489412155662336
+    m_Localized: Hey hey, hold on.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 489460788617216
+    m_Localized: "Don\u2019t forget, I, the great genius Arno, would be glad to throw
+      a new challenge your way!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

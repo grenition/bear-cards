@@ -17,19 +17,49 @@ MonoBehaviour:
   <Dialogues>k__BackingField:
   - ActorPosition: 0
     ActorConfig: {fileID: 11400000, guid: e295b6f773779f54b9a8132162114706, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 483005134004224
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F, \u044F \u043F\u043E\u043D\u044F\u043B,
       \u0433\u0434\u0435 \u043E\u0448\u0438\u0431\u0441\u044F. \u0418\u043B\u0438
       \u043D\u0435\u0442?"
   - ActorPosition: 0
     ActorConfig: {fileID: 11400000, guid: e295b6f773779f54b9a8132162114706, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 482960082984960
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u041C\u043E\u0436\u0435\u0442, \u043F\u0440\u043E\u0441\u0442\u043E
       \u043F\u043E\u043F\u0440\u043E\u0431\u043E\u0432\u0430\u0442\u044C \u0432\u0441\u0451
       \u043F\u043E-\u0434\u0440\u0443\u0433\u043E\u043C\u0443..."
   - ActorPosition: 0
     ActorConfig: {fileID: 11400000, guid: 08a77187c52a53e4482f9e49589a492d, type: 2}
+    LocalizedTextDialogue:
+      m_TableReference:
+        m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+      m_TableEntryReference:
+        m_KeyId: 483064852504576
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     TextDialogue: "\u0412\u043E\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \u0431\u044B
       \u0435\u0449\u0451 \u0441\u043E\u0431\u0440\u0430\u0442\u044C \u0432\u0441\u0435
       \u044D\u0442\u0438 \u0440\u0435\u0446\u0435\u043F\u0442\u044B \u0441\u043E\u0435\u0434\u0438\u043D\u0435\u043D\u0438\u0439!"
-  <Comand>k__BackingField: Equals(CountLocationOneUpdate,24)
+  <Comand>k__BackingField: Equals(CountLocationOneUpdate,15)
   <StartUnlimited>k__BackingField: 0
   IsComplited: 0
+  references:
+    version: 2
+    RefIds: []
