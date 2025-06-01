@@ -12,8 +12,6 @@ namespace Assets.Scripts.Map
         public bool IsEnemyPoint;
     
         public string[] EnemyKeys;
-        //public int Level;
-        //public string Key;
 
         [HideInInspector] public int NumberLevel;
         [HideInInspector] public string Key;
@@ -29,8 +27,10 @@ namespace Assets.Scripts.Map
         {
             PointEntity = new();
         }
+
         public abstract void OnBeginInteract();
         public abstract void OnEndInteract();
+
         public PointEntity PointEntity;
 
         public ViewPoint ViewPoint { get; protected set; }

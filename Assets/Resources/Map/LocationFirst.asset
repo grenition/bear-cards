@@ -48,7 +48,7 @@ MonoBehaviour:
     Number: 2
     Points:
     - ID: 2
-      NeighborsID: 0300000004000000
+      NeighborsID: 03000000
       IsEnemyPoint: 1
       EnemyKeys:
       - standart_enemy_1
@@ -65,17 +65,7 @@ MonoBehaviour:
     Number: 3
     Points:
     - ID: 3
-      NeighborsID: 05000000
-      IsEnemyPoint: 0
-      EnemyKeys: []
-      NumberLevel: 0
-      Key: 
-      PointActive: 0
-      PointComplited: 0
-      PointPass: 0
-      PointLock: 0
-    - ID: 4
-      NeighborsID: 05000000
+      NeighborsID: 0400000005000000
       IsEnemyPoint: 0
       EnemyKeys: []
       NumberLevel: 0
@@ -85,11 +75,20 @@ MonoBehaviour:
       PointPass: 0
       PointLock: 0
     PointKeys:
-    - HillEasy
     - ReceptMeadle
   - Name: Level 4
     Number: 4
     Points:
+    - ID: 4
+      NeighborsID: 06000000
+      IsEnemyPoint: 0
+      EnemyKeys: []
+      NumberLevel: 0
+      Key: 
+      PointActive: 0
+      PointComplited: 0
+      PointPass: 0
+      PointLock: 0
     - ID: 5
       NeighborsID: 06000000
       IsEnemyPoint: 0
@@ -102,6 +101,7 @@ MonoBehaviour:
       PointLock: 0
     PointKeys:
     - CraftMeadle
+    - CardMeadle
   - Name: Level 5
     Number: 5
     Points:

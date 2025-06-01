@@ -1,5 +1,7 @@
 using Project;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 namespace Assets.Scripts.Map
@@ -12,19 +14,7 @@ namespace Assets.Scripts.Map
         public int LocationLevel => Levels.Length;
 
         [field: SerializeField] public Level[] Levels { get; private set; }
-
-        //[Header("Fork Setting")]
-        //[field: SerializeField] public int MinimumFork { get; private set; }
-        //[field: SerializeField] public int MaximumFork { get; private set; }
-        //[Header("Point key in location")]
-        //[field: SerializeField] public List<string> KeysEnemy { get; private set; }
-        //[field: SerializeField] public List<string> KeysPrice { get; private set; }
-        //[Tooltip("first point is enemy?")]
-        //[field: SerializeField] public bool FirsEnemyPoint { get; private set; }
         [field: SerializeField] public string[] BattleKeys { get; private set; }
-        //[field: SerializeField] public string[] EnemyEasyKeys { get; private set; }
-        //[field: SerializeField] public string[] EnemyEpicKeys { get; private set; }
-        //[field: SerializeField] public string[] EnemyLegendKeys { get; private set; }
         [field: SerializeField] public Sprite BackGround { get; private set; }
         [field: SerializeField] public string MainBossKey { get; private set; }
         [field: SerializeField] public string AdditionalBossKey { get; private set; }
@@ -32,16 +22,6 @@ namespace Assets.Scripts.Map
         public string GetBattleKey() =>
             BattleKeys[Random.Range(0, BattleKeys.Length)];
 
-        //public string GetEnemyKey(string keyEnemy)
-        //{
-        //    return keyEnemy switch
-        //    {
-        //        "EnemyEasy" => EnemyEasyKeys[Random.Range(0, EnemyEasyKeys.Length)],
-        //        "EnemyMeadle" => EnemyEpicKeys[Random.Range(0, EnemyEpicKeys.Length)],
-        //        "EnemyLegend" => EnemyLegendKeys[Random.Range(0, EnemyLegendKeys.Length)],
-        //        _ => EnemyEasyKeys[Random.Range(0, EnemyEasyKeys.Length)],
-        //    };
-        //}
         public string BossFight()
         {
             if (LocationKey == 0)
@@ -54,12 +34,79 @@ namespace Assets.Scripts.Map
 
             return MainBossKey;
         }
+
+        [ContextMenu("GenerateIDPoint")]
+        public void GenerateIDPoint()
+        {
+            GenerateNumber();
+            GenerateID();
+            GenerateNaighborID();
+        }
+
+        private void GenerateID()
+        {
+            int id = 0;
+            foreach (var level in Levels)
+            {
+                foreach (var point in level.Points)
+                {
+                    point.ID = id;
+                    id++;
+                }
+            }
+        }
+
+        private void GenerateNumber()
+        {
+            int number = 0;
+            foreach (var level in Levels)
+            {
+
+                level.Number = number;
+                number++;
+            }
+        }
+
+        private void GenerateNaighborID()
+        {
+            int numberGenerableLevel = 0;
+
+            while (numberGenerableLevel + 1 < Levels.Length)
+            {
+                var currentLevel = Levels[numberGenerableLevel];
+                var nextLevel = Levels[numberGenerableLevel + 1];
+
+                List<int> usedId = new();
+
+                foreach (var point in currentLevel.Points)
+                {
+                    var unusedNeighborsID = nextLevel.Points
+                        .Where(x => !usedId.Contains(x.ID))
+                        .Select(x => x.ID);
+
+                    point.NeighborsID = CalculatePointNaigbor(unusedNeighborsID, nextLevel.Points.Length).ToList();
+
+                    if (currentLevel.Points.Length < nextLevel.Points.Length)
+                        usedId.AddRange(point.NeighborsID);
+                }
+
+                Levels[numberGenerableLevel] = currentLevel;
+                numberGenerableLevel++;
+            }
+        }
+
+        private IEnumerable<int> CalculatePointNaigbor(IEnumerable<int> idNextPoints, int countPointInCurrentLevel)
+        {
+            for (int i = 0; i < idNextPoints.Count() / countPointInCurrentLevel; i++)
+            {
+                yield return idNextPoints.ElementAt(i);
+            }
+        }
     }
 
     [Serializable]
     public class Level
     {
-
         public string Name;
         public int Number;
         public PointEntity[] Points;

@@ -55,7 +55,6 @@ namespace Assets.Scripts.Map
             _deck = progres.Deck.ToList();
             _curentLocationNumber = progres.KeyLocation;
             ActiveLocation = Resources.Load<LocationConfigurate>($"Map/{_locationKey[_curentLocationNumber]}");
-            //ActiveLocation = Resources.Load<LocationConfigurate>("Map/LocationThreed");
             _pointOfInterestGenerator = new PointOfInterestGenerator(ActiveLocation);
             _enivrimentGenerator = new EnivrimentGenerator(ActiveLocation.LocationLevel);
 
