@@ -1,9 +1,6 @@
-using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using GreonAssets.Extensions;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.UI.Battle;
-using R3;
 using System;
 using TMPro;
 using UnityEngine;
@@ -59,6 +56,13 @@ namespace Project
         public bool Value { get; set; }
         public Button Button => _button;
 
+        private float _baseScale;
+
+        private void Start()
+        {
+            _baseScale = transform.localScale.x;
+        }
+
         public void ResetToggle()
         {
             Value = false;
@@ -73,10 +77,9 @@ namespace Project
 
         public void PlayAnimationView()
         {
-            float baseScale = transform.localScale.x;
-            transform.DOScale(baseScale * .75f, 0.1f).SetEase(Ease.OutQuad).OnComplete(() =>
+            transform.DOScale(_baseScale * .75f, 0.1f).SetEase(Ease.OutQuad).OnComplete(() =>
             {
-                transform.DOScale(baseScale, 0.1f).SetEase(Ease.OutBounce);
+                transform.DOScale(_baseScale, 0.1f).SetEase(Ease.OutBounce);
             });
         }
     }
