@@ -21,8 +21,6 @@ namespace Project.Gameplay.Battle.Model.Cards
         [field: SerializeField] public string VisualShortName { get; private set; }
         [field: SerializeField] public LocalizedString LocalizedName { get; private set; }
         [field: SerializeField] public LocalizedString LocalizedDescribtion { get; private set; }
-        [field: SerializeField] public string VisualName { get; private set; }
-        [field: SerializeField, TextArea] public string VisualDescription { get; private set; }
         [field: SerializeField] public string ElectroFormula { get; private set; }
         [field: SerializeField] public Sprite VisualIcon { get; private set; }
         

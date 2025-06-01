@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf37953c6c8481685257cdbc86851fc, type: 3}
   m_Name: standart_enemy_1
   m_EditorClassIdentifier: 
+  <LocalizedName>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 631306447446016
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   <VisualName>k__BackingField: "\u042E\u043D\u044B\u0439 \u0448\u0430\u0442\u0443\u043D"
   <VisualDescription>k__BackingField: 
   <Icon>k__BackingField: {fileID: 711722376542564051, guid: 22e919a68b5385d4fa3f49b68b488dd2, type: 3}
@@ -37,3 +46,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
   <Deck>k__BackingField:
   - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
+  references:
+    version: 2
+    RefIds: []

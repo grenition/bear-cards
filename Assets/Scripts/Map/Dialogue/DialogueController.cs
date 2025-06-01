@@ -33,9 +33,9 @@ namespace Project
 
         public void Initialize(DialogueConfig dialogueConfig)
         {
-            _leftActor.NameActor.text = dialogueConfig.LeftActorStart.Name;
+            _leftActor.NameActor.text = dialogueConfig.LeftActorStart.LocalizedName.GetLocalizedString();
             _leftActor.ImageActor.sprite = dialogueConfig.LeftActorStart.Icon;
-            _rightActor.NameActor.text = dialogueConfig.RightActorStart.Name;
+            _rightActor.NameActor.text = dialogueConfig.RightActorStart.LocalizedName.GetLocalizedString();
             _rightActor.ImageActor.sprite = dialogueConfig.RightActorStart.Icon;
 
             _config = dialogueConfig;
@@ -64,17 +64,17 @@ namespace Project
                 return;
             }
 
-            var dialogueText = _config.Dialogues[_numberStep].TextDialogue;
+            var dialogueText = _config.Dialogues[_numberStep].LocalizedTextDialogue.GetLocalizedString();
             _dialogues.TypewriterEffect(dialogueText, _typewriterEffectDuration);
 
             if (_config.Dialogues[_numberStep].ActorPosition == DialogueConfig.Actor.LeftActor)
             {
-                UpdateActor(_leftActor, _rightActor, _config.Dialogues[_numberStep].ActorConfig.Name,
+                UpdateActor(_leftActor, _rightActor, _config.Dialogues[_numberStep].ActorConfig.LocalizedName.GetLocalizedString(),
                     _config.Dialogues[_numberStep].ActorConfig.Icon);
             }
             else
             {
-                UpdateActor(_rightActor, _leftActor, _config.Dialogues[_numberStep].ActorConfig.Name,
+                UpdateActor(_rightActor, _leftActor, _config.Dialogues[_numberStep].ActorConfig.LocalizedName.GetLocalizedString(),
                     _config.Dialogues[_numberStep].ActorConfig.Icon);
             }
             _numberStep++;

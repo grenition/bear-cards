@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf37953c6c8481685257cdbc86851fc, type: 3}
   m_Name: boss_three_enemy
   m_EditorClassIdentifier: 
+  <LocalizedName>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 628755148791808
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   <VisualName>k__BackingField: "\u0410\u0440\u043D\u043E"
   <VisualDescription>k__BackingField: 
   <Icon>k__BackingField: {fileID: 7536806242033695933, guid: f3c27a5c8a4346a4381e8d8352b89d94, type: 3}
@@ -90,3 +99,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f0f9282175cdc54468746638acd175e9, type: 2}
   <Deck>k__BackingField:
   - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
+  references:
+    version: 2
+    RefIds: []

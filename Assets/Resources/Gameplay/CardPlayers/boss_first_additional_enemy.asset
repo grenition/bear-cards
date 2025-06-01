@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf37953c6c8481685257cdbc86851fc, type: 3}
   m_Name: boss_first_additional_enemy
   m_EditorClassIdentifier: 
+  <LocalizedName>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 628898631737344
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   <VisualName>k__BackingField: ?????
   <VisualDescription>k__BackingField: 
   <Icon>k__BackingField: {fileID: 9141399904598808705, guid: f098c6b1cbde9de4697ed7aca706c394, type: 3}
@@ -39,3 +48,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 54ae01bcf8f725e40a6e5c3fe9bfc30c, type: 2}
   <Deck>k__BackingField:
   - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
+  references:
+    version: 2
+    RefIds: []

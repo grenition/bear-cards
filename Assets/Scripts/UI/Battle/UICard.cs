@@ -85,10 +85,10 @@ namespace Project.UI.Battle
             if (_electroText) _electroText.text = Model.Config.ElectroFormula;
             if (_iconImage) _iconImage.sprite = Model.Config.VisualIcon;
             if (_shortName) _shortName.text = Model.Config.VisualShortName;
-            if (_fullName) _fullName.text = Model.Config.VisualName;
+            if (_fullName) _fullName.text = Model.Config.LocalizedName.GetLocalizedString();
             if (_damageText) _damageText.text = Model.AttackDamage.ToString();
             if (_healthText) _healthText.text = Model.Health.ToString();
-            if (_descriptionText) _descriptionText.text = Model.Config.VisualDescription.Replace("{dmg}", Math.Abs(Model.AttackDamage).ToString());
+            if (_descriptionText) _descriptionText.text = Model.Config.LocalizedDescribtion.GetLocalizedString().Replace("{dmg}", Math.Abs(Model.AttackDamage).ToString());
             if (_effects) _effects.Effects = Model.Effects;
 
             var borderColor = Model.Config.CardType switch

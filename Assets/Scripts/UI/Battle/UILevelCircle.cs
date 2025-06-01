@@ -44,7 +44,7 @@ namespace Project.UI.Battle
             {
                 var startValue = BattleController.Model.Player.LevelElectrons - delta;
                 var iterateValue = startValue + delta;
-                var level = BattleController.Model.GetElectronLevel(iterateValue);
+                var level = BattleController.Model.GetElectronLevel(iterateValue - 1);
                 var root = _orbits.GetAt(level - 1);
                 if(root == null) continue;
 

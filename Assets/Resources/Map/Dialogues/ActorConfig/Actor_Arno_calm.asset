@@ -12,5 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac701a76f319b174bbd56851d133b8c8, type: 3}
   m_Name: Actor_Arno_calm
   m_EditorClassIdentifier: 
+  <LocalizedName>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 628755148791808
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   <Name>k__BackingField: "\u0410\u0440\u043D\u043E"
   <Icon>k__BackingField: {fileID: 21300000, guid: 03b80fd3a2d89064d8822d0ee82e7e15, type: 3}
+  references:
+    version: 2
+    RefIds: []

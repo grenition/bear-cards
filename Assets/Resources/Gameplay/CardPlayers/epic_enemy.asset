@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf37953c6c8481685257cdbc86851fc, type: 3}
   m_Name: epic_enemy
   m_EditorClassIdentifier: 
+  <LocalizedName>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 629771399290880
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   <VisualName>k__BackingField: "\u042D\u0440\u0438\u0447\u043D\u044B\u0439 \u0432\u0440\u0430\u0433"
   <VisualDescription>k__BackingField: 
   <Icon>k__BackingField: {fileID: 4913349565693902316, guid: a72765af31bf042a69c2291e05cf5e33, type: 3}
@@ -20,6 +29,7 @@ MonoBehaviour:
   <DeckSize>k__BackingField: 20
   <SpellsSize>k__BackingField: 5
   <StartLevelElectrons>k__BackingField: 0
+  <StartHandElectrons>k__BackingField: 0
   <Turns>k__BackingField:
   - <PlaceToSlotChance>k__BackingField: 1
     <Cards>k__BackingField:
@@ -42,3 +52,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f0f9282175cdc54468746638acd175e9, type: 2}
   <Deck>k__BackingField:
   - {fileID: 11400000, guid: 557517c7163234bcaba774d998c64182, type: 2}
+  references:
+    version: 2
+    RefIds: []

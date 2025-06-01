@@ -31,7 +31,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8202880770048
-    m_Localized: Quit
+    m_Localized: Exit
     m_Metadata:
       m_Items: []
   - m_Id: 8916604510208
@@ -97,7 +97,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 38954351681536
-    m_Localized: Precious receips
+    m_Localized: Precious recipes
     m_Metadata:
       m_Items: []
   - m_Id: 39295965159424
@@ -105,7 +105,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 79178347798528
-    m_Localized: Save receipts
+    m_Localized: Save recipes
     m_Metadata:
       m_Items: []
   - m_Id: 356007338303488
@@ -2539,6 +2539,249 @@ MonoBehaviour:
   - m_Id: 489460788617216
     m_Localized: "Don\u2019t forget, I, the great genius Arno, would be glad to throw
       a new challenge your way!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 610002684043264
+    m_Localized: "Reduces the selected card\u2019s damage by {dmg}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 610636548235264
+    m_Localized: Poison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 610792152719360
+    m_Localized: Destroys the attacked card.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 610927892979712
+    m_Localized: Poison Resistance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 611040723951616
+    m_Localized: "This card won\u2019t be destroyed by poison damage."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 611190204751872
+    m_Localized: Explosion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 611272442470400
+    m_Localized: 'Hits three cells: front and both sides.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 611388771491840
+    m_Localized: Anti-Flying
+    m_Metadata:
+      m_Items: []
+  - m_Id: 611515686936576
+    m_Localized: Intercepts attacks from flying cards.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 611617667244032
+    m_Localized: Flying
+    m_Metadata:
+      m_Items: []
+  - m_Id: 611742649114624
+    m_Localized: Ignores the card in front and strikes the opponent's hero directly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 614565369569280
+    m_Localized: Cost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 614749998637056
+    m_Localized: Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 614845456801792
+    m_Localized: Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 614914750898176
+    m_Localized: Health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 615427441647616
+    m_Localized: End turn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 616049314324480
+    m_Localized: Waiting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 616126418214912
+    m_Localized: Your turn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 616200443486208
+    m_Localized: Opponent turn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 617017787506688
+    m_Localized: 'Put 1 electron into energy level.
+
+      Current level: {lv}
+
+      Number
+      of electrons: {ec}
+
+      Electrons to next level: {enl}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 622379194343424
+    m_Localized: Spend 2 electrons and draw the next card.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 622753884102656
+    m_Localized: All cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 623023561072640
+    m_Localized: Metal or Hydrogen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 623201537974272
+    m_Localized: Nonmetals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 623353094955008
+    m_Localized: Combine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 623499857846272
+    m_Localized: KNOWN RECIPES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 623796378361856
+    m_Localized: Craft failed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 624674896306176
+    m_Localized: Craft success
+    m_Metadata:
+      m_Items: []
+  - m_Id: 624992132489216
+    m_Localized: Ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625325676126208
+    m_Localized: Victory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625426494611456
+    m_Localized: Defeat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 625878170820608
+    m_Localized: Continue game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 626133939478528
+    m_Localized: Main menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628016464748544
+    m_Localized: Source of life
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628205602693120
+    m_Localized: Drink water +5 hp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628323248726016
+    m_Localized: Source of life
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628421697429504
+    m_Localized: Drink water +10 hp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628755148791808
+    m_Localized: Arno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628898631737344
+    m_Localized: ?????
+    m_Metadata:
+      m_Items: []
+  - m_Id: 628958090190848
+    m_Localized: Dmitry Ivanovich
+    m_Metadata:
+      m_Items: []
+  - m_Id: 629137547681792
+    m_Localized: Pasha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 629492201250816
+    m_Localized: Shatun the warlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 629698191908864
+    m_Localized: Player
+    m_Metadata:
+      m_Items: []
+  - m_Id: 629771399290880
+    m_Localized: Epic enemy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 629854396178432
+    m_Localized: Youth experimenter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 630013557432320
+    m_Localized: Shatun the major
+    m_Metadata:
+      m_Items: []
+  - m_Id: 630215316037632
+    m_Localized: Shatun the cardsman
+    m_Metadata:
+      m_Items: []
+  - m_Id: 630325936611328
+    m_Localized: Robo-Shatun
+    m_Metadata:
+      m_Items: []
+  - m_Id: 630425740075008
+    m_Localized: Shatun the panda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 630504429412352
+    m_Localized: Awaken warlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 630589699612672
+    m_Localized: Legendary enemy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 630737896955904
+    m_Localized: Shatun the warrior
+    m_Metadata:
+      m_Items: []
+  - m_Id: 630851411599360
+    m_Localized: Shatun the nature
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631004700827648
+    m_Localized: Shatun the elementalyst
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631114386071552
+    m_Localized: Shatun the assasin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631197726892032
+    m_Localized: Shatun the exolosioner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631306447446016
+    m_Localized: Shatun the young
+    m_Metadata:
+      m_Items: []
+  - m_Id: 631413691604992
+    m_Localized: Shy Shatun
+    m_Metadata:
+      m_Items: []
+  - m_Id: 632957614907392
+    m_Localized: Battle end
     m_Metadata:
       m_Items: []
   references:

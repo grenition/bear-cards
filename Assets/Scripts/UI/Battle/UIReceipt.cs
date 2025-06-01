@@ -14,8 +14,8 @@ namespace Project.UI.Battle
         public void Init(CardCraftConfig cardConfig)
         {
             if(cardConfig.Output == null) return;
-            _titleText.text = $"{cardConfig.Output.VisualName}";
-            _descriptionText.text = cardConfig.Output.VisualDescription.Replace("{dmg}", Math.Abs(cardConfig.Output.BaseDamage).ToString());    
+            _titleText.text = $"{cardConfig.Output.LocalizedName.GetLocalizedString()}";
+            _descriptionText.text = cardConfig.Output.LocalizedDescribtion.GetLocalizedString().Replace("{dmg}", Math.Abs(cardConfig.Output.BaseDamage).ToString());    
             _formulaText.text = cardConfig.Formula;    
         }
     }

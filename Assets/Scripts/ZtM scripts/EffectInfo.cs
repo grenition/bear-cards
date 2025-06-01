@@ -10,6 +10,4 @@ public class EffectInfo : ScriptableObject
     public Sprite Icon;
     public LocalizedString LocalizedName;
     public LocalizedString LocalizedDescribtion;
-    public string Name;
-    public string Describtion;
 }

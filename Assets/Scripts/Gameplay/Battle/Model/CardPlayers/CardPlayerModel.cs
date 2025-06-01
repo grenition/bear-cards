@@ -33,6 +33,21 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
 
         private int _minimumLevel;
 
+        public int _ElectronsToNextLevel
+        {
+            get
+            {
+                if(BattleModel.Config.LevelElectrons.Length <= Level)
+                {
+                    return -1;
+                }
+                else
+                {
+                    return BattleModel.Config.LevelElectrons[Level] - LevelElectrons;
+                }
+            }
+        }
+
         public CardPlayerModel(string key, CardOwner ownerhipType, BattleModel battleModel)
         {
             Key = key;
@@ -130,6 +145,7 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         {
             var spell = Deck.FirstOrDefault(x => x.Card != null && x.Card.Type == CardType.Spell)?.Card;
             var targetSlot = GetFirstFreeSlotInSpells();
+
             if (spell == null || targetSlot == null) return false;
 
             BattleModel.TryTransferCard(spell.Position, targetSlot.Position);

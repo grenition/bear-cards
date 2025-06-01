@@ -20,7 +20,7 @@ namespace Project
 
             var hillPanel = (HillUI)MapCompositionRoot.Instance.MapUI.ActiveUIByKey("hill");
             hillPanel.Apper(() => MapCompositionRoot.Instance.MapController.ComplitePoint(),
-                _config.Icon, _config.Description, _config.HPModificator, _config.Name);
+                _config.Icon, _config.LocalizedDescription.GetLocalizedString(), _config.HPModificator, _config.LocalizedName.GetLocalizedString());
         }
 
         public override void OnEndInteract()

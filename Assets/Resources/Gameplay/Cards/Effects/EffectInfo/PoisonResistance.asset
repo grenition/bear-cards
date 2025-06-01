@@ -14,5 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EffectType: 4
   Icon: {fileID: 3536614488043182551, guid: 2d431a3aabd134135adce86c9a711d0e, type: 3}
+  LocalizedName:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 610927892979712
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  LocalizedDescribtion:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 611040723951616
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   Name: "\u0418\u043D\u0435\u0440\u0442\u043D\u043E\u0441\u0442\u044C"
   Describtion: 228
+  references:
+    version: 2
+    RefIds: []

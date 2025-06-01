@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf37953c6c8481685257cdbc86851fc, type: 3}
   m_Name: player
   m_EditorClassIdentifier: 
+  <LocalizedName>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 629137547681792
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   <VisualName>k__BackingField: "\u041F\u0430\u0448\u0430"
   <VisualDescription>k__BackingField: 
   <Icon>k__BackingField: {fileID: 1007821588002581258, guid: a58e7f02b796f594d9e7f42c19b75bfe, type: 3}
@@ -20,6 +29,7 @@ MonoBehaviour:
   <DeckSize>k__BackingField: 100
   <SpellsSize>k__BackingField: 4
   <StartLevelElectrons>k__BackingField: 0
+  <StartHandElectrons>k__BackingField: 0
   <Turns>k__BackingField: []
   <Deck>k__BackingField:
   - {fileID: 11400000, guid: 46909ddd94aa14436b46af94271000f6, type: 2}
@@ -48,3 +58,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2a3d09b63f46eaf49b632c71f73cd1e4, type: 2}
   - {fileID: 11400000, guid: ca51d7ffbcbf5d44aa60db02dffbcc27, type: 2}
   - {fileID: 11400000, guid: 9bf260b8c28677448a40ef004b4e0f3e, type: 2}
+  references:
+    version: 2
+    RefIds: []

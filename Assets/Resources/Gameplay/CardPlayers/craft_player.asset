@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf37953c6c8481685257cdbc86851fc, type: 3}
   m_Name: craft_player
   m_EditorClassIdentifier: 
+  <LocalizedName>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc478ca080f43764ca1b91664699e14a
+    m_TableEntryReference:
+      m_KeyId: 629698191908864
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   <VisualName>k__BackingField: "\u0418\u0433\u0440\u043E\u043A"
   <VisualDescription>k__BackingField: 
   <Icon>k__BackingField: {fileID: -8937025750965970537, guid: 50742801b4cda49eab9de8a718b60987, type: 3}
@@ -23,3 +32,6 @@ MonoBehaviour:
   <StartHandElectrons>k__BackingField: 10000
   <Turns>k__BackingField: []
   <Deck>k__BackingField: []
+  references:
+    version: 2
+    RefIds: []

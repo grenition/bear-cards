@@ -34,7 +34,7 @@ namespace Project.Gameplay.Battle.Behaviour.EntityBehaviours
                 _shouldGivedCards.Add(BattleStaticData.Cards.Get(card));
             });
 
-            for(int lvl = 1; lvl < 7; lvl++)
+            for(int lvl = 0; lvl < 7; lvl++)
             {
                 CardConfig[] cards = new CardConfig[0];
                 foreach(CardConfig card in _shouldGivedCards.ToList())

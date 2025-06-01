@@ -18,7 +18,6 @@ namespace Project.Gameplay.Battle.Model.CardPlayers
         
         [field: Header("Visual")]
         [field: SerializeField] public LocalizedString LocalizedName { get; private set; }
-        [field: SerializeField] public string VisualName { get; private set; }
         [field: SerializeField, TextArea] public string VisualDescription { get; private set; }
         [field: SerializeField] public Sprite Icon { get; private set; }
         

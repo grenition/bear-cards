@@ -29,7 +29,6 @@ namespace Project
             public Actor ActorPosition;
             public ActorConfig ActorConfig;
             public LocalizedString LocalizedTextDialogue;
-            public string TextDialogue;
         }
     }
 }

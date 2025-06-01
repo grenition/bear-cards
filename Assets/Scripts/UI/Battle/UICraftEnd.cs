@@ -12,6 +12,7 @@ using Project.Gameplay.Common.Datas;
 using R3;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -21,6 +22,9 @@ namespace Project.UI.Battle
     {
         [SerializeField] private CanvasGroup _panel;
         [SerializeField] private TMP_Text _resultText;
+        [SerializeField] private LocalizedString LocalizedCraftFail;
+        [SerializeField] private LocalizedString LocalizedCraftSuccess;
+        [Space]
         [SerializeField] private RectTransform _cardPlaceholder;
         [SerializeField] private RectTransform _cardTargetTransforms;
         [SerializeField] private UICardSlot _targetCardSlot;
@@ -55,7 +59,7 @@ namespace Project.UI.Battle
         {
             var win = ((CraftBattleBehaviour)BattleController.Behaviour).CraftSuccessed;
             
-            _resultText.text = win ? "Получена карта" : "Крафт не удался";
+            _resultText.text = win ? LocalizedCraftSuccess.GetLocalizedString() : LocalizedCraftFail.GetLocalizedString();
             _resultText.color = win ? _battleWinColor : _battleLooseColor;
 
             _cardPlaceholder.gameObject.SetActive(win);

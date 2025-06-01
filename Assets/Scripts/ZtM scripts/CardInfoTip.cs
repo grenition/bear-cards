@@ -2,6 +2,7 @@ using Project.Gameplay.Battle.Model;
 using Project.Gameplay.Battle.Model.Cards;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 
 public class CardInfoTip : MonoBehaviour
@@ -16,6 +17,12 @@ public class CardInfoTip : MonoBehaviour
     [SerializeField] private Image LiteralBackground;
     [SerializeField] private Text Literal;
     [SerializeField] private Text BaseInfo;
+
+    [Space]
+    [SerializeField] private LocalizedString LocalizedCost;
+    [SerializeField] private LocalizedString LocalizedLevel;
+    [SerializeField] private LocalizedString LocalizedDamage;
+    [SerializeField] private LocalizedString LocalizedHealth;
 
     [Space]
     [SerializeField] private Color MetalColor;
@@ -64,7 +71,7 @@ public class CardInfoTip : MonoBehaviour
     {
         CardConfig config = card.Config;
         Portrait.sprite = config.VisualIcon;
-        Name.text = config.VisualName;
+        Name.text = config.LocalizedName.GetLocalizedString();
         Obolochka.text = config.ElectroFormula;
         Literal.text = config.VisualShortName;
 
@@ -103,32 +110,32 @@ public class CardInfoTip : MonoBehaviour
             }
         }
 
-        string info = $"Стоимость: {config.Cost}\nУровень: {config.Level}";
+        string info = $"{LocalizedCost.GetLocalizedString()}: {config.Cost}\n{LocalizedLevel.GetLocalizedString()}: {config.Level}";
 
         if(config.BaseDamage == card.AttackDamage)
         {
-            info += $"\nУрон: {card.AttackDamage}";
+            info += $"\n{LocalizedDamage.GetLocalizedString()}: {card.AttackDamage}";
         }
         else if(config.BaseDamage < card.AttackDamage)
         {
-            info += $"\nУрон: <color=cyan>{card.AttackDamage}</color>";
+            info += $"\n{LocalizedDamage.GetLocalizedString()}: <color=cyan>{card.AttackDamage}</color>";
         }
         else
         {
-            info += $"\nУрон: <color=red>{card.AttackDamage}</color>";
+            info += $"\n{LocalizedDamage.GetLocalizedString()}: <color=red>{card.AttackDamage}</color>";
         }
 
         if (config.BaseHealth == card.Health)
         {
-            info += $"\nЗдоровье: {card.Health}";
+            info += $"\n{LocalizedHealth.GetLocalizedString()}: {card.Health}";
         }
         else if (config.BaseHealth < card.Health)
         {
-            info += $"\nЗдоровье: <color=cyan>{card.Health}</color>";
+            info += $"\n{LocalizedHealth.GetLocalizedString()}: <color=cyan>{card.Health}</color>";
         }
         else
         {
-            info += $"\nЗдоровье: <color=red>{card.Health}</color>";
+            info += $"\n{LocalizedHealth.GetLocalizedString()}: <color=red>{card.Health}</color>";
         }
 
         BaseInfo.text = info;
@@ -140,7 +147,7 @@ public class CardInfoTip : MonoBehaviour
 
         float y = 0;
 
-        Describtion.text = config.VisualDescription;
+        Describtion.text = config.LocalizedDescribtion.GetLocalizedString();
         DescribtionTransform.sizeDelta = new Vector2(DescribtionTransform.sizeDelta.x, Describtion.preferredHeight + 35);
 
         y += DescribtionTransform.sizeDelta.y / 2;
@@ -157,7 +164,7 @@ public class CardInfoTip : MonoBehaviour
             PassiveInfo passive = Instantiate(PassivePrefab, PassivesContent).GetComponent<PassiveInfo>();
             RectTransform rectTransform = passive.GetComponent<RectTransform>();
 
-            passive.SetInfo(passiveInfo.Icon, passiveInfo.Name, passiveInfo.Describtion);
+            passive.SetInfo(passiveInfo.Icon, passiveInfo.LocalizedName.GetLocalizedString(), passiveInfo.LocalizedDescribtion.GetLocalizedString());
 
             float height = passive._Height;
 
