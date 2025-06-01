@@ -9,6 +9,9 @@ namespace Project
         [SerializeField] private BattleController BattleController;
         [SerializeField] private int PullCost;
 
+        [Space]
+        [SerializeField] private BattleDymaicTutorial BattleDymaicTutorial;
+
         public void PullNextCard()
         {
             if (BattleController.Behaviour.Model.Player.HandElectrons >= PullCost)
@@ -16,6 +19,7 @@ namespace Project
                 if(BattleController.Behaviour.Model.Player.TransferCardFromDeckToHand())
                 {
                     BattleController.Behaviour.Model.Player.ModifeHandElectrons(-PullCost);
+                    BattleDymaicTutorial.PulledCard();
                 }
             }
         }

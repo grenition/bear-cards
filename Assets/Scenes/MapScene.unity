@@ -1490,6 +1490,10 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u041F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A"
       objectReference: {fileID: 0}
+    - target: {fileID: 4385210243953494989, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5766398004964390555, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
       propertyPath: m_Name
       value: UICraft
@@ -1508,15 +1512,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8665352904670885244, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 231.26
+      value: -61.54
       objectReference: {fileID: 0}
     - target: {fileID: 8665352904670885244, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100.01
+      value: 225.25
       objectReference: {fileID: 0}
     - target: {fileID: 8665352904670885244, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665352904670885244, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.2600098
+      objectReference: {fileID: 0}
+    - target: {fileID: 8665352904670885244, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -754.62
       objectReference: {fileID: 0}
     - target: {fileID: 8969919881374906577, guid: 85c73c3a4949d69419e97fd28a4efda1, type: 3}
       propertyPath: m_Pivot.x

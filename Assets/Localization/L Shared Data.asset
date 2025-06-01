@@ -2643,6 +2643,214 @@ MonoBehaviour:
     m_Key: battle_label_end
     m_Metadata:
       m_Items: []
+  - m_Id: 681523838410752
+    m_Key: battle_tutorial_p1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 682145966940160
+    m_Key: battle_tutorial_p2_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 682455938588672
+    m_Key: battle_tutorial_p2_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 682592857448448
+    m_Key: battle_tutorial_p2_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 682778145021952
+    m_Key: battle_tutorial_p3_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 683061411536896
+    m_Key: battle_tutorial_p4_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 683334909517824
+    m_Key: battle_tutorial_p4_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 683603596632064
+    m_Key: battle_tutorial_p4_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 683711981641728
+    m_Key: battle_tutorial_p4_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 683940986445824
+    m_Key: battle_tutorial_p4_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684126492123136
+    m_Key: battle_tutorial_p4_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684262022668288
+    m_Key: battle_tutorial_p5_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684388963278848
+    m_Key: battle_tutorial_p5_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684570492755968
+    m_Key: battle_tutorial_p5_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684825229615104
+    m_Key: battle_tutorial_p5_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 685026283577344
+    m_Key: battle_tutorial_p6_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 685132449800192
+    m_Key: battle_tutorial_p6_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 685268336861184
+    m_Key: battle_tutorial_p6_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 685376059170816
+    m_Key: battle_tutorial_p6_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 685457688715264
+    m_Key: battle_tutorial_p6_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 686715354963968
+    m_Key: craft_tutorial_p1_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 686811303862272
+    m_Key: craft_tutorial_p1_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 686952345722880
+    m_Key: craft_tutorial_p2_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 687063968735232
+    m_Key: craft_tutorial_p2_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731143130013696
+    m_Key: battle_dyn_tutorial_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731370780057600
+    m_Key: battle_dyn_tutorial_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731491672481792
+    m_Key: battle_dyn_tutorial_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731603849142272
+    m_Key: battle_dyn_tutorial_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731750968549376
+    m_Key: battle_dyn_tutorial_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731966807433216
+    m_Key: battle_dyn_tutorial_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732068187955200
+    m_Key: battle_dyn_tutorial_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732165298675712
+    m_Key: battle_dyn_tutorial_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732256067608576
+    m_Key: battle_dyn_tutorial_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732384748855296
+    m_Key: battle_dyn_tutorial_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732560200785920
+    m_Key: battle_dyn_tutorial_11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732675019857920
+    m_Key: battle_dyn_tutorial_12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732839528849408
+    m_Key: battle_dyn_tutorial_13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732946835922944
+    m_Key: battle_dyn_tutorial_14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733060858077184
+    m_Key: battle_dyn_tutorial_15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733196321513472
+    m_Key: battle_dyn_tutorial_16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733299400728576
+    m_Key: battle_dyn_tutorial_17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733485128704000
+    m_Key: battle_dyn_tutorial_18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733725160333312
+    m_Key: battle_dyn_tutorial_19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733854533640192
+    m_Key: battle_dyn_tutorial_20
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733950193131520
+    m_Key: battle_dyn_tutorial_21
+    m_Metadata:
+      m_Items: []
+  - m_Id: 734041058533376
+    m_Key: battle_dyn_tutorial_22
+    m_Metadata:
+      m_Items: []
+  - m_Id: 734130955051008
+    m_Key: battle_dyn_tutorial_23
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742771833659392
+    m_Key: craft_dyn_tutorial_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742882437455872
+    m_Key: craft_dyn_tutorial_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742997181030400
+    m_Key: craft_dyn_tutorial_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743078928015360
+    m_Key: craft_dyn_tutorial_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743192362967040
+    m_Key: craft_dyn_tutorial_5
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

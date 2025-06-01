@@ -4,6 +4,7 @@ using DG.Tweening;
 using GreonAssets.Extensions;
 using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Craft;
+using Project.Gameplay.Battle.Data;
 using Project.Gameplay.Battle.Model.Cards;
 using Project.Gameplay.Common.Datas;
 using Project.UI.Common;
@@ -227,7 +228,9 @@ namespace Project.UI.Battle
                 {
                     var handSlot = BattleController.Model.Player.GetFirstFreeSlotInHand();
                     if (handSlot == null || !BattleController.Model.TryTransferCard(Model.Position, handSlot.Position))
+                    {
                         transform.DOMove(CardSlot ? CardSlot.transform.position : startPosition, moveTime).SetEase(Ease.OutBack);
+                    }
                     else
                     {
                         transform.SetAsFirstSibling();
@@ -235,7 +238,9 @@ namespace Project.UI.Battle
                     }
                 }
                 else
+                {
                     transform.DOMove(CardSlot ? CardSlot.transform.position : startPosition, moveTime).SetEase(Ease.OutBack);
+                }
             }
 
             PointerUpEvent?.Invoke(this, false);

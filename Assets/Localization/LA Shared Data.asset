@@ -42,8 +42,10 @@ MonoBehaviour:
         - m_KeyId: 10665033687040
           m_TableCodes:
           - ru
+          - en
         - m_KeyId: 10782943961088
           m_TableCodes:
           - ru
+          - en
         m_TypeString: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null

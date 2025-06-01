@@ -2784,6 +2784,255 @@ MonoBehaviour:
     m_Localized: Battle end
     m_Metadata:
       m_Items: []
+  - m_Id: 681523838410752
+    m_Localized: Place cards on the game board.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 682145966940160
+    m_Localized: End your turn, and the cards on the board will automatically attack
+      the opponent in front of them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 682455938588672
+    m_Localized: "To win, reduce the opponent\u2019s health to zero."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 682592857448448
+    m_Localized: If there is no opposing card, your card will deal damage directly
+      to the enemy character.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 682778145021952
+    m_Localized: 'Cards have special effects.
+
+      Explore and experiment with
+      them to discover what each one does!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 683061411536896
+    m_Localized: 'To play cards, you need Electrons.
+
+      At the start of each
+      turn, you gain 2 Electrons.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 683334909517824
+    m_Localized: "A card\u2019s cost equals the number of electrons on the element\u2019s
+      outer shell."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 683603596632064
+    m_Localized: "Add the numbers after the orbital letters \u2014 that\u2019s the
+      card\u2019s cost."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 683711981641728
+    m_Localized: 'Cost: 1'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 683940986445824
+    m_Localized: 'Cost: 6'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684126492123136
+    m_Localized: 'Cost: 11'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684262022668288
+    m_Localized: When an element card is destroyed, you collect electrons on your
+      orbitals.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684388963278848
+    m_Localized: "You gain as many electrons as the card\u2019s cost."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684570492755968
+    m_Localized: 'The more electrons on your orbitals, the higher your Electron Level.
+
+      <b>Each
+      level grants +2 electrons per turn.</b>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 684825229615104
+    m_Localized: "To play a card, it's not enough to just have the required number
+      of electrons \u2014\r\nyou also need a sufficient Electron Level."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 685026283577344
+    m_Localized: If your level is equal to or higher than the card's level, you can
+      play it by spending the required number of electrons.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 685132449800192
+    m_Localized: "You can determine a card\u2019s level by the highest number before
+      the orbital letters in its electron configuration."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 685268336861184
+    m_Localized: "El. Level \u2013 1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 685376059170816
+    m_Localized: "El. Level \u2013 2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 685457688715264
+    m_Localized: "El. Level \u2013 5"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 686715354963968
+    m_Localized: "Combine elements to create new Compound cards \u2014 your key to
+      victory."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 686811303862272
+    m_Localized: They can be used at any time in battle and cost no Electrons!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 686952345722880
+    m_Localized: "Metals are marked with a gray border.\r\n\r\nNonmetals \u2014 with
+      a yellow one.\r\n\r\nHydrogen, though a nonmetal, is an exception.\r\nIt\u2019s
+      marked with a dark border."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 687063968735232
+    m_Localized: "Collect recipes!\r\n\r\nThey stay in your inventory throughout
+      the entire game and aren\u2019t lost after defeat.\r\n\r\nRecipes show the
+      required elements and the unique effects of the resulting compound."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731143130013696
+    m_Localized: Welcome to Element Arno!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731370780057600
+    m_Localized: This is your game board.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731491672481792
+    m_Localized: "Here\u2019s the table where you\u2019ll play your cards."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731603849142272
+    m_Localized: "And this is your hand \u2014 the cards you can use."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731750968549376
+    m_Localized: "Play any card onto the board! \u2014 waiting for action"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731966807433216
+    m_Localized: Each card has attack and health values, and requires a certain amount
+      of Energy to play.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732068187955200
+    m_Localized: "The card\u2019s cost is equal to the number of electrons on its
+      outer shell."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732165298675712
+    m_Localized: "Just add the numbers after the letters in its electron configuration
+      \u2014 that\u2019s the cost!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732256067608576
+    m_Localized: "To end your turn, press \u201CEnd Turn\u201D \u2014 waiting for
+      action"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732384748855296
+    m_Localized: Waiting for the opponent's turn to end.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732560200785920
+    m_Localized: At the start of each of your turns, you gain Energy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732675019857920
+    m_Localized: The amount depends on your Electron Level.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732839528849408
+    m_Localized: You can raise your Electron Level by destroying cards on the board
+      or investing electrons into upgrading it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732946835922944
+    m_Localized: "You\u2019ve drawn a \u201CSilicon\u201D card, but can\u2019t play
+      it until your Electron Level reaches 3 \u2014 the card\u2019s required level."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733060858077184
+    m_Localized: "You can tell a card\u2019s level by the highest number before the
+      orbital letters in its electron configuration."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733196321513472
+    m_Localized: "I\u2019ll give you some electrons \u2014 spend them all to raise
+      your level!\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733299400728576
+    m_Localized: Great! Now you can play Silicon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733485128704000
+    m_Localized: "If your hand is low on cards and you want more \u2014 click the
+      deck."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733725160333312
+    m_Localized: "You\u2019ll draw a card, but it costs 2 electrons."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733854533640192
+    m_Localized: "Cards have many effects \u2014 study them to win more effectively!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733950193131520
+    m_Localized: "To win, reduce the opponent\u2019s hero\u2019s health to 0."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 734041058533376
+    m_Localized: "If there\u2019s no enemy card in front of yours \u2014 it will
+      deal damage directly to the opponent\u2019s hero."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 734130955051008
+    m_Localized: Good luck!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742771833659392
+    m_Localized: Here you can create unique Compound cards.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742882437455872
+    m_Localized: They can be used once per battle, but will return in the next one!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742997181030400
+    m_Localized: 'Collect recipes as you play or come up with your own.
+
+      But
+      remember:
+
+      Compounds can only be created from two different types of
+      cards.
+
+      You can''t create something that doesn''t exist in nature!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743078928015360
+    m_Localized: For example, to create water, you need two Hydrogen and one Oxygen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 743192362967040
+    m_Localized: "Place two Hydrogen cards on top, one Oxygen on the bottom, and
+      press \u201CCreate\u201D!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -17,7 +17,15 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 1c7782d1050a38041a2d29a63ee1abf3, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 10665033687040
+    m_Localized: '1fb95a67c3e3a3c4895d909a1d7b0ef3[Logo_Arno_eng]'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10782943961088
+    m_Localized: '5bf8eb1b61d69b046b02e7bb248b4046[Logo_Element_eng]'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

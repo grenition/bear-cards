@@ -122,4 +122,5 @@ MonoBehaviour:
   - standart_battle
   <BackGround>k__BackingField: {fileID: -5738867087462220013, guid: 0eadca9d3819ca14e87f86b1b8fad138, type: 3}
   <MainBossKey>k__BackingField: boss_first_enemy
+  <TutorialKey>k__BackingField: tutorial_battle
   <AdditionalBossKey>k__BackingField: boss_first_additional_enemy

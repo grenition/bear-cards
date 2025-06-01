@@ -45,13 +45,13 @@ namespace Project.UI.Tutorial
             _pages.ForEach(x => x.gameObject.SetActive(false));
             SetPage(_startPage);
 
-            if (PlayerPrefs.GetInt($"tutorial_played_{_tutorialId}") == 1)
-            {
-                _mainContainer.SetActive(false);
-                return;
-            }
-            _mainContainer.SetActive(true);
-            PlayerPrefs.SetInt($"tutorial_played_{_tutorialId}", 1);
+            //if (PlayerPrefs.GetInt($"tutorial_played_{_tutorialId}") == 1)
+            //{
+            //    _mainContainer.SetActive(false);
+            //    return;
+            //}
+            //_mainContainer.SetActive(true);
+            //PlayerPrefs.SetInt($"tutorial_played_{_tutorialId}", 1);
         }
 
         public void SetPage(int index)

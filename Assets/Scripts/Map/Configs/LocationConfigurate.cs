@@ -17,6 +17,7 @@ namespace Assets.Scripts.Map
         [field: SerializeField] public string[] BattleKeys { get; private set; }
         [field: SerializeField] public Sprite BackGround { get; private set; }
         [field: SerializeField] public string MainBossKey { get; private set; }
+        [field: SerializeField] public string TutorialKey { get; private set; }
         [field: SerializeField] public string AdditionalBossKey { get; private set; }
 
         public string GetBattleKey() =>

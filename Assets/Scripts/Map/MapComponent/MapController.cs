@@ -99,7 +99,14 @@ namespace Assets.Scripts.Map
             {
                 if(_currentInteractPoint.PointEntity.EnemyKeys.Length > 0)
                 {
-                    MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetBattleKey(), _currentInteractPoint.PointEntity.EnemyKeys[UnityEngine.Random.Range(0, _currentInteractPoint.PointEntity.EnemyKeys.Length)]);
+                    if(PlayerPrefs.GetInt($"tutorial_played_battle_tutorial") == 0)
+                    {
+                        MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.TutorialKey, _currentInteractPoint.PointEntity.EnemyKeys[UnityEngine.Random.Range(0, _currentInteractPoint.PointEntity.EnemyKeys.Length)]);
+                    }
+                    else
+                    {
+                        MapStaticData.BattlePointStart(interactivePoint.PointEntity.ID, _locationConfigurate.GetBattleKey(), _currentInteractPoint.PointEntity.EnemyKeys[UnityEngine.Random.Range(0, _currentInteractPoint.PointEntity.EnemyKeys.Length)]);
+                    }
                 }
                 else
                 {
