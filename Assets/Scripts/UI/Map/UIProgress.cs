@@ -13,7 +13,11 @@ namespace Project
 {
     public class UIProgress : MonoBehaviour
     {
-        [SerializeField] private TMP_Text _progress;
+        [SerializeField] private Text Location;
+        [SerializeField] private Text HitPoint;
+        [SerializeField] private Text CardElenents;
+        [SerializeField] private Text CardMajestys;
+
         [SerializeField] private Button _bockButton;
 
         [SerializeField] private LocalizedString _locationName;
@@ -63,10 +67,10 @@ namespace Project
 
         private void UpdateInfo()
         {
-            _progress.text = $"{_locationName.GetLocalizedString()} " + $"{_locationNumber + 1}" + "\n"
-                + $"{_hitPointName.GetLocalizedString()} " + $"{_hitPoint}" + "\n"
-                + $"{_cardElementName.GetLocalizedString()} " + $"{_cardElementCount}" + "\n"
-                + $"{_cardMajestyName.GetLocalizedString()} " + $"{_cardMajestyCount}" + "\n";
+            Location.text = $"{_locationName.GetLocalizedString()} " + $"{_locationNumber + 1}";
+            HitPoint.text = $": {_hitPoint}";
+            CardElenents.text = $"{_cardElementName.GetLocalizedString()} " + $"{_cardElementCount}";
+            CardMajestys.text = $"{_cardMajestyName.GetLocalizedString()} " + $"{_cardMajestyCount}";
         }
 
         private void LocalizationChanged(Locale locale)
