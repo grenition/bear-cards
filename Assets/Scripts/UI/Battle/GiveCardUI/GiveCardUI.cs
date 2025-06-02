@@ -105,7 +105,7 @@ namespace Project
             List<string> cards = new List<string>();
             foreach (var item in CardVisual)
             {
-                if (!item.Value)
+                if (item.Value)
                     cards.Add(item.Model.Key);
             }
 
