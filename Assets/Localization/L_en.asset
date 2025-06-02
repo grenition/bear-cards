@@ -2952,7 +2952,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 732675019857920
-    m_Localized: The amount depends on your Electron Level.
+    m_Localized: The amount of electrons depends on your Electron Level.
     m_Metadata:
       m_Items: []
   - m_Id: 732839528849408
