@@ -2299,7 +2299,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 486438192799744
-    m_Localized: d_sec_1
+    m_Localized: "Is this the next level? Looks like it\u2019s going to be tougher
+      than the last one."
     m_Metadata:
       m_Items: []
   - m_Id: 486504886427648
@@ -2924,7 +2925,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 731966807433216
     m_Localized: Each card has attack and health values, and requires a certain amount
-      of Energy to play.
+      of Electrons to play.
     m_Metadata:
       m_Items: []
   - m_Id: 732068187955200
@@ -2947,7 +2948,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 732560200785920
-    m_Localized: At the start of each of your turns, you gain Energy.
+    m_Localized: At the start of each of your turns, you gain Electrons.
     m_Metadata:
       m_Items: []
   - m_Id: 732675019857920
