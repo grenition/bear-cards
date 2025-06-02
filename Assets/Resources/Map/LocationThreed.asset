@@ -121,7 +121,14 @@ MonoBehaviour:
     - ID: 7
       NeighborsID: 090000000a000000
       IsEnemyPoint: 1
-      EnemyKeys: []
+      EnemyKeys:
+      - epic_enemy
+      - epic_enemy_1
+      - epic_enemy_2
+      - epic_enemy_3
+      - epic_enemy_4
+      - epic_enemy_5
+      - epic_enemy_6
       NumberLevel: 0
       Key: 
       PointActive: 0
@@ -131,7 +138,14 @@ MonoBehaviour:
     - ID: 8
       NeighborsID: 0b0000000c000000
       IsEnemyPoint: 1
-      EnemyKeys: []
+      EnemyKeys:
+      - epic_enemy
+      - epic_enemy_1
+      - epic_enemy_2
+      - epic_enemy_3
+      - epic_enemy_4
+      - epic_enemy_5
+      - epic_enemy_6
       NumberLevel: 0
       Key: 
       PointActive: 0
@@ -195,7 +209,14 @@ MonoBehaviour:
     - ID: 13
       NeighborsID: 0e000000
       IsEnemyPoint: 1
-      EnemyKeys: []
+      EnemyKeys:
+      - epic_enemy
+      - epic_enemy_1
+      - epic_enemy_2
+      - epic_enemy_3
+      - epic_enemy_4
+      - epic_enemy_5
+      - epic_enemy_6
       NumberLevel: 0
       Key: 
       PointActive: 0
@@ -292,7 +313,14 @@ MonoBehaviour:
     - ID: 20
       NeighborsID: 15000000160000001700000018000000
       IsEnemyPoint: 1
-      EnemyKeys: []
+      EnemyKeys:
+      - epic_enemy
+      - epic_enemy_1
+      - epic_enemy_2
+      - epic_enemy_3
+      - epic_enemy_4
+      - epic_enemy_5
+      - epic_enemy_6
       NumberLevel: 0
       Key: 
       PointActive: 0
@@ -422,7 +450,14 @@ MonoBehaviour:
     - ID: 30
       NeighborsID: 1f00000020000000
       IsEnemyPoint: 1
-      EnemyKeys: []
+      EnemyKeys:
+      - epic_enemy
+      - epic_enemy_1
+      - epic_enemy_2
+      - epic_enemy_3
+      - epic_enemy_4
+      - epic_enemy_5
+      - epic_enemy_6
       NumberLevel: 0
       Key: 
       PointActive: 0
@@ -478,7 +513,14 @@ MonoBehaviour:
     - ID: 34
       NeighborsID: 23000000
       IsEnemyPoint: 1
-      EnemyKeys: []
+      EnemyKeys:
+      - epic_enemy
+      - epic_enemy_1
+      - epic_enemy_2
+      - epic_enemy_3
+      - epic_enemy_4
+      - epic_enemy_5
+      - epic_enemy_6
       NumberLevel: 0
       Key: 
       PointActive: 0
@@ -548,7 +590,7 @@ MonoBehaviour:
     Points:
     - ID: 39
       NeighborsID: 
-      IsEnemyPoint: 1
+      IsEnemyPoint: 0
       EnemyKeys: []
       NumberLevel: 0
       Key: 
