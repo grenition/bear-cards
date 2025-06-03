@@ -23,13 +23,13 @@ namespace Project.UI.Battle
         public UICardSlot CardSlot => UIBattle.Instance.Slots.Get(Model.AttachedSlot);
 
         [field: Header("Movement")]
-        [SerializeField] private float moveSpeedLimit = 50;
-        [SerializeField] private float moveTime = 0.15f;
-        [SerializeField] private bool returnToHoverStartPosition = true;
+        [SerializeField] protected float moveSpeedLimit = 50;
+        [SerializeField] protected float moveTime = 0.15f;
+        [SerializeField] protected bool returnToHoverStartPosition = true;
 
         [Header("Visual")]
-        [SerializeField] private bool instantiateVisual = true;
-        [SerializeField] private GameObject cardVisualPrefab;
+        [SerializeField] protected bool instantiateVisual = true;
+        [SerializeField] protected GameObject cardVisualPrefab;
         [HideInInspector] public UICardVisual uiCardVisual;
 
         [Header("States")]
@@ -47,23 +47,23 @@ namespace Project.UI.Battle
         [HideInInspector] public UnityEvent<UICardMovement, UICardSlot> SlotEnterEvent;
         [HideInInspector] public UnityEvent<UICardMovement, UICardSlot> SlotExitEvent;
 
-        private Canvas canvas;
-        private Image imageComponent;
-        private UIVisualCardsHandler visualHandler;
-        private Vector3 offset;
-        private CanvasGroup canvasGroup;
-        private Vector3 startPosition;
-        private bool pointerEntered = false;
-        private bool pointerPressed = false;
+        protected Canvas canvas;
+        protected Image imageComponent;
+        protected UIVisualCardsHandler visualHandler;
+        protected Vector3 offset;
+        protected CanvasGroup canvasGroup;
+        protected Vector3 startPosition;
+        protected bool pointerEntered = false;
+        protected bool pointerPressed = false;
         public UICardSlot slotUnderCursor;
-        private GraphicRaycaster raycaster;
+        protected GraphicRaycaster raycaster;
 
-        public void Init(CardModel cardModel, UICardVisual overrideVisual = null)
+        public virtual void Init(CardModel cardModel, UICardVisual overrideVisual = null)
         {
             Model = cardModel;
             if (overrideVisual) cardVisualPrefab = overrideVisual.gameObject;
         }
-        void Start()
+        protected virtual void Start()
         {
             canvas = GetComponentInParent<Canvas>();
             imageComponent = GetComponent<Image>();
@@ -208,7 +208,7 @@ namespace Project.UI.Battle
             PointerDownEvent.Invoke(this);
         }
 
-        public void OnPointerUp(PointerEventData eventData)
+        public virtual void OnPointerUp(PointerEventData eventData)
         {
             if (!Interactable && !pointerPressed)
                 return;
@@ -266,7 +266,7 @@ namespace Project.UI.Battle
             return CardSlot ? UIExtensionMethods.Remap((float)ParentIndex(), 0, (float)(CardSlot.transform.parent.GetActiveChildCount() - 1), 0, 1) : 0;
         }
 
-        private UICardSlot GetAvailableCardSlotUnderCursor(PointerEventData eventData)
+        protected UICardSlot GetAvailableCardSlotUnderCursor(PointerEventData eventData)
         {
             var raycastList = new List<RaycastResult>();
             canvasGroup.blocksRaycasts = false;

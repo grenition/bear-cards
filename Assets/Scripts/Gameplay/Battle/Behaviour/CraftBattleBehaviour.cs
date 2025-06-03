@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using Assets.Scripts.Map;
 using Cysharp.Threading.Tasks;
@@ -35,17 +36,50 @@ namespace Project.Gameplay.Battle.Behaviour
 
             var playerConfig = BattleStaticData.CardPlayers.Get(Constants.Player);
             var deck = MapStaticData.LoadData();
+
+            string[] types = new string[0];
             
-            deck.Deck.ForEach(card =>
+            foreach(string card in deck.Deck)
+            {
+                types = ExcludingExpandMassive(types, card);
+            }
+
+            string[] sorted = new string[deck.Deck.Length];
+            Array.Copy(deck.Deck, sorted, sorted.Length);
+            for (int i = 0; i < sorted.Length; i++)
+            {
+                int minimal = i;
+                for(int ii = i + 1; ii < sorted.Length; ii++)
+                {
+                    if(Array.IndexOf(types, sorted[minimal]) > Array.IndexOf(types, sorted[ii]))
+                    {
+                        minimal = ii;
+                    }
+                }
+
+                string temp = sorted[minimal];
+                sorted[minimal] = sorted[i];
+                sorted[i] = temp;
+            }
+
+            sorted.ForEach(card =>
             {
                 Model.AddCardToDeck(CardOwner.player, card);
             });
 
             for (int i = 0; i < Model.Player.Config.HandSize; i++)
             {
-                Model.Player.TransferCardFromDeckToHand(); 
-                await UniTask.WaitForSeconds(0.1f);
+                if(!Model.Player.TransferCardFromDeckToHand())
+                {
+                    break;
+                }
+                else
+                {
+                    await UniTask.WaitForSeconds(0.1f);
+                }
             }
+
+            GameObject.FindObjectOfType<CardUseLocker>().UnLock();
         }
         public override async void NextTurn()
         {
@@ -118,5 +152,24 @@ namespace Project.Gameplay.Battle.Behaviour
         {
         }
         public override BattleState GetCurrentState() => _nextTurnLocked ? BattleState.awaiting : BattleState.playerTurn;
+
+        private T[] ExcludingExpandMassive<T>(T[] origin, T value)
+        {
+            foreach (T t in origin)
+            {
+                if (t.Equals(value))
+                {
+                    return origin;
+                }
+            }
+
+            T[] newMassive = new T[origin.Length + 1];
+
+            Array.Copy(origin, newMassive, origin.Length);
+
+            newMassive[newMassive.Length - 1] = value;
+
+            return newMassive;
+        }
     }
 }

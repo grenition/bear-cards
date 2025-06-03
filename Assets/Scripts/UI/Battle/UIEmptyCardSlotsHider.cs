@@ -11,6 +11,7 @@ namespace Project.UI.Battle
 {
     public class UIEmptyCardSlotsHider : MonoBehaviour
     {
+        [SerializeField] private bool ChangeSiblingIndex = true;
         private List<UICardSlot> _slots = new();
         
         private async void Start()
@@ -33,7 +34,7 @@ namespace Project.UI.Battle
             {
                 var wasActive = slot.gameObject.activeSelf;
                 slot.gameObject.SetActive(slot.Model.Card != null);
-                if (slot.gameObject.activeSelf && !wasActive)
+                if (slot.gameObject.activeSelf && !wasActive && ChangeSiblingIndex)
                     slot.transform.SetAsLastSibling();
             }            
         }
