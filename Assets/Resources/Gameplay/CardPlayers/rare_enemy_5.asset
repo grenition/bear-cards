@@ -21,10 +21,9 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  <VisualName>k__BackingField: "\u0428\u0430\u0442\u0443\u043D \u043F\u043E\u0434\u0440\u044B\u0432\u0430\u0442\u0435\u043B\u044C"
   <VisualDescription>k__BackingField: 
   <Icon>k__BackingField: {fileID: 300525734313798868, guid: f17f85007689edb47abdafd4d7a57756, type: 3}
-  <Health>k__BackingField: 15
+  <Health>k__BackingField: 20
   <HandSize>k__BackingField: 4
   <DeckSize>k__BackingField: 20
   <SpellsSize>k__BackingField: 5
