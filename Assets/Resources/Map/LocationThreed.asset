@@ -122,7 +122,6 @@ MonoBehaviour:
       NeighborsID: 090000000a000000
       IsEnemyPoint: 1
       EnemyKeys:
-      - epic_enemy
       - epic_enemy_1
       - epic_enemy_2
       - epic_enemy_3
@@ -139,7 +138,6 @@ MonoBehaviour:
       NeighborsID: 0b0000000c000000
       IsEnemyPoint: 1
       EnemyKeys:
-      - epic_enemy
       - epic_enemy_1
       - epic_enemy_2
       - epic_enemy_3
@@ -210,7 +208,6 @@ MonoBehaviour:
       NeighborsID: 0e000000
       IsEnemyPoint: 1
       EnemyKeys:
-      - epic_enemy
       - epic_enemy_1
       - epic_enemy_2
       - epic_enemy_3
@@ -314,7 +311,6 @@ MonoBehaviour:
       NeighborsID: 15000000160000001700000018000000
       IsEnemyPoint: 1
       EnemyKeys:
-      - epic_enemy
       - epic_enemy_1
       - epic_enemy_2
       - epic_enemy_3
@@ -384,7 +380,6 @@ MonoBehaviour:
       NeighborsID: 1b000000
       IsEnemyPoint: 1
       EnemyKeys:
-      - epic_enemy
       - epic_enemy_1
       - epic_enemy_2
       - epic_enemy_3
@@ -401,7 +396,6 @@ MonoBehaviour:
       NeighborsID: 1c000000
       IsEnemyPoint: 1
       EnemyKeys:
-      - epic_enemy
       - epic_enemy_1
       - epic_enemy_2
       - epic_enemy_3
@@ -465,7 +459,6 @@ MonoBehaviour:
       NeighborsID: 1f00000020000000
       IsEnemyPoint: 1
       EnemyKeys:
-      - epic_enemy
       - epic_enemy_1
       - epic_enemy_2
       - epic_enemy_3
@@ -528,7 +521,6 @@ MonoBehaviour:
       NeighborsID: 23000000
       IsEnemyPoint: 1
       EnemyKeys:
-      - epic_enemy
       - epic_enemy_1
       - epic_enemy_2
       - epic_enemy_3
