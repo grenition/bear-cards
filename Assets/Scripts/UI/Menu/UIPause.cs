@@ -41,5 +41,10 @@ namespace Project.UI.Menu
                 _mainContainer.SetActiveWithChildrensAnimation(!_mainContainer.activeSelf);
             }
         }
+
+        public void UnPause()
+        {
+            _mainContainer.SetActiveWithChildrensAnimation(false);
+        }
     }
 }

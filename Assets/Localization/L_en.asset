@@ -3034,6 +3034,10 @@ MonoBehaviour:
       press \u201CCreate\u201D!"
     m_Metadata:
       m_Items: []
+  - m_Id: 1787987374071808
+    m_Localized: Surrender
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

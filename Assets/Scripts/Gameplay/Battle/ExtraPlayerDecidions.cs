@@ -1,5 +1,6 @@
 using Project.Gameplay.Battle;
 using Project.Gameplay.Battle.Behaviour;
+using Project.UI.Menu;
 using UnityEngine;
 
 namespace Project
@@ -11,6 +12,9 @@ namespace Project
 
         [Space]
         [SerializeField] private BattleDymaicTutorial BattleDymaicTutorial;
+
+        [Space]
+        [SerializeField] private UIPause UIPause;
 
         public void PullNextCard()
         {
@@ -31,6 +35,12 @@ namespace Project
                 BattleController.Behaviour.Model.Player.ModifyLevelElectrons(1);
                 BattleController.Behaviour.Model.Player.ModifeHandElectrons(-1);
             }
+        }
+
+        public void Retreat()
+        {
+            UIPause.UnPause();
+            BattleController.Behaviour.Model.Player.ModifyHealth(-BattleController.Behaviour.Model.Player.Health);
         }
     }
 }
